@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>استودیو محمدجواد کجوری — کلاس ایمان ۱</title>
+<title>استودیو محمدجواد کجوری — پایه ایمان</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--text:#fff;--muted:rgba(255,255,255,.75);--border:rgba(255,255,255,.25);--accent:#ff5ca8;--accent2:#7c5cff;--gold:#ffd700;--ok:#4fd1a1;--err:#ff6b6b}
@@ -24,7 +24,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 @keyframes textFlow{to{background-position:200% 0}}
 .brand .line{display:block;width:60px;height:3px;border-radius:2px;margin:12px auto 0;background:linear-gradient(90deg,#ff5ca8,#7c5cff,#40e0d0)}
 .tabs{display:flex;gap:5px;background:rgba(0,0,0,.25);padding:5px;border-radius:16px;margin-bottom:18px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15)}
-.tabs button{flex:1;font:inherit;font-size:12px;font-weight:700;padding:11px 4px;background:transparent;color:var(--muted);border:0;border-radius:12px;cursor:pointer;transition:.2s}
+.tabs button{flex:1;font:inherit;font-size:11px;font-weight:700;padding:11px 3px;background:transparent;color:var(--muted);border:0;border-radius:12px;cursor:pointer;transition:.2s}
 .tabs button.on{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;box-shadow:0 6px 20px -8px #ff5ca8}
 .glass{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:22px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 32px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.25);padding:20px}
 .search{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:14px;outline:none;margin-bottom:14px;backdrop-filter:blur(10px)}
@@ -35,7 +35,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .cat:hover{border-color:rgba(255,92,168,.7);background:rgba(255,255,255,.16);transform:translateY(-3px)}
 .cat:active{transform:scale(.96)}
 .cat .emo{font-size:28px;line-height:1}
-.cat .name{font-weight:700;font-size:13.5px}
+.cat .name{font-weight:700;font-size:13px}
 .cat .en{color:rgba(255,255,255,.65);font-size:10.5px;direction:ltr}
 .section-title{display:flex;align-items:center;justify-content:space-between;margin:16px 0 12px;font-size:13px;font-weight:700;color:var(--muted)}
 .count-badge{background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:4px 12px;border-radius:99px;font-size:11.5px;font-weight:800;color:#fff;box-shadow:0 4px 12px -4px #ff5ca8}
@@ -43,10 +43,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .btn-big:hover{filter:brightness(1.1);transform:translateY(-2px)}
 .btn-big:active{transform:scale(.98)}
 .btn-big.gold{background:linear-gradient(135deg,#ffd700,#ff8c00,#ff5ca8);box-shadow:0 12px 32px -12px #ffd700}
-.btn-sm{padding:10px 14px;border:0;border-radius:12px;cursor:pointer;font:inherit;font-weight:800;font-size:12.5px;color:#fff;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);transition:.15s;margin:4px 4px 4px 0}
+.btn-sm{padding:10px 14px;border:0;border-radius:12px;cursor:pointer;font:inherit;font-weight:800;font-size:12px;color:#fff;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);transition:.15s;margin:4px 4px 4px 0}
 .btn-sm:hover{background:rgba(255,255,255,.25)}
-.btn-sm.gold{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#3d2a00;border:0}
 .btn-sm.pink{background:linear-gradient(135deg,#ff5ca8,#7c5cff);border:0}
+.btn-sm.gold{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#3d2a00;border:0}
 .top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .back{border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;border-radius:12px;font:inherit;padding:9px 14px;cursor:pointer;font-weight:700;font-size:12.5px;backdrop-filter:blur(10px)}
 .top h2{margin:0;font-size:17px;font-weight:900;flex:1}
@@ -55,7 +55,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .result{min-height:170px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:22px;padding:18px;margin-bottom:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;backdrop-filter:blur(20px)}
 .result.empty{color:var(--muted);font-size:14px}
 .result .letter{font-size:13px;color:rgba(255,255,255,.7);direction:ltr;font-weight:700;letter-spacing:2px}
-.result .word{font-size:32px;font-weight:900;direction:ltr;line-height:1.15;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 3s linear infinite;word-break:break-word}
+.result .word{font-size:30px;font-weight:900;direction:ltr;line-height:1.15;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 3s linear infinite;word-break:break-word}
 .result .fa{font-size:22px;font-weight:700}
 .result.none{background:rgba(255,107,107,.18);border-color:rgba(255,107,107,.5);color:#ffb3b3;font-size:15px;font-weight:700}
 .speak{margin-top:10px;border:0;cursor:pointer;background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;border-radius:14px;padding:11px 22px;font:inherit;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px -8px #ff5ca8;transition:transform .12s,filter .15s}
@@ -71,10 +71,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .key.none{opacity:.3;text-decoration:line-through}
 .lesson-card{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);border-radius:16px;padding:14px;margin-bottom:10px;cursor:pointer;transition:.15s}
 .lesson-card:hover{background:rgba(255,255,255,.14);border-color:rgba(255,92,168,.6)}
-.lesson-card h3{margin:0 0 6px;font-size:13.5px;font-weight:800;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.lesson-card .tag{font-size:9.5px;background:rgba(255,92,168,.25);color:#ffb3d9;padding:2px 8px;border-radius:99px;border:1px solid rgba(255,92,168,.4);font-weight:700}
-.lesson-card p{margin:0;font-size:11.5px;color:var(--muted);line-height:1.7}
-.lesson-body{padding:16px;background:rgba(0,0,0,.28);border-radius:14px;font-size:12.5px;line-height:2.1;color:rgba(255,255,255,.92);white-space:pre-line;border:1px solid rgba(255,255,255,.1)}
+.lesson-card h3{margin:0 0 6px;font-size:13px;font-weight:800;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.lesson-card .tag{font-size:9px;background:rgba(255,92,168,.25);color:#ffb3d9;padding:2px 8px;border-radius:99px;border:1px solid rgba(255,92,168,.4);font-weight:700}
+.lesson-card p{margin:0;font-size:11px;color:var(--muted);line-height:1.7}
+.lesson-body{padding:16px;background:rgba(0,0,0,.28);border-radius:14px;font-size:12px;line-height:2.1;color:rgba(255,255,255,.92);white-space:pre-line;border:1px solid rgba(255,255,255,.1)}
 .quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:11px;font-weight:700;gap:5px;flex-wrap:wrap}
 .quiz-tag{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;padding:5px 10px;border-radius:99px;font-size:10.5px}
 .quiz-tag.gold{background:rgba(255,215,0,.15);color:#ffd700;border:1px solid rgba(255,215,0,.4)}
@@ -84,24 +84,24 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .quiz-tag.q-timer{background:rgba(124,92,255,.25);color:#c9bcff;border:1px solid rgba(124,92,255,.5);font-family:monospace;font-size:13px;font-weight:800}
 .quiz-tag.q-timer.warn{background:rgba(255,107,107,.3);color:#ffb3b3;border-color:#ff6b6b;animation:tick .8s ease-in-out infinite}
 @keyframes tick{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-.quiz-question{font-size:15.5px;font-weight:800;line-height:1.7;margin:0 0 14px;text-align:center;padding:14px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
-.quiz-topic{display:inline-block;background:rgba(124,92,255,.25);color:#c9bcff;padding:3px 10px;border-radius:99px;font-size:10.5px;font-weight:700;margin-bottom:10px;border:1px solid rgba(124,92,255,.4)}
+.quiz-question{font-size:15px;font-weight:800;line-height:1.7;margin:0 0 14px;text-align:center;padding:14px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
+.quiz-topic{display:inline-block;background:rgba(124,92,255,.25);color:#c9bcff;padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;margin-bottom:10px;border:1px solid rgba(124,92,255,.4)}
 .quiz-options{display:grid;gap:9px}
 .quiz-opt{padding:13px 15px;border-radius:13px;cursor:pointer;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);color:#fff;font:inherit;font-size:13.5px;font-weight:700;text-align:right;transition:.2s;direction:ltr}
 .quiz-opt:hover:not(:disabled){background:rgba(255,255,255,.18);border-color:rgba(255,92,168,.6);transform:translateX(-4px)}
 .quiz-opt:disabled{cursor:not-allowed}
 .quiz-opt.correct{background:linear-gradient(135deg,rgba(79,209,161,.4),rgba(79,209,161,.15));border-color:#4fd1a1;color:#b3ffd9}
 .quiz-opt.wrong{background:linear-gradient(135deg,rgba(255,107,107,.4),rgba(255,107,107,.15));border-color:#ff6b6b;color:#ffb3b3}
-.mic-box{background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(255,92,168,.15));border:2px solid rgba(124,92,255,.5);border-radius:20px;padding:20px;text-align:center;margin-bottom:10px}
-.mic-box .en-sentence{font-size:22px;font-weight:900;direction:ltr;color:#ffd700;margin:10px 0;text-shadow:0 2px 20px rgba(255,215,0,.5);line-height:1.3;word-break:break-word}
-.mic-box .hint{font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.9;margin-bottom:12px}
-.mic-btn{width:90px;height:90px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:34px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:8px;position:relative}
+.mic-box{background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(255,92,168,.15));border:2px solid rgba(124,92,255,.5);border-radius:20px;padding:18px;text-align:center;margin-bottom:10px}
+.mic-box .en-sentence{font-size:20px;font-weight:900;direction:ltr;color:#ffd700;margin:10px 0;text-shadow:0 2px 20px rgba(255,215,0,.5);line-height:1.35;word-break:break-word}
+.mic-box .hint{font-size:11px;color:rgba(255,255,255,.78);line-height:1.9;margin-bottom:12px}
+.mic-btn{width:90px;height:90px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:8px;position:relative}
 .mic-btn:hover{transform:scale(1.05)}
 .mic-btn:active{transform:scale(.95)}
 .mic-btn.recording{background:linear-gradient(135deg,#ff0080,#ff5ca8);animation:micPulse 1s ease-in-out infinite}
 @keyframes micPulse{0%,100%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 0 rgba(255,92,168,.7)}50%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 20px rgba(255,92,168,0)}}
 .mic-btn .lbl{font-size:9px;font-weight:700;margin-top:-2px}
-.mic-status{font-size:12px;font-weight:700;color:#4fd1a1;margin-top:8px;min-height:18px}
+.mic-status{font-size:12px;font-weight:700;color:#4fd1a1;margin-top:8px;min-height:18px;white-space:pre-line}
 .mic-status.listening{color:#ffd700}
 .mic-status.error{color:#ff6b6b}
 .result-screen{text-align:center;padding:26px 18px}
@@ -152,6 +152,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .gallery-item .ghead{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--muted);margin-bottom:6px}
 .gallery-item .gtitle{font-size:13px;font-weight:800;color:#fff;margin-bottom:4px}
 .gallery-item .gmeta{font-size:11px;color:rgba(255,255,255,.7)}
+.gallery-item video{width:100%;border-radius:10px;background:#000;margin-top:8px}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -164,7 +165,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
   <section id="home">
     <div class="brand">
       <h1>🎓 استودیو محمدجواد کجوری</h1>
-      <p class="studio">✨ کلاس ایمان ۱ ✨</p>
+      <p class="studio">✨ پایه ایمان ✨</p>
       <div class="line"></div>
     </div>
 
@@ -182,19 +183,19 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
     </div>
 
     <div id="paneLessons" hidden>
-      <div class="glass" style="margin-bottom:14px;text-align:center;padding:14px;font-size:12.5px;line-height:1.9;color:rgba(255,255,255,.85)">
-        📌 این دروس، مباحث سختی هستند که در <b style="color:#ffd700">آزمون نهایی</b> از آن‌ها سوال می‌آید. جدول زیر نشان می‌دهد از هر مبحث چند سوال وجود دارد.
+      <div class="glass" style="margin-bottom:14px;text-align:center;padding:14px;font-size:12px;line-height:1.9;color:rgba(255,255,255,.85)">
+        📌 این دروس سطح فینال هستند. در آزمون از این مباحث سوال می‌آید. جدول توزیع سوالات را در تب «آزمون» ببین.
       </div>
       <div id="lessonsList"></div>
     </div>
 
     <div id="paneQuiz" hidden>
-      <div class="glass" style="text-align:center;padding:24px 18px">
-        <div style="font-size:56px;margin-bottom:6px">📝</div>
-        <h2 style="margin:0 0 8px;font-size:20px;font-weight:900">آزمون نهایی حرفه‌ای</h2>
-        <p style="color:var(--muted);font-size:12.5px;line-height:1.9;margin:0 0 16px">
-          <b style="color:#ffd700">۲۰ سوال سخت</b> (سطح فینال)<br>
-          ⏱ کل آزمون: <b style="color:#4fd1a1">۲۰ دقیقه</b> — هر سوال: <b style="color:#c9bcff">۵ دقیقه</b><br>
+      <div class="glass" style="text-align:center;padding:22px 16px">
+        <div style="font-size:54px;margin-bottom:6px">📝</div>
+        <h2 style="margin:0 0 8px;font-size:19px;font-weight:900">آزمون جامع فینال</h2>
+        <p style="color:var(--muted);font-size:12px;line-height:1.9;margin:0 0 14px">
+          <b style="color:#ffd700">۲۰ سوال سخت</b> در سطح آزمون نهایی<br>
+          ⏱ کل آزمون: <b style="color:#4fd1a1">۵ دقیقه</b> — ⏱ هر سوال: <b style="color:#c9bcff">۵ دقیقه</b><br>
           🎤 شامل سوالات تلفظ با میکروفن
         </p>
         <div class="glass" style="text-align:right;padding:12px;margin-bottom:14px;font-size:11px">
@@ -202,7 +203,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
           <div id="topicDistribution" style="line-height:2"></div>
         </div>
         <input type="text" class="field" id="studentName" placeholder="نام و نام خانوادگی" maxlength="40">
-        <input type="text" class="field" id="studentClass" placeholder="کلاس (مثلاً: ایمان ۲)" maxlength="20" value="پایه ایمان">
+        <input type="text" class="field" id="studentClass" placeholder="کلاس" maxlength="20" value="پایه ایمان">
         <button class="btn-big gold" id="startQuiz" type="button">🚀 شروع آزمون</button>
       </div>
     </div>
@@ -235,11 +236,11 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
   </section>
 
   <section id="quiz" hidden>
-    <div class="top"><button class="back" id="backQuiz" type="button">→ بازگشت</button><h2>📝 آزمون نهایی</h2></div>
+    <div class="top"><button class="back" id="backQuiz" type="button">→ بازگشت</button><h2>📝 آزمون فینال</h2></div>
     <div class="quiz-header">
-      <span class="quiz-tag" id="qNum">سوال ۱ / ۲۰</span>
+      <span class="quiz-tag" id="qNum">۱ / ۲۰</span>
       <span class="quiz-tag gold" id="qScore">امتیاز: ۰</span>
-      <span class="quiz-tag timer" id="qTimer">۲۰:۰۰</span>
+      <span class="quiz-tag timer" id="qTimer">۰۵:۰۰</span>
       <span class="quiz-tag q-timer" id="qQTimer">⏱ ۰۵:۰۰</span>
     </div>
     <div class="progress-bar"><i id="quizFill"></i></div>
@@ -310,12 +311,12 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
       <p class="cert-sub">Certificate of Achievement</p>
       <div style="font-size:11.5px;color:rgba(255,255,255,.7);margin-bottom:4px">بدین‌وسیله به</div>
       <div class="cert-name" id="certName">—</div>
-      <div class="cert-body">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع حروف و دستور زبان انگلیسی</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
+      <div class="cert-body">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع حروف، دستور زبان و واژگان انگلیسی</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
       <div class="cert-score" id="certScore">نمره: —</div>
       <div class="cert-footer">
         <div class="cert-sign"><div class="name">محمدجواد کجوری</div><div>مدیر استودیو</div><div style="font-size:9px;margin-top:2px" id="certDate">—</div></div>
         <div class="cert-seal">🏆</div>
-        <div class="cert-sign"><div class="name">کلاس ایمان ۱</div><div>دورهٔ آموزشی</div><div style="font-size:9px;margin-top:2px">گواهینامهٔ معتبر</div></div>
+        <div class="cert-sign"><div class="name">پایه ایمان</div><div>دورهٔ آموزشی</div><div style="font-size:9px;margin-top:2px">گواهینامهٔ معتبر</div></div>
       </div>
     </div>
     <div class="save-bar" style="margin-bottom:14px">
@@ -324,18 +325,16 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
     <button class="btn-big" id="backHome" type="button">🏠 بازگشت به خانه</button>
   </section>
 
-  <div class="foot">طراحی و ساخت: <b>محمدجواد کجوری</b><br>© استودیو محمدجواد کجوری — کلاس ایمان ۱</div>
+  <div class="foot">طراحی و ساخت: <b>محمدجواد کجوری</b><br>استودیو محمدجواد کجوری — <b>پایه ایمان</b></div>
 </div>
-
-<div class="toast" id="toast"></div>
 
   <script>
 /* =========================================================
-   داده‌های ۴۰ دسته
+   ۴۰ دسته آموزشی حروف
    ========================================================= */
 const C = {
-  object:{fa:"اشیاء",en:"Objects",emo:"📱🔑",d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت نامه"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
-  animal:{fa:"حیوانات",en:"Animals",emo:"🦁🐘",d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیای دریایی"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
+  object:{fa:"اشیاء",en:"Objects",emo:"📱🔑",d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
+  animal:{fa:"حیوانات",en:"Animals",emo:"🦁🐘",d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیا"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
   bird:{fa:"پرندگان",en:"Birds",emo:"🦅🦜",d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی آبی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","مرغ ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","پرنده چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ"]}},
   fish:{fa:"ماهی‌ها",en:"Fish",emo:"🐟🐠",d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","ماهی حلوا"],I:["Ide","ماهی ایده"],J:["Jellyfish","عروس دریایی"],K:["Koi","ماهی کوئی"],L:["Lobster","لابستر"],M:["Mackerel","ماهی خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ماهی ملکه"],R:["Ray","سفره‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیا"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","ماهی گورخری"]}},
   insect:{fa:"حشرات",en:"Insects",emo:"🐝🦋",d:{A:["Ant","مورچه"],B:["Bee","زنبور"],C:["Cricket","جیرجیرک"],D:["Dragonfly","سنجاقک"],E:["Earwig","گوش‌خیزک"],F:["Firefly","کرم شب‌تاب"],G:["Grasshopper","ملخ"],H:["Hornet","زنبور قرمز"],I:["Isopod","خرخاکی"],J:["June Bug","سوسک خرداد"],K:["Katydid","جیرجیرک برگ"],L:["Ladybug","کفش‌دوزک"],M:["Moth","پروانه شب"],N:["Nymph","شفیره"],O:["Owlfly","جغدپروانه"],P:["Praying Mantis","آخوندک"],Q:["Queen Bee","ملکه زنبور"],R:["Roach","سوسری"],S:["Spider","عنکبوت"],T:["Termite","موریانه"],U:["Underwing","شب‌پره"],V:["Velvet Ant","مورچه مخملی"],W:["Wasp","زنبور وحشی"],X:["Xerces Blue","پروانه آبی"],Y:["Yellow Jacket","زنبور زرد"],Z:["Zebra Butterfly","پروانه گورخری"]}},
@@ -344,7 +343,8 @@ const C = {
   color:{fa:"رنگ‌ها",en:"Colors",emo:"🎨🌈",d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی تند"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی اولترامارین"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی خاکستری"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
   country:{fa:"کشورها",en:"Countries",emo:"🌍🏳️",d:{A:["Argentina","آرژانتین","🇦🇷"],B:["Brazil","برزیل","🇧🇷"],C:["Canada","کانادا","🇨🇦"],D:["Denmark","دانمارک","🇩🇰"],E:["Egypt","مصر","🇪🇬"],F:["France","فرانسه","🇫🇷"],G:["Germany","آلمان","🇩🇪"],H:["Hungary","مجارستان","🇭🇺"],I:["Iran","ایران","🇮🇷"],J:["Japan","ژاپن","🇯🇵"],K:["Kuwait","کویت","🇰🇼"],L:["Lebanon","لبنان","🇱🇧"],M:["Mexico","مکزیک","🇲🇽"],N:["Norway","نروژ","🇳🇴"],O:["Oman","عمان","🇴🇲"],P:["Portugal","پرتغال","🇵🇹"],Q:["Qatar","قطر","🇶🇦"],R:["Russia","روسیه","🇷🇺"],S:["Spain","اسپانیا","🇪🇸"],T:["Turkey","ترکیه","🇹🇷"],U:["Ukraine","اوکراین","🇺🇦"],V:["Venezuela","ونزوئلا","🇻🇪"],W:["Wales","ولز","🏴"],X:["Xinjiang","سین‌کیانگ","🏴"],Y:["Yemen","یمن","🇾🇪"],Z:["Zambia","زامبیا","🇿🇲"]}},
   iranCity:{fa:"شهرهای ایران",en:"Iranian Cities",emo:"🏙️🕌",d:{A:["Ahvaz","اهواز"],B:["Babol","بابل"],C:["Chabahar","چابهار"],D:["Damghan","دامغان"],E:["Esfahan","اصفهان"],F:["Firuzabad","فیروزآباد"],G:["Gorgan","گرگان"],H:["Hamadan","همدان"],I:["Ilam","ایلام"],J:["Jahrom","جهرم"],K:["Kerman","کرمان"],L:["Lahijan","لاهیجان"],M:["Mashhad","مشهد"],N:["Najafabad","نجف‌آباد"],O:["Omidiyeh","امیدیه"],P:["Pakdasht","پاکدشت"],Q:["Qazvin","قزوین"],R:["Rasht","رشت"],S:["Shiraz","شیراز"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xoshkebijar","خشکبیجار"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
-  iranFood:{fa:"غذاهای ایرانی",en:"Iranian Food",emo:"🍚🍢",d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی کباب"],J:["Joojeh Kabab","جوجه‌کباب"],K:["Kookoo Sabzi","کوکو سبزی"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا قاسمی"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج سفید"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک‌پلو"]}},
+  province:{fa:"استان‌های ایران",en:"Iranian Provinces",emo:"🗺️🇮🇷",d:{A:["Alborz","البرز"],B:["Bushehr","بوشهر"],C:["Chaharmahal","چهارمحال"],D:["Deylaman","دیلمان"],E:["East Azerbaijan","آذربایجان شرقی"],F:["Fars","فارس"],G:["Gilan","گیلان"],H:["Hormozgan","هرمزگان"],I:["Ilam","ایلام"],J:["Jiroft","جیرفت"],K:["Kohgiluyeh","کهگیلویه"],L:["Lorestan","لرستان"],M:["Markazi","مرکزی"],N:["North Khorasan","خراسان شمالی"],O:["Ostan Tehran","استان تهران"],P:["Persian Gulf","خلیج فارس"],Q:["Qazvin","قزوین"],R:["Razavi Khorasan","خراسان رضوی"],S:["Sistan","سیستان"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xorasan","خراسان"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
+  iranFood:{fa:"غذاهای ایرانی",en:"Iranian Food",emo:"🍚🍢",d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی"],J:["Joojeh Kabab","جوجه‌کباب"],K:["Kookoo Sabzi","کوکو سبزی"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا قاسمی"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج سفید"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک‌پلو"]}},
   sweet:{fa:"شیرینی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کیک کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","شیرینی زبان"]}},
   drink:{fa:"نوشیدنی‌ها",en:"Drinks",emo:"☕🥤",d:{A:["Americano","آمریکانو"],B:["Beer","آبجو"],C:["Coffee","قهوه"],D:["Doogh","دوغ"],E:["Espresso","اسپرسو"],F:["Frappe","فراپه"],G:["Green Tea","چای سبز"],H:["Hot Chocolate","شکلات داغ"],I:["Iced Tea","آیس تی"],J:["Juice","آبمیوه"],K:["Kombucha","کامبوچا"],L:["Lemonade","لیموناد"],M:["Milk","شیر"],N:["Nectar","نکتار"],O:["Orange Juice","آب پرتقال"],P:["Pepsi","پپسی"],Q:["Quinine","تونیک"],R:["Red Bull","ردبول"],S:["Smoothie","اسموتی"],T:["Tea","چای"],U:["Ume","آب آلو"],V:["Vodka","ودکا"],W:["Water","آب"],X:["Xigua Juice","آب هندوانه"],Y:["Yerba Mate","یربا مات"],Z:["Zamzam","زمزم"]}},
   sport:{fa:"ورزش‌ها",en:"Sports",emo:"⚽🏀",d:{A:["Archery","تیراندازی"],B:["Basketball","بسکتبال"],C:["Cricket","کریکت"],D:["Diving","شیرجه"],E:["Equestrian","سوارکاری"],F:["Football","فوتبال"],G:["Golf","گلف"],H:["Hockey","هاکی"],I:["Ice Skating","اسکیت یخ"],J:["Judo","جودو"],K:["Karate","کاراته"],L:["Long Jump","پرش طول"],M:["Marathon","ماراتن"],N:["Netball","نت‌بال"],O:["Orienteering","جهت‌یابی"],P:["Polo","چوگان"],Q:["Quidditch","کوایدیچ"],R:["Rowing","قایقرانی"],S:["Swimming","شنا"],T:["Tennis","تنیس"],U:["Ultimate Frisbee","فریزبی"],V:["Volleyball","والیبال"],W:["Wrestling","کشتی"],X:["Xare","باسکی"],Y:["Yoga","یوگا"],Z:["Zumba","زومبا"]}},
@@ -375,107 +375,111 @@ const C = {
 };
 
 /* =========================================================
-   ۱۲ درس پیشرفته — مباحث سخت آزمون
+   ۱۲ درس پیشرفته — سطح آزمون فینال
    ========================================================= */
 const LESSONS = [
-  {id:"phonics",title:"آواشناسی پیشرفته",emo:"🔊",desc:"صداهای خاموش، دیفتانگ، و استرس کلمات",
-   body:`• حروف خاموش (Silent Letters):\n   K در Knife، Knee، Know\n   B در Lamb، Comb، Climb\n   W در Write، Wrong، Wrist\n   H در Hour، Honest، Ghost\n\n• دیفتانگ‌ها (Double Vowels):\n   /eɪ/ → A در Cake, Rain\n   /aɪ/ → I در Time, Light\n   /oʊ/ → O در Go, Boat\n   /juː/ → U در Cute, Music\n\n• استرس کلمه (Word Stress):\n   PHO-to-graph (استرس روی اول)\n   pho-TO-gra-pher (استرس روی دوم)\n   pho-to-GRAPH-ic (استرس روی سوم)`},
+  {id:"phonics",title:"آواشناسی پیشرفته",emo:"🔊",desc:"Silent Letters، دیفتانگ‌ها، Stress",
+   body:`• حروف خاموش (Silent Letters):\n   K → Knife, Knee, Know, Knock\n   B → Lamb, Comb, Climb, Debt\n   W → Write, Wrong, Wrist, Wrap\n   H → Hour, Honest, Ghost, Vehicle\n   T → Castle, Listen, Often\n\n• دیفتانگ‌ها (Double Vowels):\n   /eɪ/ → A در Cake, Rain, They\n   /aɪ/ → I در Time, Light, My\n   /oʊ/ → O در Go, Boat, Though\n   /aʊ/ → OU در House, Now\n   /juː/ → U در Cute, Music, Few\n\n• استرس کلمه (Word Stress):\n   PHO-to-graph → عکس\n   pho-TO-gra-pher → عکاس\n   pho-to-GRAPH-ic → عکاسی\n\n• Stress در اسم/فعل:\n   PREsent (اسم) / preSENT (فعل)\n   REcord (اسم) / reCORD (فعل)`},
 
-  {id:"grammar",title:"زمان‌های فعلی",emo:"⏰",desc:"Present Perfect، Past Perfect، Future Perfect",
-   body:`• Present Perfect: have/has + past participle\n   I have eaten. — من خورده‌ام\n   She has finished. — او تمام کرده\n\n• Past Perfect: had + past participle\n   He had left before I arrived.\n   (او قبل از رسیدن من رفته بود)\n\n• Future Perfect: will have + past participle\n   By 2030, I will have graduated.\n   (تا ۲۰۳۰ فارغ‌التحصیل شده‌ام)\n\n• Present Perfect Continuous:\n   have/has been + V-ing\n   I have been studying for 2 hours.`},
+  {id:"grammar",title:"زمان‌های فعلی پیشرفته",emo:"⏰",desc:"Perfect Tenses، Continuous، و ترکیب آن‌ها",
+   body:`• Present Perfect: have/has + past participle\n   I have eaten. — من خورده‌ام\n   She has finished. — او تمام کرده\n\n• Past Perfect: had + past participle\n   He had left before I arrived.\n   (او قبل از رسیدن من رفته بود)\n\n• Future Perfect: will have + past participle\n   By 2030, I will have graduated.\n\n• Present Perfect Continuous:\n   have/has been + V-ing\n   I have been studying for 2 hours.\n\n• Past Perfect Continuous:\n   had been + V-ing\n   She had been waiting for an hour.\n\n• تفاوت Past Simple و Present Perfect:\n   Past Simple → زمان مشخص گذشته\n   I saw him yesterday.\n   Present Perfect → زمان نامشخص\n   I have seen him before.`},
 
-  {id:"conditionals",title:"جملات شرطی",emo:"🔀",desc:"Conditional Sentences — همه انواع",
-   body:`• نوع صفر: If + present, present\n   If you heat water, it boils.\n\n• نوع یکم: If + present, will + V\n   If it rains, I will stay home.\n\n• نوع دوم: If + past, would + V\n   If I were rich, I would travel.\n\n• نوع سوم: If + had + pp, would have + pp\n   If I had studied, I would have passed.\n\n• Mixed: If + had + pp, would + V\n   If I had slept, I would feel better.`},
+  {id:"conditionals",title:"جملات شرطی (شرطی‌های چهارگانه)",emo:"🔀",desc:"Conditional Sentences — همه انواع",
+   body:`• نوع صفر (Zero): If + present, present\n   If you heat water, it boils.\n   (حقیقت علمی)\n\n• نوع یکم (First): If + present, will + V\n   If it rains, I will stay home.\n   (احتمال واقعی)\n\n• نوع دوم (Second): If + past, would + V\n   If I were rich, I would travel.\n   (خیالی در حال)\n   ← در همه ضمایر from were استفاده کن (نه was)\n\n• نوع سوم (Third): If + had + pp, would have + pp\n   If I had studied, I would have passed.\n   (خیالی در گذشته)\n\n• Mixed: If + had + pp, would + V\n   If I had slept, I would feel better now.\n   (گذشته → حال)`},
 
-  {id:"passive",title:"جملات مجهول",emo:"🔄",desc:"Passive Voice در همه زمان‌ها",
-   body:`• ساختار: be + past participle\n\n• حال ساده: English is spoken here.\n• گذشته ساده: The book was written in 1990.\n• حال کامل: The work has been done.\n• گذشته کامل: It had been finished.\n• آینده: It will be completed.\n• Modal: It can be done / should be done.\n\n• در Passive، فاعل اصلی حذف می‌شود یا با "by" می‌آید:\n   Ali wrote the letter.\n   The letter was written by Ali.`},
+  {id:"passive",title:"جملات مجهول (Passive)",emo:"🔄",desc:"Passive Voice در همه زمان‌ها",
+   body:`• ساختار کلی: be + past participle\n\n• حال ساده: English is spoken here.\n• گذشته ساده: The book was written in 1990.\n• حال کامل: The work has been done.\n• گذشته کامل: It had been finished.\n• آینده: It will be completed.\n• Modal: It can be done / should be done.\n• Perfect Modal: It must have been done.\n\n• در Passive، فاعل اصلی با "by" می‌آید:\n   Ali wrote the letter.\n   → The letter was written by Ali.\n\n• اگر فاعل نامشخص یا بی‌اهمیت باشد، حذف می‌شود:\n   Someone stole my bike.\n   → My bike was stolen.`},
 
   {id:"reported",title:"نقل قول غیرمستقیم",emo:"💬",desc:"Reported Speech + تغییر زمان‌ها",
-   body:`• قاعده کلی: یک زمان به عقب برمی‌گردد\n   Present → Past\n   Past → Past Perfect\n   will → would\n   can → could\n   may → might\n\n• مثال:\n   "I am tired." → He said he was tired.\n   "I will come." → She said she would come.\n\n• سوالات:\n   "Where do you live?" → He asked where I lived.`},
+   body:`• قاعده: یک زمان به عقب برمی‌گردد\n   Present → Past\n   Past → Past Perfect\n   will → would\n   can → could\n   may → might\n   must → had to\n\n• مثال:\n   "I am tired." → He said he was tired.\n   "I will come." → She said she would come.\n   "I have finished." → He said he had finished.\n\n• سوالات:\n   "Where do you live?"\n   → He asked where I lived.\n   (سوال + تبدیل به جمله خبری)\n\n• دستورات:\n   "Close the door!"\n   → He told me to close the door.`},
 
-  {id:"vocab",title:"واژگان پیشرفته",emo:"📚",desc:"کلمات دشوار و ریشه‌شناسی",
-   body:`• پیشوندها (Prefixes):\n   un- happy → unhappy (ناراضی)\n   re- do → redo (دوباره انجام دادن)\n   dis- agree → disagree (مخالف بودن)\n   pre- historic → prehistoric (پیش از تاریخ)\n\n• پسوندها (Suffixes):\n   -ness: happiness (خوشحالی)\n   -ment: development (توسعه)\n   -tion: creation (آفرینش)\n   -able: readable (خواندنی)\n\n• کلمات هم‌آوا (Homophones):\n   their / there / they're\n   to / too / two\n   your / you're`},
+  {id:"vocab",title:"واژگان پیشرفته",emo:"📚",desc:"Prefixes، Suffixes، Homophones",
+   body:`• پیشوندها (Prefixes):\n   un- → unhappy (ناراضی)\n   re- → redo (دوباره)\n   dis- → disagree (مخالف)\n   pre- → prehistoric (پیش از تاریخ)\n   mis- → misunderstand (بدفهمیدن)\n   over- → overwork (بیش از حد کار کردن)\n\n• پسوندها (Suffixes):\n   -ness → happiness (خوشحالی)\n   -ment → development (توسعه)\n   -tion → creation (آفرینش)\n   -able → readable (خواندنی)\n   -ful → beautiful (زیبا)\n\n• هم‌آوا (Homophones):\n   their / there / they're\n   to / too / two\n   your / you're\n   its / it's\n   know / no\n   write / right`},
 
   {id:"idioms",title:"اصطلاحات رایج",emo:"🎭",desc:"Idioms پرکاربرد انگلیسی",
-   body:`• Break the ice — یخ جمع را شکستن\n• Piece of cake — مثل آب خوردن\n• Hit the books — درس خواندن جدی\n• Under the weather — ناخوش\n• Once in a blue moon — به ندرت\n• Cost an arm and a leg — خیلی گران\n• Let the cat out of the bag — لو دادن\n• Bite the bullet — تحمل کردن سختی\n• Kill two birds with one stone — با یک تیر دو نشان`},
+   body:`• Break the ice — یخ جمع را شکستن\n• Piece of cake — مثل آب خوردن\n• Hit the books — درس خواندن جدی\n• Under the weather — ناخوش\n• Once in a blue moon — به ندرت\n• Cost an arm and a leg — خیلی گران\n• Let the cat out of the bag — لو دادن\n• Bite the bullet — تحمل کردن سختی\n• Kill two birds with one stone — با یک تیر دو نشان\n• The ball is in your court — تصمیم با توست\n• Pull someone's leg — سر کسی شوخی کردن\n• Hit the sack — رفتن به رختخواب`},
 
   {id:"phrasal",title:"افعال عبارتی",emo:"🧩",desc:"Phrasal Verbs ضروری",
-   body:`• give up — تسلیم شدن\n• look after — مراقبت کردن\n• put off — به تعویق انداختن\n• turn on/off — روشن/خاموش کردن\n• come across — تصادفاً دیدن\n• run out of — تمام کردن\n• get along with — کنار آمدن\n• take care of — رسیدگی کردن\n• look forward to — مشتاق بودن\n• carry on — ادامه دادن`},
+   body:`• give up — تسلیم شدن، رها کردن\n• look after — مراقبت کردن\n• put off — به تعویق انداختن\n• turn on/off — روشن/خاموش کردن\n• come across — تصادفاً دیدن\n• run out of — تمام کردن\n• get along with — کنار آمدن\n• take care of — رسیدگی کردن\n• look forward to — مشتاق بودن (بعدش V-ing)\n• carry on — ادامه دادن\n• bring up — بزرگ کردن بچه\n• figure out — فهمیدن`},
 
-  {id:"prepositions",title:"حروف اضافه",emo:"🧭",desc:"Prepositions و کاربردهایشان",
-   body:`• in / on / at (زمان):\n   in: ماه، سال، فصل — in May, in 2020\n   on: روز، تاریخ — on Monday, on May 5\n   at: ساعت، لحظه — at 6pm, at noon\n\n• in / on / at (مکان):\n   in: داخل فضا — in the room\n   on: سطح — on the table\n   at: نقطه — at the door\n\n• in / on / at (وسایل):\n   in a car, on a bus, at school`},
+  {id:"prepositions",title:"حروف اضافه",emo:"🧭",desc:"Prepositions زمان و مکان",
+   body:`• زمان (in/on/at):\n   in → ماه، سال، فصل: in May, in 2020, in summer\n   on → روز، تاریخ: on Monday, on May 5\n   at → ساعت، لحظه: at 6pm, at noon, at night\n\n• مکان (in/on/at):\n   in → داخل فضا: in the room, in Tehran\n   on → سطح: on the table, on the wall\n   at → نقطه: at the door, at the station\n\n• وسایل نقلیه:\n   in a car, in a taxi\n   on a bus, on a train, on a plane\n\n• سایر ترکیبات:\n   by mistake, on purpose, in love, at risk`},
 
   {id:"irregular",title:"افعال بی‌قاعده",emo:"📝",desc:"مهم‌ترین Irregular Verbs",
-   body:`• go → went → gone\n• come → came → come\n• see → saw → seen\n• do → did → done\n• take → took → taken\n• give → gave → given\n• write → wrote → written\n• speak → spoke → spoken\n• break → broke → broken\n• choose → chose → chosen\n• forget → forgot → forgotten\n• know → knew → known\n• begin → began → begun\n• drink → drank → drunk\n• sing → sang → sung`},
+   body:`• go → went → gone\n• come → came → come\n• see → saw → seen\n• do → did → done\n• take → took → taken\n• give → gave → given\n• write → wrote → written\n• speak → spoke → spoken\n• break → broke → broken\n• choose → chose → chosen\n• forget → forgot → forgotten\n• know → knew → known\n• begin → began → begun\n• drink → drank → drunk\n• sing → sang → sung\n• swim → swam → swum\n• run → ran → run\n• read → read → read (تلفظ تغییر می‌کند)`},
 
   {id:"pronunciation",title:"تلفظ و لهجه",emo:"🎤",desc:"نکات کلیدی تلفظ آمریکایی",
-   body:`• حرف T در وسط کلمه:\n   Water → "wader" (فلپ)\n   Better → "bedder"\n\n• -ed در آخر افعال:\n   /t/ بعد از صامت‌های بی‌صدا: walked\n   /d/ بعد از صدادارها: played\n   /ɪd/ بعد از t یا d: wanted, needed\n\n• استرس جملات:\n   جمله‌ها هم کلمه‌ی مهم دارند:\n   I LOVE you. (عشق مهمه)\n   I love YOU. (تو مهمی)\n\n• لحن (Intonation):\n   سوال بله/خیر → بالا رفتن لحن در انتها\n   سوال Wh → پایین آمدن لحن`},
+   body:`• حرف T در وسط کلمه:\n   Water → "wader" (فلپ)\n   Better → "bedder"\n   Butter → "buder"\n\n• -ed در آخر افعال:\n   /t/ بعد از صامت‌های بی‌صدا: walked, stopped\n   /d/ بعد از صدادارها: played, loved\n   /ɪd/ بعد از t یا d: wanted, needed\n\n• استرس جملات:\n   I LOVE you. (عشق مهمه)\n   I love YOU. (تو مهمی)\n\n• لحن (Intonation):\n   سوال بله/خیر → بالا رفتن لحن در انتها\n   سوال Wh → پایین آمدن لحن\n\n• حروف خاموش:\n   -e آخر کلمه معمولاً خاموش: hope, name\n   gh در night, light, though`},
 
-  {id:"writing",title:"نگارش و املا",emo:"✍️",desc:"قواعد نگارشی و املای دشوار",
-   body:`• حروف بزرگ (Capitalization):\n   اول جمله، اسم‌های خاص، ضمیر I\n\n• علامت‌گذاری (Punctuation):\n   کاما برای فهرست و مکث\n   نقطه‌ویرگول بین دو جملهٔ مرتبط\n   دو نقطه قبل از توضیح\n\n• کلمات دشوار:\n   receive (نه recieve)\n   necessary (نه neccessary)\n   accommodate (دو c، دو m)\n   definitely (نه definately)\n   separate (نه seperate)`}
+  {id:"writing",title:"نگارش و املا",emo:"✍️",desc:"قواعد نگارشی و کلمات دشوار",
+   body:`• حروف بزرگ (Capitalization):\n   اول جمله، اسم‌های خاص، ضمیر I\n   محمدجواد، ایران، Tehran\n\n• علامت‌گذاری (Punctuation):\n   کاما، نقطه، نقطه‌ویرگول، دو نقطه\n   سوال، تعجب، علامت نقل قول\n\n• کلمات دشوار (Spelling):\n   receive (نه recieve)\n   necessary (نه neccessary)\n   accommodate (دو c، دو m)\n   definitely (نه definately)\n   separate (نه seperate)\n   tomorrow (دو r، یک m)\n   beautiful (beau-ti-ful)\n   business (نه buisness)`}
 ];
 
 /* =========================================================
    توزیع سوالات
    ========================================================= */
 const TOPIC_DIST = {
-  "آواشناسی و تلفظ":4,
+  "آواشناسی و تلفظ":3,
   "دستور زبان":4,
-  "واژگان پیشرفته":3,
+  "واژگان و معانی":3,
   "اصطلاحات و افعال عبارتی":3,
   "حروف اضافه":2,
-  "تلفظ با میکروفن":4
+  "تلفظ با میکروفن":5
 };
 
 /* =========================================================
-   ۲۰ سوال سخت — با پشتیبانی از سوال تلفظ (میکروفن)
-   type: "mc" = چند گزینه‌ای، type: "mic" = تلفظ
+   ۲۰ سوال فینال سخت
    ========================================================= */
 const QUIZ = [
   {topic:"آواشناسی و تلفظ",type:"mc",
    q:"حرف کدام گزینه در کلمهٔ «Knife» خاموش است؟",
    o:["K","N","I","F"],a:0,
-   exp:"حرف K در ابتدای کلمات Knife, Knee, Know, Knock خاموش است و تلفظ نمی‌شود."},
+   exp:"حرف K در ابتدای Knife, Knee, Know, Knock خاموش است و تلفظ نمی‌شود."},
 
   {topic:"آواشناسی و تلفظ",type:"mc",
    q:"کدام کلمه دارای صدای دیفتانگ /aɪ/ است؟",
    o:["Time","Team","Tame","Tom"],a:0,
-   exp:"در کلمهٔ Time، حرف i صدای /aɪ/ می‌دهد. Team صدای /iː/، Tame صدای /eɪ/، و Tom صدای /ɒ/ دارد."},
+   exp:"در Time، i صدای /aɪ/ دارد. Team /iː/، Tame /eɪ/، Tom /ɒ/."},
+
+  {topic:"آواشناسی و تلفظ",type:"mc",
+   q:"کدام کلمه هم‌آوا (Homophone) کلمهٔ «their» نیست؟",
+   o:["there","they're","care","هیچ‌کدام"],a:2,
+   exp:"their, there, they're هم‌آوا هستند. care صدای /eər/ دارد و متفاوت است."},
 
   {topic:"دستور زبان",type:"mc",
    q:"کدام جمله صحیح است؟",
    o:["I have seen him yesterday","I saw him yesterday","I have saw him","I seen him yesterday"],a:1,
-   exp:"با قید زمان گذشتهٔ مشخص (yesterday)، باید از Past Simple استفاده کنیم: I saw him yesterday."},
+   exp:"با قید زمان گذشتهٔ مشخص (yesterday) باید از Past Simple استفاده کنیم."},
 
   {topic:"دستور زبان",type:"mc",
    q:"If I ___ rich, I would travel the world.",
    o:["am","was","were","be"],a:2,
-   exp:"شرطی نوع دوم: If + past simple + would + V. برای همهٔ ضمایر، از were استفاده می‌شود (If I were rich)."},
+   exp:"شرطی نوع دوم: If + past simple + would + V. برای همه ضمایر از were استفاده می‌شود."},
 
   {topic:"دستور زبان",type:"mc",
    q:"The letter ___ by Ali last week.",
    o:["wrote","was written","has written","is writing"],a:1,
-   exp:"مجهول در گذشته: was/were + past participle. نوشتن → wrote → written. پس was written صحیح است."},
+   exp:"مجهول در گذشته: was/were + past participle. write → wrote → written."},
 
   {topic:"دستور زبان",type:"mc",
    q:"By the time we arrived, the movie ___.",
    o:["started","has started","had started","was starting"],a:2,
-   exp:"Past Perfect برای عملی که قبل از عمل گذشتهٔ دیگر رخ داده: had + past participle. فیلم قبل از رسیدن ما شروع شده بود."},
+   exp:"Past Perfect برای عملی که قبل از عمل گذشتهٔ دیگر رخ داده: had + pp."},
 
-  {topic:"واژگان پیشرفته",type:"mc",
+  {topic:"واژگان و معانی",type:"mc",
    q:"معنی «under the weather» چیست؟",
    o:["زیر باران","خوشحال","ناخوش و مریض","در سفر"],a:2,
-   exp:"«under the weather» یک اصطلاح است به معنی کسالت و ناخوشی. مثال: I'm feeling under the weather today."},
+   exp:"«under the weather» یک اصطلاح به معنی کسالت و ناخوشی است."},
 
-  {topic:"واژگان پیشرفته",type:"mc",
+  {topic:"واژگان و معانی",type:"mc",
    q:"پیشوند «dis-» در کلمهٔ «disagree» چه معنایی می‌دهد؟",
    o:["دوباره","مخالف","قبل","بیشتر"],a:1,
-   exp:"پیشوند dis- معنای منفی و مخالف می‌دهد: disagree (مخالف بودن)، disappear (ناپدید شدن)، dislike (بد آمدن)."},
+   exp:"پیشوند dis- معنای منفی و مخالف می‌دهد: disagree, disappear, dislike."},
 
-  {topic:"واژگان پیشرفته",type:"mc",
+  {topic:"واژگان و معانی",type:"mc",
    q:"کدام کلمه درست املاء شده است؟",
    o:["recieve","neccessary","accommodate","definately"],a:2,
-   exp:"accommodate درست است (دو c، دو m). بقیه اشتباهند: receive، necessary، definitely."},
+   exp:"accommodate درست است (دو c، دو m). بقیه اشتباهند."},
 
   {topic:"اصطلاحات و افعال عبارتی",type:"mc",
    q:"«look after» یعنی چه؟",
@@ -485,53 +489,48 @@ const QUIZ = [
   {topic:"اصطلاحات و افعال عبارتی",type:"mc",
    q:"کدام عبارت یعنی «به تعویق انداختن»؟",
    o:["put on","put off","put up","put out"],a:1,
-   exp:"put off = به تعویق انداختن. put on = پوشیدن، put up = نصب کردن، put out = خاموش کردن آتش."},
+   exp:"put off = به تعویق انداختن. put on = پوشیدن، put up = نصب، put out = خاموش."},
 
   {topic:"اصطلاحات و افعال عبارتی",type:"mc",
    q:"معنی «It costs an arm and a leg» چیست؟",
    o:["خیلی خطرناک است","خیلی گران است","خیلی ارزان است","خیلی آسان است"],a:1,
-   exp:"این اصطلاح یعنی چیزی بسیار گران است. مثال: This phone costs an arm and a leg."},
+   exp:"این اصطلاح یعنی چیزی بسیار گران است."},
 
   {topic:"حروف اضافه",type:"mc",
    q:"کدام صحیح است؟ «I'll see you ___ Friday.»",
    o:["in","on","at","by"],a:1,
-   exp:"برای روزهای هفته از on استفاده می‌شود: on Friday, on Monday. برای ماه و سال: in. برای ساعت: at."},
+   exp:"برای روزهای هفته از on استفاده می‌شود: on Friday, on Monday."},
 
   {topic:"حروف اضافه",type:"mc",
    q:"کدام جمله صحیح است؟",
    o:["I arrived in the airport","I arrived at the airport","I arrived on the airport","I arrived to the airport"],a:1,
-   exp:"برای مکان‌های خاص (فرودگاه، ایستگاه، خانه) از at استفاده می‌شود: at the airport."},
+   exp:"برای مکان‌های خاص از at استفاده می‌شود: at the airport, at the station."},
 
-  {topic:"دستور زبان",type:"mc",
-   q:"He said, “I will call you.” → He said he ___ call me.",
-   o:["will","would","can","did"],a:1,
-   exp:"در نقل قول غیرمستقیم، will به would تبدیل می‌شود."},
-
-  {topic:"واژگان پیشرفته",type:"mc",
-   q:"کدام کلمه هم‌آوا (Homophone) کلمهٔ «their» نیست؟",
-   o:["there","they're","care","هیچکدام"],a:2,
-   exp:"their, there, they're هم‌آوا هستند (یکسان تلفظ می‌شوند). care صدای متفاوتی دارد."},
-
-  /* ====== سوالات میکروفن ====== */
+  /* ====== ۵ سوال میکروفن ====== */
   {topic:"تلفظ با میکروفن",type:"mic",
    q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
    en:"I have lived in Tehran for ten years.",
-   exp:"به استرس کلمات توجه کن: I HAVE lived in teh-RAAN for TEN years. کلمات کلیدی را واضح‌تر بگو."},
+   exp:"به استرس کلمات توجه کن: I HAVE lived in teh-RAAN for TEN years."},
 
   {topic:"تلفظ با میکروفن",type:"mic",
    q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
    en:"She doesn't know how to pronounce that word.",
-   exp:"به صدای /ʃ/ در she و /aʊ/ در how و pronounce توجه کن. doesnt = دازنت، نه دازِنت."},
+   exp:"به /ʃ/ در she و /aʊ/ در how و pronounce توجه کن. doesnt = دازنت."},
 
   {topic:"تلفظ با میکروفن",type:"mic",
    q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
    en:"Could you please pass me the butter?",
-   exp:"در Could، حرف l خاموش است: /kʊd/. در butter، t وسط بین دو صدا به d تبدیل می‌شود: /ˈbʌdər/."},
+   exp:"در Could، حرف l خاموش: /kʊd/. در butter، t به d تبدیل: /ˈbʌdər/."},
 
   {topic:"تلفظ با میکروفن",type:"mic",
    q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
    en:"I'm looking forward to seeing you again.",
-   exp:"looking forward = لوکینگ فوروِرد. to اینجا /tə/ تلفظ می‌شود، نه /tuː/."}
+   exp:"looking forward = لوکینگ فوروِرد. to اینجا /tə/ تلفظ می‌شود."},
+
+  {topic:"تلفظ با میکروفن",type:"mic",
+   q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
+   en:"Practice makes perfect, so keep trying every day.",
+   exp:"به استرس در prac-TICE و PER-fect و EV-ery توجه کن."}
 ];
 </script>
 
@@ -558,6 +557,21 @@ function fmtTime(sec){
   return `${m}:${s}`;
 }
 
+function nowFa(){
+  return new Date().toLocaleDateString("fa-IR");
+}
+function nowTimeFa(){
+  return new Date().toLocaleTimeString("fa-IR", {hour:"2-digit", minute:"2-digit", second:"2-digit"});
+}
+function timeOnlyFa(ts){
+  return new Date(ts).toLocaleTimeString("fa-IR", {hour:"2-digit", minute:"2-digit", second:"2-digit"});
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c =>
+    ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
 /* ---------- ستاره‌ها ---------- */
 (function stars(){
   const box = $("#stars");
@@ -573,9 +587,13 @@ function fmtTime(sec){
   }
 })();
 
-/* ---------- صدا ---------- */
+/* =========================================================
+   صدا (Speech Synthesis)
+   ========================================================= */
 let voices = [];
-function loadVoices(){ if("speechSynthesis" in window) voices = speechSynthesis.getVoices(); }
+function loadVoices(){
+  if("speechSynthesis" in window) voices = speechSynthesis.getVoices();
+}
 loadVoices();
 if("speechSynthesis" in window) speechSynthesis.onvoiceschanged = loadVoices;
 
@@ -584,7 +602,7 @@ function speak(text, btn){
   try{
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US"; u.rate = .85;
+    u.lang = "en-US"; u.rate = .85; u.pitch = 1; u.volume = 1;
     if(!voices.length) voices = speechSynthesis.getVoices();
     const v = voices.find(x=>x.lang==="en-US") || voices.find(x=>x.lang.startsWith("en"));
     if(v) u.voice = v;
@@ -600,7 +618,10 @@ function speak(text, btn){
 let audioUnlocked = false;
 function unlockAudio(){
   if(audioUnlocked) return; audioUnlocked = true;
-  try{ const u = new SpeechSynthesisUtterance(""); u.volume=0; speechSynthesis.speak(u); speechSynthesis.cancel(); loadVoices(); }catch(e){}
+  try{
+    const u = new SpeechSynthesisUtterance(""); u.volume = 0;
+    speechSynthesis.speak(u); speechSynthesis.cancel(); loadVoices();
+  }catch(e){}
 }
 document.addEventListener("touchstart", unlockAudio, {once:true});
 document.addEventListener("click", unlockAudio, {once:true});
@@ -737,14 +758,14 @@ $("#backLearn").addEventListener("click", ()=>{
 });
 
 /* =========================================================
-   دروس
+   دروس پیشرفته
    ========================================================= */
 const lessonsList = $("#lessonsList");
 LESSONS.forEach(l=>{
   const card = document.createElement("div");
   card.className = "lesson-card";
   card.innerHTML = `
-    <h3>${l.emo} ${l.title} <span class="tag">مهم برای آزمون</span></h3>
+    <h3>${l.emo} ${l.title} <span class="tag">سطح فینال</span></h3>
     <p>${l.desc}</p>`;
   card.addEventListener("click", ()=>openLesson(l.id));
   lessonsList.appendChild(card);
@@ -756,7 +777,7 @@ function openLesson(id){
   if(!l) return;
   currentLesson = l;
   $("#lessonTitle").textContent = l.emo + " " + l.title;
-  $("#lessonContent").innerHTML = `<div class="lesson-body">${l.body}</div>`;
+  $("#lessonContent").innerHTML = `<div class="lesson-body">${escapeHtml(l.body)}</div>`;
   $("#home").hidden = true;
   $("#lessonPage").hidden = false;
   window.scrollTo(0,0);
@@ -795,561 +816,14 @@ $("#saveLesson").addEventListener("click", ()=>{
 })();
 
 /* =========================================================
-   آزمون
-   ========================================================= */
-const quizState = {
-  idx:0, score:0, answered:false,
-  student:"", studentClass:"", startTime:0, endTime:0,
-  totalSec:20*60, totalLeft:20*60,
-  qSec:5*60, qLeft:5*60,
-  totalTimer:null, qTimer:null,
-  results:[],           // {q, correct, userAnswer, topic, exp}
-  micRecognition:null,
-  micRecording:false
-};
-
-$("#startQuiz").addEventListener("click", ()=>{
-  const name = $("#studentName").value.trim();
-  const cls = $("#studentClass").value.trim() || "پایه ایمان";
-  if(name.length < 2){ toast("نام خود را وارد کن"); $("#studentName").focus(); return; }
-
-  quizState.student = name;
-  quizState.studentClass = cls;
-  quizState.idx = 0;
-  quizState.score = 0;
-  quizState.answered = false;
-  quizState.results = [];
-  quizState.startTime = Date.now();
-  quizState.totalLeft = 20*60;
-  quizState.qLeft = 5*60;
-
-  $("#home").hidden = true;
-  $("#play").hidden = true;
-  $("#lessonPage").hidden = true;
-  $("#quiz").hidden = false;
-  $("#quizResult").hidden = true;
-  $("#report").hidden = true;
-  $("#cert").hidden = true;
-  $("#answers").hidden = true;
-
-  renderQuestion();
-  startTotalTimer();
-  window.scrollTo(0,0);
-});
-
-function startTotalTimer(){
-  clearInterval(quizState.totalTimer);
-  updateTotalTimerUI();
-  quizState.totalTimer = setInterval(()=>{
-    quizState.totalLeft--;
-    updateTotalTimerUI();
-    if(quizState.totalLeft <= 0){
-      clearInterval(quizState.totalTimer);
-      clearInterval(quizState.qTimer);
-      finishQuiz(true);
-    }
-  }, 1000);
-}
-
-function updateTotalTimerUI(){
-  const el = $("#qTimer");
-  el.textContent = fmtTime(quizState.totalLeft);
-  el.classList.remove("warn","danger");
-  if(quizState.totalLeft <= 120) el.classList.add("danger");
-  else if(quizState.totalLeft <= 300) el.classList.add("warn");
-}
-
-function startQTimer(){
-  clearInterval(quizState.qTimer);
-  quizState.qLeft = 5*60;
-  updateQTimerUI();
-  quizState.qTimer = setInterval(()=>{
-    quizState.qLeft--;
-    updateQTimerUI();
-    if(quizState.qLeft <= 0){
-      clearInterval(quizState.qTimer);
-      if(!quizState.answered){
-        answerQuestion(-1, null, true); // انقضا
-      }
-    }
-  }, 1000);
-}
-
-function updateQTimerUI(){
-  const el = $("#qQTimer");
-  el.textContent = "⏱ " + fmtTime(quizState.qLeft);
-  el.classList.remove("warn");
-  if(quizState.qLeft <= 60) el.classList.add("warn");
-}
-
-function renderQuestion(){
-  const q = QUIZ[quizState.idx];
-  $("#qNum").textContent = `سوال ${fa(quizState.idx+1)} / ${fa(QUIZ.length)}`;
-  $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
-  $("#quizFill").style.width = ((quizState.idx)/QUIZ.length*100) + "%";
-  $("#qTopic").textContent = q.topic;
-  $("#qText").textContent = q.q;
-
-  const body = $("#qBody");
-  body.innerHTML = "";
-
-  if(q.type === "mc"){
-    const optsEl = document.createElement("div");
-    optsEl.className = "quiz-options";
-    optsEl.id = "qOpts";
-    q.o.forEach((opt, i)=>{
-      const b = document.createElement("button");
-      b.type = "button"; b.className = "quiz-opt"; b.textContent = opt;
-      b.addEventListener("click", ()=>answerQuestion(i, b));
-      optsEl.appendChild(b);
-    });
-    body.appendChild(optsEl);
-  } else if(q.type === "mic"){
-    const box = document.createElement("div");
-    box.className = "mic-box";
-    box.innerHTML = `
-      <div class="hint">🎤 روی دکمهٔ زیر بزن، سپس جمله را بلند و واضح تلفظ کن، بعد دوباره روی دکمه بزن تا نمره‌بندی شود.</div>
-      <div class="en-sentence">${q.en}</div>
-      <button type="button" class="mic-btn" id="micBtn">
-        <span>🎤</span>
-        <span class="lbl">شروع ضبط</span>
-      </button>
-      <div class="mic-status" id="micStatus">آماده</div>
-      <button type="button" class="btn-sm" id="hearIt" style="margin-top:10px">🔊 نمونه را بشنو</button>
-    `;
-    body.appendChild(box);
-
-    $("#hearIt").addEventListener("click", ()=>speak(q.en));
-
-    const micBtn = $("#micBtn");
-    micBtn.addEventListener("click", ()=>toggleMic(q));
-
-    // اگه SpeechRecognition نبود، پیام بده
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if(!SR){
-      $("#micStatus").textContent = "⚠️ مرورگر شما از تشخیص گفتار پشتیبانی نمی‌کند — نمرهٔ این سوال رایگان گرفته می‌شود.";
-      $("#micStatus").className = "mic-status error";
-    }
-  }
-
-  quizState.answered = false;
-  startQTimer();
-}
-
-function toggleMic(q){
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if(!SR){
-    // نمرهٔ رایگان در صورت عدم پشتیبانی
-    answerQuestion(1, null, false, true);
-    return;
-  }
-
-  if(quizState.micRecording){
-    // توقف و بررسی
-    try{ quizState.micRecognition.stop(); }catch(e){}
-    quizState.micRecording = false;
-    $("#micBtn").classList.remove("recording");
-    $("#micBtn").querySelector(".lbl").textContent = "شروع ضرب";
-    $("#micStatus").textContent = "در حال بررسی تلفظ…";
-    $("#micStatus").className = "mic-status";
-    return;
-  }
-
-  const rec = new SR();
-  rec.lang = "en-US";
-  rec.interimResults = false;
-  rec.maxAlternatives = 5;
-  rec.continuous = false;
-
-  quizState.micRecognition = rec;
-  quizState.micRecording = true;
-  $("#micBtn").classList.add("recording");
-  $("#micBtn").querySelector(".lbl").textContent = "توقف و نمره";
-  $("#micStatus").textContent = "🎙️ در حال گوش دادن… بلند تلفظ کن";
-  $("#micStatus").className = "mic-status listening";
-
-  rec.onresult = (event)=>{
-    const heard = event.results[0][0].transcript.toLowerCase().trim();
-    evaluatePronunciation(q, heard);
-  };
-
-  rec.onerror = ()=>{
-    $("#micStatus").textContent = "⚠️ خطا در ضبط. دوباره امتحان کن.";
-    $("#micStatus").className = "mic-status error";
-    quizState.micRecording = false;
-    $("#micBtn").classList.remove("recording");
-    $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
-  };
-
-  rec.onend = ()=>{
-    quizState.micRecording = false;
-    $("#micBtn").classList.remove("recording");
-    $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
-  };
-
-  try{ rec.start(); }
-  catch(e){
-    quizState.micRecording = false;
-    $("#micBtn").classList.remove("recording");
-  }
-}
-
-/* شباهت دو رشته (Levenshtein-based) */
-function similarity(a, b){
-  a = a.replace(/[^a-z\s]/g,"").toLowerCase().trim();
-  b = b.replace(/[^a-z\s]/g,"").toLowerCase().trim();
-  if(!a || !b) return 0;
-  const m = a.length, n = b.length;
-  const dp = Array.from({length:m+1}, ()=>new Array(n+1).fill(0));
-  for(let i=0;i<=m;i++) dp[i][0] = i;
-  for(let j=0;j<=n;j++) dp[0][j] = j;
-  for(let i=1;i<=m;i++){
-    for(let j=1;j<=n;j++){
-      dp[i][j] = Math.min(
-        dp[i-1][j]+1,
-        dp[i][j-1]+1,
-        dp[i-1][j-1] + (a[i-1]===b[j-1] ? 0 : 1)
-      );
-    }
-  }
-  return 1 - dp[m][n] / Math.max(m, n);
-}
-
-function evaluatePronunciation(q, heard){
-  const target = q.en.toLowerCase();
-  const sim = similarity(target, heard);
-  let correct = false;
-  let score = 0;
-  let msg = "";
-
-  if(sim >= 0.75){ correct = true; score = 1; msg = `✅ عالی! شباهت: ${fa(Math.round(sim*100))}%`; }
-  else if(sim >= 0.5){ correct = false; score = 0; msg = `⚠️ نزدیک بود. شباهت: ${fa(Math.round(sim*100))}% — دوباره تلاش کن.`; }
-  else { correct = false; score = 0; msg = `❌ تلفظ صحیح نبود. شباهت: ${fa(Math.round(sim*100))}%.`; }
-
-  $("#micStatus").textContent = msg + `\nشنیده‌شده: "${heard}"`;
-  $("#micStatus").className = "mic-status " + (correct ? "" : "error");
-
-  // ذخیره و برو جلو
-  setTimeout(()=>{
-    answerQuestion(score, null, false, false, heard);
-  }, 1200);
-}
-
-function answerQuestion(i, btn, timeout=false, freeScore=false, heard=null){
-  if(quizState.answered) return;
-  quizState.answered = true;
-  clearInterval(quizState.qTimer);
-
-  const q = QUIZ[quizState.idx];
-  let correct = false;
-  let userAnswer = "";
-
-  if(q.type === "mc"){
-    if(timeout || i < 0){
-      correct = false;
-      userAnswer = "(زمان تمام شد)";
-    } else {
-      correct = (i === q.a);
-      userAnswer = q.o[i];
-      const allOpts = document.querySelectorAll("#qBody .quiz-opt");
-      allOpts.forEach((b, idx)=>{
-        b.disabled = true;
-        if(idx === q.a) b.classList.add("correct");
-        else if(idx === i && !correct) b.classList.add("wrong");
-      });
-    }
-  } else if(q.type === "mic"){
-    if(freeScore){ correct = true; userAnswer = "(بدون پشتیبانی مرورگر)"; }
-    else if(timeout){ correct = false; userAnswer = "(زمان تمام شد)"; }
-    else { correct = (i === 1); userAnswer = heard || "(نامشخص)"; }
-  }
-
-  if(correct) quizState.score++;
-
-  quizState.results.push({
-    q: q.type === "mic" ? q.q + " — " + q.en : q.q,
-    correct,
-    userAnswer,
-    correctAnswer: q.type === "mc" ? q.o[q.a] : q.en,
-    topic: q.topic,
-    exp: q.exp
-  });
-
-  $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
-
-  setTimeout(()=>{
-    quizState.idx++;
-    if(quizState.idx < QUIZ.length){
-      renderQuestion();
-    } else {
-      finishQuiz(false);
-    }
-  }, 900);
-}
-
-/* =========================================================
-   پایان آزمون
-   ========================================================= */
-function finishQuiz(timeout=false){
-  clearInterval(quizState.totalTimer);
-  clearInterval(quizState.qTimer);
-  quizState.endTime = Date.now();
-
-  // اگر سوالاتی بی‌جواب ماندند
-  while(quizState.idx < QUIZ.length){
-    const q = QUIZ[quizState.idx];
-    quizState.results.push({
-      q: q.type === "mic" ? q.q + " — " + q.en : q.q,
-      correct: false,
-      userAnswer: "(بی‌پاسخ)",
-      correctAnswer: q.type === "mc" ? q.o[q.a] : q.en,
-      topic: q.topic,
-      exp: q.exp
-    });
-    quizState.idx++;
-  }
-
-  $("#quiz").hidden = true;
-  $("#quizResult").hidden = false;
-  window.scrollTo(0,0);
-
-  const total = QUIZ.length;
-  const score = quizState.score;
-  const pct = Math.round(score/total*100);
-
-  $("#resScore").textContent = `${fa(score)} / ${fa(total)}`;
-  $("#resPercent").textContent = `${fa(pct)}٪`;
-
-  const stars = Math.round(pct/20);
-  $("#resStars").textContent = "★".repeat(stars) + "☆".repeat(5-stars);
-
-  let emoji, msg;
-  if(timeout){
-    emoji = "⏰";
-    msg = "زمان آزمون به پایان رسید. نمرهٔ فعلی ثبت شد. می‌توانی دوباره امتحان کنی.";
-  } else if(pct >= 90){ emoji = "🏆"; msg = "فوق‌العاده! یک نابغهٔ زبان انگلیسی هستی! 🌟 آمادهٔ دریافت گواهینامه طلایی."; }
-  else if(pct >= 75){ emoji = "🎉"; msg = "بسیار عالی! دانش تو در سطح حرفه‌ای است. گواهینامهٔ افتخار برایت صادر می‌شود."; }
-  else if(pct >= 50){ emoji = "👍"; msg = "خوب بود! با کمی تمرین بیشتر به سطح عالی می‌رسی. گواهینامه دریافت می‌کنی."; }
-  else { emoji = "💪"; msg = "ناامید نشو! دروس پیشرفته را مطالعه کن و دفعهٔ بعد عالی می‌شوی. گواهینامه دریافت می‌کنی."; }
-
-  $("#resEmoji").textContent = emoji;
-  $("#resMsg").textContent = msg;
-
-  if(pct >= 50) confetti(2500);
-}
-
-/* =========================================================
-   کارنامه
-   ========================================================= */
-function nowFa(){
-  return new Date().toLocaleDateString("fa-IR");
-}
-function nowTimeFa(){
-  return new Date().toLocaleTimeString("fa-IR", {hour:"2-digit", minute:"2-digit", second:"2-digit"});
-}
-
-$("#showReport").addEventListener("click", ()=>{
-  $("#quizResult").hidden = true;
-  $("#report").hidden = false;
-  buildReport();
-  window.scrollTo(0,0);
-});
-
-function buildReport(){
-  const total = QUIZ.length;
-  const score = quizState.score;
-  const pct = Math.round(score/total*100);
-  const elapsed = Math.floor((quizState.endTime - quizState.startTime) / 1000);
-
-  $("#rpName").textContent = quizState.student;
-  $("#rpClass").textContent = quizState.studentClass;
-  $("#rpDate").textContent = nowFa();
-  $("#rpStart").textContent = new Date(quizState.startTime).toLocaleTimeString("fa-IR", {hour:"2-digit", minute:"2-digit"});
-  $("#rpEnd").textContent = new Date(quizState.endTime).toLocaleTimeString("fa-IR", {hour:"2-digit", minute:"2-digit"});
-  $("#rpTime").textContent = fmtTime(elapsed);
-
-  $("#rpScore").textContent = `${fa(score)} از ${fa(total)}`;
-  const pctEl = $("#rpPct");
-  pctEl.textContent = `${fa(pct)}٪`;
-  pctEl.className = pct >= 75 ? "score-good" : pct >= 50 ? "score-mid" : "score-bad";
-
-  const statusEl = $("#rpStatus");
-  if(pct >= 90){ statusEl.textContent = "عالی ⭐⭐⭐"; statusEl.className = "score-good"; }
-  else if(pct >= 75){ statusEl.textContent = "خیلی خوب ⭐⭐"; statusEl.className = "score-good"; }
-  else if(pct >= 50){ statusEl.textContent = "قابل قبول ⭐"; statusEl.className = "score-mid"; }
-  else { statusEl.textContent = "نیاز به تلاش بیشتر"; statusEl.className = "score-bad"; }
-
-  // عملکرد بر اساس مبحث
-  const byTopic = {};
-  quizState.results.forEach(r=>{
-    if(!byTopic[r.topic]) byTopic[r.topic] = {ok:0, all:0};
-    byTopic[r.topic].all++;
-    if(r.correct) byTopic[r.topic].ok++;
-  });
-  const box = $("#rpTopics");
-  box.innerHTML = "";
-  for(const [t, s] of Object.entries(byTopic)){
-    const p = Math.round(s.ok/s.all*100);
-    const cls = p >= 75 ? "score-good" : p >= 50 ? "score-mid" : "score-bad";
-    const div = document.createElement("div");
-    div.className = "report-row";
-    div.innerHTML = `<span>${t}</span><span class="${cls}">${fa(s.ok)}/${fa(s.all)} (${fa(p)}٪)</span>`;
-    box.appendChild(div);
-  }
-}
-
-$("#saveReport").addEventListener("click", ()=>{
-  let txt = `📋 کارنامهٔ آزمون\n`;
-  txt += `─────────────\n`;
-  txt += `نام: ${quizState.student}\n`;
-  txt += `کلاس: ${quizState.studentClass}\n`;
-  txt += `تاریخ: ${nowFa()}\n`;
-  txt += `شروع: ${new Date(quizState.startTime).toLocaleTimeString("fa-IR")}\n`;
-  txt += `پایان: ${new Date(quizState.endTime).toLocaleTimeString("fa-IR")}\n`;
-  txt += `مدت: ${fmtTime(Math.floor((quizState.endTime-quizState.startTime)/1000))}\n`;
-  txt += `─────────────\n`;
-  txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
-  txt += `درصد: ${Math.round(quizState.score/QUIZ.length*100)}٪\n`;
-  txt += `─────────────\n`;
-  txt += `استودیو محمدجواد کجوری — کلاس ایمان ۱`;
-
-  saveToGallery({
-    type:"report",
-    title: `کارنامهٔ ${quizState.student} — ${quizState.score}/${QUIZ.length}`,
-    content: txt,
-    date: nowFa(),
-    time: nowTimeFa()
-  });
-  toast("✅ کارنامه در گالری ذخیره شد");
-});
-
-$("#saveQuestions").addEventListener("click", ()=>{
-  let txt = `📝 سوالات آزمون — ${quizState.student}\n`;
-  txt += `تاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n`;
-  txt += `─────────────\n\n`;
-  QUIZ.forEach((q, i)=>{
-    txt += `سوال ${i+1} [${q.topic}]\n`;
-    txt += q.q + "\n";
-    if(q.type === "mc"){
-      q.o.forEach((o, j)=>{
-        txt += `  ${String.fromCharCode(65+j)}) ${o}${j===q.a?" ✅":""}\n`;
-      });
-    } else {
-      txt += `  تلفظ: ${q.en}\n`;
-    }
-    txt += `  پاسخ: ${q.exp}\n\n`;
-  });
-
-  saveToGallery({
-    type:"questions",
-    title: `سوالات آزمون — ${quizState.student}`,
-    content: txt,
-    date: nowFa(),
-    time: nowTimeFa()
-  });
-  toast("✅ سوالات در گالری ذخیره شد");
-});
-
-$("#viewAnswers").addEventListener("click", ()=>{
-  $("#report").hidden = true;
-  $("#answers").hidden = false;
-  buildAnswers();
-  window.scrollTo(0,0);
-});
-
-function buildAnswers(){
-  const box = $("#answerList");
-  box.innerHTML = "";
-  quizState.results.forEach((r, i)=>{
-    const div = document.createElement("div");
-    div.className = "answer-item " + (r.correct ? "correct" : "wrong");
-    div.innerHTML = `
-      <div class="q">${fa(i+1)}. ${escapeHtml(r.q)} <span style="color:#c9bcff;font-size:10px">[${r.topic}]</span></div>
-      <div class="ans">✅ پاسخ صحیح: ${escapeHtml(r.correctAnswer)}</div>
-      <div class="ans" style="color:${r.correct?'#4fd1a1':'#ff6b6b'}">📝 پاسخ شما: ${escapeHtml(r.userAnswer)}</div>
-      <div class="exp">💡 ${escapeHtml(r.exp)}</div>
-    `;
-    box.appendChild(div);
-  });
-}
-
-$("#saveAnswers").addEventListener("click", ()=>{
-  let txt = `📖 پاسخ‌نامهٔ تشریحی — ${quizState.student}\n`;
-  txt += `تاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
-  quizState.results.forEach((r, i)=>{
-    txt += `${i+1}. ${r.q}\n`;
-    txt += `   ${r.correct ? "✅" : "❌"} پاسخ شما: ${r.userAnswer}\n`;
-    txt += `   پاسخ صحیح: ${r.correctAnswer}\n`;
-    txt += `   توضیح: ${r.exp}\n\n`;
-  });
-  saveToGallery({
-    type:"answers",
-    title: `پاسخ‌نامه — ${quizState.student}`,
-    content: txt,
-    date: nowFa(),
-    time: nowTimeFa()
-  });
-  toast("✅ پاسخ‌نامه در گالری ذخیره شد");
-});
-
-$("#backReport").addEventListener("click", ()=>{
-  $("#answers").hidden = true;
-  $("#report").hidden = false;
-  window.scrollTo(0,0);
-});
-
-/* =========================================================
-   گواهینامه
-   ========================================================= */
-$("#goCert").addEventListener("click", ()=>{
-  $("#report").hidden = true;
-  $("#cert").hidden = false;
-  const pct = Math.round(quizState.score/QUIZ.length*100);
-  $("#certName").textContent = quizState.student;
-  $("#certScore").textContent = `نمره: ${fa(quizState.score)} از ${fa(QUIZ.length)} (${fa(pct)}٪)`;
-  $("#certDate").textContent = `تاریخ: ${nowFa()} — ساعت: ${new Date(quizState.endTime).toLocaleTimeString("fa-IR", {hour:"2-digit",minute:"2-digit"})}`;
-  confetti(4000);
-  window.scrollTo(0,0);
-});
-
-$("#saveCert").addEventListener("click", ()=>{
-  let txt = `🏆 گواهینامهٔ افتخار\n`;
-  txt += `استودیو محمدجواد کجوری\n`;
-  txt += `کلاس ایمان ۱\n─────────────\n\n`;
-  txt += `به: ${quizState.student}\n`;
-  txt += `کلاس: ${quizState.studentClass}\n`;
-  txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
-  txt += `تاریخ: ${nowFa()}\n`;
-  txt += `─────────────\n`;
-  txt += `این گواهینامه به پاس تلاش و موفقیت در آزمون\n`;
-  txt += `جامع حروف و دستور زبان انگلیسی اعطا گردید.\n\n`;
-  txt += `امضا: محمدجواد کجوری — مدیر استودیو`;
-
-  saveToGallery({
-    type:"cert",
-    title: `گواهینامهٔ ${quizState.student}`,
-    content: txt,
-    date: nowFa(),
-    time: nowTimeFa()
-  });
-  toast("✅ گواهینامه در گالری ذخیره شد");
-});
-
-$("#backHome").addEventListener("click", ()=>{
-  $("#cert").hidden = true;
-  $("#home").hidden = false;
-  window.scrollTo(0,0);
-});
-
-/* =========================================================
    گالری
    ========================================================= */
 function getGallery(){
-  try{ return JSON.parse(localStorage.getItem("iman1_gallery") || "[]"); }
+  try{ return JSON.parse(localStorage.getItem("iman_gallery") || "[]"); }
   catch(e){ return []; }
 }
 function setGallery(arr){
-  try{ localStorage.setItem("iman1_gallery", JSON.stringify(arr)); }
+  try{ localStorage.setItem("iman_gallery", JSON.stringify(arr)); }
   catch(e){ toast("حافظه پر است"); }
 }
 
@@ -1364,7 +838,7 @@ function renderGallery(){
   const box = $("#galleryList");
   const arr = getGallery();
   if(!arr.length){
-    box.innerHTML = `<div class="gallery-empty">🎞 هنوز چیزی ذخیره نکرده‌ای.<br>از بخش‌های مختلف برنامه (کارنامه، درس، گواهینامه) می‌تونی ذخیره کنی.</div>`;
+    box.innerHTML = `<div class="gallery-empty">🎞 هنوز چیزی ذخیره نکرده‌ای.<br>از کارنامه، درس، گواهینامه یا پاسخ‌نامه می‌تونی ذخیره کنی.</div>`;
     return;
   }
   box.innerHTML = "";
@@ -1373,13 +847,18 @@ function renderGallery(){
     div.className = "gallery-item";
     const typeLabel = {
       report: "📋 کارنامه", lesson: "📚 درس", questions: "📝 سوالات",
-      answers: "📖 پاسخ‌نامه", cert: "🏆 گواهینامه"
+      answers: "📖 پاسخ‌نامه", cert: "🏆 گواهینامه", video: "🎥 ویدیو"
     }[it.type] || "📄";
+    let media = "";
+    if(it.type === "video" && it.dataUrl){
+      media = `<video src="${it.dataUrl}" controls playsinline></video>`;
+    }
     div.innerHTML = `
       <div class="ghead"><span>${typeLabel}</span><span>${it.date} — ${it.time}</span></div>
       <div class="gtitle">${escapeHtml(it.title || "")}</div>
       <div class="gmeta" style="white-space:pre-line;max-height:80px;overflow:hidden">${escapeHtml((it.content||"").slice(0,180))}…</div>
-      <div class="save-bar">
+      ${media}
+      <div class="save-bar" style="justify-content:flex-start">
         <button class="btn-sm pink" data-act="view" data-id="${it.id}">👁 مشاهده</button>
         <button class="btn-sm gold" data-act="download" data-id="${it.id}">⬇️ دانلود</button>
         <button class="btn-sm" data-act="del" data-id="${it.id}">🗑 حذف</button>
@@ -1395,14 +874,21 @@ function renderGallery(){
       const it = arr.find(x=>x.id === id);
       if(!it) return;
       if(b.dataset.act === "view"){
-        alert(`${it.title}\n\n${it.content}`);
+        alert(`${it.title}\n\n${it.content || "(فایل رسانه‌ای)"}`);
       } else if(b.dataset.act === "download"){
-        const blob = new Blob([it.content], {type:"text/plain;charset=utf-8"});
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = `${it.title.replace(/\s+/g,"_")}.txt`;
-        a.click();
-        URL.revokeObjectURL(a.href);
+        if(it.type === "video" && it.dataUrl){
+          const a = document.createElement("a");
+          a.href = it.dataUrl;
+          a.download = `${it.title.replace(/\s+/g,"_")}.webm`;
+          a.click();
+        } else {
+          const blob = new Blob([it.content || ""], {type:"text/plain;charset=utf-8"});
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = `${it.title.replace(/\s+/g,"_")}.txt`;
+          a.click();
+          URL.revokeObjectURL(a.href);
+        }
         toast("دانلود شد");
       } else if(b.dataset.act === "del"){
         const newArr = arr.filter(x=>x.id !== id);
@@ -1422,13 +908,8 @@ $("#clearGallery").addEventListener("click", ()=>{
 });
 
 /* =========================================================
-   ابزارها
+   کانفتی
    ========================================================= */
-function escapeHtml(s){
-  return String(s).replace(/[&<>"']/g, c =>
-    ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-
 function confetti(duration=3000){
   const colors = ["#ff5ca8","#7c5cff","#ffd700","#40e0d0","#ff8c00","#ff0080"];
   const wrap = document.createElement("div");
@@ -1452,19 +933,571 @@ function confetti(duration=3000){
   }, duration);
 }
 
-/* =========================================================
-   کیبورد
-   ========================================================= */
+/* ---------- کیبورد ---------- */
 document.addEventListener("keydown", e=>{
   if($("#play").hidden) return;
   const L = e.key.toUpperCase();
   if(L.length === 1 && LETTERS.includes(L)) pick(L);
 });
 
+renderGallery();
+</script>
+
+  <script>
 /* =========================================================
-   شروع
+   آزمون فینال — با تایمر کل ۵ دقیقه و هر سوال ۵ دقیقه
    ========================================================= */
+const QUIZ_TOTAL_SEC = 5 * 60;   // کل آزمون ۵ دقیقه
+const QUIZ_Q_SEC = 5 * 60;       // هر سوال ۵ دقیقه (سقف)
+
+const quizState = {
+  idx: 0,
+  score: 0,
+  answered: false,
+  student: "",
+  studentClass: "",
+  startTime: 0,
+  endTime: 0,
+  totalLeft: QUIZ_TOTAL_SEC,
+  qLeft: QUIZ_Q_SEC,
+  totalTimer: null,
+  qTimer: null,
+  results: [],
+  micRecognition: null,
+  micRecording: false
+};
+
+/* ---------- شروع آزمون ---------- */
+$("#startQuiz").addEventListener("click", () => {
+  const name = $("#studentName").value.trim();
+  const cls = $("#studentClass").value.trim() || "پایه ایمان";
+  if (name.length < 2) {
+    toast("نام خود را وارد کن");
+    $("#studentName").focus();
+    return;
+  }
+
+  quizState.student = name;
+  quizState.studentClass = cls;
+  quizState.idx = 0;
+  quizState.score = 0;
+  quizState.answered = false;
+  quizState.results = [];
+  quizState.startTime = Date.now();
+  quizState.totalLeft = QUIZ_TOTAL_SEC;
+  quizState.qLeft = QUIZ_Q_SEC;
+
+  $("#home").hidden = true;
+  $("#play").hidden = true;
+  $("#lessonPage").hidden = true;
+  $("#quiz").hidden = false;
+  $("#quizResult").hidden = true;
+  $("#report").hidden = true;
+  $("#cert").hidden = true;
+  $("#answers").hidden = true;
+
+  renderQuestion();
+  startTotalTimer();
+  window.scrollTo(0, 0);
+});
+
+/* ---------- تایمر کل ---------- */
+function startTotalTimer() {
+  clearInterval(quizState.totalTimer);
+  updateTotalTimerUI();
+  quizState.totalTimer = setInterval(() => {
+    quizState.totalLeft--;
+    updateTotalTimerUI();
+    if (quizState.totalLeft <= 0) {
+      clearInterval(quizState.totalTimer);
+      clearInterval(quizState.qTimer);
+      finishQuiz(true);
+    }
+  }, 1000);
+}
+
+function updateTotalTimerUI() {
+  const el = $("#qTimer");
+  el.textContent = fmtTime(quizState.totalLeft);
+  el.classList.remove("warn", "danger");
+  if (quizState.totalLeft <= 30) el.classList.add("danger");
+  else if (quizState.totalLeft <= 60) el.classList.add("warn");
+}
+
+/* ---------- تایمر سوال ---------- */
+function startQTimer() {
+  clearInterval(quizState.qTimer);
+  quizState.qLeft = QUIZ_Q_SEC;
+  updateQTimerUI();
+  quizState.qTimer = setInterval(() => {
+    quizState.qLeft--;
+    updateQTimerUI();
+    if (quizState.qLeft <= 0) {
+      clearInterval(quizState.qTimer);
+      if (!quizState.answered) {
+        answerQuestion(-1, null, true);
+      }
+    }
+  }, 1000);
+}
+
+function updateQTimerUI() {
+  const el = $("#qQTimer");
+  el.textContent = "⏱ " + fmtTime(quizState.qLeft);
+  el.classList.remove("warn");
+  if (quizState.qLeft <= 30) el.classList.add("warn");
+}
+
+/* ---------- نمایش سوال ---------- */
+function renderQuestion() {
+  const q = QUIZ[quizState.idx];
+  $("#qNum").textContent = `سوال ${fa(quizState.idx + 1)} / ${fa(QUIZ.length)}`;
+  $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
+  $("#quizFill").style.width = ((quizState.idx) / QUIZ.length * 100) + "%";
+  $("#qTopic").textContent = q.topic;
+  $("#qText").textContent = q.q;
+
+  const body = $("#qBody");
+  body.innerHTML = "";
+
+  if (q.type === "mc") {
+    const optsEl = document.createElement("div");
+    optsEl.className = "quiz-options";
+    optsEl.id = "qOpts";
+    q.o.forEach((opt, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "quiz-opt"; b.textContent = opt;
+      b.addEventListener("click", () => answerQuestion(i, b));
+      optsEl.appendChild(b);
+    });
+    body.appendChild(optsEl);
+  } else if (q.type === "mic") {
+    const box = document.createElement("div");
+    box.className = "mic-box";
+    box.innerHTML = `
+      <div class="hint">
+        🎤 روی دکمهٔ زیر بزن تا شروع شود، سپس جمله را بلند و واضح تلفظ کن،<br>
+        بعد دوباره روی همان دکمه بزن تا تلفظ تو بررسی و نمره داده شود.
+      </div>
+      <div class="en-sentence">${q.en}</div>
+      <button type="button" class="mic-btn" id="micBtn">
+        <span>🎤</span>
+        <span class="lbl">شروع ضبط</span>
+      </button>
+      <div class="mic-status" id="micStatus">آماده</div>
+      <button type="button" class="btn-sm" id="hearIt" style="margin-top:10px">🔊 نمونه را بشنو</button>
+    `;
+    body.appendChild(box);
+
+    $("#hearIt").addEventListener("click", () => speak(q.en));
+
+    const micBtn = $("#micBtn");
+    micBtn.addEventListener("click", () => toggleMic(q));
+
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      $("#micStatus").textContent = "⚠️ مرورگر شما از تشخیص گفتار پشتیبانی نمی‌کند — نمرهٔ این سوال رایگان گرفته می‌شود.";
+      $("#micStatus").className = "mic-status error";
+    }
+  }
+
+  quizState.answered = false;
+  startQTimer();
+}
+
+/* ---------- میکروفن ---------- */
+function toggleMic(q) {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) {
+    answerQuestion(1, null, false, true);
+    return;
+  }
+
+  if (quizState.micRecording) {
+    try { quizState.micRecognition.stop(); } catch (e) {}
+    quizState.micRecording = false;
+    $("#micBtn").classList.remove("recording");
+    $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
+    $("#micStatus").textContent = "در حال بررسی تلفظ…";
+    $("#micStatus").className = "mic-status";
+    return;
+  }
+
+  const rec = new SR();
+  rec.lang = "en-US";
+  rec.interimResults = false;
+  rec.maxAlternatives = 5;
+  rec.continuous = false;
+
+  quizState.micRecognition = rec;
+  quizState.micRecording = true;
+  $("#micBtn").classList.add("recording");
+  $("#micBtn").querySelector(".lbl").textContent = "توقف و نمره";
+  $("#micStatus").textContent = "🎙️ در حال گوش دادن… بلند تلفظ کن";
+  $("#micStatus").className = "mic-status listening";
+
+  rec.onresult = (event) => {
+    const heard = event.results[0][0].transcript.toLowerCase().trim();
+    evaluatePronunciation(q, heard);
+  };
+
+  rec.onerror = () => {
+    $("#micStatus").textContent = "⚠️ خطا در ضبط. دوباره امتحان کن.";
+    $("#micStatus").className = "mic-status error";
+    quizState.micRecording = false;
+    $("#micBtn").classList.remove("recording");
+    $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
+  };
+
+  rec.onend = () => {
+    quizState.micRecording = false;
+    $("#micBtn").classList.remove("recording");
+    $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
+  };
+
+  try { rec.start(); }
+  catch (e) {
+    quizState.micRecording = false;
+    $("#micBtn").classList.remove("recording");
+  }
+}
+
+/* شباهت دو رشته */
+function similarity(a, b) {
+  a = a.replace(/[^a-z\s]/g, "").toLowerCase().trim();
+  b = b.replace(/[^a-z\s]/g, "").toLowerCase().trim();
+  if (!a || !b) return 0;
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+  }
+  return 1 - dp[m][n] / Math.max(m, n);
+}
+
+function evaluatePronunciation(q, heard) {
+  const target = q.en.toLowerCase();
+  const sim = similarity(target, heard);
+  let correct = false, score = 0, msg = "";
+
+  if (sim >= 0.75) { correct = true; score = 1; msg = `✅ عالی! شباهت: ${fa(Math.round(sim * 100))}%`; }
+  else if (sim >= 0.5) { correct = false; score = 0; msg = `⚠️ نزدیک بود. شباهت: ${fa(Math.round(sim * 100))}% — دوباره تلاش کن.`; }
+  else { correct = false; score = 0; msg = `❌ تلفظ صحیح نبود. شباهت: ${fa(Math.round(sim * 100))}%.`; }
+
+  $("#micStatus").textContent = msg + `\nشنیده‌شده: "${heard}"`;
+  $("#micStatus").className = "mic-status " + (correct ? "" : "error");
+
+  setTimeout(() => {
+    answerQuestion(score, null, false, false, heard);
+  }, 1200);
+}
+
+/* ---------- پاسخ به سوال ---------- */
+function answerQuestion(i, btn, timeout = false, freeScore = false, heard = null) {
+  if (quizState.answered) return;
+  quizState.answered = true;
+  clearInterval(quizState.qTimer);
+
+  const q = QUIZ[quizState.idx];
+  let correct = false;
+  let userAnswer = "";
+
+  if (q.type === "mc") {
+    if (timeout || i < 0) {
+      correct = false;
+      userAnswer = "(زمان تمام شد)";
+    } else {
+      correct = (i === q.a);
+      userAnswer = q.o[i];
+      const allOpts = document.querySelectorAll("#qBody .quiz-opt");
+      allOpts.forEach((b, idx) => {
+        b.disabled = true;
+        if (idx === q.a) b.classList.add("correct");
+        else if (idx === i && !correct) b.classList.add("wrong");
+      });
+    }
+  } else if (q.type === "mic") {
+    if (freeScore) { correct = true; userAnswer = "(بدون پشتیبانی مرورگر)"; }
+    else if (timeout) { correct = false; userAnswer = "(زمان تمام شد)"; }
+    else { correct = (i === 1); userAnswer = heard || "(نامشخص)"; }
+  }
+
+  if (correct) quizState.score++;
+
+  quizState.results.push({
+    q: q.type === "mic" ? q.q + " — " + q.en : q.q,
+    correct,
+    userAnswer,
+    correctAnswer: q.type === "mc" ? q.o[q.a] : q.en,
+    topic: q.topic,
+    exp: q.exp
+  });
+
+  $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
+
+  setTimeout(() => {
+    quizState.idx++;
+    if (quizState.idx < QUIZ.length) {
+      renderQuestion();
+    } else {
+      finishQuiz(false);
+    }
+  }, 900);
+}
+
+/* ---------- پایان آزمون ---------- */
+function finishQuiz(timeout = false) {
+  clearInterval(quizState.totalTimer);
+  clearInterval(quizState.qTimer);
+  quizState.endTime = Date.now();
+
+  while (quizState.idx < QUIZ.length) {
+    const q = QUIZ[quizState.idx];
+    quizState.results.push({
+      q: q.type === "mic" ? q.q + " — " + q.en : q.q,
+      correct: false,
+      userAnswer: "(بی‌پاسخ)",
+      correctAnswer: q.type === "mc" ? q.o[q.a] : q.en,
+      topic: q.topic,
+      exp: q.exp
+    });
+    quizState.idx++;
+  }
+
+  $("#quiz").hidden = true;
+  $("#quizResult").hidden = false;
+  window.scrollTo(0, 0);
+
+  const total = QUIZ.length;
+  const score = quizState.score;
+  const pct = Math.round(score / total * 100);
+
+  $("#resScore").textContent = `${fa(score)} / ${fa(total)}`;
+  $("#resPercent").textContent = `${fa(pct)}٪`;
+
+  const stars = Math.round(pct / 20);
+  $("#resStars").textContent = "★".repeat(stars) + "☆".repeat(5 - stars);
+
+  let emoji, msg;
+  if (timeout) {
+    emoji = "⏰";
+    msg = "زمان آزمون به پایان رسید. نمرهٔ فعلی ثبت شد.";
+  } else if (pct >= 90) { emoji = "🏆"; msg = "فوق‌العاده! یک نابغهٔ زبان انگلیسی هستی! 🌟 آمادهٔ دریافت گواهینامهٔ طلایی."; }
+  else if (pct >= 75) { emoji = "🎉"; msg = "بسیار عالی! دانش تو در سطح حرفه‌ای است. گواهینامهٔ افتخار برایت صادر می‌شود."; }
+  else if (pct >= 50) { emoji = "👍"; msg = "خوب بود! با کمی تمرین بیشتر به سطح عالی می‌رسی. گواهینامه دریافت می‌کنی."; }
+  else { emoji = "💪"; msg = "ناامید نشو! دروس پیشرفته را مطالعه کن و دفعهٔ بعد عالی می‌شوی. گواهینامه دریافت می‌کنی."; }
+
+  $("#resEmoji").textContent = emoji;
+  $("#resMsg").textContent = msg;
+
+  if (pct >= 50) confetti(2500);
+}
+
+/* =========================================================
+   کارنامه
+   ========================================================= */
+$("#showReport").addEventListener("click", () => {
+  $("#quizResult").hidden = true;
+  $("#report").hidden = false;
+  buildReport();
+  window.scrollTo(0, 0);
+});
+
+function buildReport() {
+  const total = QUIZ.length;
+  const score = quizState.score;
+  const pct = Math.round(score / total * 100);
+  const elapsed = Math.floor((quizState.endTime - quizState.startTime) / 1000);
+
+  $("#rpName").textContent = quizState.student;
+  $("#rpClass").textContent = quizState.studentClass;
+  $("#rpDate").textContent = nowFa();
+  $("#rpStart").textContent = timeOnlyFa(quizState.startTime);
+  $("#rpEnd").textContent = timeOnlyFa(quizState.endTime);
+  $("#rpTime").textContent = fmtTime(elapsed);
+
+  $("#rpScore").textContent = `${fa(score)} از ${fa(total)}`;
+  const pctEl = $("#rpPct");
+  pctEl.textContent = `${fa(pct)}٪`;
+  pctEl.className = pct >= 75 ? "score-good" : pct >= 50 ? "score-mid" : "score-bad";
+
+  const statusEl = $("#rpStatus");
+  if (pct >= 90) { statusEl.textContent = "عالی ⭐⭐⭐"; statusEl.className = "score-good"; }
+  else if (pct >= 75) { statusEl.textContent = "خیلی خوب ⭐⭐"; statusEl.className = "score-good"; }
+  else if (pct >= 50) { statusEl.textContent = "قابل قبول ⭐"; statusEl.className = "score-mid"; }
+  else { statusEl.textContent = "نیاز به تلاش بیشتر"; statusEl.className = "score-bad"; }
+
+  const byTopic = {};
+  quizState.results.forEach(r => {
+    if (!byTopic[r.topic]) byTopic[r.topic] = { ok: 0, all: 0 };
+    byTopic[r.topic].all++;
+    if (r.correct) byTopic[r.topic].ok++;
+  });
+  const box = $("#rpTopics");
+  box.innerHTML = "";
+  for (const [t, s] of Object.entries(byTopic)) {
+    const p = Math.round(s.ok / s.all * 100);
+    const cls = p >= 75 ? "score-good" : p >= 50 ? "score-mid" : "score-bad";
+    const div = document.createElement("div");
+    div.className = "report-row";
+    div.innerHTML = `<span>${t}</span><span class="${cls}">${fa(s.ok)}/${fa(s.all)} (${fa(p)}٪)</span>`;
+    box.appendChild(div);
+  }
+}
+
+$("#saveReport").addEventListener("click", () => {
+  let txt = `📋 کارنامهٔ آزمون\n─────────────\n`;
+  txt += `نام: ${quizState.student}\n`;
+  txt += `کلاس: ${quizState.studentClass}\n`;
+  txt += `تاریخ: ${nowFa()}\n`;
+  txt += `شروع: ${timeOnlyFa(quizState.startTime)}\n`;
+  txt += `پایان: ${timeOnlyFa(quizState.endTime)}\n`;
+  txt += `مدت: ${fmtTime(Math.floor((quizState.endTime - quizState.startTime) / 1000))}\n`;
+  txt += `─────────────\n`;
+  txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
+  txt += `درصد: ${Math.round(quizState.score / QUIZ.length * 100)}٪\n`;
+  txt += `─────────────\n`;
+  txt += `استودیو محمدجواد کجوری — پایه ایمان`;
+
+  saveToGallery({
+    type: "report",
+    title: `کارنامهٔ ${quizState.student} — ${quizState.score}/${QUIZ.length}`,
+    content: txt,
+    date: nowFa(),
+    time: nowTimeFa()
+  });
+  toast("✅ کارنامه در گالری ذخیره شد");
+});
+
+$("#saveQuestions").addEventListener("click", () => {
+  let txt = `📝 سوالات آزمون — ${quizState.student}\nتاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
+  QUIZ.forEach((q, i) => {
+    txt += `سوال ${i + 1} [${q.topic}]\n${q.q}\n`;
+    if (q.type === "mc") {
+      q.o.forEach((o, j) => {
+        txt += `  ${String.fromCharCode(65 + j)}) ${o}${j === q.a ? " ✅" : ""}\n`;
+      });
+    } else {
+      txt += `  تلفظ: ${q.en}\n`;
+    }
+    txt += `  پاسخ: ${q.exp}\n\n`;
+  });
+  saveToGallery({
+    type: "questions",
+    title: `سوالات آزمون — ${quizState.student}`,
+    content: txt,
+    date: nowFa(),
+    time: nowTimeFa()
+  });
+  toast("✅ سوالات در گالری ذخیره شد");
+});
+
+$("#viewAnswers").addEventListener("click", () => {
+  $("#report").hidden = true;
+  $("#answers").hidden = false;
+  buildAnswers();
+  window.scrollTo(0, 0);
+});
+
+function buildAnswers() {
+  const box = $("#answerList");
+  box.innerHTML = "";
+  quizState.results.forEach((r, i) => {
+    const div = document.createElement("div");
+    div.className = "answer-item " + (r.correct ? "correct" : "wrong");
+    div.innerHTML = `
+      <div class="q">${fa(i + 1)}. ${escapeHtml(r.q)} <span style="color:#c9bcff;font-size:10px">[${r.topic}]</span></div>
+      <div class="ans">✅ پاسخ صحیح: ${escapeHtml(r.correctAnswer)}</div>
+      <div class="ans" style="color:${r.correct ? '#4fd1a1' : '#ff6b6b'}">📝 پاسخ شما: ${escapeHtml(r.userAnswer)}</div>
+      <div class="exp">💡 ${escapeHtml(r.exp)}</div>
+    `;
+    box.appendChild(div);
+  });
+}
+
+$("#saveAnswers").addEventListener("click", () => {
+  let txt = `📖 پاسخ‌نامهٔ تشریحی — ${quizState.student}\nتاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
+  quizState.results.forEach((r, i) => {
+    txt += `${i + 1}. ${r.q}\n   ${r.correct ? "✅" : "❌"} پاسخ شما: ${r.userAnswer}\n   پاسخ صحیح: ${r.correctAnswer}\n   توضیح: ${r.exp}\n\n`;
+  });
+  saveToGallery({
+    type: "answers",
+    title: `پاسخ‌نامه — ${quizState.student}`,
+    content: txt,
+    date: nowFa(),
+    time: nowTimeFa()
+  });
+  toast("✅ پاسخ‌نامه در گالری ذخیره شد");
+});
+
+$("#backReport").addEventListener("click", () => {
+  $("#answers").hidden = true;
+  $("#report").hidden = false;
+  window.scrollTo(0, 0);
+});
+
+/* =========================================================
+   گواهینامه
+   ========================================================= */
+$("#goCert").addEventListener("click", () => {
+  $("#report").hidden = true;
+  $("#cert").hidden = false;
+  const pct = Math.round(quizState.score / QUIZ.length * 100);
+  $("#certName").textContent = quizState.student;
+  $("#certScore").textContent = `نمره: ${fa(quizState.score)} از ${fa(QUIZ.length)} (${fa(pct)}٪)`;
+  $("#certDate").textContent = `تاریخ: ${nowFa()} — ${timeOnlyFa(quizState.endTime)}`;
+  confetti(4000);
+  window.scrollTo(0, 0);
+});
+
+$("#saveCert").addEventListener("click", () => {
+  let txt = `🏆 گواهینامهٔ افتخار\nاستودیو محمدجواد کجوری\nپایه ایمان\n─────────────\n\n`;
+  txt += `به: ${quizState.student}\n`;
+  txt += `کلاس: ${quizState.studentClass}\n`;
+  txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
+  txt += `تاریخ: ${nowFa()}\n─────────────\n\n`;
+  txt += `این گواهینامه به پاس تلاش و موفقیت در آزمون\nجامع حروف، دستور زبان و واژگان انگلیسی اعطا گردید.\n\n`;
+  txt += `امضا: محمدجواد کجوری — مدیر استودیو`;
+
+  saveToGallery({
+    type: "cert",
+    title: `گواهینامهٔ ${quizState.student}`,
+    content: txt,
+    date: nowFa(),
+    time: nowTimeFa()
+  });
+  toast("✅ گواهینامه در گالری ذخیره شد");
+});
+
+$("#backHome").addEventListener("click", () => {
+  $("#cert").hidden = true;
+  $("#home").hidden = false;
+  window.scrollTo(0, 0);
+});
+
+$("#backQuiz").addEventListener("click", () => {
+  if (!confirm("آزمون در حال اجرا است. از آزمون خارج شوی؟")) return;
+  clearInterval(quizState.totalTimer);
+  clearInterval(quizState.qTimer);
+  $("#quiz").hidden = true;
+  $("#home").hidden = false;
+  window.scrollTo(0, 0);
+});
+
+/* ---------- شروع ---------- */
 renderGallery();
 </script>
 </body>
 </html>
+
+<div class="toast" id="toast"></div>
+
+  
