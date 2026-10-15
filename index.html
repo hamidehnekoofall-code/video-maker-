@@ -3,552 +3,879 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>استودیو محمدجواد کجوری — آموزش حروف انگلیسی</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<title>استودیو محمدجواد کجوری — کلاس ایمان ۱</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f6f3ff; --surface:#ffffff; --text:#1d1b2e; --muted:#6b6880; --line:#e3dff5;
-  --accent:#5b3df5; --accent-text:#ffffff; --ok:#12805c; --warn:#b4472c; --warn-bg:#fff0ea;
-  --brand:#7c5cff; --brand2:#ff5ca8;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#14112a; --surface:#1f1b3d; --text:#f2f0ff; --muted:#a9a5c9; --line:#342f60;
-    --accent:#8f7bff; --accent-text:#14112a; --ok:#4fd1a1; --warn:#ff9c7d; --warn-bg:#3a2326;
-  }
-}
+:root{--text:#fff;--muted:rgba(255,255,255,.75);--border:rgba(255,255,255,.25);--accent:#ff5ca8;--accent2:#7c5cff;--gold:#ffd700;--ok:#4fd1a1;--err:#ff6b6b}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;
-  min-height:100vh;
-  background-image:
-    radial-gradient(600px 300px at 90% 0%, rgba(124,92,255,.15), transparent 70%),
-    radial-gradient(500px 300px at 0% 100%, rgba(255,92,168,.12), transparent 70%);
-}
-.app{max-width:560px;margin:0 auto;padding:20px 16px 40px}
-
-.brand{
-  text-align:center;margin:8px 0 24px;padding:20px 12px;
-  background:linear-gradient(135deg, rgba(124,92,255,.12), rgba(255,92,168,.10));
-  border:1.5px solid var(--line);border-radius:22px;
-}
-.brand h1{
-  font-size:24px;font-weight:800;margin:0 0 6px;
-  background:linear-gradient(135deg,var(--brand),var(--brand2));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.brand p{color:var(--muted);margin:0;font-size:14px}
-.brand .line{
-  display:inline-block;width:40px;height:3px;border-radius:2px;margin:10px auto 0;
-  background:linear-gradient(90deg,var(--brand),var(--brand2));
-}
-
-.section-title{
-  display:flex;align-items:center;justify-content:space-between;
-  margin:18px 0 12px;font-size:14px;color:var(--muted);font-weight:600;
-}
-.count-badge{
-  background:rgba(124,92,255,.15);color:var(--accent);
-  padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;
-}
-.search{
-  width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);
-  background:var(--surface);color:var(--text);font:inherit;font-size:14px;outline:none;
-  margin-bottom:16px;
-}
-.search:focus{border-color:var(--accent)}
-
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cat{
-  background:var(--surface);border:1.5px solid var(--line);border-radius:20px;
-  padding:16px 8px;font:inherit;color:var(--text);cursor:pointer;
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  transition:transform .12s, border-color .12s, box-shadow .2s;
-  box-shadow:0 2px 8px -4px rgba(0,0,0,.06);
-}
-.cat:hover{border-color:var(--accent);box-shadow:0 8px 20px -10px rgba(124,92,255,.4)}
+html,body{overflow-x:hidden}
+body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh;background:#0a0620;position:relative}
+.rainbow-bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 20%,#ff0080 0%,transparent 45%),radial-gradient(circle at 80% 20%,#ff8c00 0%,transparent 45%),radial-gradient(circle at 80% 80%,#40e0d0 0%,transparent 45%),radial-gradient(circle at 20% 80%,#7c5cff 0%,transparent 45%),radial-gradient(circle at 50% 50%,#ff5ca8 0%,transparent 60%),#0a0620;background-size:200% 200%;animation:rainbowShift 18s ease-in-out infinite;filter:blur(40px) saturate(1.5)}
+@keyframes rainbowShift{0%,100%{background-position:0% 0%}25%{background-position:100% 0%}50%{background-position:100% 100%}75%{background-position:0% 100%}}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;box-shadow:0 0 8px 2px rgba(255,255,255,.6);animation:floatStar linear infinite}
+@keyframes floatStar{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}90%{opacity:.8}100%{transform:translateY(-20vh) scale(1);opacity:0}}
+.app{max-width:680px;margin:0 auto;padding:20px 16px 60px;position:relative;z-index:1}
+.brand{text-align:center;margin:8px 0 20px;padding:22px 16px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);border-radius:26px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35);position:relative;overflow:hidden}
+.brand::before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);animation:shine 4s linear infinite}
+@keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.brand h1{font-size:22px;font-weight:900;margin:0 0 6px;position:relative;text-shadow:0 2px 20px rgba(255,255,255,.4)}
+.brand .studio{font-size:13.5px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 4s linear infinite;margin:0 0 8px}
+@keyframes textFlow{to{background-position:200% 0}}
+.brand .line{display:block;width:60px;height:3px;border-radius:2px;margin:12px auto 0;background:linear-gradient(90deg,#ff5ca8,#7c5cff,#40e0d0)}
+.tabs{display:flex;gap:5px;background:rgba(0,0,0,.25);padding:5px;border-radius:16px;margin-bottom:18px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15)}
+.tabs button{flex:1;font:inherit;font-size:12.5px;font-weight:700;padding:11px 4px;background:transparent;color:var(--muted);border:0;border-radius:12px;cursor:pointer;transition:.2s}
+.tabs button.on{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;box-shadow:0 6px 20px -8px #ff5ca8}
+.glass{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:22px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 32px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.25);padding:20px}
+.search{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:14px;outline:none;margin-bottom:14px;backdrop-filter:blur(10px)}
+.search::placeholder{color:rgba(255,255,255,.55)}
+.search:focus{border-color:#ff5ca8;background:rgba(255,255,255,.18);box-shadow:0 0 0 4px rgba(255,92,168,.20)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cat{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:18px;padding:14px 8px;font:inherit;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;transition:transform .12s,border-color .15s,background .15s;backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.20)}
+.cat:hover{border-color:rgba(255,92,168,.7);background:rgba(255,255,255,.16);transform:translateY(-3px)}
 .cat:active{transform:scale(.96)}
-.cat:focus-visible,.key:focus-visible,.back:focus-visible,.speak:focus-visible{
-  outline:3px solid var(--accent);outline-offset:2px;
-}
-.cat .emo{font-size:32px;line-height:1}
-.cat .name{font-weight:700;font-size:15px}
-.cat .en{color:var(--muted);font-size:11.5px;direction:ltr}
-
+.cat .emo{font-size:28px;line-height:1}
+.cat .name{font-weight:700;font-size:13.5px}
+.cat .en{color:rgba(255,255,255,.65);font-size:10.5px;direction:ltr}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:16px 0 12px;font-size:13px;font-weight:700;color:var(--muted)}
+.count-badge{background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:4px 12px;border-radius:99px;font-size:11.5px;font-weight:800;color:#fff;box-shadow:0 4px 12px -4px #ff5ca8}
+.btn-big{width:100%;padding:16px;border:0;border-radius:16px;cursor:pointer;font:inherit;font-weight:900;font-size:16px;color:#fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);box-shadow:0 12px 32px -12px #ff5ca8;transition:.15s}
+.btn-big:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-big:active{transform:scale(.98)}
+.btn-big.gold{background:linear-gradient(135deg,#ffd700,#ff8c00,#ff5ca8);box-shadow:0 12px 32px -12px #ffd700}
 .top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.back{
-  border:1.5px solid var(--line);background:var(--surface);color:var(--text);
-  border-radius:12px;font:inherit;padding:8px 14px;cursor:pointer;font-weight:600;font-size:13px;
-}
-.top h2{margin:0;font-size:18px;font-weight:800;flex:1}
-.progress-bar{
-  height:6px;background:rgba(124,92,255,.1);border-radius:99px;
-  overflow:hidden;margin-bottom:14px;
-}
-.progress-bar i{
-  display:block;height:100%;width:0;border-radius:99px;
-  background:linear-gradient(90deg,var(--brand),var(--brand2));
-  transition:width .4s;
-}
-
-.result{
-  min-height:180px;background:var(--surface);border:1.5px solid var(--line);border-radius:22px;
-  padding:18px;margin-bottom:16px;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;gap:8px;
-  transition:all .2s;
-}
-.result.empty{color:var(--muted);font-size:15px}
-.result .letter{
-  font-size:14px;color:var(--muted);direction:ltr;font-weight:600;letter-spacing:1px;
-}
-.result .word{
-  font-size:34px;font-weight:800;direction:ltr;color:var(--accent);line-height:1.15;
-  word-break:break-word;
-}
-.result .fa{font-size:24px;font-weight:600}
-.result.none{
-  background:var(--warn-bg);border-color:var(--warn);color:var(--warn);
-  font-size:16px;font-weight:600;
-}
-
-/* ---------- دکمه تلفظ ---------- */
-.speak{
-  margin-top:12px;border:0;cursor:pointer;
-  background:linear-gradient(135deg,var(--brand),var(--brand2));
-  color:#fff;border-radius:14px;padding:12px 24px;
-  font:inherit;font-weight:800;font-size:15px;
-  display:inline-flex;align-items:center;gap:8px;
-  box-shadow:0 8px 20px -8px rgba(124,92,255,.7);
-  transition:transform .12s, filter .15s;
-}
+.back{border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;border-radius:12px;font:inherit;padding:9px 14px;cursor:pointer;font-weight:700;font-size:12.5px;backdrop-filter:blur(10px)}
+.top h2{margin:0;font-size:17px;font-weight:900;flex:1}
+.progress-bar{height:6px;background:rgba(0,0,0,.3);border-radius:99px;overflow:hidden;margin-bottom:14px}
+.progress-bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff);transition:width .4s}
+.result{min-height:170px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:22px;padding:18px;margin-bottom:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;backdrop-filter:blur(20px)}
+.result.empty{color:var(--muted);font-size:14px}
+.result .letter{font-size:13px;color:rgba(255,255,255,.7);direction:ltr;font-weight:700;letter-spacing:2px}
+.result .word{font-size:32px;font-weight:900;direction:ltr;line-height:1.15;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 3s linear infinite;word-break:break-word}
+.result .fa{font-size:22px;font-weight:700}
+.result.none{background:rgba(255,107,107,.18);border-color:rgba(255,107,107,.5);color:#ffb3b3;font-size:15px;font-weight:700}
+.speak{margin-top:10px;border:0;cursor:pointer;background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;border-radius:14px;padding:11px 22px;font:inherit;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px -8px #ff5ca8;transition:transform .12s,filter .15s}
 .speak:hover{filter:brightness(1.1)}
 .speak:active{transform:scale(.96)}
-.speak .icon{font-size:18px;line-height:1}
-.speak.speaking{
-  animation:pulse 1s ease-in-out infinite;
-}
-@keyframes pulse{
-  0%,100%{box-shadow:0 8px 20px -8px rgba(124,92,255,.7)}
-  50%{box-shadow:0 8px 30px -4px rgba(255,92,168,.9)}
-}
-
-.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;direction:ltr}
-.key{
-  position:relative;aspect-ratio:1;border-radius:14px;border:1.5px solid var(--line);
-  background:var(--surface);color:var(--text);font:inherit;font-size:19px;
-  font-weight:800;cursor:pointer;transition:transform .1s, background .15s;
-}
+.speak.speaking{animation:glow 1s ease-in-out infinite}
+@keyframes glow{0%,100%{box-shadow:0 8px 24px -8px #ff5ca8}50%{box-shadow:0 8px 40px -4px #7c5cff}}
+.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;direction:ltr}
+.key{position:relative;aspect-ratio:1;border-radius:13px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:18px;font-weight:900;cursor:pointer;transition:transform .1s,background .15s;backdrop-filter:blur(8px)}
 .key:active{transform:scale(.92)}
-.key.sel{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
-.key.done::after{
-  content:"✓";position:absolute;top:2px;left:5px;font-size:10px;font-weight:800;
-  color:var(--ok);
-}
-.key.sel.done::after{color:var(--accent-text)}
-.key.none{opacity:.35;text-decoration:line-through}
-
-.foot{
-  margin-top:36px;text-align:center;color:var(--muted);font-size:12.5px;
-  line-height:2;
-}
-.foot b{color:var(--text);font-weight:700}
-
+.key.sel{background:linear-gradient(135deg,#ff5ca8,#7c5cff);border-color:transparent;box-shadow:0 6px 20px -6px #ff5ca8}
+.key.done::after{content:"✓";position:absolute;top:2px;left:6px;font-size:10px;font-weight:900;color:#ffd700}
+.key.none{opacity:.3;text-decoration:line-through}
+.lesson-card{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);border-radius:16px;padding:14px;margin-bottom:10px;cursor:pointer;transition:.15s}
+.lesson-card:hover{background:rgba(255,255,255,.14);border-color:rgba(255,92,168,.6)}
+.lesson-card h3{margin:0 0 6px;font-size:14px;font-weight:800}
+.lesson-card p{margin:0;font-size:11.5px;color:var(--muted);line-height:1.7}
+.lesson-body{padding:14px;background:rgba(0,0,0,.25);border-radius:14px;font-size:12.5px;line-height:2;color:rgba(255,255,255,.9);white-space:pre-line}
+.quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:12px;font-weight:700;gap:6px;flex-wrap:wrap}
+.quiz-tag{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;padding:5px 11px;border-radius:99px;font-size:11px}
+.quiz-tag.gold{background:rgba(255,215,0,.15);color:#ffd700;border:1px solid rgba(255,215,0,.4)}
+.quiz-tag.timer{background:rgba(79,209,161,.2);color:#4fd1a1;border:1px solid rgba(79,209,161,.5);font-family:monospace;font-size:16px;letter-spacing:1px;font-weight:900;padding:6px 14px;box-shadow:0 0 20px rgba(79,209,161,.4);transition:.3s}
+.quiz-tag.timer.warn{background:rgba(255,180,92,.25);color:#ffb45c;border-color:#ffb45c;box-shadow:0 0 20px rgba(255,180,92,.5);animation:tick 1s ease-in-out infinite}
+.quiz-tag.timer.danger{background:rgba(255,0,0,.35);color:#fff;border-color:#ff6b6b;box-shadow:0 0 30px rgba(255,0,0,.6);animation:tick .5s ease-in-out infinite}
+@keyframes tick{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.quiz-question{font-size:16px;font-weight:800;line-height:1.7;margin:0 0 14px;text-align:center;padding:14px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
+.quiz-topic{display:inline-block;background:rgba(124,92,255,.25);color:#c9bcff;padding:3px 10px;border-radius:99px;font-size:10.5px;font-weight:700;margin-bottom:10px;border:1px solid rgba(124,92,255,.4)}
+.quiz-options{display:grid;gap:9px}
+.quiz-opt{padding:13px 15px;border-radius:13px;cursor:pointer;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);color:#fff;font:inherit;font-size:13.5px;font-weight:700;text-align:right;transition:.2s;direction:ltr}
+.quiz-opt:hover:not(:disabled){background:rgba(255,255,255,.18);border-color:rgba(255,92,168,.6);transform:translateX(-4px)}
+.quiz-opt:disabled{cursor:not-allowed}
+.quiz-opt.correct{background:linear-gradient(135deg,rgba(79,209,161,.4),rgba(79,209,161,.15));border-color:#4fd1a1;color:#b3ffd9}
+.quiz-opt.wrong{background:linear-gradient(135deg,rgba(255,107,107,.4),rgba(255,107,107,.15));border-color:#ff6b6b;color:#ffb3b3}
+.result-screen{text-align:center;padding:26px 18px}
+.result-screen .big-emoji{font-size:66px;margin-bottom:8px;line-height:1}
+.result-screen .score-text{font-size:42px;font-weight:900;margin:8px 0;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 3s linear infinite}
+.result-screen .score-label{font-size:13.5px;color:var(--muted);font-weight:700;margin-bottom:14px}
+.stars-row{font-size:26px;letter-spacing:5px;margin:10px 0 16px}
+.result-screen .msg{font-size:13.5px;font-weight:700;line-height:1.9;margin-bottom:16px;padding:13px;border-radius:14px;background:rgba(255,255,255,.10)}
+.report-section{margin-bottom:14px;padding:13px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)}
+.report-section h4{margin:0 0 10px;font-size:13px;font-weight:800;color:#ffd700}
+.report-row{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px dashed rgba(255,255,255,.15)}
+.report-row:last-child{border-bottom:0}
+.score-good{color:#4fd1a1}.score-mid{color:#ffd700}.score-bad{color:#ff6b6b}
+.answer-sheet{font-size:12px;line-height:1.9}
+.answer-item{padding:11px;border-radius:12px;background:rgba(255,255,255,.06);margin-bottom:8px;border-right:3px solid rgba(255,255,255,.3)}
+.answer-item.correct{border-right-color:#4fd1a1}
+.answer-item.wrong{border-right-color:#ff6b6b}
+.answer-item .q{font-weight:800;color:#fff;margin-bottom:5px;font-size:12.5px}
+.answer-item .ans{color:#4fd1a1;font-weight:700;margin-bottom:4px;direction:ltr;text-align:left;font-size:12px}
+.answer-item .exp{color:rgba(255,255,255,.75);font-size:11px;line-height:1.85}
+.certificate{background:radial-gradient(ellipse at top left,rgba(255,215,0,.15),transparent 50%),radial-gradient(ellipse at bottom right,rgba(255,92,168,.15),transparent 50%),linear-gradient(135deg,#1a1033,#2a1a4d,#1a1033);border:3px double #ffd700;border-radius:24px;padding:26px 20px;text-align:center;position:relative;box-shadow:0 0 60px rgba(255,215,0,.3),inset 0 0 60px rgba(255,215,0,.05);margin-bottom:16px;overflow:hidden}
+.certificate::before{content:"";position:absolute;inset:8px;border:1px solid rgba(255,215,0,.4);border-radius:18px;pointer-events:none}
+.certificate::after{content:"★";position:absolute;top:14px;right:20px;color:#ffd700;font-size:20px;text-shadow:0 0 12px #ffd700}
+.cert-top-deco{color:#ffd700;font-size:22px;letter-spacing:8px;margin-bottom:8px}
+.cert-title{font-size:20px;font-weight:900;background:linear-gradient(135deg,#ffd700,#ff5ca8,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 4s linear infinite;margin:0 0 6px}
+.cert-sub{color:rgba(255,255,255,.7);font-size:11.5px;margin:0 0 14px;font-weight:600}
+.cert-name{font-size:24px;font-weight:900;color:#fff;padding:12px 18px;margin:10px 0;border-top:2px solid #ffd700;border-bottom:2px solid #ffd700;text-shadow:0 0 20px rgba(255,215,0,.6);line-height:1.4;word-break:break-word}
+.cert-body{color:rgba(255,255,255,.85);font-size:12.5px;line-height:2;margin:12px 0}
+.cert-score{display:inline-block;padding:7px 16px;border-radius:99px;margin:10px 0;background:linear-gradient(135deg,rgba(255,215,0,.2),rgba(255,92,168,.2));border:1.5px solid #ffd700;color:#ffd700;font-weight:800;font-size:13px}
+.cert-footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(255,215,0,.4);display:flex;justify-content:space-between;align-items:center;font-size:10px;color:rgba(255,255,255,.6)}
+.cert-sign{text-align:center}
+.cert-sign .name{color:#ffd700;font-size:12px;font-weight:800;margin-bottom:2px}
+.cert-seal{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff5b0,#ffd700 40%,#b8860b);display:grid;place-items:center;font-size:20px;color:#5a3d00;box-shadow:0 0 24px rgba(255,215,0,.6),inset 0 -3px 6px rgba(0,0,0,.3);font-weight:900;position:relative}
+.cert-seal::after{content:"";position:absolute;inset:6px;border:2px dashed rgba(90,61,0,.5);border-radius:50%}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:9999}
+.confetti-piece{position:absolute;width:10px;height:14px;animation:confettiFall linear infinite;opacity:.9}
+@keyframes confettiFall{0%{transform:translateY(-20vh) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.name-input{width:100%;padding:14px;border-radius:14px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.28);color:#fff;font:inherit;font-size:15px;font-weight:700;text-align:center;outline:none;margin-bottom:14px;transition:.2s}
+.name-input::placeholder{color:rgba(255,255,255,.5)}
+.name-input:focus{border-color:#ffd700;box-shadow:0 0 0 4px rgba(255,215,0,.2);background:rgba(255,255,255,.18)}
+.toast{position:fixed;bottom:24px;right:50%;transform:translate(50%,120px);background:rgba(0,0,0,.85);border:1.5px solid rgba(255,255,255,.25);color:#fff;padding:13px 20px;border-radius:14px;font-size:13px;font-weight:700;z-index:9999;backdrop-filter:blur(20px);transition:transform .3s;max-width:90vw;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.toast.show{transform:translate(50%,0)}
+.foot{margin-top:30px;text-align:center;color:rgba(255,255,255,.6);font-size:12px;line-height:2}
+.foot b{color:#ffd700;font-weight:800}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<div class="app">
+<div class="rainbow-bg"></div>
+<div class="stars" id="stars"></div>
 
+<div class="app">
   <section id="home">
     <div class="brand">
-      <h1>🎬 استودیو محمدجواد کجوری</h1>
-      <p>بازی آموزش حروف انگلیسی — دسته‌بندی موضوعی</p>
+      <h1>🎓 استودیو محمدجواد کجوری</h1>
+      <p class="studio">✨ کلاس ایمان ۱ ✨</p>
       <div class="line"></div>
     </div>
 
-    <input type="text" class="search" id="search" placeholder="🔍 جستجوی دسته...">
-
-    <div class="section-title">
-      <span>همهٔ دسته‌ها</span>
-      <span class="count-badge" id="catCount"></span>
+    <div class="tabs" id="tabs">
+      <button type="button" data-v="learn" class="on">📚 حروف</button>
+      <button type="button" data-v="lessons">🎯 دروس</button>
+      <button type="button" data-v="quiz">📝 آزمون</button>
     </div>
 
-    <div class="grid" id="cats"></div>
+    <div id="paneLearn">
+      <input type="text" class="search" id="search" placeholder="🔍 جستجوی دسته...">
+      <div class="section-title"><span>دسته‌های آموزشی</span><span class="count-badge" id="catCount"></span></div>
+      <div class="grid" id="cats"></div>
+    </div>
+
+    <div id="paneLessons" hidden>
+      <div class="glass" style="margin-bottom:14px;text-align:center;padding:14px;font-size:12.5px;line-height:1.9;color:rgba(255,255,255,.85)">
+        📌 این دروس، مباحثی هستند که در <b style="color:#ffd700">آزمون نهایی</b> از آن‌ها سوال می‌آید. جدول زیر نشان می‌دهد از هر مبحث چند سوال وجود دارد.
+      </div>
+      <div id="lessonsList"></div>
+    </div>
+
+    <div id="paneQuiz" hidden>
+      <div class="glass" style="text-align:center;padding:24px 18px">
+        <div style="font-size:56px;margin-bottom:6px">📝</div>
+        <h2 style="margin:0 0 8px;font-size:20px;font-weight:900">آزمون نهایی حرفه‌ای</h2>
+        <p style="color:var(--muted);font-size:12.5px;line-height:1.9;margin:0 0 16px">
+          <b style="color:#ffd700">۲۰ سوال سخت</b> از تمام مباحث<br>
+          ⏱ زمان: <b style="color:#4fd1a1">۲۰ دقیقه</b> — با کارنامه و پاسخ‌نامهٔ تشریحی
+        </p>
+        <div class="glass" style="text-align:right;padding:12px;margin-bottom:14px;font-size:11px">
+          <div style="color:#ffd700;font-weight:800;margin-bottom:6px">📊 توزیع سوالات:</div>
+          <div id="topicDistribution" style="line-height:2"></div>
+        </div>
+        <input type="text" class="name-input" id="studentName" placeholder="نام و نام خانوادگی" maxlength="40">
+        <button class="btn-big gold" id="startQuiz" type="button">🚀 شروع آزمون</button>
+      </div>
+    </div>
   </section>
 
   <section id="play" hidden>
-    <div class="top">
-      <button class="back" id="back" type="button">→ بازگشت</button>
-      <h2 id="ptitle"></h2>
-    </div>
-
+    <div class="top"><button class="back" id="backLearn" type="button">→ بازگشت</button><h2 id="ptitle"></h2></div>
     <div class="progress-bar"><i id="progFill"></i></div>
-
     <div class="result empty" id="result">یک حرف را انتخاب کن</div>
     <div class="keys" id="keys"></div>
-
-    <div class="foot" style="margin-top:24px" id="playFoot"></div>
+    <div class="foot" id="playFoot"></div>
   </section>
 
-  <div class="foot" id="mainFoot">
-    طراحی و ساخت: <b>محمدجواد کجوری</b><br>
-    © استودیو محمدجواد کجوری
-  </div>
+  <section id="lessonPage" hidden>
+    <div class="top"><button class="back" id="backLesson" type="button">→ بازگشت</button><h2 id="lessonTitle"></h2></div>
+    <div class="glass" id="lessonContent"></div>
+  </section>
 
+  <section id="quiz" hidden>
+    <div class="top"><button class="back" id="backQuiz" type="button">→ بازگشت</button><h2>📝 آزمون نهایی</h2></div>
+    <div class="quiz-header">
+      <span class="quiz-tag" id="qNum">سوال ۱ / ۲۰</span>
+      <span class="quiz-tag gold" id="qScore">امتیاز: ۰</span>
+      <span class="quiz-tag timer" id="qTimer">۲۰:۰۰</span>
+    </div>
+    <div class="progress-bar"><i id="quizFill"></i></div>
+    <div class="glass">
+      <div class="quiz-topic" id="qTopic"></div>
+      <p class="quiz-question" id="qText"></p>
+      <div class="quiz-options" id="qOpts"></div>
+    </div>
+  </section>
+
+  <section id="quizResult" hidden>
+    <div class="glass result-screen">
+      <div class="big-emoji" id="resEmoji">🎉</div>
+      <div class="score-text" id="resScore">— / ۲۰</div>
+      <div class="score-label" id="resPercent">—٪</div>
+      <div class="stars-row" id="resStars"></div>
+      <div class="msg" id="resMsg"></div>
+      <button class="btn-big gold" id="showReport" type="button">📋 مشاهده کارنامه</button>
+    </div>
+  </section>
+
+  <section id="report" hidden>
+    <div class="glass">
+      <h2 style="text-align:center;font-size:18px;font-weight:900;margin:0 0 16px">📋 کارنامهٔ آزمون</h2>
+      <div class="report-section">
+        <h4>👤 اطلاعات دانش‌آموز</h4>
+        <div class="report-row"><span>نام:</span><span class="score-good" id="rpName">—</span></div>
+        <div class="report-row"><span>کلاس:</span><span class="score-good">ایمان ۱</span></div>
+        <div class="report-row"><span>تاریخ:</span><span class="score-good" id="rpDate">—</span></div>
+        <div class="report-row"><span>زمان صرف‌شده:</span><span class="score-good" id="rpTime">—</span></div>
+      </div>
+      <div class="report-section">
+        <h4>📊 نتیجهٔ کلی</h4>
+        <div class="report-row"><span>نمره کل:</span><span id="rpScore">—</span></div>
+        <div class="report-row"><span>درصد:</span><span id="rpPct">—</span></div>
+        <div class="report-row"><span>وضعیت:</span><span id="rpStatus">—</span></div>
+      </div>
+      <div class="report-section">
+        <h4>📚 عملکرد بر اساس مبحث</h4>
+        <div id="rpTopics"></div>
+      </div>
+      <button class="btn-big gold" id="goCert" type="button" style="margin-top:8px">🏆 دریافت گواهینامه</button>
+      <button class="btn-big" id="viewAnswers" type="button" style="margin-top:10px">📖 پاسخ‌نامه تشریحی</button>
+    </div>
+  </section>
+
+  <section id="answers" hidden>
+    <div class="glass">
+      <h2 style="text-align:center;font-size:18px;font-weight:900;margin:0 0 14px">📖 پاسخ‌نامهٔ تشریحی</h2>
+      <div class="answer-sheet" id="answerList"></div>
+      <button class="btn-big" id="backReport" type="button" style="margin-top:14px">→ بازگشت به کارنامه</button>
+    </div>
+  </section>
+
+  <section id="cert" hidden>
+    <div class="certificate">
+      <div class="cert-top-deco">★ ★ ★</div>
+      <h2 class="cert-title">گواهینامهٔ افتخار</h2>
+      <p class="cert-sub">Certificate of Achievement</p>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.7);margin-bottom:4px">بدین‌وسیله به</div>
+      <div class="cert-name" id="certName">—</div>
+      <div class="cert-body">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع حروف و دستور زبان انگلیسی</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
+      <div class="cert-score" id="certScore">نمره: —</div>
+      <div class="cert-footer">
+        <div class="cert-sign"><div class="name">محمدجواد کجوری</div><div>مدیر استودیو</div><div style="font-size:9px;margin-top:2px" id="certDate">—</div></div>
+        <div class="cert-seal">🏆</div>
+        <div class="cert-sign"><div class="name">کلاس ایمان ۱</div><div>دورهٔ آموزشی</div><div style="font-size:9px;margin-top:2px">گواهینامهٔ معتبر</div></div>
+      </div>
+    </div>
+    <button class="btn-big" id="backHome" type="button">🏠 بازگشت به خانه</button>
+  </section>
+
+  <div class="foot">طراحی و ساخت: <b>محمدجواد کجوری</b><br>© استودیو محمدجواد کجوری — کلاس ایمان ۱</div>
 </div>
 
-<script>
+<div class="toast" id="toast"></div>
+
+  <script>
 /* =========================================================
-   داده‌های بازی — ۴۰ دسته
+   دادهٔ ۴۰ دستهٔ آموزش حروف
    ========================================================= */
 const C = {
-  object: { fa:"اشیاء", en:"Objects", emo:"📱🔑",
-    d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت نامه"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف شیشه‌ای"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت مچی"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
-
-  animal: { fa:"حیوانات", en:"Animals", emo:"🦁🐘",
-    d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیای دریایی"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب زمینی"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
-
-  bird: { fa:"پرندگان", en:"Birds", emo:"🦅🦜",
-    d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی آبی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","مرغ ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","پرنده چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ گورخری"]}},
-
-  fish: { fa:"ماهی‌ها", en:"Fish", emo:"🐟🐠",
-    d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","ماهی حلوا"],I:["Ide","ماهی ایده"],J:["Jellyfish","عروس دریایی"],K:["Koi","ماهی کوئی"],L:["Lobster","لابستر"],M:["Mackerel","ماهی خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ماهی ملکه"],R:["Ray","سفر‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیای دریایی"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا اشعه‌ای"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","ماهی گورخری"]}},
-
-  insect: { fa:"حشرات", en:"Insects", emo:"🐝🦋",
-    d:{A:["Ant","مورچه"],B:["Bee","زنبور"],C:["Cricket","جیرجیرک"],D:["Dragonfly","سنجاقک"],E:["Earwig","گوش‌خیزک"],F:["Firefly","کرم شب‌تاب"],G:["Grasshopper","ملخ"],H:["Hornet","زنبور قرمز"],I:["Isopod","خرخاکی"],J:["June Bug","سوسک خرداد"],K:["Katydid","جیرجیرک برگ"],L:["Ladybug","کفش‌دوزک"],M:["Moth","پروانه شب"],N:["Nymph","شفیره"],O:["Owlfly","جغدپروانه"],P:["Praying Mantis","آخوندک"],Q:["Queen Bee","ملکه زنبور"],R:["Roach","سوسری"],S:["Spider","عنکبوت"],T:["Termite","موریانه"],U:["Underwing","شب‌پره زیربال"],V:["Velvet Ant","مورچه مخملی"],W:["Wasp","زنبور وحشی"],X:["Xerces Blue","پروانه آبی"],Y:["Yellow Jacket","زنبور زرد"],Z:["Zebra Butterfly","پروانه گورخری"]}},
-
-  fruit: { fa:"میوه‌ها", en:"Fruits", emo:"🍎🍇",
-    d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Date","خرما"],E:["Elderberry","انگور فرنگی"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Imbe","میوه آفریقایی"],J:["Jackfruit","جک فروت"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","هلو انجیری"],O:["Orange","پرتقال"],P:["Peach","هلو"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت‌فرنگی"],T:["Tangerine","نارنگی"],U:["Ugli Fruit","آگلی فروت"],V:["Valencia Orange","پرتقال والنسیا"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی زرد"],Z:["Ziziphus","عناب"]}},
-
-  vegetable: { fa:"سبزیجات", en:"Vegetables", emo:"🥕🥦",
-    d:{A:["Artichoke","کنگر فرنگی"],B:["Broccoli","کلم بروکلی"],C:["Carrot","هویج"],D:["Dill","شوید"],E:["Eggplant","بادمجان"],F:["Fennel","رازیانه"],G:["Garlic","سیر"],H:["Horseradish","ترب کوهی"],I:["Iceberg Lettuce","کاهوی آیسبرگ"],J:["Jalapeño","فلفل هالوپینو"],K:["Kale","کلم پیچ"],L:["Lettuce","کاهو"],M:["Mushroom","قارچ"],N:["Napa Cabbage","کلم ناپا"],O:["Onion","پیاز"],P:["Potato","سیب‌زمینی"],Q:["Quinoa","کینوا"],R:["Radish","تربچه"],S:["Spinach","اسفناج"],T:["Tomato","گوجه"],U:["Upland Cress","شاهی کوهی"],V:["Vine Leaves","برگ مو"],W:["Watercress","شاهی آبی"],X:["Xylopia","فلفل آفریقایی"],Y:["Yam","سیب‌زمینی شیرین"],Z:["Zucchini","کدو سبز"]}},
-
-  color: { fa:"رنگ‌ها", en:"Colors", emo:"🎨🌈",
-    d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای روشن"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی تند"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی اولترامارین"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی خاکستری"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
-
-  country: { fa:"کشورها", en:"Countries", emo:"🌍🏳️",
-    d:{A:["Argentina","آرژانتین","🇦🇷"],B:["Brazil","برزیل","🇧🇷"],C:["Canada","کانادا","🇨🇦"],D:["Denmark","دانمارک","🇩🇰"],E:["Egypt","مصر","🇪🇬"],F:["France","فرانسه","🇫🇷"],G:["Germany","آلمان","🇩🇪"],H:["Hungary","مجارستان","🇭🇺"],I:["Iran","ایران","🇮🇷"],J:["Japan","ژاپن","🇯🇵"],K:["Kuwait","کویت","🇰🇼"],L:["Lebanon","لبنان","🇱🇧"],M:["Mexico","مکزیک","🇲🇽"],N:["Norway","نروژ","🇳🇴"],O:["Oman","عمان","🇴🇲"],P:["Portugal","پرتغال","🇵🇹"],Q:["Qatar","قطر","🇶🇦"],R:["Russia","روسیه","🇷🇺"],S:["Spain","اسپانیا","🇪🇸"],T:["Turkey","ترکیه","🇹🇷"],U:["Ukraine","اوکراین","🇺🇦"],V:["Venezuela","ونزوئلا","🇻🇪"],W:["Wales","ولز","🏴"],X:["Xinjiang","سین‌کیانگ","🏴"],Y:["Yemen","یمن","🇾🇪"],Z:["Zambia","زامبیا","🇿🇲"]}},
-
-  iranCity: { fa:"شهرهای ایران", en:"Iranian Cities", emo:"🏙️🕌",
-    d:{A:["Ahvaz","اهواز"],B:["Babol","بابل"],C:["Chabahar","چابهار"],D:["Damghan","دامغان"],E:["Esfahan","اصفهان"],F:["Firuzabad","فیروزآباد"],G:["Gorgan","گرگان"],H:["Hamadan","همدان"],I:["Ilam","ایلام"],J:["Jahrom","جهرم"],K:["Kerman","کرمان"],L:["Lahijan","لاهیجان"],M:["Mashhad","مشهد"],N:["Najafabad","نجف‌آباد"],O:["Omidiyeh","امیدیه"],P:["Pakdasht","پاکدشت"],Q:["Qazvin","قزوین"],R:["Rasht","رشت"],S:["Shiraz","شیراز"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xoshkebijar","خشکبیجار"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
-
-  province: { fa:"استان‌های ایران", en:"Iranian Provinces", emo:"🗺️🇮🇷",
-    d:{A:["Alborz","البرز"],B:["Bushehr","بوشهر"],C:["Chaharmahal","چهارمحال"],D:["Deylaman","دیلمان"],E:["East Azerbaijan","آذربایجان شرقی"],F:["Fars","فارس"],G:["Gilan","گیلان"],H:["Hormozgan","هرمزگان"],I:["Ilam","ایلام"],J:["Jiroft","جیرفت"],K:["Kohgiluyeh","کهگیلویه"],L:["Lorestan","لرستان"],M:["Markazi","مرکزی"],N:["North Khorasan","خراسان شمالی"],O:["Ostan Tehran","استان تهران"],P:["Persian Gulf","خلیج فارس"],Q:["Qazvin","قزوین"],R:["Razavi Khorasan","خراسان رضوی"],S:["Sistan","سیستان"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xorasan","خراسان"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
-
-  iranFood: { fa:"غذاهای ایرانی", en:"Iranian Food", emo:"🍚🍢",
-    d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی کباب"],J:["Joojeh Kabab","جوجه‌کباب"],K:["Kookoo Sabzi","کوکو سبزی"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا قاسمی"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج سفید"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک‌پلو"]}},
-
-  sweet: { fa:"شیرینی و خوراکی", en:"Sweets & Snacks", emo:"🍰🍬",
-    d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات چوبی"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک اوبه"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کیک کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","شیرینی زبان"]}},
-
-  drink: { fa:"نوشیدنی‌ها", en:"Drinks", emo:"☕🥤",
-    d:{A:["Americano","آمریکانو"],B:["Beer","آبجو"],C:["Coffee","قهوه"],D:["Doogh","دوغ"],E:["Espresso","اسپرسو"],F:["Frappe","فراپه"],G:["Green Tea","چای سبز"],H:["Hot Chocolate","شکلات داغ"],I:["Iced Tea","آیس تی"],J:["Juice","آبمیوه"],K:["Kombucha","کامبوچا"],L:["Lemonade","لیموناد"],M:["Milk","شیر"],N:["Nectar","نکتار"],O:["Orange Juice","آب پرتقال"],P:["Pepsi","پپسی"],Q:["Quinine","تونیک"],R:["Red Bull","ردبول"],S:["Smoothie","اسموتی"],T:["Tea","چای"],U:["Ume","آب آلو"],V:["Vodka","ودکا"],W:["Water","آب"],X:["Xigua Juice","آب هندوانه"],Y:["Yerba Mate","یربا مات"],Z:["Zamzam","زمزم"]}},
-
-  sport: { fa:"ورزش‌ها", en:"Sports", emo:"⚽🏀",
-    d:{A:["Archery","تیراندازی با کمان"],B:["Basketball","بسکتبال"],C:["Cricket","کریکت"],D:["Diving","شیرجه"],E:["Equestrian","سوارکاری"],F:["Football","فوتبال"],G:["Golf","گلف"],H:["Hockey","هاکی"],I:["Ice Skating","اسکیت روی یخ"],J:["Judo","جودو"],K:["Karate","کاراته"],L:["Long Jump","پرش طول"],M:["Marathon","ماراتن"],N:["Netball","نت‌بال"],O:["Orienteering","جهت‌یابی"],P:["Polo","چوگان"],Q:["Quidditch","کوایدیچ"],R:["Rowing","قایقرانی"],S:["Swimming","شنا"],T:["Tennis","تنیس"],U:["Ultimate Frisbee","فریزبی"],V:["Volleyball","والیبال"],W:["Wrestling","کشتی"],X:["Xare","ورزش باسکی"],Y:["Yoga","یوگا"],Z:["Zumba","زومبا"]}},
-
-  job: { fa:"شغل‌ها", en:"Jobs", emo:"👨‍⚕️👷",
-    d:{A:["Architect","معمار"],B:["Baker","نانوا"],C:["Chef","آشپز"],D:["Doctor","دکتر"],E:["Engineer","مهندس"],F:["Farmer","کشاورز"],G:["Gardener","باغبان"],H:["Hairdresser","آرایشگر"],I:["Illustrator","تصویرساز"],J:["Journalist","روزنامه‌نگار"],K:["Knight","شوالیه"],L:["Lawyer","وکیل"],M:["Musician","نوازنده"],N:["Nurse","پرستار"],O:["Optician","عینک‌ساز"],P:["Painter","نقاش"],Q:["Quantity Surveyor","مهندس برآورد"],R:["Reporter","خبرنگار"],S:["Soldier","سرباز"],T:["Teacher","معلم"],U:["Umpire","داور"],V:["Veterinarian","دامپزشک"],W:["Writer","نویسنده"],X:["Xylophonist","نوازنده زایلوفون"],Y:["Youtuber","یوتیوبر"],Z:["Zoologist","جانورشناس"]}},
-
-  car: { fa:"ماشین‌ها", en:"Cars", emo:"🏎🚗",
-    d:{A:["Audi","آئودی"],B:["BMW","بی‌ام‌و"],C:["Chevrolet","شورولت"],D:["Dodge","دوج"],E:["Elantra","النترا"],F:["Ferrari","فراری"],G:["GMC","جی‌ام‌سی"],H:["Honda","هوندا"],I:["Infiniti","اینفینیتی"],J:["Jaguar","جگوار"],K:["Kia","کیا"],L:["Lamborghini","لامبورگینی"],M:["Mercedes","مرسدس"],N:["Nissan","نیسان"],O:["Opel","اوپل"],P:["Peugeot","پژو"],Q:["Qoros","کوروس"],R:["Renault","رنو"],S:["Skoda","اشکودا"],T:["Toyota","تویوتا"],U:["UAZ","اواز"],V:["Volvo","ولوو"],W:["Wuling","ولینگ"],X:["Xpeng","ایکس‌پنگ"],Y:["Yaris","یاریس"],Z:["Zeekr","زیکر"]}},
-
-  player: { fa:"فوتبالیست‌ها", en:"Footballers", emo:"⚽🏆",
-    d:{A:["Aguero","آگوئرو"],B:["Beckham","بکام"],C:["Cristiano Ronaldo","کریستیانو رونالدو"],D:["Drogba","دروگبا"],E:["Eto'o","اتوئو"],F:["Figo","فیگو"],G:["Gerrard","جرارد"],H:["Haaland","هالند"],I:["Iniesta","اینیستا"],J:["Jahanbakhsh","جهانبخش"],K:["Kane","کین"],L:["Lionel Messi","لیونل مسی"],M:["Maradona","مارادونا"],N:["Neymar","نیمار"],O:["Ozil","اوزیل"],P:["Pele","پله"],Q:["Quaresma","کوارشما"],R:["Ronaldinho","رونالدینیو"],S:["Salah","صلاح"],T:["Taremi","طارمی"],U:["Ureña","اورنیا"],V:["Vinicius","وینیسیوس"],W:["Weah","ویا"],X:["Xavi","ژاوی"],Y:["Yamal","یامال"],Z:["Zidane","زیدان"]}},
-
-  actor: { fa:"بازیگران مرد", en:"Actors", emo:"🎬🎭",
-    d:{A:["Amin Zendegani","امین زندگانی"],B:["Behrouz Vossoughi","بهروز وثوقی"],C:["Cameron Diaz","کامرون دیاز"],D:["Dariush Arjmand","داریوش ارجمند"],E:["Ezzatolah Entezami","عزت‌الله انتظامی"],F:["Farhad Aslani","فرهاد اصلانی"],G:["Golab Adineh","گلاب آدینه"],H:["Homayoun Ershadi","همایون ارشادی"],I:["Iraj Ghaderi","ایرج قادری"],J:["Jamshid Mashayekhi","جمشید مشایخی"],K:["Kambiz Dirbaz","کامبیز دیرباز"],L:["Leonardo DiCaprio","لئوناردو دی‌کاپریو"],M:["Mehdi Hashemi","مهدی هاشمی"],N:["Navid Mohammadzadeh","نوید محمدزاده"],O:["Omid Abbasi","امید عباسی"],P:["Parviz Parastui","پرویز پرستویی"],Q:["Qasem Zare","قاسم زارع"],R:["Reza Attaran","رضا عطاران"],S:["Shahab Hosseini","شهاب حسینی"],T:["Tom Cruise","تام کروز"],U:["Umar Khan","عمر خان"],V:["Hamed Vakili","حامد وکیلی"],W:["Will Smith","ویل اسمیت"],X:["Xavier Bardem","خاویر باردم"],Y:["Yousef Teymouri","یوسف تیموری"],Z:["Zahra Amir Ebrahimi","زهرا امیرابراهیمی"]}},
-
-  actress: { fa:"بازیگران زن", en:"Actresses", emo:"🎭👩",
-    d:{A:["Angelina Jolie","آنجلینا جولی"],B:["Bahareh Kian Afshar","بهاره کیان‌افشار"],C:["Cate Blanchett","کیت بلانشت"],D:["Diana Kruger","دایان کروگر"],E:["Elika Abdolrazzaghi","الیکا عبدالرزاقی"],F:["Fatemeh Motamed-Arya","فاطمه معتمدآریا"],G:["Golshifteh Farahani","گلشیفته فراهانی"],H:["Hanieh Tavassoli","هانیه توسلی"],I:["Iran Daftari","ایران دفتری"],J:["Julia Roberts","جولیا رابرتز"],K:["Katayoun Riahi","کتایون ریاحی"],L:["Leila Otadi","لیلا اوتادی"],M:["Melika Sharifinia","ملیکا شریفی‌نیا"],N:["Nasrin Nosrati","نسرین نصرتی"],O:["Olivia Wilde","الیویا وایلد"],P:["Parinaz Izadyar","پریناز ایزدیار"],Q:["Queen Latifah","کوئین لطیفه"],R:["Rima Raminfar","ریما رامین‌فر"],S:["Sareh Bayat","ساره بیات"],T:["Taraneh Alidoosti","ترانه علیدوستی"],U:["Uma Thurman","اوما تورمن"],V:["Vishka Asayesh","ویشکا آسایش"],W:["Winona Ryder","وینونا رایدر"],X:["Xena","زینا"],Y:["Yasmin Le Bon","یاسمین لو بون"],Z:["Ziba Boroufeh","زیبا بروفه"]}},
-
-  singer: { fa:"خواننده‌ها", en:"Singers", emo:"🎤🎵",
-    d:{A:["Adele","ادل"],B:["Beyoncé","بیانسه"],C:["Celine Dion","سلین دیون"],D:["Drake","دریک"],E:["Eminem","امینم"],F:["Frank Sinatra","فرانک سیناترا"],G:["Googoosh","گوگوش"],H:["Homayoun Shajarian","همایون شجریان"],I:["Iggy Azalea","ایگی آزیلیا"],J:["Justin Bieber","جاستین بیبر"],K:["Katy Perry","کیتی پری"],L:["Lady Gaga","لیدی گاگا"],M:["Michael Jackson","مایکل جکسون"],N:["Nazanin","نازنین"],O:["Olivia Rodrigo","الیویا رودریگو"],P:["Pink","پینک"],Q:["Queen","کوئین"],R:["Rihanna","ریحانا"],S:["Shakira","شکیرا"],T:["Taylor Swift","تیلور سوئیفت"],U:["U2","یو تو"],V:["Vigen","ویگن"],W:["Weeknd","ویکند"],X:["Xzibit","ایکسزیبیت"],Y:["Yas","یاس"],Z:["Zayn Malik","زین مالیک"]}},
-
-  scientist: { fa:"دانشمندان", en:"Scientists", emo:"🔬🧪",
-    d:{A:["Archimedes","ارشمیدس"],B:["Bell","بِل"],C:["Curie","کوری"],D:["Darwin","داروین"],E:["Einstein","اینشتین"],F:["Faraday","فارادی"],G:["Galileo","گالیله"],H:["Hawking","هاوکینگ"],I:["Ibn Sina","ابن‌سینا"],J:["James Watt","جیمز وات"],K:["Kepler","کپلر"],L:["Lavoisier","لاووازیه"],M:["Mendel","مندل"],N:["Newton","نیوتن"],O:["Oppenheimer","اوپنهایمر"],P:["Pasteur","پاستور"],Q:["Quetelet","کتله"],R:["Rutherford","رادرفورد"],S:["Sagan","ساگان"],T:["Tesla","تسلا"],U:["Urey","یوری"],V:["Volta","ولتا"],W:["Watson","واتسون"],X:["Xenophanes","گزنوفانس"],Y:["Young","یانگ"],Z:["Zewail","زیویل"]}},
-
-  writer: { fa:"نویسندگان", en:"Writers", emo:"✍️📚",
-    d:{A:["Aeschylus","آیسخولوس"],B:["Balzac","بالزاک"],C:["Chekhov","چخوف"],D:["Dostoevsky","داستایوفسکی"],E:["Ernest Hemingway","ارنست همینگوی"],F:["Faulkner","فاکنر"],G:["Goethe","گوته"],H:["Hugo","هوگو"],I:["Ibsen","ایبسن"],J:["Jane Austen","جین آستین"],K:["Kafka","کافکا"],L:["Leo Tolstoy","لئو تولستوی"],M:["Maupassant","موپاسان"],N:["Nabokov","نابوکوف"],O:["Orwell","اورول"],P:["Pushkin","پوشکین"],Q:["Quiroga","کیروگا"],R:["Rumi","مولوی"],S:["Shakespeare","شکسپیر"],T:["Tolstoy","تولستوی"],U:["Updike","آپدایک"],V:["Voltaire","ولتر"],W:["Wilde","وایلد"],X:["Xenophon","گزنفون"],Y:["Yeats","ییتس"],Z:["Zola","زولا"]}},
-
-  poet: { fa:"شاعران ایرانی", en:"Persian Poets", emo:"📜🕌",
-    d:{A:["Attar","عطار"],B:["Baba Taher","بابا طاهر"],C:["Cyrus","کوروش"],D:["Daghighi","دقیقی"],E:["Ehsan","احسان"],F:["Farrokhi","فرخی"],G:["Ganjavi","گنجوی"],H:["Hafez","حافظ"],I:["Iraj Mirza","ایرج میرزا"],J:["Jami","جامی"],K:["Khaqani","خاقانی"],L:["Labibi","لبیبی"],M:["Moulavi","مولوی"],N:["Nezami","نظامی"],O:["Omar Khayyam","عمر خیام"],P:["Parvin","پروین"],Q:["Qatran","قطران"],R:["Rudaki","رودکی"],S:["Saadi","سعدی"],T:["Torki","ترکی"],U:["Ustad","استاد"],V:["Vahshi","وحشی"],W:["Wasif","وصیف"],X:["Xosro","خسرو"],Y:["Yaghma","یغما"],Z:["Zahir","ظهیر"]}},
-
-  flower: { fa:"گل‌ها", en:"Flowers", emo:"🌸🌷",
-    d:{A:["Aster","ستاره‌ای"],B:["Begonia","بگونیا"],C:["Chrysanthemum","داوودی"],D:["Daisy","گل مینا"],E:["Edelweiss","ادلوایس"],F:["Freesia","فریزیا"],G:["Gardenia","گاردنیا"],H:["Hyacinth","سنبل"],I:["Iris","زنبق"],J:["Jasmine","یاس"],K:["King Protea","پروتئا"],L:["Lily","سوسن"],M:["Magnolia","ماگنولیا"],N:["Narcissus","نرگس"],O:["Orchid","ارکیده"],P:["Peony","صدتومانی"],Q:["Queen Anne's Lace","توری ملکه"],R:["Rose","گل رز"],S:["Sunflower","آفتابگردان"],T:["Tulip","لاله"],U:["Ursinia","اورسینیا"],V:["Violet","بنفشه"],W:["Water Lily","نیلوفر آبی"],X:["Xeranthemum","خشک‌گل"],Y:["Yarrow","بومادران"],Z:["Zinnia","زینیا"]}},
-
-  clothing: { fa:"پوشاک", en:"Clothing", emo:"👕👖",
-    d:{A:["Apron","پیش‌بند"],B:["Blouse","بلوز"],C:["Coat","کت"],D:["Dress","پیراهن زنانه"],E:["Ear Muffs","گوش‌بند"],F:["Fedora","کلاه شاپو"],G:["Gloves","دستکش"],H:["Hat","کلاه"],I:["Insole","کفی کفش"],J:["Jacket","کاپشن"],K:["Kimono","کیمونو"],L:["Leggings","ساپورت"],M:["Mittens","دستکش بدون انگشت"],N:["Nightgown","لباس خواب"],O:["Overcoat","پالتو"],P:["Pants","شلوار"],Q:["Quilted Jacket","کاپشن لایه‌دار"],R:["Raincoat","بارانی"],S:["Shirt","پیراهن"],T:["Tie","کراوات"],U:["Underwear","لباس زیر"],V:["Vest","جاکت جلیقه‌ای"],W:["Waistcoat","جلیقه"],X:["X-large Shirt","پیراهن سایز بزرگ"],Y:["Yoga Pants","شلوار یوگا"],Z:["Zip-up","زیپ‌دار"]}},
-
-  instrument: { fa:"سازها", en:"Instruments", emo:"🎸🎹",
-    d:{A:["Accordion","آکاردئون"],B:["Banjo","بانجو"],C:["Cello","ویولنسل"],D:["Drum","طبل"],E:["Electric Guitar","گیتار برقی"],F:["Flute","فلوت"],G:["Guitar","گیتار"],H:["Harmonica","ساز دهنی"],I:["Ipu","طبل هاوایی"],J:["Jembe","جمبه"],K:["Keyboard","کیبورد"],L:["Lute","لوت"],M:["Mandolin","ماندولین"],N:["Ney","نی"],O:["Oboe","ابوا"],P:["Piano","پیانو"],Q:["Qanun","قانون"],R:["Rabab","رباب"],S:["Santur","سنتور"],T:["Tar","تار"],U:["Ukulele","یوکلله"],V:["Violin","ویولن"],W:["Woodblock","وودبلاک"],X:["Xylophone","زایلوفون"],Y:["Yangqin","یانگ‌کین"],Z:["Zither","زیتر"]}},
-
-  kitchen: { fa:"لوازم آشپزخانه", en:"Kitchen Items", emo:"🍳🥄",
-    d:{A:["Apron","پیش‌بند"],B:["Blender","مخلوط‌کن"],C:["Cutting Board","تخته برش"],D:["Dish","بشقاب"],E:["Egg Beater","همزن"],F:["Fork","چنگال"],G:["Glass","لیوان"],H:["Hob","اجاق"],I:["Ice Tray","قالب یخ"],J:["Jug","پارچ"],K:["Kettle","کتری"],L:["Ladle","ملاقه"],M:["Mug","ماگ"],N:["Napkin","دستمال سفره"],O:["Oven","فر"],P:["Pan","ماهیتابه"],Q:["Quiche Dish","ظرف کیش"],R:["Rolling Pin","وردنه"],S:["Spoon","قاشق"],T:["Tongs","انبر"],U:["Utensils","ابزار آشپزخانه"],V:["Vegetable Peeler","سبزی‌پوست‌کن"],W:["Whisk","همزن"],X:["Xiaolongbao Steamer","بخارپز"],Y:["Yeast Jar","شیشه مخمر"],Z:["Zester","رنده پوست مرکبات"]}},
-
-  stationery: { fa:"لوازم‌التحریر", en:"Stationery", emo:"✏️📐",
-    d:{A:["A4 Paper","کاغذ A4"],B:["Ballpoint Pen","خودکار"],C:["Compass","پرگار"],D:["Drawing Book","دفتر نقاشی"],E:["Eraser","پاک‌کن"],F:["Folder","پوشه"],G:["Glue","چسب"],H:["Highlighter","ماژیک فسفری"],I:["Ink Pen","خودنویس"],J:["Jotter","دفترچه یادداشت"],K:["Knife","کاتر"],L:["Lead Pencil","مداد نوکی"],M:["Marker","ماژیک"],N:["Notebook","دفتر"],O:["Oil Pastel","پاستل روغنی"],P:["Pencil","مداد"],Q:["Quill","قلم پر"],R:["Ruler","خط‌کش"],S:["Scissors","قیچی"],T:["Tape","چسب نواری"],U:["USB Drive","فلش"],V:["Vellum Paper","کاغذ پوستی"],W:["Watercolor","آبرنگ"],X:["X-Acto Knife","کاتر تیز"],Y:["Yellow Pad","دفترچه زرد"],Z:["Zipper Case","جامدادی زیپ‌دار"]}},
-
-  toy: { fa:"اسباب‌بازی‌ها", en:"Toys", emo:"🧸🎮",
-    d:{A:["Action Figure","فیگور اکشن"],B:["Ball","توپ"],C:["Car Toy","ماشین اسباب‌بازی"],D:["Doll","عروسک"],E:["Electric Train","قطار برقی"],F:["Frisbee","فریزبی"],G:["Game Console","کنسول بازی"],H:["Hula Hoop","هلاهوپ"],I:["Ice Skates","اسکیت یخ"],J:["Jigsaw","پازل"],K:["Kite","بادبادک"],L:["Lego","لگو"],M:["Marbles","تیله"],N:["Nerf Gun","تفنگ نرف"],O:["Origami","اریگامی"],P:["Puzzle","پازل"],Q:["Quadcopter","کوادکوپتر"],R:["Robot","ربات"],S:["Slinky","اسلینکی"],T:["Teddy Bear","خرس تدی"],U:["Ukulele Toy","یوکلله اسباب‌بازی"],V:["Video Game","بازی ویدیویی"],W:["Wooden Blocks","بلوک چوبی"],X:["Xylophone Toy","زایلوفون اسباب‌بازی"],Y:["Yo-yo","یویو"],Z:["Zebra Toy","گورخر اسباب‌بازی"]}},
-
-  superhero: { fa:"ابرقهرمانان", en:"Superheroes", emo:"🦸‍♂️🦸‍♀️",
-    d:{A:["Aquaman","آکوامن"],B:["Batman","بتمن"],C:["Captain America","کاپیتان آمریکا"],D:["Daredevil","دردویل"],E:["Elektra","الکترا"],F:["Flash","فلش"],G:["Green Lantern","گرین لنترن"],H:["Hulk","هالک"],I:["Iron Man","آیرون من"],J:["Joker","جوکر"],K:["Krypto","کریپتو"],L:["Loki","لوکی"],M:["Magneto","مگنتو"],N:["Nightcrawler","نایت‌کراولر"],O:["Oracle","اوراکل"],P:["Professor X","پروفسور ایکس"],Q:["Quicksilver","کوئیک‌سیلور"],R:["Robin","رابین"],S:["Superman","سوپرمن"],T:["Thor","ثور"],U:["Ultron","اولترون"],V:["Venom","ونوم"],W:["Wolverine","ولورین"],X:["X-Man","ایکس‌من"],Y:["Yellowjacket","یلوجکت"],Z:["Zatanna","زاتانا"]}},
-
-  brand: { fa:"برندها", en:"Brands", emo:"🏷️🛍️",
-    d:{A:["Adidas","آدیداس"],B:["Benz","بنز"],C:["Coca Cola","کوکاکولا"],D:["Dell","دل"],E:["Epson","اپسون"],F:["Ferrari","فراری"],G:["Google","گوگل"],H:["Huawei","هوآوی"],I:["Intel","اینتل"],J:["Jordan","جردن"],K:["Kellogg's","کلوگ"],L:["Lenovo","لنوو"],M:["Microsoft","مایکروسافت"],N:["Nike","نایک"],O:["Oppo","اوپو"],P:["Puma","پوما"],Q:["Qantas","کانتاس"],R:["Reebok","ریباک"],S:["Samsung","سامسونگ"],T:["Tesla","تسلا"],U:["Umbro","آمبرو"],V:["Vans","ونس"],W:["Walmart","والمارت"],X:["Xiaomi","شیائومی"],Y:["Yamaha","یاماها"],Z:["Zara","زارا"]}},
-
-  app: { fa:"اپلیکیشن‌ها", en:"Applications", emo:"📱💻",
-    d:{A:["Airbnb","ایربان‌بی"],B:["Bale","بله"],C:["Chrome","کروم"],D:["Discord","دیسکورد"],E:["Evernote","اورنوت"],F:["Facebook","فیسبوک"],G:["Gmail","جیمیل"],H:["Honey","هانی"],I:["Instagram","اینستاگرام"],J:["Java","جاوا"],K:["Khan Academy","خان آکادمی"],L:["LinkedIn","لینکدین"],M:["Minecraft","ماینکرافت"],N:["Notion","نوشن"],O:["Opera","اپرا"],P:["Photoshop","فتوشاپ"],Q:["Quora","کورا"],R:["Reddit","ردیت"],S:["Snapchat","اسنپ‌چت"],T:["Telegram","تلگرام"],U:["Uber","اوبر"],V:["Viber","وایبر"],W:["WhatsApp","واتس‌اپ"],X:["X (Twitter)","ایکس"],Y:["YouTube","یوتیوب"],Z:["Zoom","زوم"]}},
-
-  month: { fa:"ماه‌های سال", en:"Months", emo:"📅🗓️",
-    d:{A:["April","آوریل"],B:["Bahman","بهمن"],C:["December","دسامبر"],D:["Dey","دی"],E:["Esfand","اسفند"],F:["February","فوریه"],G:["August","اوت"],H:["January","ژانویه"],I:["Isfand","اسفند"],J:["June","ژوئن"],K:["Khordad","خرداد"],L:["July","جولای"],M:["March","مارس"],N:["November","نوامبر"],O:["October","اکتبر"],P:["Mehr","مهر"],Q:["Qaws","قوس"],R:["Ramadan","رمضان"],S:["September","سپتامبر"],T:["Tir","تیر"],U:["Urdibihisht","اردیبهشت"],V:["Vahman","بهمن"],W:["Winter","زمستان"],X:["Xmas","کریسمس"],Y:["Year","سال"],Z:["Zamestan","زمستان"]}},
-
-  body: { fa:"اندام‌های بدن", en:"Body Parts", emo:"🫀💪",
-    d:{A:["Arm","بازو"],B:["Back","کمر"],C:["Chest","سینه"],D:["Ear","گوش"],E:["Eye","چشم"],F:["Finger","انگشت"],G:["Gum","لثه"],H:["Hand","دست"],I:["Index Finger","انگشت اشاره"],J:["Jaw","فک"],K:["Knee","زانو"],L:["Leg","پا"],M:["Mouth","دهان"],N:["Nose","بینی"],O:["Organ","اندام"],P:["Palm","کف دست"],Q:["Quadriceps","چهارسر"],R:["Rib","دنده"],S:["Shoulder","شانه"],T:["Toe","انگشت پا"],U:["Uvula","زبان کوچک"],V:["Vein","رگ"],W:["Wrist","مچ"],X:["Xiphoid","جناغ"],Y:["Yellow Marrow","مغز استخوان زرد"],Z:["Zygomatic","استخوان گونه"]}},
-
-  girlName: { fa:"اسم‌های دخترانه", en:"Girl Names", emo:"👧💐",
-    d:{A:["Ava","آوا"],B:["Bahareh","بهاره"],C:["Chehreh","چهره"],D:["Darya","دریا"],E:["Elaheh","الهه"],F:["Farzaneh","فرزانه"],G:["Golnaz","گلناز"],H:["Hanieh","هانیه"],I:["Iran","ایران"],J:["Jaleh","ژاله"],K:["Kimia","کیمیا"],L:["Laleh","لاله"],M:["Maryam","مریم"],N:["Narges","نرگس"],O:["Olga","اولگا"],P:["Parisa","پریسا"],Q:["Qamar","قمر"],R:["Roya","رویا"],S:["Sara","سارا"],T:["Tara","تارا"],U:["Ulduz","اولدوز"],V:["Vida","ویدا"],W:["Wendy","وندی"],X:["Xenia","زنيا"],Y:["Yasaman","یاسمن"],Z:["Zahra","زهرا"]}},
-
-  boyName: { fa:"اسم‌های پسرانه", en:"Boy Names", emo:"👦🎩",
-    d:{A:["Ali","علی"],B:["Babak","بابک"],C:["Cyrus","کوروش"],D:["Dariush","داریوش"],E:["Ehsan","احسان"],F:["Farhad","فرهاد"],G:["Ghasem","قاسم"],H:["Hamed","حامد"],I:["Iman","ایمان"],J:["Javad","جواد"],K:["Kamran","کامران"],L:["Leila","لیلا"],M:["Mohammad","محمد"],N:["Navid","نوید"],O:["Omid","امید"],P:["Parviz","پرویز"],Q:["Qasem","قاسم"],R:["Reza","رضا"],S:["Sina","سینا"],T:["Taha","طه"],U:["Omid","امید"],V:["Vahid","وحید"],W:["William","ویلیام"],X:["Xerxes","خشایار"],Y:["Yasin","یاسین"],Z:["Zahra","زهرا"]}},
-
-  mountain: { fa:"کوه‌ها", en:"Mountains", emo:"⛰️🏔️",
-    d:{A:["Alborz","البرز"],B:["Behistun","بیستون"],C:["Caucasus","قفقاز"],D:["Damavand","دماوند"],E:["Elbrus","البروس"],F:["Fuji","فوجی"],G:["Ghori","غوری"],H:["Himalaya","هیمالیا"],I:["Ilam","ایلام"],J:["Jolmo Lungma","جولمو لونگما"],K:["Kilimanjaro","کیلیمانجارو"],L:["Logan","لوگان"],M:["Matterhorn","ماترهورن"],N:["Nanga Parbat","نانگا پاربات"],O:["Olympus","المپ"],P:["Pamir","پامیر"],Q:["Qandil","قندیل"],R:["Rocky","راکی"],S:["Sabalan","سبلان"],T:["Taftan","تفتان"],U:["Ural","اورال"],V:["Vesuvius","وزوو"],W:["Whitney","ویتنی"],X:["Xinling","شینلینگ"],Y:["Yosemite","یوسمیت"],Z:["Zagros","زاگرس"]}},
-
-  space: { fa:"سیارات و فضا", en:"Space", emo:"🪐🚀",
-    d:{A:["Andromeda","آندرومدا"],B:["Black Hole","سیاه‌چاله"],C:["Comet","دنباله‌دار"],D:["Deep Space","فضای دور"],E:["Earth","زمین"],F:["Fomalhaut","فم‌الحوت"],G:["Galaxy","کهکشان"],H:["Halo","هاله"],I:["Io","آیو"],J:["Jupiter","مشتری"],K:["Kepler","کپلر"],L:["Luna","ماه"],M:["Mars","مریخ"],N:["Neptune","نپتون"],O:["Orbit","مدار"],P:["Pluto","پلوتو"],Q:["Quasar","کوازار"],R:["Rocket","موشک"],S:["Saturn","زحل"],T:["Titan","تیتان"],U:["Uranus","اورانوس"],V:["Venus","زهره"],W:["Wormhole","کرم‌چاله"],X:["Xenon","زنون"],Y:["Ymir","ایمیر"],Z:["Zenith","سمت‌الرأس"]}},
-
-  element: { fa:"عناصر شیمیایی", en:"Chemical Elements", emo:"⚗️🧪",
-    d:{A:["Argon","آرگون"],B:["Boron","بور"],C:["Carbon","کربن"],D:["Dubnium","دوبنیم"],E:["Einsteinium","اینشتینیوم"],F:["Fluorine","فلوئور"],G:["Gold","طلا"],H:["Hydrogen","هیدروژن"],I:["Iodine","ید"],J:["Jodium","ید"],K:["Krypton","کریپتون"],L:["Lithium","لیتیوم"],M:["Magnesium","منیزیم"],N:["Nitrogen","نیتروژن"],O:["Oxygen","اکسیژن"],P:["Phosphorus","فسفر"],Q:["Quicksilver","جیوه"],R:["Radium","رادیوم"],S:["Sodium","سدیم"],T:["Titanium","تیتانیوم"],U:["Uranium","اورانیوم"],V:["Vanadium","وانادیم"],W:["Tungsten","تنگستن"],X:["Xenon","زنون"],Y:["Yttrium","ایتریوم"],Z:["Zinc","روی"]}}
+  object:{fa:"اشیاء",en:"Objects",emo:"📱🔑",d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت نامه"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف شیشه‌ای"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت مچی"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
+  animal:{fa:"حیوانات",en:"Animals",emo:"🦁🐘",d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیای دریایی"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب زمینی"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
+  bird:{fa:"پرندگان",en:"Birds",emo:"🦅🦜",d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی آبی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","مرغ ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","پرنده چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ گورخری"]}},
+  fish:{fa:"ماهی‌ها",en:"Fish",emo:"🐟🐠",d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","ماهی حلوا"],I:["Ide","ماهی ایده"],J:["Jellyfish","عروس دریایی"],K:["Koi","ماهی کوئی"],L:["Lobster","لابستر"],M:["Mackerel","ماهی خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ماهی ملکه"],R:["Ray","سفر‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیای دریایی"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا اشعه‌ای"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","ماهی گورخری"]}},
+  insect:{fa:"حشرات",en:"Insects",emo:"🐝🦋",d:{A:["Ant","مورچه"],B:["Bee","زنبور"],C:["Cricket","جیرجیرک"],D:["Dragonfly","سنجاقک"],E:["Earwig","گوش‌خیزک"],F:["Firefly","کرم شب‌تاب"],G:["Grasshopper","ملخ"],H:["Hornet","زنبور قرمز"],I:["Isopod","خرخاکی"],J:["June Bug","سوسک خرداد"],K:["Katydid","جیرجیرک برگ"],L:["Ladybug","کفش‌دوزک"],M:["Moth","پروانه شب"],N:["Nymph","شفیره"],O:["Owlfly","جغدپروانه"],P:["Praying Mantis","آخوندک"],Q:["Queen Bee","ملکه زنبور"],R:["Roach","سوسری"],S:["Spider","عنکبوت"],T:["Termite","موریانه"],U:["Underwing","شب‌پره زیربال"],V:["Velvet Ant","مورچه مخملی"],W:["Wasp","زنبور وحشی"],X:["Xerces Blue","پروانه آبی"],Y:["Yellow Jacket","زنبور زرد"],Z:["Zebra Butterfly","پروانه گورخری"]}},
+  fruit:{fa:"میوه‌ها",en:"Fruits",emo:"🍎🍇",d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Date","خرما"],E:["Elderberry","انگور فرنگی"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Imbe","میوه آفریقایی"],J:["Jackfruit","جک فروت"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","هلو انجیری"],O:["Orange","پرتقال"],P:["Peach","هلو"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت‌فرنگی"],T:["Tangerine","نارنگی"],U:["Ugli Fruit","آگلی فروت"],V:["Valencia Orange","پرتقال والنسیا"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی زرد"],Z:["Ziziphus","عناب"]}},
+  vegetable:{fa:"سبزیجات",en:"Vegetables",emo:"🥕🥦",d:{A:["Artichoke","کنگر فرنگی"],B:["Broccoli","کلم بروکلی"],C:["Carrot","هویج"],D:["Dill","شوید"],E:["Eggplant","بادمجان"],F:["Fennel","رازیانه"],G:["Garlic","سیر"],H:["Horseradish","ترب کوهی"],I:["Iceberg Lettuce","کاهوی آیسبرگ"],J:["Jalapeño","فلفل هالوپینو"],K:["Kale","کلم پیچ"],L:["Lettuce","کاهو"],M:["Mushroom","قارچ"],N:["Napa Cabbage","کلم ناپا"],O:["Onion","پیاز"],P:["Potato","سیب‌زمینی"],Q:["Quinoa","کینوا"],R:["Radish","تربچه"],S:["Spinach","اسفناج"],T:["Tomato","گوجه"],U:["Upland Cress","شاهی کوهی"],V:["Vine Leaves","برگ مو"],W:["Watercress","شاهی آبی"],X:["Xylopia","فلفل آفریقایی"],Y:["Yam","سیب‌زمینی شیرین"],Z:["Zucchini","کدو سبز"]}},
+  color:{fa:"رنگ‌ها",en:"Colors",emo:"🎨🌈",d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی تند"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی اولترامارین"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی خاکستری"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
+  country:{fa:"کشورها",en:"Countries",emo:"🌍🏳️",d:{A:["Argentina","آرژانتین","🇦🇷"],B:["Brazil","برزیل","🇧🇷"],C:["Canada","کانادا","🇨🇦"],D:["Denmark","دانمارک","🇩🇰"],E:["Egypt","مصر","🇪🇬"],F:["France","فرانسه","🇫🇷"],G:["Germany","آلمان","🇩🇪"],H:["Hungary","مجارستان","🇭🇺"],I:["Iran","ایران","🇮🇷"],J:["Japan","ژاپن","🇯🇵"],K:["Kuwait","کویت","🇰🇼"],L:["Lebanon","لبنان","🇱🇧"],M:["Mexico","مکزیک","🇲🇽"],N:["Norway","نروژ","🇳🇴"],O:["Oman","عمان","🇴🇲"],P:["Portugal","پرتغال","🇵🇹"],Q:["Qatar","قطر","🇶🇦"],R:["Russia","روسیه","🇷🇺"],S:["Spain","اسپانیا","🇪🇸"],T:["Turkey","ترکیه","🇹🇷"],U:["Ukraine","اوکراین","🇺🇦"],V:["Venezuela","ونزوئلا","🇻🇪"],W:["Wales","ولز","🏴"],X:["Xinjiang","سین‌کیانگ","🏴"],Y:["Yemen","یمن","🇾🇪"],Z:["Zambia","زامبیا","🇿🇲"]}},
+  iranCity:{fa:"شهرهای ایران",en:"Iranian Cities",emo:"🏙️🕌",d:{A:["Ahvaz","اهواز"],B:["Babol","بابل"],C:["Chabahar","چابهار"],D:["Damghan","دامغان"],E:["Esfahan","اصفهان"],F:["Firuzabad","فیروزآباد"],G:["Gorgan","گرگان"],H:["Hamadan","همدان"],I:["Ilam","ایلام"],J:["Jahrom","جهرم"],K:["Kerman","کرمان"],L:["Lahijan","لاهیجان"],M:["Mashhad","مشهد"],N:["Najafabad","نجف‌آباد"],O:["Omidiyeh","امیدیه"],P:["Pakdasht","پاکدشت"],Q:["Qazvin","قزوین"],R:["Rasht","رشت"],S:["Shiraz","شیراز"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xoshkebijar","خشکبیجار"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
+  iranFood:{fa:"غذاهای ایرانی",en:"Iranian Food",emo:"🍚🍢",d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی کباب"],J:["Joojeh Kabab","جوجه‌کباب"],K:["Kookoo Sabzi","کوکو سبزی"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا قاسمی"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج سفید"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک‌پلو"]}},
+  sweet:{fa:"شیرینی و خوراکی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات چوبی"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک اوبه"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کیک کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","شیرینی زبان"]}},
+  drink:{fa:"نوشیدنی‌ها",en:"Drinks",emo:"☕🥤",d:{A:["Americano","آمریکانو"],B:["Beer","آبجو"],C:["Coffee","قهوه"],D:["Doogh","دوغ"],E:["Espresso","اسپرسو"],F:["Frappe","فراپه"],G:["Green Tea","چای سبز"],H:["Hot Chocolate","شکلات داغ"],I:["Iced Tea","آیس تی"],J:["Juice","آبمیوه"],K:["Kombucha","کامبوچا"],L:["Lemonade","لیموناد"],M:["Milk","شیر"],N:["Nectar","نکتار"],O:["Orange Juice","آب پرتقال"],P:["Pepsi","پپسی"],Q:["Quinine","تونیک"],R:["Red Bull","ردبول"],S:["Smoothie","اسموتی"],T:["Tea","چای"],U:["Ume","آب آلو"],V:["Vodka","ودکا"],W:["Water","آب"],X:["Xigua Juice","آب هندوانه"],Y:["Yerba Mate","یربا مات"],Z:["Zamzam","زمزم"]}},
+  sport:{fa:"ورزش‌ها",en:"Sports",emo:"⚽🏀",d:{A:["Archery","تیراندازی"],B:["Basketball","بسکتبال"],C:["Cricket","کریکت"],D:["Diving","شیرجه"],E:["Equestrian","سوارکاری"],F:["Football","فوتبال"],G:["Golf","گلف"],H:["Hockey","هاکی"],I:["Ice Skating","اسکیت یخ"],J:["Judo","جودو"],K:["Karate","کاراته"],L:["Long Jump","پرش طول"],M:["Marathon","ماراتن"],N:["Netball","نت‌بال"],O:["Orienteering","جهت‌یابی"],P:["Polo","چوگان"],Q:["Quidditch","کوایدیچ"],R:["Rowing","قایقرانی"],S:["Swimming","شنا"],T:["Tennis","تنیس"],U:["Ultimate Frisbee","فریزبی"],V:["Volleyball","والیبال"],W:["Wrestling","کشتی"],X:["Xare","باسکی"],Y:["Yoga","یوگا"],Z:["Zumba","زومبا"]}},
+  job:{fa:"شغل‌ها",en:"Jobs",emo:"👨‍⚕️👷",d:{A:["Architect","معمار"],B:["Baker","نانوا"],C:["Chef","آشپز"],D:["Doctor","دکتر"],E:["Engineer","مهندس"],F:["Farmer","کشاورز"],G:["Gardener","باغبان"],H:["Hairdresser","آرایشگر"],I:["Illustrator","تصویرساز"],J:["Journalist","خبرنگار"],K:["Knight","شوالیه"],L:["Lawyer","وکیل"],M:["Musician","نوازنده"],N:["Nurse","پرستار"],O:["Optician","عینک‌ساز"],P:["Painter","نقاش"],Q:["Surveyor","مهندس برآورد"],R:["Reporter","خبرنگار"],S:["Soldier","سرباز"],T:["Teacher","معلم"],U:["Umpire","داور"],V:["Veterinarian","دامپزشک"],W:["Writer","نویسنده"],X:["Xylophonist","نوازنده"],Y:["Youtuber","یوتیوبر"],Z:["Zoologist","جانورشناس"]}},
+  car:{fa:"ماشین‌ها",en:"Cars",emo:"🏎🚗",d:{A:["Audi","آئودی"],B:["BMW","بی‌ام‌و"],C:["Chevrolet","شورولت"],D:["Dodge","دوج"],E:["Elantra","النترا"],F:["Ferrari","فراری"],G:["GMC","جی‌ام‌سی"],H:["Honda","هوندا"],I:["Infiniti","اینفینیتی"],J:["Jaguar","جگوار"],K:["Kia","کیا"],L:["Lamborghini","لامبورگینی"],M:["Mercedes","مرسدس"],N:["Nissan","نیسان"],O:["Opel","اوپل"],P:["Peugeot","پژو"],Q:["Qoros","کوروس"],R:["Renault","رنو"],S:["Skoda","اشکودا"],T:["Toyota","تویوتا"],U:["UAZ","اواز"],V:["Volvo","ولوو"],W:["Wuling","ولینگ"],X:["Xpeng","ایکس‌پنگ"],Y:["Yaris","یاریس"],Z:["Zeekr","زیکر"]}},
+  player:{fa:"فوتبالیست‌ها",en:"Footballers",emo:"⚽🏆",d:{A:["Aguero","آگوئرو"],B:["Beckham","بکام"],C:["Cristiano Ronaldo","رونالدو"],D:["Drogba","دروگبا"],E:["Eto'o","اتوئو"],F:["Figo","فیگو"],G:["Gerrard","جرارد"],H:["Haaland","هالند"],I:["Iniesta","اینیستا"],J:["Jahanbakhsh","جهانبخش"],K:["Kane","کین"],L:["Lionel Messi","مسی"],M:["Maradona","مارادونا"],N:["Neymar","نیمار"],O:["Ozil","اوزیل"],P:["Pele","پله"],Q:["Quaresma","کوارشما"],R:["Ronaldinho","رونالدینیو"],S:["Salah","صلاح"],T:["Taremi","طارمی"],U:["Ureña","اورنیا"],V:["Vinicius","وینیسیوس"],W:["Weah","ویا"],X:["Xavi","ژاوی"],Y:["Yamal","یامال"],Z:["Zidane","زیدان"]}},
+  actor:{fa:"بازیگران",en:"Actors",emo:"🎬🎭",d:{A:["Amin Zendegani","امین زندگانی"],B:["Behrouz Vossoughi","بهروز وثوقی"],C:["Cameron Diaz","کامرون دیاز"],D:["Dariush Arjmand","داریوش ارجمند"],E:["Ezzatolah Entezami","عزت‌الله انتظامی"],F:["Farhad Aslani","فرهاد اصلانی"],G:["Golab Adineh","گلاب آدینه"],H:["Homayoun Ershadi","همایون ارشادی"],I:["Iraj Ghaderi","ایرج قادری"],J:["Jamshid Mashayekhi","جمشید مشایخی"],K:["Kambiz Dirbaz","کامبیز دیرباز"],L:["Leonardo DiCaprio","دی‌کاپریو"],M:["Mehdi Hashemi","مهدی هاشمی"],N:["Navid Mohammadzadeh","نوید محمدزاده"],O:["Omid Abbasi","امید عباسی"],P:["Parviz Parastui","پرویز پرستویی"],Q:["Qasem Zare","قاسم زارع"],R:["Reza Attaran","رضا عطاران"],S:["Shahab Hosseini","شهاب حسینی"],T:["Tom Cruise","تام کروز"],U:["Umar Khan","عمر خان"],V:["Hamed Vakili","حامد وکیلی"],W:["Will Smith","ویل اسمیت"],X:["Xavier Bardem","خاویر باردم"],Y:["Yousef Teymouri","یوسف تیموری"],Z:["Zahra Amir Ebrahimi","زهرا امیرابراهیمی"]}},
+  singer:{fa:"خواننده‌ها",en:"Singers",emo:"🎤🎵",d:{A:["Adele","ادل"],B:["Beyoncé","بیانسه"],C:["Celine Dion","سلین دیون"],D:["Drake","دریک"],E:["Eminem","امینم"],F:["Frank Sinatra","سیناترا"],G:["Googoosh","گوگوش"],H:["Homayoun Shajarian","همایون شجریان"],I:["Iggy Azalea","ایگی"],J:["Justin Bieber","جاستین بیبر"],K:["Katy Perry","کیتی پری"],L:["Lady Gaga","لیدی گاگا"],M:["Michael Jackson","مایکل جکسون"],N:["Nazanin","نازنین"],O:["Olivia Rodrigo","الیویا"],P:["Pink","پینک"],Q:["Queen","کوئین"],R:["Rihanna","ریحانا"],S:["Shakira","شکیرا"],T:["Taylor Swift","تیلور سوئیفت"],U:["U2","یو تو"],V:["Vigen","ویگن"],W:["Weeknd","ویکند"],X:["Xzibit","ایکسزیبیت"],Y:["Yas","یاس"],Z:["Zayn Malik","زین مالیک"]}},
+  scientist:{fa:"دانشمندان",en:"Scientists",emo:"🔬🧪",d:{A:["Archimedes","ارشمیدس"],B:["Bell","بِل"],C:["Curie","کوری"],D:["Darwin","داروین"],E:["Einstein","اینشتین"],F:["Faraday","فارادی"],G:["Galileo","گالیله"],H:["Hawking","هاوکینگ"],I:["Ibn Sina","ابن‌سینا"],J:["James Watt","جیمز وات"],K:["Kepler","کپلر"],L:["Lavoisier","لاووازیه"],M:["Mendel","مندل"],N:["Newton","نیوتن"],O:["Oppenheimer","اوپنهایمر"],P:["Pasteur","پاستور"],Q:["Quetelet","کتله"],R:["Rutherford","رادرفورد"],S:["Sagan","ساگان"],T:["Tesla","تسلا"],U:["Urey","یوری"],V:["Volta","ولتا"],W:["Watson","واتسون"],X:["Xenophanes","گزنوفانس"],Y:["Young","یانگ"],Z:["Zewail","زیویل"]}},
+  writer:{fa:"نویسندگان",en:"Writers",emo:"✍️📚",d:{A:["Aeschylus","آیسخولوس"],B:["Balzac","بالزاک"],C:["Chekhov","چخوف"],D:["Dostoevsky","داستایوفسکی"],E:["Ernest Hemingway","همینگوی"],F:["Faulkner","فاکنر"],G:["Goethe","گوته"],H:["Hugo","هوگو"],I:["Ibsen","ایبسن"],J:["Jane Austen","جین آستین"],K:["Kafka","کافکا"],L:["Leo Tolstoy","تولستوی"],M:["Maupassant","موپاسان"],N:["Nabokov","نابوکوف"],O:["Orwell","اورول"],P:["Pushkin","پوشکین"],Q:["Quiroga","کیروگا"],R:["Rumi","مولوی"],S:["Shakespeare","شکسپیر"],T:["Tolstoy","تولستوی"],U:["Updike","آپدایک"],V:["Voltaire","ولتر"],W:["Wilde","وایلد"],X:["Xenophon","گزنفون"],Y:["Yeats","ییتس"],Z:["Zola","زولا"]}},
+  poet:{fa:"شاعران ایرانی",en:"Poets",emo:"📜🕌",d:{A:["Attar","عطار"],B:["Baba Taher","بابا طاهر"],C:["Cyrus","کوروش"],D:["Daghighi","دقیقی"],E:["Ehsan","احسان"],F:["Farrokhi","فرخی"],G:["Ganjavi","گنجوی"],H:["Hafez","حافظ"],I:["Iraj Mirza","ایرج میرزا"],J:["Jami","جامی"],K:["Khaqani","خاقانی"],L:["Labibi","لبیبی"],M:["Moulavi","مولوی"],N:["Nezami","نظامی"],O:["Omar Khayyam","عمر خیام"],P:["Parvin","پروین"],Q:["Qatran","قطران"],R:["Rudaki","رودکی"],S:["Saadi","سعدی"],T:["Torki","ترکی"],U:["Ustad","استاد"],V:["Vahshi","وحشی"],W:["Wasif","وصیف"],X:["Xosro","خسرو"],Y:["Yaghma","یغما"],Z:["Zahir","ظهیر"]}},
+  flower:{fa:"گل‌ها",en:"Flowers",emo:"🌸🌷",d:{A:["Aster","ستاره‌ای"],B:["Begonia","بگونیا"],C:["Chrysanthemum","داوودی"],D:["Daisy","گل مینا"],E:["Edelweiss","ادلوایس"],F:["Freesia","فریزیا"],G:["Gardenia","گاردنیا"],H:["Hyacinth","سنبل"],I:["Iris","زنبق"],J:["Jasmine","یاس"],K:["King Protea","پروتئا"],L:["Lily","سوسن"],M:["Magnolia","ماگنولیا"],N:["Narcissus","نرگس"],O:["Orchid","ارکیده"],P:["Peony","صدتومانی"],Q:["Queen Anne's Lace","توری ملکه"],R:["Rose","گل رز"],S:["Sunflower","آفتابگردان"],T:["Tulip","لاله"],U:["Ursinia","اورسینیا"],V:["Violet","بنفشه"],W:["Water Lily","نیلوفر آبی"],X:["Xeranthemum","خشک‌گل"],Y:["Yarrow","بومادران"],Z:["Zinnia","زینیا"]}},
+  clothing:{fa:"پوشاک",en:"Clothing",emo:"👕👖",d:{A:["Apron","پیش‌بند"],B:["Blouse","بلوز"],C:["Coat","کت"],D:["Dress","پیراهن زنانه"],E:["Ear Muffs","گوش‌بند"],F:["Fedora","کلاه شاپو"],G:["Gloves","دستکش"],H:["Hat","کلاه"],I:["Insole","کفی کفش"],J:["Jacket","کاپشن"],K:["Kimono","کیمونو"],L:["Leggings","ساپورت"],M:["Mittens","دستکش بدون انگشت"],N:["Nightgown","لباس خواب"],O:["Overcoat","پالتو"],P:["Pants","شلوار"],Q:["Quilted Jacket","کاپشن لایه‌دار"],R:["Raincoat","بارانی"],S:["Shirt","پیراهن"],T:["Tie","کراوات"],U:["Underwear","لباس زیر"],V:["Vest","جاکت جلیقه‌ای"],W:["Waistcoat","جلیقه"],X:["X-large Shirt","پیراهن سایز بزرگ"],Y:["Yoga Pants","شلوار یوگا"],Z:["Zip-up","زیپ‌دار"]}},
+  instrument:{fa:"سازها",en:"Instruments",emo:"🎸🎹",d:{A:["Accordion","آکاردئون"],B:["Banjo","بانجو"],C:["Cello","ویولنسل"],D:["Drum","طبل"],E:["Electric Guitar","گیتار برقی"],F:["Flute","فلوت"],G:["Guitar","گیتار"],H:["Harmonica","ساز دهنی"],I:["Ipu","طبل هاوایی"],J:["Jembe","جمبه"],K:["Keyboard","کیبورد"],L:["Lute","لوت"],M:["Mandolin","ماندولین"],N:["Ney","نی"],O:["Oboe","ابوا"],P:["Piano","پیانو"],Q:["Qanun","قانون"],R:["Rabab","رباب"],S:["Santur","سنتور"],T:["Tar","تار"],U:["Ukulele","یوکلله"],V:["Violin","ویولن"],W:["Woodblock","وودبلاک"],X:["Xylophone","زایلوفون"],Y:["Yangqin","یانگ‌کین"],Z:["Zither","زیتر"]}},
+  kitchen:{fa:"لوازم آشپزخانه",en:"Kitchen Items",emo:"🍳🥄",d:{A:["Apron","پیش‌بند"],B:["Blender","مخلوط‌کن"],C:["Cutting Board","تخته برش"],D:["Dish","بشقاب"],E:["Egg Beater","همزن"],F:["Fork","چنگال"],G:["Glass","لیوان"],H:["Hob","اجاق"],I:["Ice Tray","قالب یخ"],J:["Jug","پارچ"],K:["Kettle","کتری"],L:["Ladle","ملاقه"],M:["Mug","ماگ"],N:["Napkin","دستمال سفره"],O:["Oven","فر"],P:["Pan","ماهیتابه"],Q:["Quiche Dish","ظرف کیش"],R:["Rolling Pin","وردنه"],S:["Spoon","قاشق"],T:["Tongs","انبر"],U:["Utensils","ابزار آشپزخانه"],V:["Vegetable Peeler","سبزی‌پوست‌کن"],W:["Whisk","همزن"],X:["Xiaolongbao Steamer","بخارپز"],Y:["Yeast Jar","شیشه مخمر"],Z:["Zester","رنده پوست مرکبات"]}},
+  stationery:{fa:"لوازم‌التحریر",en:"Stationery",emo:"✏️📐",d:{A:["A4 Paper","کاغذ A4"],B:["Ballpoint Pen","خودکار"],C:["Compass","پرگار"],D:["Drawing Book","دفتر نقاشی"],E:["Eraser","پاک‌کن"],F:["Folder","پوشه"],G:["Glue","چسب"],H:["Highlighter","ماژیک فسفری"],I:["Ink Pen","خودنویس"],J:["Jotter","دفترچه یادداشت"],K:["Knife","کاتر"],L:["Lead Pencil","مداد نوکی"],M:["Marker","ماژیک"],N:["Notebook","دفتر"],O:["Oil Pastel","پاستل روغنی"],P:["Pencil","مداد"],Q:["Quill","قلم پر"],R:["Ruler","خط‌کش"],S:["Scissors","قیچی"],T:["Tape","چسب نواری"],U:["USB Drive","فلش"],V:["Vellum Paper","کاغذ پوستی"],W:["Watercolor","آبرنگ"],X:["X-Acto Knife","کاتر تیز"],Y:["Yellow Pad","دفترچه زرد"],Z:["Zipper Case","جامدادی زیپ‌دار"]}},
+  toy:{fa:"اسباب‌بازی‌ها",en:"Toys",emo:"🧸🎮",d:{A:["Action Figure","فیگور"],B:["Ball","توپ"],C:["Car Toy","ماشین اسباب‌بازی"],D:["Doll","عروسک"],E:["Electric Train","قطار برقی"],F:["Frisbee","فریزبی"],G:["Game Console","کنسول بازی"],H:["Hula Hoop","هلاهوپ"],I:["Ice Skates","اسکیت یخ"],J:["Jigsaw","پازل"],K:["Kite","بادبادک"],L:["Lego","لگو"],M:["Marbles","تیله"],N:["Nerf Gun","تفنگ نرف"],O:["Origami","اریگامی"],P:["Puzzle","پازل"],Q:["Quadcopter","کوادکوپتر"],R:["Robot","ربات"],S:["Slinky","اسلینکی"],T:["Teddy Bear","خرس تدی"],U:["Ukulele Toy","یوکلله اسباب‌بازی"],V:["Video Game","بازی ویدیویی"],W:["Wooden Blocks","بلوک چوبی"],X:["Xylophone Toy","زایلوفون اسباب‌بازی"],Y:["Yo-yo","یویو"],Z:["Zebra Toy","گورخر اسباب‌بازی"]}},
+  superhero:{fa:"ابرقهرمانان",en:"Superheroes",emo:"🦸‍♂️",d:{A:["Aquaman","آکوامن"],B:["Batman","بتمن"],C:["Captain America","کاپیتان آمریکا"],D:["Daredevil","دردویل"],E:["Elektra","الکترا"],F:["Flash","فلش"],G:["Green Lantern","گرین لنترن"],H:["Hulk","هالک"],I:["Iron Man","آیرون من"],J:["Joker","جوکر"],K:["Krypto","کریپتو"],L:["Loki","لوکی"],M:["Magneto","مگنتو"],N:["Nightcrawler","نایت‌کراولر"],O:["Oracle","اوراکل"],P:["Professor X","پروفسور ایکس"],Q:["Quicksilver","کوئیک‌سیلور"],R:["Robin","رابین"],S:["Superman","سوپرمن"],T:["Thor","ثور"],U:["Ultron","اولترون"],V:["Venom","ونوم"],W:["Wolverine","ولورین"],X:["X-Man","ایکس‌من"],Y:["Yellowjacket","یلوجکت"],Z:["Zatanna","زاتانا"]}},
+  brand:{fa:"برندها",en:"Brands",emo:"🏷️🛍️",d:{A:["Adidas","آدیداس"],B:["Benz","بنز"],C:["Coca Cola","کوکاکولا"],D:["Dell","دل"],E:["Epson","اپسون"],F:["Ferrari","فراری"],G:["Google","گوگل"],H:["Huawei","هوآوی"],I:["Intel","اینتل"],J:["Jordan","جردن"],K:["Kellogg's","کلوگ"],L:["Lenovo","لنوو"],M:["Microsoft","مایکروسافت"],N:["Nike","نایک"],O:["Oppo","اوپو"],P:["Puma","پوما"],Q:["Qantas","کانتاس"],R:["Reebok","ریباک"],S:["Samsung","سامسونگ"],T:["Tesla","تسلا"],U:["Umbro","آمبرو"],V:["Vans","ونس"],W:["Walmart","والمارت"],X:["Xiaomi","شیائومی"],Y:["Yamaha","یاماها"],Z:["Zara","زارا"]}},
+  app:{fa:"اپلیکیشن‌ها",en:"Applications",emo:"📱💻",d:{A:["Airbnb","ایربان‌بی"],B:["Bale","بله"],C:["Chrome","کروم"],D:["Discord","دیسکورد"],E:["Evernote","اورنوت"],F:["Facebook","فیسبوک"],G:["Gmail","جیمیل"],H:["Honey","هانی"],I:["Instagram","اینستاگرام"],J:["Java","جاوا"],K:["Khan Academy","خان آکادمی"],L:["LinkedIn","لینکدین"],M:["Minecraft","ماینکرافت"],N:["Notion","نوشن"],O:["Opera","اپرا"],P:["Photoshop","فتوشاپ"],Q:["Quora","کورا"],R:["Reddit","ردیت"],S:["Snapchat","اسنپ‌چت"],T:["Telegram","تلگرام"],U:["Uber","اوبر"],V:["Viber","وایبر"],W:["WhatsApp","واتس‌اپ"],X:["X (Twitter)","ایکس"],Y:["YouTube","یوتیوب"],Z:["Zoom","زوم"]}},
+  month:{fa:"ماه‌های سال",en:"Months",emo:"📅🗓️",d:{A:["April","آوریل"],B:["Bahman","بهمن"],C:["December","دسامبر"],D:["Dey","دی"],E:["Esfand","اسفند"],F:["February","فوریه"],G:["August","اوت"],H:["January","ژانویه"],I:["Isfand","اسفند"],J:["June","ژوئن"],K:["Khordad","خرداد"],L:["July","جولای"],M:["March","مارس"],N:["November","نوامبر"],O:["October","اکتبر"],P:["Mehr","مهر"],Q:["Qaws","قوس"],R:["Ramadan","رمضان"],S:["September","سپتامبر"],T:["Tir","تیر"],U:["Urdibihisht","اردیبهشت"],V:["Vahman","بهمن"],W:["Winter","زمستان"],X:["Xmas","کریسمس"],Y:["Year","سال"],Z:["Zamestan","زمستان"]}},
+  body:{fa:"اندام‌های بدن",en:"Body Parts",emo:"🫀💪",d:{A:["Arm","بازو"],B:["Back","کمر"],C:["Chest","سینه"],D:["Ear","گوش"],E:["Eye","چشم"],F:["Finger","انگشت"],G:["Gum","لثه"],H:["Hand","دست"],I:["Index Finger","انگشت اشاره"],J:["Jaw","فک"],K:["Knee","زانو"],L:["Leg","پا"],M:["Mouth","دهان"],N:["Nose","بینی"],O:["Organ","اندام"],P:["Palm","کف دست"],Q:["Quadriceps","چهارسر"],R:["Rib","دنده"],S:["Shoulder","شانه"],T:["Toe","انگشت پا"],U:["Uvula","زبان کوچک"],V:["Vein","رگ"],W:["Wrist","مچ"],X:["Xiphoid","جناغ"],Y:["Yellow Marrow","مغز استخوان زرد"],Z:["Zygomatic","استخوان گونه"]}},
+  girlName:{fa:"اسم‌های دخترانه",en:"Girl Names",emo:"👧💐",d:{A:["Ava","آوا"],B:["Bahareh","بهاره"],C:["Chehreh","چهره"],D:["Darya","دریا"],E:["Elaheh","الهه"],F:["Farzaneh","فرزانه"],G:["Golnaz","گلناز"],H:["Hanieh","هانیه"],I:["Iran","ایران"],J:["Jaleh","ژاله"],K:["Kimia","کیمیا"],L:["Laleh","لاله"],M:["Maryam","مریم"],N:["Narges","نرگس"],O:["Olga","اولگا"],P:["Parisa","پریسا"],Q:["Qamar","قمر"],R:["Roya","رویا"],S:["Sara","سارا"],T:["Tara","تارا"],U:["Ulduz","اولدوز"],V:["Vida","ویدا"],W:["Wendy","وندی"],X:["Xenia","زنيا"],Y:["Yasaman","یاسمن"],Z:["Zahra","زهرا"]}},
+  boyName:{fa:"اسم‌های پسرانه",en:"Boy Names",emo:"👦🎩",d:{A:["Ali","علی"],B:["Babak","بابک"],C:["Cyrus","کوروش"],D:["Dariush","داریوش"],E:["Ehsan","احسان"],F:["Farhad","فرهاد"],G:["Ghasem","قاسم"],H:["Hamed","حامد"],I:["Iman","ایمان"],J:["Javad","جواد"],K:["Kamran","کامران"],L:["Leila","لیلا"],M:["Mohammad","محمد"],N:["Navid","نوید"],O:["Omid","امید"],P:["Parviz","پرویز"],Q:["Qasem","قاسم"],R:["Reza","رضا"],S:["Sina","سینا"],T:["Taha","طه"],U:["Omid","امید"],V:["Vahid","وحید"],W:["William","ویلیام"],X:["Xerxes","خشایار"],Y:["Yasin","یاسین"],Z:["Zahra","زهرا"]}},
+  mountain:{fa:"کوه‌ها",en:"Mountains",emo:"⛰️🏔️",d:{A:["Alborz","البرز"],B:["Behistun","بیستون"],C:["Caucasus","قفقاز"],D:["Damavand","دماوند"],E:["Elbrus","البروس"],F:["Fuji","فوجی"],G:["Ghori","غوری"],H:["Himalaya","هیمالیا"],I:["Ilam","ایلام"],J:["Jolmo Lungma","جولمو لونگما"],K:["Kilimanjaro","کیلیمانجارو"],L:["Logan","لوگان"],M:["Matterhorn","ماترهورن"],N:["Nanga Parbat","نانگا پاربات"],O:["Olympus","المپ"],P:["Pamir","پامیر"],Q:["Qandil","قندیل"],R:["Rocky","راکی"],S:["Sabalan","سبلان"],T:["Taftan","تفتان"],U:["Ural","اورال"],V:["Vesuvius","وزوو"],W:["Whitney","ویتنی"],X:["Xinling","شینلینگ"],Y:["Yosemite","یوسمیت"],Z:["Zagros","زاگرس"]}},
+  space:{fa:"سیارات و فضا",en:"Space",emo:"🪐🚀",d:{A:["Andromeda","آندرومدا"],B:["Black Hole","سیاه‌چاله"],C:["Comet","دنباله‌دار"],D:["Deep Space","فضای دور"],E:["Earth","زمین"],F:["Fomalhaut","فم‌الحوت"],G:["Galaxy","کهکشان"],H:["Halo","هاله"],I:["Io","آیو"],J:["Jupiter","مشتری"],K:["Kepler","کپلر"],L:["Luna","ماه"],M:["Mars","مریخ"],N:["Neptune","نپتون"],O:["Orbit","مدار"],P:["Pluto","پلوتو"],Q:["Quasar","کوازار"],R:["Rocket","موشک"],S:["Saturn","زحل"],T:["Titan","تیتان"],U:["Uranus","اورانوس"],V:["Venus","زهره"],W:["Wormhole","کرم‌چاله"],X:["Xenon","زنون"],Y:["Ymir","ایمیر"],Z:["Zenith","سمت‌الرأس"]}},
+  element:{fa:"عناصر شیمیایی",en:"Chemical Elements",emo:"⚗️🧪",d:{A:["Argon","آرگون"],B:["Boron","بور"],C:["Carbon","کربن"],D:["Dubnium","دوبنیم"],E:["Einsteinium","اینشتینیوم"],F:["Fluorine","فلوئور"],G:["Gold","طلا"],H:["Hydrogen","هیدروژن"],I:["Iodine","ید"],J:["Jodium","ید"],K:["Krypton","کریپتون"],L:["Lithium","لیتیوم"],M:["Magnesium","منیزیم"],N:["Nitrogen","نیتروژن"],O:["Oxygen","اکسیژن"],P:["Phosphorus","فسفر"],Q:["Quicksilver","جیوه"],R:["Radium","رادیوم"],S:["Sodium","سدیم"],T:["Titanium","تیتانیوم"],U:["Uranium","اورانیوم"],V:["Vanadium","وانادیم"],W:["Tungsten","تنگستن"],X:["Xenon","زنون"],Y:["Yttrium","ایتریوم"],Z:["Zinc","روی"]}}
 };
 
 /* =========================================================
-   منطق بازی
+   ۱۲ درس پیشرفته — مباحث آزمون
+   ========================================================= */
+const LESSONS = [
+  { id:"alphabet", title:"الفبای انگلیسی و ترتیب حروف", emoji:"🔤",
+    short:"حروف بزرگ، کوچک، ترتیب و شمارهٔ هر حرف",
+    body:"الفبای انگلیسی ۲۶ حرف دارد: A تا Z.\n\n🔹 حروف صدادار (Vowels): A, E, I, O, U — فقط ۵ حرف.\n🔹 حروف صامت (Consonants): ۲۱ حرف باقی‌مانده.\n🔹 حرف Y در بعضی کلمات صدادار است (مثل: Sky، Baby).\n\n📌 جایگاه هر حرف:\nA=۱، E=۵، I=۹، O=۱۵، U=۲۱\nمثال: حرف J دهمین حرف، T بیستمین حرف، Z بیست‌وششمین حرف.\n\n📌 نکته کنکوری: در حروف کوچک، حرف‌های l و i و j نقطه دارند، اما فقط i و j نقطه‌ای هستند که از حرف جدا می‌شوند." },
+
+  { id:"phonics", title:"صدای حروف و فونتیک", emoji:"🔊",
+    short:"تلفظ، صداهای کوتاه و بلند، استثناها",
+    body:"هر حرف صدای خاص خودش را دارد.\n\n🔹 صدای کوتاه A: Apple, Cat, Hat\n🔹 صدای بلند A: Cake, Name, Same\n\n🔹 حرف C دو صدا دارد:\n  • صدای /k/ قبل از a, o, u → Cat, Cup\n  • صدای /s/ قبل از e, i, y → City, Cent, Cycle\n\n🔹 حرف G دو صدا دارد:\n  • /g/ سخت → Go, Give\n  • /j/ نرم قبل از e, i → Giant, Gym\n\n🔹 ترکیب‌های مهم:\nth (Think)، sh (Ship)، ch (Chair)، ph (Phone = صدای f)" },
+
+  { id:"spelling", title:"هجی و تعداد حروف کلمات", emoji:"✏️",
+    short:"شمارش حروف، هجا، حروف تکراری",
+    body:"📌 نکته‌های مهم درباره تعداد حروف:\n\n🔹 Strawberry = ۱۰ حرف (s-t-r-a-w-b-e-r-r-y)\n🔹 Beautiful = ۹ حرف\n🔹 Elephant = ۸ حرف\n🔹 Book = ۴ حرف\n🔹 Queue = ۵ حرف (سه تا e پشت هم!)\n\n📌 هجا (Syllable) = بخش‌های صوتی کلمه:\n• Cat = ۱ هجا\n• Water = ۲ هجا (wa-ter)\n• Banana = ۳ هجا (ba-na-na)\n• Beautiful = ۳ هجا\n\n📌 کلماتی که حرف بی‌صدا دارند:\n• Knife — حرف K خوانده نمی‌شود\n• Lamb — حرف B خوانده نمی‌شود\n• Hour — حرف H خوانده نمی‌شود\n• Know, Knee, Knock — K خوانده نمی‌شود" },
+
+  { id:"vowels", title:"حروف صدادار و صامت — پیشرفته", emoji:"🎯",
+    short:"تشخیص Vowel از Consonant، حرف Y، ترکیب‌ها",
+    body:"📌 Vowel = A, E, I, O, U (۵ حرف اصلی)\n📌 گاهی Y هم ششمّی محسوب می‌شود.\n\n🔹 Y چه زمانی Vowel می‌شود؟\n  • انتهای کلمه: Sky, My, Cry, Baby\n  • وسط کلمه با صدای /i/: Gym, Myth\n\n🔹 Y چه زمانی Consonant است؟\n  • ابتدای کلمه: Yes, Yellow, You\n\n📌 تست هوشمند:\nاگر حرفی «صدای زبان» را باز نگه دارد → صدادار.\nاگر مانع جریان هوا شود → صامت.\n\nمثال سخت:\n«Rhythm» — تنها کلمهٔ انگلیسی بدون Vowel واقعی (Y صدادار است)." },
+
+  { id:"similar", title:"حروف شبیه‌هم و اشتباه‌گیر", emoji:"👀",
+    short:"b/d, p/q, m/n, u/v و تفاوت‌ها",
+    body:"📌 جفت‌های اشتباه‌گیر:\n\n🔹 b و d — شبیه هم در آینه\n  b: قلاب سمت راست، d: قلاب سمت چپ\n  • Bed = تخت (دو حرف اشتباه‌گیر)\n\n🔹 p و q — هم شکل در آینه\n  p: میله پایین، q: میله پایین با قلاب چپ\n\n🔹 m و n — تعداد قلاب‌ها فرق داره\n  m: ۲ قلاب / n: ۱ قلاب\n\n🔹 u و v — u عمیق‌تر، v تیز\n\n🔹 i و j — j دم دارد، i نقطه دارد\n\n🔹 o و 0 (صفر) — در متن انگلیسی خیلی اشتباه می‌شوند\n\n📌 تست: کلمه «Book» — دو تا o پشت سر هم." },
+
+  { id:"capital", title:"حروف بزرگ و کوچک — قواعد", emoji:"🔠",
+    short:"کجا Capital بگذاریم، تفاوت‌ها",
+    body:"📌 چه زمانی از حرف بزرگ (Capital) استفاده می‌کنیم؟\n\n🔹 اول جمله: The cat is black.\n🔹 اسم خاص افراد: Ali, Sara, Mohammad\n🔹 اسم کشورها و شهرها: Iran, Tehran, London\n🔹 روزهای هفته: Monday, Friday\n🔹 ماه‌ها: January, March\n🔹 زبان‌ها: English, Persian, Arabic\n🔹 ضمیر I: I am a student.\n🔹 عنوان کتاب و فیلم\n\n📌 در انگلیسی، برخلاف بعضی زبان‌ها، «من» (I) همیشه بزرگ نوشته می‌شود.\n\n📌 مخفف‌ها همه بزرگ: USA, UK, UN, TV" },
+
+  { id:"suffix", title:"پسوندها و پیشوندها (Affixes)", emoji:"🧩",
+    short:"un-, re-, -ing, -ed, -er, -ly",
+    body:"📌 پیشوندها (Prefixes) — ابتدای کلمه:\n\n🔹 un- → منفی: happy → unhappy\n🔹 re- → دوباره: do → redo، play → replay\n🔹 dis- → مخالف: like → dislike\n🔹 pre- → قبل: view → preview\n🔹 mis- → اشتباه: spell → misspell\n\n📌 پسوندها (Suffixes) — انتهای کلمه:\n\n🔹 -ing → ادامه‌دار: play → playing\n🔹 -ed → گذشته: walk → walked\n🔹 -er → شخص: teach → teacher\n🔹 -est → صفت عالی: fast → fastest\n🔹 -ly → قید: quick → quickly\n🔹 -tion → اسم: inform → information\n\n📌 نکته: بعضی کلمات با ترکیب پسوند، حرف آخرشان دو برابر می‌شود:\nrun → running، big → bigger" },
+
+  { id:"homophone", title:"کلمات هم‌صدا (Homophones)", emoji:"🎵",
+    short:"کلماتی که صدای یکسان ولی معنی متفاوت",
+    body:"📌 این کلمات سخت‌ترین بخش آزمون‌ها هستند:\n\n🔹 to / two / too\n  • to: به (I go to school)\n  • two: دو (I have two cats)\n  • too: هم / خیلی (Me too / too big)\n\n🔹 there / their / they're\n  • there: آنجا\n  • their: مال آن‌ها\n  • they're: آن‌ها هستند\n\n🔹 your / you're\n🔹 its / it's\n🔹 know / no\n🔹 write / right\n🔹 sea / see\n🔹 meat / meet\n🔹 hear / here\n🔹 knight / night\n🔹 bear / bare\n🔹 brake / break\n\n📌 تست: تفاوت اینا فقط از روی جمله فهمیده می‌شود." },
+
+  { id:"silent", title:"حروف بی‌صدا (Silent Letters)", emoji:"🤫",
+    short:"حروفی که نوشته می‌شوند ولی خوانده نمی‌شوند",
+    body:"📌 پرکاربردترین حروف بی‌صدا:\n\n🔹 K در ابتدای کلمه قبل از N:\n  Knee, Knife, Know, Knock, Knight\n\n🔹 B قبل از T یا بعد از M:\n  Debt, Doubt, Lamb, Thumb, Comb\n\n🔹 H در بعضی کلمات:\n  Hour, Honest, Heir\n\n🔹 W قبل از R:\n  Write, Wrong, Wrist, Wrap\n\n🔹 G قبل از N:\n  Sign, Design, Foreign\n\n🔹 L قبل از K و M:\n  Walk, Talk, Half, Calm\n\n🔹 T در: Listen, Castle, Often\n\n🔹 P در: Psychology, Pneumonia\n\n📌 نکته: کلمه «Knife» ۵ حرف دارد ولی ۴ صدا." },
+
+  { id:"prefix-number", title:"پیشوندهای عددی و اندازه", emoji:"🔢",
+    short:"mono-, bi-, tri-, multi-, semi-",
+    body:"📌 پیشوندهای عددی:\n\n🔹 mono- / uni- = یک\n  Monopoly, Unicycle\n\n🔹 bi- / di- = دو\n  Bicycle, Dioxide, Bilingual\n\n🔹 tri- = سه\n  Triangle, Tricycle, Trio\n\n🔹 quad- / tetra- = چهار\n  Quadrilateral, Tetris\n\n🔹 penta- = پنج → Pentagon\n🔹 hexa- = شش → Hexagon\n🔹 octa- = هشت → October (ماه هشتم رومی)\n🔹 deci- = دهم → Decimal\n🔹 cent- = صد → Century\n🔹 milli- = هزارم → Millimeter\n\n📌 تست: از روی پیشوند می‌شود معنای کلمه را حدس زد." },
+
+  { id:"grammar", title:"دستور زبان و علائم نگارشی", emoji:"📝",
+    short:"نقطه، ویرگول، علامت سؤال، حروف اضافه",
+    body:"📌 علائم نگارشی (Punctuation):\n\n🔹 نقطه (.) → پایان جملهٔ خبری\n🔹 علامت سؤال (?) → پایان جملهٔ سؤالی\n🔹 علامت تعجب (!) → جملهٔ تعجبی\n🔹 ویرگول (,) → جداسازی، وقف کوتاه\n🔹 آپاستروف (') → مالکیت یا کوتاه‌شده\n🔹 دو نقطه (:) → معرفی لیست یا توضیح\n\n📌 حروف اضافهٔ مهم:\n• in → داخل (in the box)\n• on → روی سطح (on the table)\n• at → در نقطه (at 5 o'clock)\n• to → به سمت (to school)\n• for → برای\n• with → با\n• by → توسط\n\n📌 ترتیب جمله: فاعل + فعل + مفعول" },
+
+  { id:"advanced-vocab", title:"واژگان پیشرفته و ریشه‌شناسی", emoji:"🎓",
+    short:"ریشه‌های لاتین، یونانی، کلمات ترکیبی",
+    body:"📌 ریشه‌های لاتین رایج:\n\n🔹 port = بردن → Transport, Import, Export\n🔹 dict = گفتن → Dictate, Predict, Dictionary\n🔹 scrib = نوشتن → Describe, Subscribe\n🔹 vid / vis = دیدن → Video, Vision, Visible\n🔹 aud = شنیدن → Audio, Audience\n🔹 aqua = آب → Aquarium, Aquatic\n🔹 terra = زمین → Territory, Terrain\n🔹 sol = خورشید → Solar, Solstice\n\n📌 ریشه‌های یونانی:\n🔹 phon = صدا → Phone, Symphony\n🔹 graph = نوشتن → Photograph, Graph\n🔹 bio = زندگی → Biology, Biography\n🔹 geo = زمین → Geography\n🔹 tele = دور → Telephone, Television\n\n📌 تست: از روی ریشه می‌توانی معنای کلمه را حدس بزنی." }
+];
+
+/* =========================================================
+   ۲۰ سوال سخت آزمون با پاسخ‌نامه تشریحی
+   ========================================================= */
+const QUIZ = [
+  { topic:"الفبا", q:"حرف بعد از R در الفبای انگلیسی کدام است؟", o:["S","Q","T","P"], a:0,
+    exp:"ترتیب الفبا: … P، Q، R، S، T … پس بعد از R حرف S است." },
+  { topic:"الفبا", q:"حرف پنجم الفبای انگلیسی کدام است؟", o:["C","D","E","F"], a:2,
+    exp:"A=1، B=2، C=3، D=4، E=5. پس حرف پنجم E است." },
+  { topic:"حروف صدادار", q:"چند حرف صدادار (Vowel) در انگلیسی وجود دارد؟", o:["۳","۵","۷","۶"], a:1,
+    exp:"حروف صدادار اصلی: A, E, I, O, U — یعنی ۵ حرف. حرف Y در بعضی کلمات جایگزین می‌شود." },
+  { topic:"حروف صدادار", q:"کدام حرف در انگلیسی معمولاً صامت (Consonant) است؟", o:["A","E","W","I"], a:2,
+    exp:"W در تمام حالت‌ها صامت است. A، E، I همیشه صدادار هستند." },
+  { topic:"شمارش حروف", q:"کلمهٔ «Strawberry» چند حرف دارد؟", o:["۸","۹","۱۰","۱۱"], a:2,
+    exp:"S-t-r-a-w-b-e-r-r-y = ۱۰ حرف. حرف r دو بار پشت سر هم تکرار شده." },
+  { topic:"شمارش حروف", q:"کلمهٔ «Beautiful» چند حرف دارد؟", o:["۷","۸","۹","۱۰"], a:2,
+    exp:"B-e-a-u-t-i-f-u-l = ۹ حرف." },
+  { topic:"صداها", q:"حرف C در کلمهٔ «City» چه صدایی دارد؟", o:["/k/","/s/","/ch/","/ʃ/"], a:1,
+    exp:"C قبل از e, i, y صدای /s/ می‌دهد. پس City = /sɪti/." },
+  { topic:"صداها", q:"حرف G در کلمهٔ «Gym» چه صدایی دارد؟", o:["/g/","/j/","/k/","/zh/"], a:1,
+    exp:"G قبل از e, i, y صدای /j/ نرم می‌دهد. Gym = /dʒɪm/." },
+  { topic:"حروف بی‌صدا", q:"در کلمهٔ «Knife» کدام حرف خوانده نمی‌شود؟", o:["N","K","F","E"], a:1,
+    exp:"در کلماتی مثل Knee, Knife, Know, Knight حرف K در ابتدای کلمه بی‌صدا است." },
+  { topic:"حروف بی‌صدا", q:"در کلمهٔ «Lamb» کدام حرف بی‌صدا است؟", o:["L","A","B","M"], a:2,
+    exp:"B بعد از M در انتهای کلمه بی‌صدا می‌شود: Lamb, Thumb, Comb, Climb." },
+  { topic:"حروف شبیه‌هم", q:"کدام جفت حرف بیشترین اشتباه را در نوشتن دارند؟", o:["a و e","b و d","f و k","s و z"], a:1,
+    exp:"b و d در آینه شبیه هم به‌نظر می‌رسند. b قلاب راست، d قلاب چپ. کلمهٔ Bed این دو را کنار هم دارد." },
+  { topic:"حرف Y", q:"در کلمهٔ «Sky» حرف Y چه نقشی دارد؟", o:["صامت","صدادار","بی‌صدا","بی‌نقش"], a:1,
+    exp:"Y در انتهای کلمات مثل Sky, My, Cry, Baby نقش صدادار دارد و صدای /ai/ یا /i/ می‌دهد." },
+  { topic:"حرف Y", q:"در کلمهٔ «Yes» حرف Y چه نقشی دارد؟", o:["صامت","صدادار","بی‌صدا","بی‌نقش"], a:0,
+    exp:"Y در ابتدای کلمه قبل از حرف صدادار، نقش صامت دارد: Yes, Yellow, You, Yard." },
+  { topic:"هجا", q:"کلمهٔ «Banana» چند هجا دارد؟", o:["۱","۲","۳","۴"], a:2,
+    exp:"Ba-na-na = ۳ هجا. هر هجا یک بخش صوتی جداگانه است." },
+  { topic:"پیشوندها", q:"پیشوند «un-» به کلمهٔ Happy چه معنایی می‌دهد؟", o:["دوباره","منفی","بیشتر","قبل"], a:1,
+    exp:"پیشوند un- معنای منفی می‌سازد: Happy → Unhappy (ناراحت)، Fair → Unfair، Do → Undo." },
+  { topic:"پیشوندها", q:"پیشوند «re-» به کلمهٔ Play چه معنایی می‌دهد؟", o:["دوباره","منفی","قبل","اشتباه"], a:0,
+    exp:"پیشوند re- یعنی «دوباره»: Play → Replay، Do → Redo، Write → Rewrite." },
+  { topic:"هم‌صدا", q:"کدام یک از این کلمات با «To» هم‌صدا است؟", o:["Too","Top","Toy","Tone"], a:0,
+    exp:"To, Too, Two هر سه یکسان تلفظ می‌شوند (/tuː/) ولی معنی متفاوت دارند. Too = هم/خیلی، Two = دو." },
+  { topic:"هم‌صدا", q:"کدام کلمه هم‌صدای «Write» است؟", o:["Right","Wide","White","Wait"], a:0,
+    exp:"Write /raɪt/ و Right /raɪt/ یکسان تلفظ می‌شوند. Write = نوشتن، Right = درست." },
+  { topic:"پیشوندهای عددی", q:"پیشوند «tri-» در کلمهٔ Triangle به چه معناست؟", o:["یک","دو","سه","چهار"], a:2,
+    exp:"پیشوند tri- یعنی سه: Triangle = مثلث، Tricycle = سه‌چرخه، Trio = گروه سه‌نفره." },
+  { topic:"الفبا", q:"چندمین حرف الفبای انگلیسی، حرف Z است؟", o:["۲۴","۲۵","۲۶","۲۷"], a:2,
+    exp:"الفبای انگلیسی ۲۶ حرف دارد. Z آخرین حرف است، یعنی حرف بیست‌وششم." }
+];
+
+/* =========================================================
+   ابزارها
    ========================================================= */
 const $ = (s) => document.querySelector(s);
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const fa = (n) => Number(n).toLocaleString("fa-IR");
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-let current = null;
-let keyButtons = {};
-let doneSet = new Set();
+function toast(msg, ms=2400){
+  const t = $("#toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._tid);
+  t._tid = setTimeout(()=>t.classList.remove("show"), ms);
+}
 
-/* ---------- آماده‌سازی صدا ---------- */
+/* ---------- ستاره‌های شناور ---------- */
+(function(){
+  const box = $("#stars");
+  for(let i=0;i<40;i++){
+    const s = document.createElement("div");
+    s.className = "star";
+    s.style.left = Math.random()*100 + "%";
+    s.style.animationDuration = (8 + Math.random()*12) + "s";
+    s.style.animationDelay = (-Math.random()*20) + "s";
+    const size = 2 + Math.random()*3;
+    s.style.width = size + "px"; s.style.height = size + "px";
+    box.appendChild(s);
+  }
+})();
+
+/* ---------- صدا ---------- */
 let voices = [];
-function loadVoices() {
-  if (!("speechSynthesis" in window)) return;
-  voices = speechSynthesis.getVoices();
-}
+function loadVoices(){ if("speechSynthesis" in window) voices = speechSynthesis.getVoices(); }
 loadVoices();
-if ("speechSynthesis" in window) {
-  speechSynthesis.onvoiceschanged = loadVoices;
-}
+if("speechSynthesis" in window) speechSynthesis.onvoiceschanged = loadVoices;
 
-/* ---------- تلفظ قوی ---------- */
-let currentUtterance = null;
-function speak(text, btn) {
-  if (!("speechSynthesis" in window)) {
-    alert("مرورگر شما از تلفظ پشتیبانی نمی‌کند");
-    return;
-  }
-
-  try {
-    // توقف هر تلفظ در حال اجرا
+function speak(text, btn){
+  if(!("speechSynthesis" in window)) return;
+  try{
     speechSynthesis.cancel();
-
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = 0.85;
-    u.pitch = 1;
-    u.volume = 1;
-
-    // انتخاب صدای انگلیسی (اولویت آمریکایی)
-    if (!voices.length) voices = speechSynthesis.getVoices();
-    const preferred =
-      voices.find((v) => v.lang === "en-US" && /Google|Samantha|Microsoft/i.test(v.name)) ||
-      voices.find((v) => v.lang === "en-US") ||
-      voices.find((v) => v.lang.startsWith("en"));
-    if (preferred) u.voice = preferred;
-
-    // انیمیشن دکمه
-    if (btn) {
+    u.lang = "en-US"; u.rate = .85;
+    if(!voices.length) voices = speechSynthesis.getVoices();
+    const v = voices.find(x=>x.lang==="en-US") || voices.find(x=>x.lang.startsWith("en"));
+    if(v) u.voice = v;
+    if(btn){
       btn.classList.add("speaking");
-      u.onend = () => btn.classList.remove("speaking");
-      u.onerror = () => btn.classList.remove("speaking");
+      u.onend = ()=>btn.classList.remove("speaking");
+      u.onerror = ()=>btn.classList.remove("speaking");
     }
-
-    currentUtterance = u;
     speechSynthesis.speak(u);
-  } catch (e) {
-    console.warn("speak error:", e);
-  }
+  }catch(e){}
 }
+let audioUnlocked = false;
+document.addEventListener("touchstart", ()=>{
+  if(audioUnlocked) return; audioUnlocked = true;
+  try{ const u = new SpeechSynthesisUtterance(""); u.volume=0; speechSynthesis.speak(u); speechSynthesis.cancel(); loadVoices(); }catch(e){}
+}, { once:true });
+document.addEventListener("click", ()=>{
+  if(audioUnlocked) return; audioUnlocked = true;
+  try{ const u = new SpeechSynthesisUtterance(""); u.volume=0; speechSynthesis.speak(u); speechSynthesis.cancel(); loadVoices(); }catch(e){}
+}, { once:true });
 
-/* ---------- ساخت کارت‌های دسته ---------- */
+/* =========================================================
+   تب‌ها
+   ========================================================= */
+document.querySelectorAll("#tabs button").forEach(b=>{
+  b.addEventListener("click", ()=>{
+    document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("on", x===b));
+    const v = b.dataset.v;
+    $("#paneLearn").hidden = v !== "learn";
+    $("#paneLessons").hidden = v !== "lessons";
+    $("#paneQuiz").hidden = v !== "quiz";
+  });
+});
+
+/* =========================================================
+   ساخت کارت‌های ۴۰ دسته
+   ========================================================= */
 const catsEl = $("#cats");
-Object.entries(C).forEach(([id, cat]) => {
+Object.entries(C).forEach(([id, cat])=>{
   const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "cat";
-  btn.dataset.id = id;
+  btn.type = "button"; btn.className = "cat";
   btn.dataset.search = (cat.fa + " " + cat.en).toLowerCase();
   btn.innerHTML = `<span class="emo">${cat.emo}</span>
                    <span class="name">${cat.fa}</span>
                    <span class="en">${cat.en}</span>`;
-  btn.addEventListener("click", () => openCat(id));
+  btn.addEventListener("click", ()=>openCat(id));
   catsEl.appendChild(btn);
 });
 $("#catCount").textContent = fa(Object.keys(C).length) + " دسته";
-
-/* ---------- جستجو ---------- */
-$("#search").addEventListener("input", (e) => {
+$("#search").addEventListener("input", e=>{
   const q = e.target.value.trim().toLowerCase();
-  document.querySelectorAll("#cats .cat").forEach((b) => {
+  document.querySelectorAll("#cats .cat").forEach(b=>{
     b.style.display = !q || b.dataset.search.includes(q) ? "" : "none";
   });
 });
 
-/* ---------- ورود به دسته ---------- */
-function openCat(id) {
-  current = id;
+/* =========================================================
+   صفحه حروف
+   ========================================================= */
+let currentCat = null;
+let keyButtons = {};
+let doneSet = new Set();
+
+function openCat(id){
+  currentCat = id;
   const cat = C[id];
-
   $("#ptitle").textContent = cat.emo + " " + cat.fa;
-
   const keysEl = $("#keys");
-  keysEl.innerHTML = "";
-  keyButtons = {};
-  doneSet = new Set();
-
-  LETTERS.forEach((L) => {
+  keysEl.innerHTML = ""; keyButtons = {}; doneSet = new Set();
+  LETTERS.forEach(L=>{
     const b = document.createElement("button");
-    b.type = "button";
-    b.className = "key";
-    b.textContent = L;
-    b.setAttribute("aria-label", "حرف " + L);
-    b.addEventListener("click", () => pick(L));
-    keysEl.appendChild(b);
-    keyButtons[L] = b;
+    b.type = "button"; b.className = "key"; b.textContent = L;
+    b.addEventListener("click", ()=>pick(L));
+    keysEl.appendChild(b); keyButtons[L] = b;
   });
-
-  setEmpty();
-  updateProgress();
-  $("#playFoot").textContent = C[current].en;
-
-  $("#home").hidden = true;
-  $("#play").hidden = false;
-  window.scrollTo(0, 0);
+  setEmpty(); updateProgress();
+  $("#playFoot").textContent = cat.en;
+  $("#home").hidden = true; $("#play").hidden = false;
+  $("#lessonPage").hidden = true; $("#quiz").hidden = true;
+  $("#quizResult").hidden = true; $("#report").hidden = true;
+  $("#answers").hidden = true; $("#cert").hidden = true;
+  window.scrollTo(0,0);
 }
-
-function setEmpty() {
+function setEmpty(){
   const r = $("#result");
   r.className = "result empty";
   r.textContent = "یک حرف را انتخاب کن";
 }
-
-function updateProgress() {
-  const total = Object.keys(C[current].d).length;
-  const pct = total ? (doneSet.size / total) * 100 : 0;
-  $("#progFill").style.width = pct + "%";
+function updateProgress(){
+  const total = Object.keys(C[currentCat].d).length;
+  $("#progFill").style.width = (total? (doneSet.size/total)*100 : 0) + "%";
 }
-
-/* ---------- انتخاب حرف ---------- */
-function pick(L) {
+function pick(L){
   const btn = keyButtons[L];
-  if (!btn) return;
-
-  document.querySelectorAll(".key.sel").forEach((x) => x.classList.remove("sel"));
+  if(!btn) return;
+  document.querySelectorAll(".key.sel").forEach(x=>x.classList.remove("sel"));
   btn.classList.add("sel");
-
   const r = $("#result");
-  const data = C[current].d[L];
+  const data = C[currentCat].d[L];
   r.innerHTML = "";
-
-  if (!data) {
+  if(!data){
     r.className = "result none";
     r.textContent = "در این دسته کلمه‌ای با حرف «" + L + "» نداریم";
     btn.classList.add("none");
     return;
   }
-
-  doneSet.add(L);
-  btn.classList.add("done");
-  updateProgress();
-
+  doneSet.add(L); btn.classList.add("done"); updateProgress();
   r.className = "result";
-
-  const letterEl = document.createElement("div");
-  letterEl.className = "letter";
+  const letterEl = document.createElement("div"); letterEl.className="letter";
   letterEl.textContent = L + " " + L.toLowerCase();
-
-  const wordEl = document.createElement("div");
-  wordEl.className = "word";
+  const wordEl = document.createElement("div"); wordEl.className="word";
   wordEl.textContent = data[0];
-
-  const faEl = document.createElement("div");
-  faEl.className = "fa";
+  const faEl = document.createElement("div"); faEl.className="fa";
   faEl.textContent = data[1];
-
   const spk = document.createElement("button");
-  spk.type = "button";
-  spk.className = "speak";
-  spk.innerHTML = `<span class="icon">🔊</span><span>تلفظ کن</span>`;
-  spk.addEventListener("click", (e) => {
-    e.stopPropagation();
-    speak(data[0], spk);
-  });
-
-  if (data[2]) {
+  spk.type = "button"; spk.className="speak";
+  spk.innerHTML = `<span>🔊</span><span>تلفظ کن</span>`;
+  spk.addEventListener("click", e=>{ e.stopPropagation(); speak(data[0], spk); });
+  if(data[2]){
     const emojiEl = document.createElement("div");
-    emojiEl.style.fontSize = "44px";
-    emojiEl.style.lineHeight = "1.1";
+    emojiEl.style.fontSize="44px"; emojiEl.style.lineHeight="1.1";
     emojiEl.textContent = data[2];
     r.append(letterEl, emojiEl, wordEl, faEl, spk);
   } else {
     r.append(letterEl, wordEl, faEl, spk);
   }
-
-  // تلفظ خودکار
   speak(data[0], spk);
 }
-
-/* ---------- بازگشت ---------- */
-$("#back").addEventListener("click", () => {
-  if ("speechSynthesis" in window) speechSynthesis.cancel();
-  $("#play").hidden = true;
-  $("#home").hidden = false;
-  window.scrollTo(0, 0);
+$("#backLearn").addEventListener("click", ()=>{
+  if("speechSynthesis" in window) speechSynthesis.cancel();
+  $("#play").hidden = true; $("#home").hidden = false;
+  window.scrollTo(0,0);
 });
 
-/* ---------- کیبورد ---------- */
-document.addEventListener("keydown", (e) => {
-  if ($("#play").hidden) return;
-  const L = e.key.toUpperCase();
-  if (L.length === 1 && LETTERS.includes(L)) pick(L);
+/* =========================================================
+   دروس پیشرفته
+   ========================================================= */
+const lessonsList = $("#lessonsList");
+LESSONS.forEach((les, idx)=>{
+  const card = document.createElement("div");
+  card.className = "lesson-card";
+  card.innerHTML = `<h3>${les.emoji} ${les.title}</h3><p>${les.short}</p>`;
+  card.addEventListener("click", ()=>openLesson(idx));
+  lessonsList.appendChild(card);
 });
 
-/* ---------- اولین لمس برای فعال‌سازی صدا (برای موبایل) ---------- */
-let audioUnlocked = false;
-function unlockAudio() {
-  if (audioUnlocked) return;
-  audioUnlocked = true;
-  if ("speechSynthesis" in window) {
-    try {
-      const u = new SpeechSynthesisUtterance("");
-      u.volume = 0;
-      speechSynthesis.speak(u);
-      speechSynthesis.cancel();
-      loadVoices();
-    } catch (e) {}
-  }
+function openLesson(idx){
+  const les = LESSONS[idx];
+  $("#lessonTitle").textContent = les.emoji + " " + les.title;
+  $("#lessonContent").innerHTML = `<div class="lesson-body">${les.body}</div>`;
+  $("#home").hidden = true; $("#play").hidden = true;
+  $("#lessonPage").hidden = false;
+  window.scrollTo(0,0);
 }
-document.addEventListener("touchstart", unlockAudio, { once: true });
-document.addEventListener("click", unlockAudio, { once: true });
+$("#backLesson").addEventListener("click", ()=>{
+  $("#lessonPage").hidden = true; $("#home").hidden = false;
+  window.scrollTo(0,0);
+});
+
+/* =========================================================
+   نمایش توزیع سوالات در صفحه آزمون
+   ========================================================= */
+(function(){
+  const counts = {};
+  QUIZ.forEach(q => counts[q.topic] = (counts[q.topic]||0) + 1);
+  const html = Object.entries(counts).map(([t,n]) =>
+    `<div style="display:flex;justify-content:space-between;border-bottom:1px dashed rgba(255,255,255,.1);padding:3px 0">
+      <span style="color:rgba(255,255,255,.85)">${t}</span>
+      <span style="color:#ffd700;font-weight:800">${fa(n)} سوال</span>
+    </div>`).join("");
+  $("#topicDistribution").innerHTML = html;
+})();
+
+/* =========================================================
+   آزمون با تایمر زنده
+   ========================================================= */
+const QUIZ_DURATION = 20 * 60; // ۲۰ دقیقه بر حسب ثانیه
+let quizState = { idx:0, score:0, answered:false, startTime:0, timer:null, timeLeft:QUIZ_DURATION, answers:[] };
+
+$("#startQuiz").addEventListener("click", ()=>{
+  const name = $("#studentName").value.trim();
+  if(name.length < 2){
+    toast("لطفاً نام خود را وارد کنید");
+    $("#studentName").focus();
+    return;
+  }
+  quizState = { idx:0, score:0, answered:false, startTime:Date.now(), timer:null, timeLeft:QUIZ_DURATION, answers:[], studentName:name };
+  $("#home").hidden = true; $("#play").hidden = true; $("#lessonPage").hidden = true;
+  $("#quiz").hidden = false; $("#quizResult").hidden = true;
+  $("#report").hidden = true; $("#answers").hidden = true; $("#cert").hidden = true;
+  startTimer();
+  renderQuestion();
+  window.scrollTo(0,0);
+});
+$("#backQuiz").addEventListener("click", ()=>{
+  if(quizState.timer) clearInterval(quizState.timer);
+  $("#quiz").hidden = true; $("#home").hidden = false;
+  window.scrollTo(0,0);
+});
+
+/* ---------- تایمر زنده ---------- */
+function startTimer(){
+  if(quizState.timer) clearInterval(quizState.timer);
+  quizState.timeLeft = QUIZ_DURATION;
+  updateTimerDisplay();
+  quizState.timer = setInterval(()=>{
+    quizState.timeLeft--;
+    updateTimerDisplay();
+    if(quizState.timeLeft <= 0){
+      clearInterval(quizState.timer);
+      finishQuiz();
+    }
+  }, 1000);
+}
+function updateTimerDisplay(){
+  const m = Math.floor(quizState.timeLeft/60);
+  const s = quizState.timeLeft % 60;
+  const el = $("#qTimer");
+  el.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  el.classList.remove("warn","danger");
+  if(quizState.timeLeft <= 60) el.classList.add("danger");
+  else if(quizState.timeLeft <= 5*60) el.classList.add("warn");
+}
+
+/* ---------- نمایش سوال ---------- */
+function renderQuestion(){
+  const q = QUIZ[quizState.idx];
+  $("#qNum").textContent = `سوال ${fa(quizState.idx+1)} از ${fa(QUIZ.length)}`;
+  $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
+  $("#quizFill").style.width = ((quizState.idx)/QUIZ.length*100) + "%";
+  $("#qTopic").textContent = "📚 " + q.topic;
+  $("#qText").textContent = q.q;
+  const optsEl = $("#qOpts");
+  optsEl.innerHTML = "";
+  q.o.forEach((opt, i)=>{
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "quiz-opt"; b.textContent = opt;
+    b.addEventListener("click", ()=>answer(i, b));
+    optsEl.appendChild(b);
+  });
+  quizState.answered = false;
+}
+
+/* ---------- پاسخ ---------- */
+function answer(i, btn){
+  if(quizState.answered) return;
+  quizState.answered = true;
+  const q = QUIZ[quizState.idx];
+  quizState.answers.push({ q: q.q, correct: q.a, chosen: i, topic: q.topic, exp: q.exp, options: q.o });
+  const allOpts = document.querySelectorAll("#qOpts .quiz-opt");
+  allOpts.forEach((b, idx)=>{
+    b.disabled = true;
+    if(idx === q.a) b.classList.add("correct");
+    else if(idx === i) b.classList.add("wrong");
+  });
+  if(i === q.a){
+    quizState.score++;
+    $("#qScore").textContent = `امتیاز: ${fa(quizState.score)}`;
+  }
+  setTimeout(()=>{
+    quizState.idx++;
+    if(quizState.idx < QUIZ.length) renderQuestion();
+    else finishQuiz();
+  }, 1000);
+}
+
+/* ---------- پایان آزمون ---------- */
+function finishQuiz(){
+  if(quizState.timer) clearInterval(quizState.timer);
+  $("#quiz").hidden = true; $("#quizResult").hidden = false;
+  window.scrollTo(0,0);
+
+  const total = QUIZ.length;
+  const score = quizState.score;
+  const pct = Math.round(score/total*100);
+
+  $("#resScore").textContent = `${fa(score)} / ${fa(total)}`;
+  $("#resPercent").textContent = `${fa(pct)}٪`;
+
+  const stars = Math.round(pct/20);
+  $("#resStars").textContent = "★".repeat(stars) + "☆".repeat(5-stars);
+
+  let msg, emoji;
+  if(pct >= 90){ emoji="🏆"; msg="فوق‌العاده! شما یک نابغهٔ حروف انگلیسی هستید! 🌟"; }
+  else if(pct >= 75){ emoji="🎉"; msg="بسیار عالی! دانش شما در حد حرفه‌ای است."; }
+  else if(pct >= 50){ emoji="👍"; msg="خوب بود! با کمی تمرین بیشتر به سطح عالی می‌رسید."; }
+  else { emoji="💪"; msg="ناامید نشوید! با مطالعهٔ دروس و تمرین، دفعهٔ بعد عالی می‌شوید."; }
+  $("#resEmoji").textContent = emoji;
+  $("#resMsg").textContent = msg;
+
+  if(pct >= 50) confetti(2500);
+}
+
+/* =========================================================
+   کارنامه
+   ========================================================= */
+$("#showReport").addEventListener("click", ()=>{
+  $("#quizResult").hidden = true; $("#report").hidden = false;
+
+  const total = QUIZ.length;
+  const score = quizState.score;
+  const pct = Math.round(score/total*100);
+  const elapsed = Date.now() - quizState.startTime;
+  const em = Math.floor(elapsed/60000);
+  const es = Math.floor((elapsed % 60000)/1000);
+
+  $("#rpName").textContent = quizState.studentName;
+  $("#rpDate").textContent = new Date().toLocaleDateString("fa-IR");
+  $("#rpTime").textContent = `${fa(em)} دقیقه و ${fa(es)} ثانیه`;
+  $("#rpScore").textContent = `${fa(score)} از ${fa(total)}`;
+  $("#rpPct").textContent = `${fa(pct)}٪`;
+
+  let status, cls;
+  if(pct >= 90){ status="عالی — ممتاز"; cls="score-good"; }
+  else if(pct >= 75){ status="خیلی خوب"; cls="score-good"; }
+  else if(pct >= 50){ status="قابل قبول"; cls="score-mid"; }
+  else { status="نیاز به تلاش بیشتر"; cls="score-bad"; }
+  const st = $("#rpStatus"); st.textContent = status; st.className = cls;
+
+  // تحلیل بر اساس مبحث
+  const topics = {};
+  quizState.answers.forEach(a=>{
+    if(!topics[a.topic]) topics[a.topic] = { correct:0, total:0 };
+    topics[a.topic].total++;
+    if(a.chosen === a.correct) topics[a.topic].correct++;
+  });
+  const html = Object.entries(topics).map(([t, d])=>{
+    const ratio = d.correct / d.total;
+    const c = ratio === 1 ? "score-good" : ratio >= 0.5 ? "score-mid" : "score-bad";
+    return `<div class="report-row"><span>${t}</span><span class="${c}">${fa(d.correct)} / ${fa(d.total)}</span></div>`;
+  }).join("");
+  $("#rpTopics").innerHTML = html;
+
+  window.scrollTo(0,0);
+});
+
+/* =========================================================
+   پاسخ‌نامهٔ تشریحی
+   ========================================================= */
+$("#viewAnswers").addEventListener("click", ()=>{
+  $("#report").hidden = true; $("#answers").hidden = false;
+  const html = quizState.answers.map((a, i)=>{
+    const ok = a.chosen === a.correct;
+    const correctText = a.options[a.correct];
+    const chosenText = a.chosen >= 0 ? a.options[a.chosen] : "—";
+    return `<div class="answer-item ${ok?'correct':'wrong'}">
+      <div class="q">${fa(i+1)}. ${a.q}</div>
+      <div class="ans">✅ پاسخ صحیح: ${correctText}</div>
+      ${!ok ? `<div style="color:#ffb3b3;font-size:11px;margin-bottom:4px">❌ پاسخ شما: ${chosenText}</div>` : ''}
+      <div class="exp">💡 ${a.exp}</div>
+    </div>`;
+  }).join("");
+  $("#answerList").innerHTML = html;
+  window.scrollTo(0,0);
+});
+$("#backReport").addEventListener("click", ()=>{
+  $("#answers").hidden = true; $("#report").hidden = false;
+  window.scrollTo(0,0);
+});
+
+/* =========================================================
+   گواهینامه
+   ========================================================= */
+$("#goCert").addEventListener("click", ()=>{
+  const total = QUIZ.length;
+  const score = quizState.score;
+  const pct = Math.round(score/total*100);
+  $("#certName").textContent = quizState.studentName;
+  $("#certScore").textContent = `نمرهٔ کسب‌شده: ${fa(score)} از ${fa(total)} (${fa(pct)}٪)`;
+  $("#certDate").textContent = "تاریخ صدور: " + new Date().toLocaleDateString("fa-IR");
+  $("#report").hidden = true; $("#answers").hidden = true; $("#cert").hidden = false;
+  confetti(5000);
+  toast("🎉 گواهینامه با موفقیت صادر شد!");
+  window.scrollTo(0,0);
+});
+$("#backHome").addEventListener("click", ()=>{
+  $("#cert").hidden = true; $("#home").hidden = false;
+  if(quizState.timer) clearInterval(quizState.timer);
+  window.scrollTo(0,0);
+});
+
+/* =========================================================
+   کانفتی
+   ========================================================= */
+function confetti(duration=3000){
+  const colors = ["#ff5ca8","#7c5cff","#ffd700","#40e0d0","#ff8c00","#ff0080"];
+  const wrap = document.createElement("div");
+  wrap.className = "confetti";
+  document.body.appendChild(wrap);
+  for(let i=0;i<90;i++){
+    const p = document.createElement("div");
+    p.className = "confetti-piece";
+    p.style.left = Math.random()*100 + "%";
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    p.style.animationDuration = (2.2 + Math.random()*2) + "s";
+    p.style.animationDelay = (Math.random()*0.6) + "s";
+    p.style.transform = `rotate(${Math.random()*360}deg)`;
+    if(Math.random() < .3) p.style.borderRadius = "50%";
+    wrap.appendChild(p);
+  }
+  setTimeout(()=>{
+    wrap.style.transition = "opacity .6s";
+    wrap.style.opacity = "0";
+    setTimeout(()=>wrap.remove(), 700);
+  }, duration);
+}
+
+/* =========================================================
+   کیبورد
+   ========================================================= */
+document.addEventListener("keydown", e=>{
+  if(!$("#play").hidden){
+    const L = e.key.toUpperCase();
+    if(L.length === 1 && LETTERS.includes(L)) pick(L);
+  }
+});
 </script>
 </body>
 </html>
