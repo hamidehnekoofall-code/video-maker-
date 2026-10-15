@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>استودیو محمدجواد کجوری — پایه ایمان</title>
+<title>موسسه زبان انگلیسی محمدجواد کجوری — پایه ایمان ۱</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--text:#fff;--muted:rgba(255,255,255,.75);--border:rgba(255,255,255,.25);--accent:#ff5ca8;--accent2:#7c5cff;--gold:#ffd700;--ok:#4fd1a1;--err:#ff6b6b}
@@ -19,9 +19,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .brand{text-align:center;margin:8px 0 20px;padding:22px 16px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);border-radius:26px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35);position:relative;overflow:hidden}
 .brand::before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);animation:shine 4s linear infinite}
 @keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.brand h1{font-size:22px;font-weight:900;margin:0 0 6px;position:relative;text-shadow:0 2px 20px rgba(255,255,255,.4)}
-.brand .studio{font-size:13.5px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 4s linear infinite;margin:0 0 8px}
+.brand h1{font-size:19px;font-weight:900;margin:0 0 6px;position:relative;text-shadow:0 2px 20px rgba(255,255,255,.4);line-height:1.5}
+.brand .studio{font-size:13px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textFlow 4s linear infinite;margin:0 0 8px}
 @keyframes textFlow{to{background-position:200% 0}}
+.brand .class-badge{display:inline-block;background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:4px 14px;border-radius:99px;font-size:11.5px;font-weight:800;box-shadow:0 4px 16px rgba(255,92,168,.5);margin-top:4px}
 .brand .line{display:block;width:60px;height:3px;border-radius:2px;margin:12px auto 0;background:linear-gradient(90deg,#ff5ca8,#7c5cff,#40e0d0)}
 .tabs{display:flex;gap:5px;background:rgba(0,0,0,.25);padding:5px;border-radius:16px;margin-bottom:18px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15)}
 .tabs button{flex:1;font:inherit;font-size:11px;font-weight:700;padding:11px 3px;background:transparent;color:var(--muted);border:0;border-radius:12px;cursor:pointer;transition:.2s}
@@ -78,10 +79,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:11px;font-weight:700;gap:5px;flex-wrap:wrap}
 .quiz-tag{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;padding:5px 10px;border-radius:99px;font-size:10.5px}
 .quiz-tag.gold{background:rgba(255,215,0,.15);color:#ffd700;border:1px solid rgba(255,215,0,.4)}
-.quiz-tag.timer{background:rgba(79,209,161,.15);color:#4fd1a1;border:1px solid rgba(79,209,161,.4);font-family:monospace;font-size:14px;letter-spacing:1px;font-weight:800;padding:5px 12px}
+.quiz-tag.timer{background:rgba(79,209,161,.15);color:#4fd1a1;border:1px solid rgba(79,209,161,.4);font-family:monospace;font-size:13px;letter-spacing:1px;font-weight:800;padding:5px 11px}
 .quiz-tag.timer.warn{background:rgba(255,180,92,.25);color:#ffb45c;border-color:#ffb45c;animation:tick 1s ease-in-out infinite}
 .quiz-tag.timer.danger{background:rgba(255,0,0,.3);color:#fff;border-color:#ff6b6b;animation:tick .6s ease-in-out infinite}
-.quiz-tag.q-timer{background:rgba(124,92,255,.25);color:#c9bcff;border:1px solid rgba(124,92,255,.5);font-family:monospace;font-size:13px;font-weight:800}
+.quiz-tag.q-timer{background:rgba(124,92,255,.25);color:#c9bcff;border:1px solid rgba(124,92,255,.5);font-family:monospace;font-size:12.5px;font-weight:800;padding:5px 10px}
 .quiz-tag.q-timer.warn{background:rgba(255,107,107,.3);color:#ffb3b3;border-color:#ff6b6b;animation:tick .8s ease-in-out infinite}
 @keyframes tick{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 .quiz-question{font-size:15px;font-weight:800;line-height:1.7;margin:0 0 14px;text-align:center;padding:14px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
@@ -93,15 +94,16 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .quiz-opt.correct{background:linear-gradient(135deg,rgba(79,209,161,.4),rgba(79,209,161,.15));border-color:#4fd1a1;color:#b3ffd9}
 .quiz-opt.wrong{background:linear-gradient(135deg,rgba(255,107,107,.4),rgba(255,107,107,.15));border-color:#ff6b6b;color:#ffb3b3}
 .mic-box{background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(255,92,168,.15));border:2px solid rgba(124,92,255,.5);border-radius:20px;padding:18px;text-align:center;margin-bottom:10px}
-.mic-box .en-sentence{font-size:20px;font-weight:900;direction:ltr;color:#ffd700;margin:10px 0;text-shadow:0 2px 20px rgba(255,215,0,.5);line-height:1.35;word-break:break-word}
-.mic-box .hint{font-size:11px;color:rgba(255,255,255,.78);line-height:1.9;margin-bottom:12px}
-.mic-btn{width:90px;height:90px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:8px;position:relative}
+.mic-box .en-sentence{font-size:19px;font-weight:900;direction:ltr;color:#ffd700;margin:10px 0;text-shadow:0 2px 20px rgba(255,215,0,.5);line-height:1.35;word-break:break-word}
+.mic-box .hint{font-size:11px;color:rgba(255,255,255,.82);line-height:2;margin-bottom:12px;text-align:right}
+.mic-box .hint b{color:#ffd700}
+.mic-btn{width:96px;height:96px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:8px;position:relative}
 .mic-btn:hover{transform:scale(1.05)}
 .mic-btn:active{transform:scale(.95)}
 .mic-btn.recording{background:linear-gradient(135deg,#ff0080,#ff5ca8);animation:micPulse 1s ease-in-out infinite}
-@keyframes micPulse{0%,100%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 0 rgba(255,92,168,.7)}50%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 20px rgba(255,92,168,0)}}
+@keyframes micPulse{0%,100%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 0 rgba(255,92,168,.7)}50%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 22px rgba(255,92,168,0)}}
 .mic-btn .lbl{font-size:9px;font-weight:700;margin-top:-2px}
-.mic-status{font-size:12px;font-weight:700;color:#4fd1a1;margin-top:8px;min-height:18px;white-space:pre-line}
+.mic-status{font-size:12px;font-weight:700;color:#4fd1a1;margin-top:8px;min-height:22px;white-space:pre-line;line-height:1.6}
 .mic-status.listening{color:#ffd700}
 .mic-status.error{color:#ff6b6b}
 .result-screen{text-align:center;padding:26px 18px}
@@ -112,8 +114,9 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .result-screen .msg{font-size:13.5px;font-weight:700;line-height:1.9;margin-bottom:16px;padding:13px;border-radius:14px;background:rgba(255,255,255,.10)}
 .report-section{margin-bottom:14px;padding:13px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)}
 .report-section h4{margin:0 0 10px;font-size:13px;font-weight:800;color:#ffd700}
-.report-row{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px dashed rgba(255,255,255,.15)}
+.report-row{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px dashed rgba(255,255,255,.15);gap:8px}
 .report-row:last-child{border-bottom:0}
+.report-row .subname{font-size:10px;color:#ffd700;font-weight:700}
 .score-good{color:#4fd1a1}.score-mid{color:#ffd700}.score-bad{color:#ff6b6b}
 .answer-sheet{font-size:12px;line-height:1.9;max-height:60vh;overflow-y:auto;padding-left:4px}
 .answer-item{padding:11px;border-radius:12px;background:rgba(255,255,255,.06);margin-bottom:8px;border-right:3px solid rgba(255,255,255,.3)}
@@ -144,7 +147,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 .field:focus{border-color:#ffd700;box-shadow:0 0 0 4px rgba(255,215,0,.2);background:rgba(255,255,255,.18)}
 .toast{position:fixed;bottom:24px;right:50%;transform:translate(50%,120px);background:rgba(0,0,0,.9);border:1.5px solid rgba(255,255,255,.25);color:#fff;padding:13px 20px;border-radius:14px;font-size:13px;font-weight:700;z-index:9999;backdrop-filter:blur(20px);transition:transform .3s;max-width:90vw;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 .toast.show{transform:translate(50%,0)}
-.foot{margin-top:30px;text-align:center;color:rgba(255,255,255,.6);font-size:12px;line-height:2}
+.foot{margin-top:30px;text-align:center;color:rgba(255,255,255,.6);font-size:11.5px;line-height:2}
 .foot b{color:#ffd700;font-weight:800}
 .save-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
 .gallery-empty{text-align:center;color:var(--muted);font-size:13px;padding:24px;border:1.5px dashed rgba(255,255,255,.2);border-radius:14px}
@@ -164,9 +167,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 <div class="app">
   <section id="home">
     <div class="brand">
-      <h1>🎓 استودیو محمدجواد کجوری</h1>
-      <p class="studio">✨ پایه ایمان ✨</p>
+      <h1>🎓 موسسه زبان انگلیسی محمدجواد کجوری</h1>
+      <p class="studio">✨ پایه ایمان ۱ ✨</p>
       <div class="line"></div>
+      <div class="class-badge">آموزش حروف انگلیسی · حرفه‌ای</div>
     </div>
 
     <div class="tabs" id="tabs">
@@ -195,7 +199,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
         <h2 style="margin:0 0 8px;font-size:19px;font-weight:900">آزمون جامع فینال</h2>
         <p style="color:var(--muted);font-size:12px;line-height:1.9;margin:0 0 14px">
           <b style="color:#ffd700">۲۰ سوال سخت</b> در سطح آزمون نهایی<br>
-          ⏱ کل آزمون: <b style="color:#4fd1a1">۵ دقیقه</b> — ⏱ هر سوال: <b style="color:#c9bcff">۵ دقیقه</b><br>
+          ⏱ کل آزمون: <b style="color:#4fd1a1">۱۳:۲۰</b> (۸۰۰ ثانیه) — ⏱ هر سوال: <b style="color:#c9bcff">۰۰:۴۰</b> (۴۰ ثانیه)<br>
           🎤 شامل سوالات تلفظ با میکروفن
         </p>
         <div class="glass" style="text-align:right;padding:12px;margin-bottom:14px;font-size:11px">
@@ -240,8 +244,8 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
     <div class="quiz-header">
       <span class="quiz-tag" id="qNum">۱ / ۲۰</span>
       <span class="quiz-tag gold" id="qScore">امتیاز: ۰</span>
-      <span class="quiz-tag timer" id="qTimer">۰۵:۰۰</span>
-      <span class="quiz-tag q-timer" id="qQTimer">⏱ ۰۵:۰۰</span>
+      <span class="quiz-tag timer" id="qTimer">۱۳:۲۰</span>
+      <span class="quiz-tag q-timer" id="qQTimer">⏱ ۰۰:۴۰</span>
     </div>
     <div class="progress-bar"><i id="quizFill"></i></div>
     <div class="glass">
@@ -267,7 +271,7 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
       <h2 style="text-align:center;font-size:18px;font-weight:900;margin:0 0 16px">📋 کارنامهٔ آزمون</h2>
       <div class="report-section">
         <h4>👤 اطلاعات دانش‌آموز</h4>
-        <div class="report-row"><span>نام:</span><span class="score-good" id="rpName">—</span></div>
+        <div class="report-row"><span>نام و نام خانوادگی:</span><span class="score-good" id="rpName">—</span></div>
         <div class="report-row"><span>کلاس:</span><span class="score-good" id="rpClass">—</span></div>
         <div class="report-row"><span>تاریخ:</span><span class="score-good" id="rpDate">—</span></div>
         <div class="report-row"><span>ساعت شروع:</span><span class="score-good" id="rpStart">—</span></div>
@@ -314,9 +318,9 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
       <div class="cert-body">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع حروف، دستور زبان و واژگان انگلیسی</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
       <div class="cert-score" id="certScore">نمره: —</div>
       <div class="cert-footer">
-        <div class="cert-sign"><div class="name">محمدجواد کجوری</div><div>مدیر استودیو</div><div style="font-size:9px;margin-top:2px" id="certDate">—</div></div>
+        <div class="cert-sign"><div class="name">محمدجواد کجوری</div><div>مدیر موسسه</div><div style="font-size:9px;margin-top:2px" id="certDate">—</div></div>
         <div class="cert-seal">🏆</div>
-        <div class="cert-sign"><div class="name">پایه ایمان</div><div>دورهٔ آموزشی</div><div style="font-size:9px;margin-top:2px">گواهینامهٔ معتبر</div></div>
+        <div class="cert-sign"><div class="name">پایه ایمان ۱</div><div>دورهٔ آموزشی</div><div style="font-size:9px;margin-top:2px">گواهینامهٔ معتبر</div></div>
       </div>
     </div>
     <div class="save-bar" style="margin-bottom:14px">
@@ -325,8 +329,10 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
     <button class="btn-big" id="backHome" type="button">🏠 بازگشت به خانه</button>
   </section>
 
-  <div class="foot">طراحی و ساخت: <b>محمدجواد کجوری</b><br>استودیو محمدجواد کجوری — <b>پایه ایمان</b></div>
+  <div class="foot">طراحی و ساخت: <b>محمدجواد کجوری</b><br>موسسه زبان انگلیسی محمدجواد کجوری — <b>پایه ایمان ۱</b></div>
 </div>
+
+<div class="toast" id="toast"></div>
 
   <script>
 /* =========================================================
@@ -335,23 +341,24 @@ body{margin:0;color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;min-he
 const C = {
   object:{fa:"اشیاء",en:"Objects",emo:"📱🔑",d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
   animal:{fa:"حیوانات",en:"Animals",emo:"🦁🐘",d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیا"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
-  bird:{fa:"پرندگان",en:"Birds",emo:"🦅🦜",d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی آبی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","مرغ ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","پرنده چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ"]}},
+  bird:{fa:"پرندگان",en:"Birds",emo:"🦅🦜",d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی آبی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","پرنده چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ"]}},
   fish:{fa:"ماهی‌ها",en:"Fish",emo:"🐟🐠",d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","ماهی حلوا"],I:["Ide","ماهی ایده"],J:["Jellyfish","عروس دریایی"],K:["Koi","ماهی کوئی"],L:["Lobster","لابستر"],M:["Mackerel","ماهی خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ماهی ملکه"],R:["Ray","سفره‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیا"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","ماهی گورخری"]}},
   insect:{fa:"حشرات",en:"Insects",emo:"🐝🦋",d:{A:["Ant","مورچه"],B:["Bee","زنبور"],C:["Cricket","جیرجیرک"],D:["Dragonfly","سنجاقک"],E:["Earwig","گوش‌خیزک"],F:["Firefly","کرم شب‌تاب"],G:["Grasshopper","ملخ"],H:["Hornet","زنبور قرمز"],I:["Isopod","خرخاکی"],J:["June Bug","سوسک خرداد"],K:["Katydid","جیرجیرک برگ"],L:["Ladybug","کفش‌دوزک"],M:["Moth","پروانه شب"],N:["Nymph","شفیره"],O:["Owlfly","جغدپروانه"],P:["Praying Mantis","آخوندک"],Q:["Queen Bee","ملکه زنبور"],R:["Roach","سوسری"],S:["Spider","عنکبوت"],T:["Termite","موریانه"],U:["Underwing","شب‌پره"],V:["Velvet Ant","مورچه مخملی"],W:["Wasp","زنبور وحشی"],X:["Xerces Blue","پروانه آبی"],Y:["Yellow Jacket","زنبور زرد"],Z:["Zebra Butterfly","پروانه گورخری"]}},
-  fruit:{fa:"میوه‌ها",en:"Fruits",emo:"🍎🍇",d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Date","خرما"],E:["Elderberry","انگور فرنگی"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Imbe","میوه آفریقایی"],J:["Jackfruit","جک فروت"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","هلو انجیری"],O:["Orange","پرتقال"],P:["Peach","هلو"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت‌فرنگی"],T:["Tangerine","نارنگی"],U:["Ugli Fruit","آگلی فروت"],V:["Valencia Orange","پرتقال والنسیا"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی زرد"],Z:["Ziziphus","عناب"]}},
+  fruit:{fa:"میوه‌ها",en:"Fruits",emo:"🍎🍇",d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Date","خرما"],E:["Elderberry","انگور فرنگی"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Imbe","میوه آفریقایی"],J:["Jackfruit","جک فروت"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","هلو انجیری"],O:["Orange","پرتقال"],P:["Peach","هلو"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت‌فرنگی"],T:["Tangerine","نارنگی"],U:["Ugli Fruit","آگلی فروت"],V:["Valencia Orange","پرتقال"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی زرد"],Z:["Ziziphus","عناب"]}},
   vegetable:{fa:"سبزیجات",en:"Vegetables",emo:"🥕🥦",d:{A:["Artichoke","کنگر"],B:["Broccoli","بروکلی"],C:["Carrot","هویج"],D:["Dill","شوید"],E:["Eggplant","بادمجان"],F:["Fennel","رازیانه"],G:["Garlic","سیر"],H:["Horseradish","ترب کوهی"],I:["Iceberg Lettuce","کاهو"],J:["Jalapeño","هالوپینو"],K:["Kale","کلم پیچ"],L:["Lettuce","کاهو"],M:["Mushroom","قارچ"],N:["Napa Cabbage","کلم ناپا"],O:["Onion","پیاز"],P:["Potato","سیب‌زمینی"],Q:["Quinoa","کینوا"],R:["Radish","تربچه"],S:["Spinach","اسفناج"],T:["Tomato","گوجه"],U:["Upland Cress","شاهی"],V:["Vine Leaves","برگ مو"],W:["Watercress","شاهی آبی"],X:["Xylopia","فلفل آفریقایی"],Y:["Yam","سیب‌زمینی شیرین"],Z:["Zucchini","کدو"]}},
-  color:{fa:"رنگ‌ها",en:"Colors",emo:"🎨🌈",d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی تند"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی اولترامارین"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی خاکستری"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
+  color:{fa:"رنگ‌ها",en:"Colors",emo:"🎨🌈",d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی تند"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی اولترامارین"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
   country:{fa:"کشورها",en:"Countries",emo:"🌍🏳️",d:{A:["Argentina","آرژانتین","🇦🇷"],B:["Brazil","برزیل","🇧🇷"],C:["Canada","کانادا","🇨🇦"],D:["Denmark","دانمارک","🇩🇰"],E:["Egypt","مصر","🇪🇬"],F:["France","فرانسه","🇫🇷"],G:["Germany","آلمان","🇩🇪"],H:["Hungary","مجارستان","🇭🇺"],I:["Iran","ایران","🇮🇷"],J:["Japan","ژاپن","🇯🇵"],K:["Kuwait","کویت","🇰🇼"],L:["Lebanon","لبنان","🇱🇧"],M:["Mexico","مکزیک","🇲🇽"],N:["Norway","نروژ","🇳🇴"],O:["Oman","عمان","🇴🇲"],P:["Portugal","پرتغال","🇵🇹"],Q:["Qatar","قطر","🇶🇦"],R:["Russia","روسیه","🇷🇺"],S:["Spain","اسپانیا","🇪🇸"],T:["Turkey","ترکیه","🇹🇷"],U:["Ukraine","اوکراین","🇺🇦"],V:["Venezuela","ونزوئلا","🇻🇪"],W:["Wales","ولز","🏴"],X:["Xinjiang","سین‌کیانگ","🏴"],Y:["Yemen","یمن","🇾🇪"],Z:["Zambia","زامبیا","🇿🇲"]}},
   iranCity:{fa:"شهرهای ایران",en:"Iranian Cities",emo:"🏙️🕌",d:{A:["Ahvaz","اهواز"],B:["Babol","بابل"],C:["Chabahar","چابهار"],D:["Damghan","دامغان"],E:["Esfahan","اصفهان"],F:["Firuzabad","فیروزآباد"],G:["Gorgan","گرگان"],H:["Hamadan","همدان"],I:["Ilam","ایلام"],J:["Jahrom","جهرم"],K:["Kerman","کرمان"],L:["Lahijan","لاهیجان"],M:["Mashhad","مشهد"],N:["Najafabad","نجف‌آباد"],O:["Omidiyeh","امیدیه"],P:["Pakdasht","پاکدشت"],Q:["Qazvin","قزوین"],R:["Rasht","رشت"],S:["Shiraz","شیراز"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xoshkebijar","خشکبیجار"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
-  province:{fa:"استان‌های ایران",en:"Iranian Provinces",emo:"🗺️🇮🇷",d:{A:["Alborz","البرز"],B:["Bushehr","بوشهر"],C:["Chaharmahal","چهارمحال"],D:["Deylaman","دیلمان"],E:["East Azerbaijan","آذربایجان شرقی"],F:["Fars","فارس"],G:["Gilan","گیلان"],H:["Hormozgan","هرمزگان"],I:["Ilam","ایلام"],J:["Jiroft","جیرفت"],K:["Kohgiluyeh","کهگیلویه"],L:["Lorestan","لرستان"],M:["Markazi","مرکزی"],N:["North Khorasan","خراسان شمالی"],O:["Ostan Tehran","استان تهران"],P:["Persian Gulf","خلیج فارس"],Q:["Qazvin","قزوین"],R:["Razavi Khorasan","خراسان رضوی"],S:["Sistan","سیستان"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xorasan","خراسان"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
+  province:{fa:"استان‌های ایران",en:"Provinces",emo:"🗺️🇮🇷",d:{A:["Alborz","البرز"],B:["Bushehr","بوشهر"],C:["Chaharmahal","چهارمحال"],D:["Deylaman","دیلمان"],E:["East Azerbaijan","آذربایجان شرقی"],F:["Fars","فارس"],G:["Gilan","گیلان"],H:["Hormozgan","هرمزگان"],I:["Ilam","ایلام"],J:["Jiroft","جیرفت"],K:["Kohgiluyeh","کهگیلویه"],L:["Lorestan","لرستان"],M:["Markazi","مرکزی"],N:["North Khorasan","خراسان شمالی"],O:["Ostan Tehran","استان تهران"],P:["Persian Gulf","خلیج فارس"],Q:["Qazvin","قزوین"],R:["Razavi Khorasan","خراسان رضوی"],S:["Sistan","سیستان"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xorasan","خراسان"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
   iranFood:{fa:"غذاهای ایرانی",en:"Iranian Food",emo:"🍚🍢",d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی"],J:["Joojeh Kabab","جوجه‌کباب"],K:["Kookoo Sabzi","کوکو سبزی"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا قاسمی"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج سفید"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک‌پلو"]}},
-  sweet:{fa:"شیرینی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کیک کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","شیرینی زبان"]}},
+  sweet:{fa:"شیرینی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک اوبه"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کیک کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","شیرینی زبان"]}},
   drink:{fa:"نوشیدنی‌ها",en:"Drinks",emo:"☕🥤",d:{A:["Americano","آمریکانو"],B:["Beer","آبجو"],C:["Coffee","قهوه"],D:["Doogh","دوغ"],E:["Espresso","اسپرسو"],F:["Frappe","فراپه"],G:["Green Tea","چای سبز"],H:["Hot Chocolate","شکلات داغ"],I:["Iced Tea","آیس تی"],J:["Juice","آبمیوه"],K:["Kombucha","کامبوچا"],L:["Lemonade","لیموناد"],M:["Milk","شیر"],N:["Nectar","نکتار"],O:["Orange Juice","آب پرتقال"],P:["Pepsi","پپسی"],Q:["Quinine","تونیک"],R:["Red Bull","ردبول"],S:["Smoothie","اسموتی"],T:["Tea","چای"],U:["Ume","آب آلو"],V:["Vodka","ودکا"],W:["Water","آب"],X:["Xigua Juice","آب هندوانه"],Y:["Yerba Mate","یربا مات"],Z:["Zamzam","زمزم"]}},
   sport:{fa:"ورزش‌ها",en:"Sports",emo:"⚽🏀",d:{A:["Archery","تیراندازی"],B:["Basketball","بسکتبال"],C:["Cricket","کریکت"],D:["Diving","شیرجه"],E:["Equestrian","سوارکاری"],F:["Football","فوتبال"],G:["Golf","گلف"],H:["Hockey","هاکی"],I:["Ice Skating","اسکیت یخ"],J:["Judo","جودو"],K:["Karate","کاراته"],L:["Long Jump","پرش طول"],M:["Marathon","ماراتن"],N:["Netball","نت‌بال"],O:["Orienteering","جهت‌یابی"],P:["Polo","چوگان"],Q:["Quidditch","کوایدیچ"],R:["Rowing","قایقرانی"],S:["Swimming","شنا"],T:["Tennis","تنیس"],U:["Ultimate Frisbee","فریزبی"],V:["Volleyball","والیبال"],W:["Wrestling","کشتی"],X:["Xare","باسکی"],Y:["Yoga","یوگا"],Z:["Zumba","زومبا"]}},
   job:{fa:"شغل‌ها",en:"Jobs",emo:"👨‍⚕️👷",d:{A:["Architect","معمار"],B:["Baker","نانوا"],C:["Chef","آشپز"],D:["Doctor","دکتر"],E:["Engineer","مهندس"],F:["Farmer","کشاورز"],G:["Gardener","باغبان"],H:["Hairdresser","آرایشگر"],I:["Illustrator","تصویرساز"],J:["Journalist","خبرنگار"],K:["Knight","شوالیه"],L:["Lawyer","وکیل"],M:["Musician","نوازنده"],N:["Nurse","پرستار"],O:["Optician","عینک‌ساز"],P:["Painter","نقاش"],Q:["Surveyor","مهندس برآورد"],R:["Reporter","خبرنگار"],S:["Soldier","سرباز"],T:["Teacher","معلم"],U:["Umpire","داور"],V:["Veterinarian","دامپزشک"],W:["Writer","نویسنده"],X:["Xylophonist","نوازنده"],Y:["Youtuber","یوتیوبر"],Z:["Zoologist","جانورشناس"]}},
   car:{fa:"ماشین‌ها",en:"Cars",emo:"🏎🚗",d:{A:["Audi","آئودی"],B:["BMW","بی‌ام‌و"],C:["Chevrolet","شورولت"],D:["Dodge","دوج"],E:["Elantra","النترا"],F:["Ferrari","فراری"],G:["GMC","جی‌ام‌سی"],H:["Honda","هوندا"],I:["Infiniti","اینفینیتی"],J:["Jaguar","جگوار"],K:["Kia","کیا"],L:["Lamborghini","لامبورگینی"],M:["Mercedes","مرسدس"],N:["Nissan","نیسان"],O:["Opel","اوپل"],P:["Peugeot","پژو"],Q:["Qoros","کوروس"],R:["Renault","رنو"],S:["Skoda","اشکودا"],T:["Toyota","تویوتا"],U:["UAZ","اواز"],V:["Volvo","ولوو"],W:["Wuling","ولینگ"],X:["Xpeng","ایکس‌پنگ"],Y:["Yaris","یاریس"],Z:["Zeekr","زیکر"]}},
   player:{fa:"فوتبالیست‌ها",en:"Footballers",emo:"⚽🏆",d:{A:["Aguero","آگوئرو"],B:["Beckham","بکام"],C:["Cristiano Ronaldo","رونالدو"],D:["Drogba","درگبا"],E:["Eto'o","اتوئو"],F:["Figo","فیگو"],G:["Gerrard","جرارد"],H:["Haaland","هالند"],I:["Iniesta","اینیستا"],J:["Jahanbakhsh","جهانبخش"],K:["Kane","کین"],L:["Messi","مسی"],M:["Maradona","مارادونا"],N:["Neymar","نیمار"],O:["Ozil","اوزیل"],P:["Pele","پله"],Q:["Quaresma","کوارشما"],R:["Ronaldinho","رونالدینیو"],S:["Salah","صلاح"],T:["Taremi","طارمی"],U:["Ureña","اورنیا"],V:["Vinicius","وینیسیوس"],W:["Weah","ویا"],X:["Xavi","ژاوی"],Y:["Yamal","یامال"],Z:["Zidane","زیدان"]}},
-  actor:{fa:"بازیگران",en:"Actors",emo:"🎬🎭",d:{A:["Amin Zendegani","امین زندگانی"],B:["Behrouz Vossoughi","بهروز وثوقی"],C:["Cameron Diaz","کامرون دیاز"],D:["Dariush Arjmand","داریوش ارجمند"],E:["Ezzatolah Entezami","عزت‌الله انتظامی"],F:["Farhad Aslani","فرهاد اصلانی"],G:["Golab Adineh","گلاب آدینه"],H:["Homayoun Ershadi","همایون ارشادی"],I:["Iraj Ghaderi","ایرج قادری"],J:["Jamshid Mashayekhi","جمشید مشایخی"],K:["Kambiz Dirbaz","کامبیز دیرباز"],L:["Leonardo DiCaprio","دی‌کاپریو"],M:["Mehdi Hashemi","مهدی هاشمی"],N:["Navid Mohammadzadeh","نوید محمدزاده"],O:["Omid Abbasi","امید عباسی"],P:["Parviz Parastui","پرویز پرستویی"],Q:["Qasem Zare","قاسم زارع"],R:["Reza Attaran","رضا عطاران"],S:["Shahab Hosseini","شهاب حسینی"],T:["Tom Cruise","تام کروز"],U:["Umar Khan","عمر خان"],V:["Hamed Vakili","حامد وکیلی"],W:["Will Smith","ویل اسمیت"],X:["Xavier Bardem","خاویر باردم"],Y:["Yousef Teymouri","یوسف تیموری"],Z:["Zahra Amir Ebrahimi","زهرا امیرابراهیمی"]}},
+  actor:{fa:"بازیگران مرد",en:"Actors",emo:"🎬🎭",d:{A:["Amin Zendegani","امین زندگانی"],B:["Behrouz Vossoughi","بهروز وثوقی"],C:["Cameron Diaz","کامرون دیاز"],D:["Dariush Arjmand","داریوش ارجمند"],E:["Ezzatolah Entezami","عزت‌الله انتظامی"],F:["Farhad Aslani","فرهاد اصلانی"],G:["Golab Adineh","گلاب آدینه"],H:["Homayoun Ershadi","همایون ارشادی"],I:["Iraj Ghaderi","ایرج قادری"],J:["Jamshid Mashayekhi","جمشید مشایخی"],K:["Kambiz Dirbaz","کامبیز دیرباز"],L:["Leonardo DiCaprio","دی‌کاپریو"],M:["Mehdi Hashemi","مهدی هاشمی"],N:["Navid Mohammadzadeh","نوید محمدزاده"],O:["Omid Abbasi","امید عباسی"],P:["Parviz Parastui","پرویز پرستویی"],Q:["Qasem Zare","قاسم زارع"],R:["Reza Attaran","رضا عطاران"],S:["Shahab Hosseini","شهاب حسینی"],T:["Tom Cruise","تام کروز"],U:["Umar Khan","عمر خان"],V:["Hamed Vakili","حامد وکیلی"],W:["Will Smith","ویل اسمیت"],X:["Xavier Bardem","خاویر باردم"],Y:["Yousef Teymouri","یوسف تیموری"],Z:["Zahra Amir Ebrahimi","زهرا امیرابراهیمی"]}},
+  actress:{fa:"بازیگران زن",en:"Actresses",emo:"🎭👩",d:{A:["Angelina Jolie","آنجلینا جولی"],B:["Bahareh Kian Afshar","بهاره کیان‌افشار"],C:["Cate Blanchett","کیت بلانشت"],D:["Diana Kruger","دایان کروگر"],E:["Elika Abdolrazzaghi","الیکا عبدالرزاقی"],F:["Fatemeh Motamed-Arya","فاطمه معتمدآریا"],G:["Golshifteh Farahani","گلشیفته فراهانی"],H:["Hanieh Tavassoli","هانیه توسلی"],I:["Iran Daftari","ایران دفتری"],J:["Julia Roberts","جولیا رابرتز"],K:["Katayoun Riahi","کتایون ریاحی"],L:["Leila Otadi","لیلا اوتادی"],M:["Melika Sharifinia","ملیکا شریفی‌نیا"],N:["Nasrin Nosrati","نسرین نصرتی"],O:["Olivia Wilde","الیویا وایلد"],P:["Parinaz Izadyar","پریناز ایزدیار"],Q:["Queen Latifah","کوئین لطیفه"],R:["Rima Raminfar","ریما رامین‌فر"],S:["Sareh Bayat","ساره بیات"],T:["Taraneh Alidoosti","ترانه علیدوستی"],U:["Uma Thurman","اوما تورمن"],V:["Vishka Asayesh","ویشکا آسایش"],W:["Winona Ryder","وینونا رایدر"],X:["Xena","زینا"],Y:["Yasmin Le Bon","یاسمین لو بون"],Z:["Ziba Boroufeh","زیبا بروفه"]}},
   singer:{fa:"خواننده‌ها",en:"Singers",emo:"🎤🎵",d:{A:["Adele","ادل"],B:["Beyoncé","بیانسه"],C:["Celine Dion","سلین دیون"],D:["Drake","دریک"],E:["Eminem","امینم"],F:["Frank Sinatra","سیناترا"],G:["Googoosh","گوگوش"],H:["Homayoun Shajarian","همایون شجریان"],I:["Iggy Azalea","ایگی"],J:["Justin Bieber","جاستین بیبر"],K:["Katy Perry","کیتی پری"],L:["Lady Gaga","لیدی گاگا"],M:["Michael Jackson","مایکل جکسون"],N:["Nazanin","نازنین"],O:["Olivia Rodrigo","الیویا"],P:["Pink","پینک"],Q:["Queen","کوئین"],R:["Rihanna","ریحانا"],S:["Shakira","شکیرا"],T:["Taylor Swift","تیلور سوئیفت"],U:["U2","یو تو"],V:["Vigen","ویگن"],W:["Weeknd","ویکند"],X:["Xzibit","ایکسزیبیت"],Y:["Yas","یاس"],Z:["Zayn Malik","زین مالیک"]}},
   scientist:{fa:"دانشمندان",en:"Scientists",emo:"🔬🧪",d:{A:["Archimedes","ارشمیدس"],B:["Bell","بِل"],C:["Curie","کوری"],D:["Darwin","داروین"],E:["Einstein","اینشتین"],F:["Faraday","فارادی"],G:["Galileo","گالیله"],H:["Hawking","هاوکینگ"],I:["Ibn Sina","ابن‌سینا"],J:["James Watt","جیمز وات"],K:["Kepler","کپلر"],L:["Lavoisier","لاووازیه"],M:["Mendel","مندل"],N:["Newton","نیوتن"],O:["Oppenheimer","اوپنهایمر"],P:["Pasteur","پاستور"],Q:["Quetelet","کتله"],R:["Rutherford","رادرفورد"],S:["Sagan","ساگان"],T:["Tesla","تسلا"],U:["Urey","یوری"],V:["Volta","ولتا"],W:["Watson","واتسون"],X:["Xenophanes","گزنوفانس"],Y:["Young","یانگ"],Z:["Zewail","زیویل"]}},
   writer:{fa:"نویسندگان",en:"Writers",emo:"✍️📚",d:{A:["Aeschylus","آیسخولوس"],B:["Balzac","بالزاک"],C:["Chekhov","چخوف"],D:["Dostoevsky","داستایوفسکی"],E:["Hemingway","همینگوی"],F:["Faulkner","فاکنر"],G:["Goethe","گوته"],H:["Hugo","هوگو"],I:["Ibsen","ایبسن"],J:["Jane Austen","جین آستین"],K:["Kafka","کافکا"],L:["Tolstoy","تولستوی"],M:["Maupassant","موپاسان"],N:["Nabokov","نابوکوف"],O:["Orwell","اورول"],P:["Pushkin","پوشکین"],Q:["Quiroga","کیروگا"],R:["Rumi","مولوی"],S:["Shakespeare","شکسپیر"],T:["Tolstoy","تولستوی"],U:["Updike","آپدایک"],V:["Voltaire","ولتر"],W:["Wilde","وایلد"],X:["Xenophon","گزنفون"],Y:["Yeats","ییتس"],Z:["Zola","زولا"]}},
@@ -384,10 +391,10 @@ const LESSONS = [
   {id:"grammar",title:"زمان‌های فعلی پیشرفته",emo:"⏰",desc:"Perfect Tenses، Continuous، و ترکیب آن‌ها",
    body:`• Present Perfect: have/has + past participle\n   I have eaten. — من خورده‌ام\n   She has finished. — او تمام کرده\n\n• Past Perfect: had + past participle\n   He had left before I arrived.\n   (او قبل از رسیدن من رفته بود)\n\n• Future Perfect: will have + past participle\n   By 2030, I will have graduated.\n\n• Present Perfect Continuous:\n   have/has been + V-ing\n   I have been studying for 2 hours.\n\n• Past Perfect Continuous:\n   had been + V-ing\n   She had been waiting for an hour.\n\n• تفاوت Past Simple و Present Perfect:\n   Past Simple → زمان مشخص گذشته\n   I saw him yesterday.\n   Present Perfect → زمان نامشخص\n   I have seen him before.`},
 
-  {id:"conditionals",title:"جملات شرطی (شرطی‌های چهارگانه)",emo:"🔀",desc:"Conditional Sentences — همه انواع",
+  {id:"conditionals",title:"جملات شرطی",emo:"🔀",desc:"Conditional Sentences — همه انواع",
    body:`• نوع صفر (Zero): If + present, present\n   If you heat water, it boils.\n   (حقیقت علمی)\n\n• نوع یکم (First): If + present, will + V\n   If it rains, I will stay home.\n   (احتمال واقعی)\n\n• نوع دوم (Second): If + past, would + V\n   If I were rich, I would travel.\n   (خیالی در حال)\n   ← در همه ضمایر from were استفاده کن (نه was)\n\n• نوع سوم (Third): If + had + pp, would have + pp\n   If I had studied, I would have passed.\n   (خیالی در گذشته)\n\n• Mixed: If + had + pp, would + V\n   If I had slept, I would feel better now.\n   (گذشته → حال)`},
 
-  {id:"passive",title:"جملات مجهول (Passive)",emo:"🔄",desc:"Passive Voice در همه زمان‌ها",
+  {id:"passive",title:"جملات مجهول",emo:"🔄",desc:"Passive Voice در همه زمان‌ها",
    body:`• ساختار کلی: be + past participle\n\n• حال ساده: English is spoken here.\n• گذشته ساده: The book was written in 1990.\n• حال کامل: The work has been done.\n• گذشته کامل: It had been finished.\n• آینده: It will be completed.\n• Modal: It can be done / should be done.\n• Perfect Modal: It must have been done.\n\n• در Passive، فاعل اصلی با "by" می‌آید:\n   Ali wrote the letter.\n   → The letter was written by Ali.\n\n• اگر فاعل نامشخص یا بی‌اهمیت باشد، حذف می‌شود:\n   Someone stole my bike.\n   → My bike was stolen.`},
 
   {id:"reported",title:"نقل قول غیرمستقیم",emo:"💬",desc:"Reported Speech + تغییر زمان‌ها",
@@ -801,7 +808,7 @@ $("#saveLesson").addEventListener("click", ()=>{
 });
 
 /* =========================================================
-   توزیع سوالات در صفحهٔ آزمون
+   توزیع سوالات
    ========================================================= */
 (function renderDist(){
   const box = $("#topicDistribution");
@@ -819,11 +826,11 @@ $("#saveLesson").addEventListener("click", ()=>{
    گالری
    ========================================================= */
 function getGallery(){
-  try{ return JSON.parse(localStorage.getItem("iman_gallery") || "[]"); }
+  try{ return JSON.parse(localStorage.getItem("iman1_gallery") || "[]"); }
   catch(e){ return []; }
 }
 function setGallery(arr){
-  try{ localStorage.setItem("iman_gallery", JSON.stringify(arr)); }
+  try{ localStorage.setItem("iman1_gallery", JSON.stringify(arr)); }
   catch(e){ toast("حافظه پر است"); }
 }
 
@@ -945,10 +952,10 @@ renderGallery();
 
   <script>
 /* =========================================================
-   آزمون فینال — با تایمر کل ۵ دقیقه و هر سوال ۵ دقیقه
+   آزمون فینال — کل ۸۰۰ ثانیه، هر سوال ۴۰ ثانیه
    ========================================================= */
-const QUIZ_TOTAL_SEC = 5 * 60;   // کل آزمون ۵ دقیقه
-const QUIZ_Q_SEC = 5 * 60;       // هر سوال ۵ دقیقه (سقف)
+const QUIZ_TOTAL_SEC = 800;  // ۱۳:۲۰
+const QUIZ_Q_SEC = 40;        // ۴۰ ثانیه برای هر سوال
 
 const quizState = {
   idx: 0,
@@ -964,7 +971,8 @@ const quizState = {
   qTimer: null,
   results: [],
   micRecognition: null,
-  micRecording: false
+  micRecording: false,
+  micHeard: ""   // برای ذخیرهٔ تلفظ شنیده‌شده
 };
 
 /* ---------- شروع آزمون ---------- */
@@ -1001,7 +1009,7 @@ $("#startQuiz").addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
-/* ---------- تایمر کل ---------- */
+/* ---------- تایمر کل (۸۰۰ ثانیه) ---------- */
 function startTotalTimer() {
   clearInterval(quizState.totalTimer);
   updateTotalTimerUI();
@@ -1020,11 +1028,11 @@ function updateTotalTimerUI() {
   const el = $("#qTimer");
   el.textContent = fmtTime(quizState.totalLeft);
   el.classList.remove("warn", "danger");
-  if (quizState.totalLeft <= 30) el.classList.add("danger");
-  else if (quizState.totalLeft <= 60) el.classList.add("warn");
+  if (quizState.totalLeft <= 60) el.classList.add("danger");
+  else if (quizState.totalLeft <= 180) el.classList.add("warn");
 }
 
-/* ---------- تایمر سوال ---------- */
+/* ---------- تایمر سوال (۴۰ ثانیه) ---------- */
 function startQTimer() {
   clearInterval(quizState.qTimer);
   quizState.qLeft = QUIZ_Q_SEC;
@@ -1045,7 +1053,7 @@ function updateQTimerUI() {
   const el = $("#qQTimer");
   el.textContent = "⏱ " + fmtTime(quizState.qLeft);
   el.classList.remove("warn");
-  if (quizState.qLeft <= 30) el.classList.add("warn");
+  if (quizState.qLeft <= 10) el.classList.add("warn");
 }
 
 /* ---------- نمایش سوال ---------- */
@@ -1059,6 +1067,7 @@ function renderQuestion() {
 
   const body = $("#qBody");
   body.innerHTML = "";
+  quizState.micHeard = "";
 
   if (q.type === "mc") {
     const optsEl = document.createElement("div");
@@ -1076,8 +1085,9 @@ function renderQuestion() {
     box.className = "mic-box";
     box.innerHTML = `
       <div class="hint">
-        🎤 روی دکمهٔ زیر بزن تا شروع شود، سپس جمله را بلند و واضح تلفظ کن،<br>
-        بعد دوباره روی همان دکمه بزن تا تلفظ تو بررسی و نمره داده شود.
+        🎤 <b>مرحله ۱:</b> روی دکمهٔ میکروفن زیر بزن تا ضبط شروع شود.<br>
+        🗣️ <b>مرحله ۲:</b> جمله را <b>بلند و واضح</b> به انگلیسی تلفظ کن.<br>
+        ⏹ <b>مرحله ۳:</b> دوباره روی همان دکمه بزن تا تلفظ تو بررسی و نمره داده شود.
       </div>
       <div class="en-sentence">${q.en}</div>
       <button type="button" class="mic-btn" id="micBtn">
@@ -1105,7 +1115,7 @@ function renderQuestion() {
   startQTimer();
 }
 
-/* ---------- میکروفن ---------- */
+/* ---------- میکروفن ۳ مرحله‌ای ---------- */
 function toggleMic(q) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) {
@@ -1113,16 +1123,18 @@ function toggleMic(q) {
     return;
   }
 
+  // اگر در حال ضبط → توقف و بررسی
   if (quizState.micRecording) {
     try { quizState.micRecognition.stop(); } catch (e) {}
     quizState.micRecording = false;
     $("#micBtn").classList.remove("recording");
     $("#micBtn").querySelector(".lbl").textContent = "شروع ضبط";
-    $("#micStatus").textContent = "در حال بررسی تلفظ…";
+    $("#micStatus").textContent = "🔍 در حال بررسی تلفظ…";
     $("#micStatus").className = "mic-status";
     return;
   }
 
+  // شروع ضبط
   const rec = new SR();
   rec.lang = "en-US";
   rec.interimResults = false;
@@ -1138,6 +1150,7 @@ function toggleMic(q) {
 
   rec.onresult = (event) => {
     const heard = event.results[0][0].transcript.toLowerCase().trim();
+    quizState.micHeard = heard;
     evaluatePronunciation(q, heard);
   };
 
@@ -1162,7 +1175,7 @@ function toggleMic(q) {
   }
 }
 
-/* شباهت دو رشته */
+/* شباهت دو رشته (Levenshtein) */
 function similarity(a, b) {
   a = a.replace(/[^a-z\s]/g, "").toLowerCase().trim();
   b = b.replace(/[^a-z\s]/g, "").toLowerCase().trim();
@@ -1189,15 +1202,15 @@ function evaluatePronunciation(q, heard) {
   let correct = false, score = 0, msg = "";
 
   if (sim >= 0.75) { correct = true; score = 1; msg = `✅ عالی! شباهت: ${fa(Math.round(sim * 100))}%`; }
-  else if (sim >= 0.5) { correct = false; score = 0; msg = `⚠️ نزدیک بود. شباهت: ${fa(Math.round(sim * 100))}% — دوباره تلاش کن.`; }
-  else { correct = false; score = 0; msg = `❌ تلفظ صحیح نبود. شباهت: ${fa(Math.round(sim * 100))}%.`; }
+  else if (sim >= 0.5) { correct = false; score = 0; msg = `⚠️ نزدیک بود. شباهت: ${fa(Math.round(sim * 100))}%`; }
+  else { correct = false; score = 0; msg = `❌ تلفظ صحیح نبود. شباهت: ${fa(Math.round(sim * 100))}%`; }
 
   $("#micStatus").textContent = msg + `\nشنیده‌شده: "${heard}"`;
   $("#micStatus").className = "mic-status " + (correct ? "" : "error");
 
   setTimeout(() => {
     answerQuestion(score, null, false, false, heard);
-  }, 1200);
+  }, 1400);
 }
 
 /* ---------- پاسخ به سوال ---------- */
@@ -1227,7 +1240,7 @@ function answerQuestion(i, btn, timeout = false, freeScore = false, heard = null
   } else if (q.type === "mic") {
     if (freeScore) { correct = true; userAnswer = "(بدون پشتیبانی مرورگر)"; }
     else if (timeout) { correct = false; userAnswer = "(زمان تمام شد)"; }
-    else { correct = (i === 1); userAnswer = heard || "(نامشخص)"; }
+    else { correct = (i === 1); userAnswer = heard || quizState.micHeard || "(نامشخص)"; }
   }
 
   if (correct) quizState.score++;
@@ -1318,7 +1331,7 @@ function buildReport() {
   const elapsed = Math.floor((quizState.endTime - quizState.startTime) / 1000);
 
   $("#rpName").textContent = quizState.student;
-  $("#rpClass").textContent = quizState.studentClass;
+  $("#rpClass").textContent = "پایه ایمان";   // ← کلاس ثابت
   $("#rpDate").textContent = nowFa();
   $("#rpStart").textContent = timeOnlyFa(quizState.startTime);
   $("#rpEnd").textContent = timeOnlyFa(quizState.endTime);
@@ -1335,6 +1348,7 @@ function buildReport() {
   else if (pct >= 50) { statusEl.textContent = "قابل قبول ⭐"; statusEl.className = "score-mid"; }
   else { statusEl.textContent = "نیاز به تلاش بیشتر"; statusEl.className = "score-bad"; }
 
+  // عملکرد بر اساس مبحث
   const byTopic = {};
   quizState.results.forEach(r => {
     if (!byTopic[r.topic]) byTopic[r.topic] = { ok: 0, all: 0 };
@@ -1354,18 +1368,20 @@ function buildReport() {
 }
 
 $("#saveReport").addEventListener("click", () => {
-  let txt = `📋 کارنامهٔ آزمون\n─────────────\n`;
-  txt += `نام: ${quizState.student}\n`;
-  txt += `کلاس: ${quizState.studentClass}\n`;
+  let txt = `📋 کارنامهٔ آزمون\n`;
+  txt += `موسسه زبان انگلیسی محمدجواد کجوری\n`;
+  txt += `─────────────\n`;
+  txt += `نام و نام خانوادگی: ${quizState.student}\n`;
+  txt += `کلاس: پایه ایمان\n`;
   txt += `تاریخ: ${nowFa()}\n`;
-  txt += `شروع: ${timeOnlyFa(quizState.startTime)}\n`;
-  txt += `پایان: ${timeOnlyFa(quizState.endTime)}\n`;
-  txt += `مدت: ${fmtTime(Math.floor((quizState.endTime - quizState.startTime) / 1000))}\n`;
+  txt += `ساعت شروع: ${timeOnlyFa(quizState.startTime)}\n`;
+  txt += `ساعت پایان: ${timeOnlyFa(quizState.endTime)}\n`;
+  txt += `مدت آزمون: ${fmtTime(Math.floor((quizState.endTime - quizState.startTime) / 1000))}\n`;
   txt += `─────────────\n`;
   txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
   txt += `درصد: ${Math.round(quizState.score / QUIZ.length * 100)}٪\n`;
   txt += `─────────────\n`;
-  txt += `استودیو محمدجواد کجوری — پایه ایمان`;
+  txt += `مدیر موسسه: محمدجواد کجوری`;
 
   saveToGallery({
     type: "report",
@@ -1378,7 +1394,10 @@ $("#saveReport").addEventListener("click", () => {
 });
 
 $("#saveQuestions").addEventListener("click", () => {
-  let txt = `📝 سوالات آزمون — ${quizState.student}\nتاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
+  let txt = `📝 سوالات آزمون\n`;
+  txt += `موسسه زبان انگلیسی محمدجواد کجوری\n`;
+  txt += `نام: ${quizState.student} — کلاس: پایه ایمان\n`;
+  txt += `تاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
   QUIZ.forEach((q, i) => {
     txt += `سوال ${i + 1} [${q.topic}]\n${q.q}\n`;
     if (q.type === "mc") {
@@ -1424,7 +1443,10 @@ function buildAnswers() {
 }
 
 $("#saveAnswers").addEventListener("click", () => {
-  let txt = `📖 پاسخ‌نامهٔ تشریحی — ${quizState.student}\nتاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
+  let txt = `📖 پاسخ‌نامهٔ تشریحی\n`;
+  txt += `موسسه زبان انگلیسی محمدجواد کجوری\n`;
+  txt += `نام: ${quizState.student} — کلاس: پایه ایمان\n`;
+  txt += `تاریخ: ${nowFa()} — ساعت: ${nowTimeFa()}\n─────────────\n\n`;
   quizState.results.forEach((r, i) => {
     txt += `${i + 1}. ${r.q}\n   ${r.correct ? "✅" : "❌"} پاسخ شما: ${r.userAnswer}\n   پاسخ صحیح: ${r.correctAnswer}\n   توضیح: ${r.exp}\n\n`;
   });
@@ -1459,13 +1481,16 @@ $("#goCert").addEventListener("click", () => {
 });
 
 $("#saveCert").addEventListener("click", () => {
-  let txt = `🏆 گواهینامهٔ افتخار\nاستودیو محمدجواد کجوری\nپایه ایمان\n─────────────\n\n`;
+  let txt = `🏆 گواهینامهٔ افتخار\n`;
+  txt += `موسسه زبان انگلیسی محمدجواد کجوری\n`;
+  txt += `پایه ایمان ۱\n─────────────\n\n`;
   txt += `به: ${quizState.student}\n`;
-  txt += `کلاس: ${quizState.studentClass}\n`;
+  txt += `کلاس: پایه ایمان\n`;
   txt += `نمره: ${quizState.score} از ${QUIZ.length}\n`;
-  txt += `تاریخ: ${nowFa()}\n─────────────\n\n`;
+  txt += `تاریخ: ${nowFa()}\n`;
+  txt += `─────────────\n`;
   txt += `این گواهینامه به پاس تلاش و موفقیت در آزمون\nجامع حروف، دستور زبان و واژگان انگلیسی اعطا گردید.\n\n`;
-  txt += `امضا: محمدجواد کجوری — مدیر استودیو`;
+  txt += `مدیر موسسه: محمدجواد کجوری`;
 
   saveToGallery({
     type: "cert",
@@ -1497,7 +1522,3 @@ renderGallery();
 </script>
 </body>
 </html>
-
-<div class="toast" id="toast"></div>
-
-  
