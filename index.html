@@ -3,70 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>موسسه زبان انگلیسی محمدجواد کجوری — کلاس ایمان ۱</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<title>موسسه محمدجواد کجوری — کلاس ایمان ۱ | پایه هفتم Prospect 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--t:#fff;--m:rgba(255,255,255,.75);--a:#ff5ca8;--a2:#7c5cff;--g:#ffd700;--ok:#4fd1a1;--er:#ff6b6b}
+:root{--t:#fff;--m:rgba(255,255,255,.75);--a:#ff5ca8;--a2:#7c5cff;--g:#ffd700;--ok:#4fd1a1;--er:#ff6b6b;--wr:#ffb45c}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{overflow-x:hidden}
-body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh;background:#0a0620;position:relative}
-.rb{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 20%,#ff0080 0%,transparent 45%),radial-gradient(circle at 80% 20%,#ff8c00 0%,transparent 45%),radial-gradient(circle at 80% 80%,#40e0d0 0%,transparent 45%),radial-gradient(circle at 20% 80%,#7c5cff 0%,transparent 45%),radial-gradient(circle at 50% 50%,#ff5ca8 0%,transparent 60%),#0a0620;background-size:200% 200%;animation:rb 18s ease-in-out infinite;filter:blur(40px) saturate(1.5)}
+body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh;background:#0a0620;position:relative;font-size:14px;line-height:1.7}
+.rb{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 15%,#ff0080 0%,transparent 40%),radial-gradient(circle at 85% 15%,#ff8c00 0%,transparent 40%),radial-gradient(circle at 85% 85%,#40e0d0 0%,transparent 40%),radial-gradient(circle at 15% 85%,#7c5cff 0%,transparent 40%),radial-gradient(circle at 50% 50%,#ff5ca8 0%,transparent 55%),#0a0620;background-size:220% 220%;animation:rb 20s ease-in-out infinite;filter:blur(50px) saturate(1.6)}
 @keyframes rb{0%,100%{background-position:0% 0%}25%{background-position:100% 0%}50%{background-position:100% 100%}75%{background-position:0% 100%}}
-.st{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.s{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;box-shadow:0 0 8px 2px rgba(255,255,255,.6);animation:fs linear infinite}
-@keyframes fs{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}90%{opacity:.8}100%{transform:translateY(-20vh) scale(1);opacity:0}}
-.app{max-width:680px;margin:0 auto;padding:20px 16px 60px;position:relative;z-index:1}
-.br{text-align:center;margin:8px 0 20px;padding:22px 16px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);border-radius:26px;backdrop-filter:blur(20px);position:relative;overflow:hidden}
-.br::before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);animation:sh 4s linear infinite}
-@keyframes sh{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.br h1{font-size:18px;font-weight:900;margin:0 0 6px;text-shadow:0 2px 20px rgba(255,255,255,.4);line-height:1.5;position:relative}
-.br .sd{font-size:13px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 4s linear infinite;margin:0 0 8px}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.str{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;box-shadow:0 0 8px 2px rgba(255,255,255,.6);animation:fs linear infinite}
+@keyframes fs{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.85}90%{opacity:.85}100%{transform:translateY(-20vh) scale(1);opacity:0}}
+.app{max-width:780px;margin:0 auto;padding:18px 14px 60px;position:relative;z-index:1}
+.brand{text-align:center;margin:6px 0 18px;padding:22px 16px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);border-radius:24px;backdrop-filter:blur(20px);position:relative;overflow:hidden}
+.brand::before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);animation:shine 5s linear infinite}
+@keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.brand h1{font-size:18px;font-weight:900;margin:0 0 6px;position:relative;text-shadow:0 2px 20px rgba(255,255,255,.4);line-height:1.5}
+.brand .sd{font-size:13px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 4s linear infinite;margin:0 0 8px}
 @keyframes tf{to{background-position:200% 0}}
-.br .cb{display:inline-block;background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:4px 14px;border-radius:99px;font-size:11.5px;font-weight:800}
-.tb{display:flex;gap:4px;background:rgba(0,0,0,.25);padding:5px;border-radius:16px;margin-bottom:16px;border:1px solid rgba(255,255,255,.15);flex-wrap:wrap}
-.tb button{flex:1;min-width:60px;font:inherit;font-size:10.5px;font-weight:700;padding:10px 3px;background:transparent;color:var(--m);border:0;border-radius:12px;cursor:pointer;transition:.2s}
-.tb button.on{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff}
-.gl{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:22px;backdrop-filter:blur(20px);padding:20px}
-.sr{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:14px;outline:none;margin-bottom:14px}
-.sr::placeholder{color:rgba(255,255,255,.55)}
+.brand .bg2{display:inline-block;background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:5px 16px;border-radius:99px;font-size:11.5px;font-weight:800;box-shadow:0 6px 20px -8px #ff5ca8}
+.tabs{display:flex;gap:4px;background:rgba(0,0,0,.3);padding:5px;border-radius:16px;margin-bottom:14px;border:1px solid rgba(255,255,255,.15);flex-wrap:wrap}
+.tabs button{flex:1;min-width:55px;font:inherit;font-size:10.5px;font-weight:700;padding:10px 3px;background:transparent;color:var(--m);border:0;border-radius:12px;cursor:pointer;transition:.2s}
+.tabs button.on{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff}
+.subtabs{display:flex;gap:3px;background:rgba(0,0,0,.3);padding:4px;border-radius:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,.15);flex-wrap:wrap}
+.subtabs button{flex:1;min-width:55px;font:inherit;font-size:10px;font-weight:700;padding:9px 3px;background:transparent;color:var(--m);border:0;border-radius:10px;cursor:pointer;transition:.2s}
+.subtabs button.on{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#3d2a00}
+.glass{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:20px;backdrop-filter:blur(20px);padding:16px}
+.search{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:13.5px;outline:none;margin-bottom:14px}
+.search::placeholder{color:rgba(255,255,255,.55)}
+.search:focus{border-color:#ff5ca8}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.cd{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:18px;padding:14px 8px;font:inherit;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;text-align:center}
-.cd:hover{border-color:rgba(255,92,168,.7);transform:translateY(-3px)}
-.cd .em{font-size:28px;line-height:1}
-.cd .nm{font-weight:700;font-size:12.5px}
-.cd .en{color:rgba(255,255,255,.65);font-size:10.5px;direction:ltr}
-.bt{width:100%;padding:16px;border:0;border-radius:16px;cursor:pointer;font:inherit;font-weight:900;font-size:16px;color:#fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);transition:.15s;box-shadow:0 8px 24px -8px #ff5ca8}
-.bt.g{background:linear-gradient(135deg,#ffd700,#ff8c00,#ff5ca8);box-shadow:0 8px 24px -8px #ffd700}
-.bt:active{transform:scale(.98)}
+.card{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);border-radius:16px;padding:13px 8px;font:inherit;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;text-align:center}
+.card:hover{border-color:rgba(255,92,168,.7);background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.card:active{transform:scale(.96)}
+.card .em{font-size:26px}
+.card .nm{font-weight:700;font-size:12px}
+.card .en{color:rgba(255,255,255,.65);font-size:10px;direction:ltr}
+.btn{width:100%;padding:14px;border:0;border-radius:16px;cursor:pointer;font:inherit;font-weight:900;font-size:15px;color:#fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);box-shadow:0 10px 28px -12px #ff5ca8;transition:.15s}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{transform:scale(.98)}
+.btn.gold{background:linear-gradient(135deg,#ffd700,#ff8c00,#ff5ca8);box-shadow:0 10px 28px -12px #ffd700}
 .bs{padding:9px 13px;border:0;border-radius:12px;cursor:pointer;font:inherit;font-weight:800;font-size:11.5px;color:#fff;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);margin:4px 4px 4px 0}
 .bs.pk{background:linear-gradient(135deg,#ff5ca8,#7c5cff);border:0}
 .bs.gd{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#3d2a00;border:0}
-.tp{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.bk{border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;border-radius:12px;font:inherit;padding:8px 13px;cursor:pointer;font-weight:700;font-size:12px}
-.tp h2{margin:0;font-size:16px;font-weight:900;flex:1}
-.pb{height:6px;background:rgba(0,0,0,.3);border-radius:99px;overflow:hidden;margin-bottom:12px}
-.pb i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff);transition:width .4s}
-.rs{min-height:170px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:22px;padding:18px;margin-bottom:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px}
-.rs.em{color:var(--m);font-size:14px}
-.rs .lt{font-size:13px;color:rgba(255,255,255,.7);direction:ltr;font-weight:700;letter-spacing:2px}
-.rs .wd{font-size:30px;font-weight:900;direction:ltr;line-height:1.15;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 3s linear infinite;word-break:break-word}
-.rs .fa{font-size:22px;font-weight:700}
-.rs.no{background:rgba(255,107,107,.18);border-color:rgba(255,107,107,.5);color:#ffb3b3;font-size:15px;font-weight:700}
-.spk{margin-top:10px;border:0;cursor:pointer;background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;border-radius:14px;padding:11px 22px;font:inherit;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px -8px #ff5ca8}
-.spk.sp{animation:gl 1s ease-in-out infinite}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.back{border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;border-radius:12px;font:inherit;padding:8px 13px;cursor:pointer;font-weight:700;font-size:12px}
+.top h2{margin:0;font-size:16px;font-weight:900;flex:1}
+.prog{height:6px;background:rgba(0,0,0,.3);border-radius:99px;overflow:hidden;margin-bottom:12px}
+.prog i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff);transition:width .4s}
+.res{min-height:170px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:22px;padding:18px;margin-bottom:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px}
+.res.empty{color:var(--m);font-size:14px}
+.res .lt{font-size:13px;color:rgba(255,255,255,.7);direction:ltr;font-weight:700;letter-spacing:2px}
+.res .wd{font-size:30px;font-weight:900;direction:ltr;line-height:1.15;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 3s linear infinite;word-break:break-word}
+.res .fa{font-size:22px;font-weight:700}
+.res.none{background:rgba(255,107,107,.18);border-color:rgba(255,107,107,.5);color:#ffb3b3;font-size:15px;font-weight:700}
+.speak{margin-top:10px;border:0;cursor:pointer;background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;border-radius:14px;padding:10px 20px;font:inherit;font-weight:800;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px -8px #ff5ca8}
+.speak.sp{animation:gl 1s ease-in-out infinite}
 @keyframes gl{0%,100%{box-shadow:0 8px 24px -8px #ff5ca8}50%{box-shadow:0 8px 40px -4px #7c5cff}}
-.ks{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;direction:ltr}
-.ky{position:relative;aspect-ratio:1;border-radius:13px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:18px;font-weight:900;cursor:pointer}
-.ky.sl{background:linear-gradient(135deg,#ff5ca8,#7c5cff);border-color:transparent}
-.ky.dn::after{content:"✓";position:absolute;top:2px;left:5px;font-size:10px;font-weight:900;color:#ffd700}
-.ky.nn{opacity:.3;text-decoration:line-through}
+.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;direction:ltr}
+.key{position:relative;aspect-ratio:1;border-radius:12px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:#fff;font:inherit;font-size:17px;font-weight:900;cursor:pointer}
+.key.sl{background:linear-gradient(135deg,#ff5ca8,#7c5cff);border-color:transparent}
+.key.dn::after{content:"✓";position:absolute;top:2px;left:5px;font-size:10px;font-weight:900;color:#ffd700}
+.key.nn{opacity:.3;text-decoration:line-through}
 .lc{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);border-radius:16px;padding:14px;margin-bottom:10px;cursor:pointer;transition:.15s}
 .lc:hover{background:rgba(255,255,255,.14);border-color:rgba(255,92,168,.6)}
 .lc h3{margin:0 0 6px;font-size:13px;font-weight:800;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .lc .tg{font-size:9px;background:rgba(255,92,168,.25);color:#ffb3d9;padding:2px 8px;border-radius:99px;border:1px solid rgba(255,92,168,.4);font-weight:700}
 .lc .tg.gr{background:rgba(79,209,161,.2);color:#b3ffd9;border-color:rgba(79,209,161,.4)}
+.lc .tg.ex{background:rgba(255,180,92,.2);color:#ffd8a3;border-color:rgba(255,180,92,.4)}
 .lc p{margin:0;font-size:11px;color:var(--m);line-height:1.7}
-.lb{padding:16px;background:rgba(0,0,0,.28);border-radius:14px;font-size:12px;line-height:2.1;color:rgba(255,255,255,.92);white-space:pre-line;border:1px solid rgba(255,255,255,.1)}
+.lb{padding:16px;background:rgba(0,0,0,.28);border-radius:14px;font-size:12.5px;line-height:2.1;color:rgba(255,255,255,.92);white-space:pre-line;border:1px solid rgba(255,255,255,.1)}
 .qh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:10.5px;font-weight:700;gap:5px;flex-wrap:wrap}
 .qt{background:linear-gradient(135deg,#ff5ca8,#7c5cff);color:#fff;padding:5px 10px;border-radius:99px;font-size:10.5px}
 .qt.gd{background:rgba(255,215,0,.15);color:#ffd700;border:1px solid rgba(255,215,0,.4)}
@@ -76,10 +83,10 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
 .qt.qt2{background:rgba(124,92,255,.25);color:#c9bcff;border:1px solid rgba(124,92,255,.5);font-family:monospace;font-size:12px;font-weight:800;padding:5px 9px}
 .qt.qt2.wn{background:rgba(255,107,107,.3);color:#ffb3b3;border-color:#ff6b6b;animation:tk .8s infinite}
 @keyframes tk{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-.qq{font-size:14.5px;font-weight:800;line-height:1.7;margin:0 0 12px;text-align:center;padding:13px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
+.qq{font-size:14px;font-weight:800;line-height:1.7;margin:0 0 12px;text-align:center;padding:12px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid rgba(255,255,255,.15)}
 .qtp{display:inline-block;background:rgba(124,92,255,.25);color:#c9bcff;padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;margin-bottom:10px;border:1px solid rgba(124,92,255,.4)}
 .qo{display:grid;gap:9px}
-.qp{padding:13px 15px;border-radius:13px;cursor:pointer;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);color:#fff;font:inherit;font-size:13.5px;font-weight:700;text-align:right;transition:.2s;direction:ltr}
+.qp{padding:13px 15px;border-radius:13px;cursor:pointer;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.22);color:#fff;font:inherit;font-size:13px;font-weight:700;text-align:right;transition:.2s;direction:ltr}
 .qp:hover:not(:disabled){background:rgba(255,255,255,.18);border-color:rgba(255,92,168,.6)}
 .qp:disabled{cursor:not-allowed}
 .qp.cr{background:linear-gradient(135deg,rgba(79,209,161,.4),rgba(79,209,161,.15));border-color:#4fd1a1;color:#b3ffd9}
@@ -88,9 +95,8 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
 .mc .en{font-size:18px;font-weight:900;direction:ltr;color:#ffd700;margin:10px 0;text-shadow:0 2px 20px rgba(255,215,0,.5);line-height:1.35;word-break:break-word}
 .mc .hn{font-size:11px;color:rgba(255,255,255,.82);line-height:2;margin-bottom:10px;text-align:right}
 .mc .hn b{color:#ffd700}
-.mb{width:90px;height:90px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:30px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:6px;position:relative}
-.mb:hover{transform:scale(1.05)}
-.mb.rc{background:linear-gradient(135deg,#ff0080,#ff5ca8);animation:mp 1s ease-in-out infinite}
+.mb{width:88px;height:88px;border-radius:50%;border:3px solid #fff;background:linear-gradient(135deg,#ff5ca8,#7c5cff);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;font-size:28px;color:#fff;box-shadow:0 8px 32px -8px #ff5ca8;transition:.2s;margin:6px;position:relative}
+.mb.rc{background:linear-gradient(135deg,#ff0080,#ff5ca8);animation:mp 1s infinite}
 @keyframes mp{0%,100%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 0 rgba(255,92,168,.7)}50%{box-shadow:0 8px 32px -8px #ff5ca8,0 0 0 22px rgba(255,92,168,0)}}
 .mb .lb{font-size:9px;font-weight:700;margin-top:-2px}
 .ms{font-size:12px;font-weight:700;color:#4fd1a1;margin-top:8px;min-height:22px;white-space:pre-line;line-height:1.6}
@@ -98,19 +104,19 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
 .ms.er{color:#ff6b6b}
 .rp{background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,92,168,.15));border:2px solid #ffd700;border-radius:20px;padding:16px;margin-bottom:10px;text-align:center}
 .rp .rl{display:inline-block;background:linear-gradient(135deg,#ffd700,#ff8c00);color:#3d2a00;padding:4px 12px;border-radius:99px;font-size:11px;font-weight:900;margin-bottom:10px}
-.rp .ln{background:rgba(0,0,0,.3);border-radius:14px;padding:13px;margin:10px 0;text-align:left;direction:ltr;font-size:13px;line-height:2;color:#fff}
+.rp .ln{background:rgba(0,0,0,.3);border-radius:14px;padding:13px;margin:10px 0;text-align:left;direction:ltr;font-size:12.5px;line-height:2;color:#fff}
 .rp .ln .sp{color:#ffd700;font-weight:800;margin-right:6px}
 .rp .ln .yu{color:#4fd1a1;font-weight:800;margin-right:6px}
 .rp .hn{font-size:11px;color:rgba(255,255,255,.85);line-height:2;text-align:right;margin-bottom:10px}
 .rp .hn b{color:#ffd700}
 .rp .mb{background:linear-gradient(135deg,#ffd700,#ff8c00);box-shadow:0 8px 32px -8px #ffd700}
 .rp .mb.rc{background:linear-gradient(135deg,#ff0080,#ff8c00)}
-.rsc{text-align:center;padding:24px 16px}
-.rsc .bg{font-size:64px;margin-bottom:8px;line-height:1}
-.rsc .sc{font-size:40px;font-weight:900;margin:8px 0;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 3s linear infinite}
-.rsc .lb2{font-size:13px;color:var(--m);font-weight:700;margin-bottom:14px}
-.rsc .sr2{font-size:24px;letter-spacing:4px;margin:10px 0 14px}
-.rsc .ms2{font-size:13px;font-weight:700;line-height:1.9;margin-bottom:16px;padding:12px;border-radius:14px;background:rgba(255,255,255,.10)}
+.rsc{text-align:center;padding:22px 14px}
+.rsc .bg{font-size:60px;margin-bottom:6px;line-height:1}
+.rsc .sc{font-size:38px;font-weight:900;margin:8px 0;background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tf 3s linear infinite}
+.rsc .lb2{font-size:13px;color:var(--m);font-weight:700;margin-bottom:12px}
+.rsc .sr2{font-size:22px;letter-spacing:4px;margin:8px 0 12px}
+.rsc .ms2{font-size:12.5px;font-weight:700;line-height:1.9;margin-bottom:14px;padding:12px;border-radius:14px;background:rgba(255,255,255,.10)}
 .rc{margin-bottom:12px;padding:12px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)}
 .rc h4{margin:0 0 8px;font-size:12.5px;font-weight:800;color:#ffd700}
 .rr{display:flex;justify-content:space-between;padding:5px 0;font-size:11.5px;border-bottom:1px dashed rgba(255,255,255,.15);gap:8px}
@@ -123,7 +129,7 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
 .ai .q{font-weight:800;color:#fff;margin-bottom:5px;font-size:12px}
 .ai .a{color:#4fd1a1;font-weight:700;margin-bottom:4px;direction:ltr;text-align:left;font-size:11.5px}
 .ai .e{color:rgba(255,255,255,.78);font-size:11px;line-height:1.8}
-.ct{background:radial-gradient(ellipse at top left,rgba(255,215,0,.15),transparent 50%),radial-gradient(ellipse at bottom right,rgba(255,92,168,.15),transparent 50%),linear-gradient(135deg,#1a1033,#2a1a4d,#1a1033);border:3px double #ffd700;border-radius:24px;padding:24px 18px;text-align:center;position:relative;box-shadow:0 0 60px rgba(255,215,0,.3);margin-bottom:14px;overflow:hidden}
+.ct{background:radial-gradient(ellipse at top left,rgba(255,215,0,.15),transparent 50%),radial-gradient(ellipse at bottom right,rgba(255,92,168,.15),transparent 50%),linear-gradient(135deg,#1a1033,#2a1a4d,#1a1033);border:3px double #ffd700;border-radius:24px;padding:22px 16px;text-align:center;position:relative;box-shadow:0 0 60px rgba(255,215,0,.3);margin-bottom:14px;overflow:hidden}
 .ct::before{content:"";position:absolute;inset:8px;border:1px solid rgba(255,215,0,.4);border-radius:18px;pointer-events:none}
 .ct::after{content:"★";position:absolute;top:14px;right:20px;color:#ffd700;font-size:20px}
 .ct .dc{color:#ffd700;font-size:20px;letter-spacing:8px;margin-bottom:8px}
@@ -153,96 +159,121 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
 .gi .gh{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--m);margin-bottom:5px}
 .gi .gt{font-size:12.5px;font-weight:800;color:#fff;margin-bottom:3px}
 .gi .gm{font-size:10.5px;color:rgba(255,255,255,.7)}
+.vi{padding:8px 10px;border-bottom:1px dashed rgba(255,255,255,.12);display:flex;justify-content:space-between;align-items:center;gap:8px;direction:ltr;text-align:left}
+.vi .en{color:#ffd700;font-weight:800;font-size:13px}
+.vi .fa{color:#fff;font-size:12px;direction:rtl}
+.vi button{flex-shrink:0}
+.ex{padding:14px;background:rgba(255,255,255,.06);border-radius:14px;margin-bottom:10px;border:1px solid rgba(255,255,255,.12)}
+.ex h4{margin:0 0 10px;font-size:13px;color:#ffd700;font-weight:800}
+.ex .qi{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.1);font-size:12px;line-height:1.9}
+.ex .qi:last-child{border-bottom:0}
+.ex .qi .nm2{color:#ff5ca8;font-weight:800;margin-right:6px}
+.ex .qi .an{color:#4fd1a1;font-weight:700;margin-top:4px;display:none}
+.ex .qi.sh .an{display:block}
+.ex .qi .ba{padding:3px 10px;font-size:10px;background:rgba(255,92,168,.2);border:1px solid rgba(255,92,168,.4);color:#ffb3d9;border-radius:8px;cursor:pointer;margin-top:6px}
+.gl-row{padding:9px 12px;border-bottom:1px dashed rgba(255,255,255,.12);display:grid;grid-template-columns:1.3fr 1fr auto;gap:8px;align-items:center}
+.gl-row .en{color:#ffd700;font-weight:800;font-size:12.5px;direction:ltr;text-align:left}
+.gl-row .ph{color:#c9bcff;font-size:10.5px;direction:ltr;text-align:left;font-family:monospace}
+.gl-row .fa{font-size:12px}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:400px){.app{padding:14px 10px 40px}.brand h1{font-size:16px}.card .nm{font-size:11px}}
 </style>
 </head>
 <body>
 <div class="rb"></div>
-<div class="st" id="stars"></div>
+<div class="stars" id="stars"></div>
 
 <div class="app">
+
   <section id="home">
-    <div class="br">
+    <div class="brand">
       <h1>🎓 موسسه زبان انگلیسی محمدجواد کجوری</h1>
       <p class="sd">✨ کلاس ایمان ۱ ✨</p>
-      <div class="cb">آموزش حروف · گرامر · مکالمه · پایه هفتم</div>
+      <div class="bg2">پایه هفتم · Prospect 1 · نسخهٔ جامع ۱۴۰۵</div>
     </div>
 
-    <div class="tb" id="tabs">
+    <div class="tabs" id="tabs">
       <button type="button" data-v="learn" class="on">📚 حروف</button>
       <button type="button" data-v="lessons">🎯 تمرین</button>
       <button type="button" data-v="quiz">📝 آزمون</button>
-      <button type="button" data-v="grade7">📘 پایه هفتم</button>
+      <button type="button" data-v="grade7">📘 هفتم</button>
       <button type="button" data-v="gallery">🎞 گالری</button>
     </div>
 
     <div id="paneLearn">
-      <input type="text" class="sr" id="search" placeholder="🔍 جستجوی دسته...">
-      <div style="display:flex;justify-content:space-between;margin:14px 0 10px;font-size:12.5px;font-weight:700;color:var(--m)"><span>۴۰ دسته آموزشی</span><span class="cb" id="catCount"></span></div>
+      <input type="text" class="search" id="search" placeholder="🔍 جستجوی دسته...">
+      <div style="display:flex;justify-content:space-between;margin:12px 0 10px;font-size:12px;font-weight:700;color:var(--m)">
+        <span>۴۰ دسته آموزشی</span>
+        <span style="background:linear-gradient(135deg,#ff5ca8,#7c5cff);padding:3px 10px;border-radius:99px;font-size:11px" id="catCount"></span>
+      </div>
       <div class="grid" id="cats"></div>
     </div>
 
     <div id="paneLessons" hidden>
-      <div class="gl" style="margin-bottom:12px;text-align:center;padding:12px;font-size:11.5px;line-height:1.9;color:rgba(255,255,255,.85)">
-        📌 دروس پیشرفته + گرامر تخصصی. سوالات آزمون از همین مباحث طراحی شده‌اند.
+      <div class="glass" style="margin-bottom:12px;text-align:center;padding:12px;font-size:11.5px;line-height:1.9;color:rgba(255,255,255,.85)">
+        📌 ۲۰ درس کامل با جزوه و تمرین تشریحی. تمام نکات گرامری و واژگان فراتر از کتاب.
       </div>
       <div id="lessonsList"></div>
     </div>
 
     <div id="paneQuiz" hidden>
-      <div class="gl" style="text-align:center;padding:20px 14px">
-        <div style="font-size:50px;margin-bottom:4px">📝</div>
-        <h2 style="margin:0 0 8px;font-size:18px;font-weight:900">آزمون جامع فینال</h2>
+      <div class="glass" style="text-align:center;padding:20px 14px">
+        <div style="font-size:48px;margin-bottom:4px">📝</div>
+        <h2 style="margin:0 0 8px;font-size:17px;font-weight:900">آزمون جامع فینال</h2>
         <p style="color:var(--m);font-size:11.5px;line-height:1.9;margin:0 0 12px">
           <b style="color:#ffd700">۲۰ سوال سخت</b> — MC + میکروفن + ایفای نقش<br>
-          ⏱ کل: <b style="color:#4fd1a1">۱۳:۲۰</b> (۸۰۰ ثانیه)<br>
-          ⏱ هر سوال: <b style="color:#c9bcff">۰۰:۴۰</b> (۴۰ ثانیه)
+          ⏱ کل: <b style="color:#4fd1a1">۶:۴۰</b> (۴۰۰ ثانیه)<br>
+          ⏱ هر سوال: <b style="color:#c9bcff">۲۰ ثانیه</b>
         </p>
-        <div class="gl" style="text-align:right;padding:10px;margin-bottom:12px;font-size:10.5px">
+        <div class="glass" style="text-align:right;padding:10px;margin-bottom:12px;font-size:10.5px">
           <div style="color:#ffd700;font-weight:800;margin-bottom:5px">📊 توزیع سوالات:</div>
-          <div id="topicDistribution" style="line-height:1.9"></div>
+          <div id="topicDist" style="line-height:1.9"></div>
         </div>
         <input type="text" class="fl" id="studentName" placeholder="نام و نام خانوادگی" maxlength="40">
         <div class="fl" style="background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.4);color:#ffd700;font-weight:800">کلاس: ایمان</div>
-        <button class="bt g" id="startQuiz" type="button" style="margin-top:8px">🚀 شروع آزمون</button>
+        <button class="btn gold" id="startQuiz" type="button" style="margin-top:8px">🚀 شروع آزمون</button>
       </div>
     </div>
 
     <div id="paneGrade7" hidden>
-      <div class="gl" style="margin-bottom:12px;text-align:center;padding:12px;font-size:11.5px;line-height:1.9;color:rgba(255,255,255,.85)">
-        📘 <b style="color:#ffd700">پایه هفتم — Prospect 1</b><br>لغات، گرامر، درک مطلب و آزمون تخصصی
+      <div class="glass" style="margin-bottom:12px;text-align:center;padding:12px;font-size:11.5px;line-height:1.9;color:rgba(255,255,255,.85)">
+        📘 <b style="color:#ffd700">پایه هفتم — Prospect 1 (چاپ ۱۴۰۵)</b><br>بر اساس کتاب رسمی: ۸ درس، واژه‌نامهٔ کامل، گرامر، تمرین، درک مطلب
       </div>
-      <div class="tb" id="g7tabs" style="margin-bottom:14px">
+      <div class="subtabs" id="g7tabs">
         <button type="button" data-g="vocab" class="on">🔤 لغات</button>
-        <button type="button" data-g="grammar">📖 گرامر</button>
+        <button type="button" data-g="grammar">📐 گرامر</button>
+        <button type="button" data-g="exercises">✏️ تمرین</button>
         <button type="button" data-g="reading">📝 درک مطلب</button>
         <button type="button" data-g="quiz">🎯 آزمون</button>
       </div>
       <div id="g7Vocab"><div class="grid" id="g7VocabList"></div></div>
       <div id="g7Grammar" hidden><div id="g7GrammarList"></div></div>
+      <div id="g7Exercises" hidden><div id="g7ExercisesList"></div></div>
       <div id="g7Reading" hidden><div id="g7ReadingList"></div></div>
       <div id="g7Quiz" hidden>
-        <div class="gl" style="text-align:center;padding:20px 14px">
-          <div style="font-size:50px;margin-bottom:4px">🎯</div>
-          <h2 style="margin:0 0 8px;font-size:17px;font-weight:900">آزمون پایه هفتم</h2>
+        <div class="glass" style="text-align:center;padding:20px 14px">
+          <div style="font-size:48px;margin-bottom:4px">🎯</div>
+          <h2 style="margin:0 0 8px;font-size:16px;font-weight:900">آزمون جامع پایه هفتم</h2>
           <p style="color:var(--m);font-size:11.5px;line-height:1.9;margin:0 0 12px">
-            <b style="color:#ffd700">۲۰ سوال</b> — کتاب + ورک‌بوک<br>
-            ⏱ کل: <b style="color:#4fd1a1">۱۰ دقیقه</b> — ⏱ هر سوال: <b style="color:#c9bcff">۳۰ ثانیه</b>
+            <b style="color:#ffd700">۵۰ سوال</b> — واژگان، گرامر، درک مطلب<br>
+            ⏱ کل: <b style="color:#4fd1a1">۲۵ دقیقه</b> (۱۵۰۰ ثانیه)<br>
+            ⏱ هر سوال: <b style="color:#c9bcff">۳۰ ثانیه</b>
           </p>
           <input type="text" class="fl" id="g7Name" placeholder="نام و نام خانوادگی" maxlength="40">
-          <button class="bt g" id="g7Start" type="button" style="margin-top:8px">🚀 شروع آزمون</button>
+          <div class="fl" style="background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.4);color:#ffd700;font-weight:800">کلاس: ایمان</div>
+          <button class="btn gold" id="g7Start" type="button" style="margin-top:8px">🚀 شروع آزمون</button>
         </div>
       </div>
       <div id="g7Play" hidden>
-        <div class="tp"><button class="bk" id="g7Back">→ بازگشت</button><h2 id="g7Title"></h2></div>
+        <div class="top"><button class="back" id="g7Back">→ بازگشت</button><h2 id="g7Title"></h2></div>
         <div class="lb" id="g7Body"></div>
       </div>
     </div>
 
     <div id="paneGallery" hidden>
-      <div class="gl" style="padding:14px">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900;color:#ffd700">🎞 گالری من</h3>
+      <div class="glass" style="padding:14px">
+        <h3 style="margin:0 0 10px;font-size:14.5px;font-weight:900;color:#ffd700">🎞 گالری من</h3>
         <div id="galleryList"></div>
         <button class="bs" id="clearGallery" type="button" style="width:100%;margin-top:6px">🗑 پاک کردن گالری</button>
       </div>
@@ -250,31 +281,31 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
   </section>
 
   <section id="play" hidden>
-    <div class="tp"><button class="bk" id="backLearn" type="button">→ بازگشت</button><h2 id="ptitle"></h2></div>
-    <div class="pb"><i id="progFill"></i></div>
-    <div class="rs em" id="result">یک حرف را انتخاب کن</div>
-    <div class="ks" id="keys"></div>
+    <div class="top"><button class="back" id="backLearn" type="button">→ بازگشت</button><h2 id="ptitle"></h2></div>
+    <div class="prog"><i id="progFill"></i></div>
+    <div class="res empty" id="result">یک حرف را انتخاب کن</div>
+    <div class="keys" id="keys"></div>
     <div class="ft" id="playFoot"></div>
   </section>
 
   <section id="lessonPage" hidden>
-    <div class="tp"><button class="bk" id="backLesson" type="button">→ بازگشت</button><h2 id="lessonTitle"></h2></div>
-    <div class="gl">
+    <div class="top"><button class="back" id="backLesson" type="button">→ بازگشت</button><h2 id="lessonTitle"></h2></div>
+    <div class="glass">
       <div id="lessonContent"></div>
       <div class="sv"><button class="bs pk" id="saveLesson" type="button">💾 ذخیره در گالری</button></div>
     </div>
   </section>
 
   <section id="quiz" hidden>
-    <div class="tp"><button class="bk" id="backQuiz" type="button">→ بازگشت</button><h2>📝 آزمون فینال</h2></div>
+    <div class="top"><button class="back" id="backQuiz" type="button">→ بازگشت</button><h2>📝 آزمون فینال</h2></div>
     <div class="qh">
       <span class="qt" id="qNum">۱ / ۲۰</span>
       <span class="qt gd" id="qScore">امتیاز: ۰</span>
-      <span class="qt tm" id="qTimer">۱۳:۲۰</span>
-      <span class="qt qt2" id="qQTimer">⏱ ۰۰:۴۰</span>
+      <span class="qt tm" id="qTimer">۰۶:۴۰</span>
+      <span class="qt qt2" id="qQTimer">⏱ ۰۰:۲۰</span>
     </div>
-    <div class="pb"><i id="quizFill"></i></div>
-    <div class="gl">
+    <div class="prog"><i id="quizFill"></i></div>
+    <div class="glass">
       <div class="qtp" id="qTopic"></div>
       <p class="qq" id="qText"></p>
       <div id="qBody"></div>
@@ -282,18 +313,18 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
   </section>
 
   <section id="quizResult" hidden>
-    <div class="gl rsc">
+    <div class="glass rsc">
       <div class="bg" id="resEmoji">🎉</div>
       <div class="sc" id="resScore">— / ۲۰</div>
       <div class="lb2" id="resPercent">—٪</div>
       <div class="sr2" id="resStars"></div>
       <div class="ms2" id="resMsg"></div>
-      <button class="bt g" id="showReport" type="button">📋 مشاهده کارنامه</button>
+      <button class="btn gold" id="showReport" type="button">📋 مشاهده کارنامه</button>
     </div>
   </section>
 
   <section id="report" hidden>
-    <div class="gl">
+    <div class="glass">
       <h2 style="text-align:center;font-size:17px;font-weight:900;margin:0 0 14px">📋 کارنامهٔ آزمون</h2>
       <div class="rc">
         <h4>👤 اطلاعات دانش‌آموز</h4>
@@ -316,28 +347,28 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
         <button class="bs pk" id="saveReport" type="button">💾 ذخیره کارنامه</button>
         <button class="bs pk" id="saveQuestions" type="button">💾 ذخیره سوالات</button>
       </div>
-      <button class="bt g" id="goCert" type="button" style="margin-top:12px">🏆 دریافت گواهینامه</button>
-      <button class="bt" id="viewAnswers" type="button" style="margin-top:8px">📖 پاسخ‌نامه تشریحی</button>
+      <button class="btn gold" id="goCert" type="button" style="margin-top:12px">🏆 دریافت گواهینامه</button>
+      <button class="btn" id="viewAnswers" type="button" style="margin-top:8px">📖 پاسخ‌نامه تشریحی</button>
     </div>
   </section>
 
   <section id="answers" hidden>
-    <div class="gl">
+    <div class="glass">
       <h2 style="text-align:center;font-size:17px;font-weight:900;margin:0 0 12px">📖 پاسخ‌نامهٔ تشریحی</h2>
       <div class="ans" id="answerList"></div>
       <div class="sv"><button class="bs pk" id="saveAnswers" type="button">💾 ذخیره پاسخ‌نامه</button></div>
-      <button class="bt" id="backReport" type="button" style="margin-top:12px">→ بازگشت به کارنامه</button>
+      <button class="btn" id="backReport" type="button" style="margin-top:12px">→ بازگشت به کارنامه</button>
     </div>
   </section>
 
   <section id="cert" hidden>
-    <div class="ct" id="certBox">
+    <div class="ct">
       <div class="dc">★ ★ ★</div>
       <h2 class="tt">گواهینامهٔ افتخار</h2>
       <p class="sb">Certificate of Achievement</p>
       <div style="font-size:11px;color:rgba(255,255,255,.7);margin-bottom:4px">بدین‌وسیله به</div>
       <div class="nm" id="certName">—</div>
-      <div class="bd2">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع گرامر، واژگان، تلفظ و مکالمه</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
+      <div class="bd2">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700">آزمون جامع گرامر، واژگان و مکالمه</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
       <div class="sc2" id="certScore">نمره: —</div>
       <div class="ft2">
         <div class="sg"><div class="n2">محمدجواد کجوری</div><div>مدیر موسسه</div><div style="font-size:9px;margin-top:2px" id="certDate">—</div></div>
@@ -346,35 +377,38 @@ body{margin:0;color:var(--t);font-family:'Vazirmatn',Tahoma,sans-serif;min-heigh
       </div>
     </div>
     <div class="sv" style="margin-bottom:12px"><button class="bs pk" id="saveCert" type="button">💾 ذخیره گواهینامه</button></div>
-    <button class="bt" id="backHome" type="button">🏠 بازگشت به خانه</button>
+    <button class="btn" id="backHome" type="button">🏠 بازگشت به خانه</button>
   </section>
 
-  <div class="ft">طراحی و ساخت: <b>محمدجواد کجوری</b><br>موسسه زبان انگلیسی محمدجواد کجوری — <b>کلاس ایمان ۱</b></div>
+  <div class="ft">
+    طراحی و ساخت: <b>محمدجواد کجوری</b><br>
+    موسسه زبان انگلیسی محمدجواد کجوری — <b>کلاس ایمان ۱</b>
+  </div>
 </div>
 
 <div class="ts" id="toast"></div>
 
   <script>
 /* =========================================================
-   ۴۰ دسته آموزشی حروف
+   ۴۰ دستهٔ آموزشی حروف
    ========================================================= */
 const C = {
   object:{fa:"اشیاء",en:"Objects",emo:"📱🔑",d:{A:["Axe","تبر"],B:["Book","کتاب"],C:["Chair","صندلی"],D:["Door","در"],E:["Envelope","پاکت"],F:["Fork","چنگال"],G:["Glasses","عینک"],H:["Hammer","چکش"],I:["Iron","اتو"],J:["Jar","ظرف"],K:["Key","کلید"],L:["Lamp","چراغ"],M:["Mirror","آینه"],N:["Notebook","دفترچه"],O:["Oven","فر"],P:["Phone","گوشی"],Q:["Quilt","لحاف"],R:["Ring","انگشتر"],S:["Scissors","قیچی"],T:["Table","میز"],U:["Umbrella","چتر"],V:["Vase","گلدان"],W:["Watch","ساعت"],X:["Xylophone","زایلوفون"],Y:["Yo-yo","یویو"],Z:["Zipper","زیپ"]}},
   animal:{fa:"حیوانات",en:"Animals",emo:"🦁🐘",d:{A:["Ant","مورچه"],B:["Bear","خرس"],C:["Cat","گربه"],D:["Dog","سگ"],E:["Elephant","فیل"],F:["Fox","روباه"],G:["Giraffe","زرافه"],H:["Horse","اسب"],I:["Iguana","ایگوانا"],J:["Jaguar","جگوار"],K:["Kangaroo","کانگورو"],L:["Lion","شیر"],M:["Monkey","میمون"],N:["Nightingale","بلبل"],O:["Owl","جغد"],P:["Penguin","پنگوئن"],Q:["Quail","بلدرچین"],R:["Rabbit","خرگوش"],S:["Snake","مار"],T:["Tiger","ببر"],U:["Urchin","توتیا"],V:["Vulture","کرکس"],W:["Wolf","گرگ"],X:["Xerus","سنجاب"],Y:["Yak","یاک"],Z:["Zebra","گورخر"]}},
   bird:{fa:"پرندگان",en:"Birds",emo:"🦅🦜",d:{A:["Albatross","آلباتروس"],B:["Blue Jay","جی‌جی"],C:["Crow","کلاغ"],D:["Duck","اردک"],E:["Eagle","عقاب"],F:["Flamingo","فلامینگو"],G:["Goose","غاز"],H:["Hawk","شاهین"],I:["Ibis","اکراس"],J:["Jay","جی‌جی"],K:["Kingfisher","ماهی‌خوار"],L:["Lark","چکاوک"],M:["Magpie","زاغی"],N:["Nightingale","بلبل"],O:["Ostrich","شترمرغ"],P:["Parrot","طوطی"],Q:["Quail","بلدرچین"],R:["Robin","سینه‌سرخ"],S:["Sparrow","گنجشک"],T:["Toucan","توکان"],U:["Umbrellabird","چتر"],V:["Vulture","کرکس"],W:["Woodpecker","دارکوب"],X:["Xenops","زینوپس"],Y:["Yellowhammer","زردپره"],Z:["Zebra Finch","فنچ"]}},
-  fish:{fa:"ماهی‌ها",en:"Fish",emo:"🐟🐠",d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","حلوا"],I:["Ide","ایده"],J:["Jellyfish","عروس دریایی"],K:["Koi","کوئی"],L:["Lobster","لابستر"],M:["Mackerel","خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ملکه"],R:["Ray","سفره‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیا"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","گورخری"]}},
+  fish:{fa:"ماهی‌ها",en:"Fish",emo:"🐟🐠",d:{A:["Anchovy","آنچوی"],B:["Bass","باس"],C:["Catfish","گربه‌ماهی"],D:["Dolphin","دلفین"],E:["Eel","مارماهی"],F:["Flounder","کفشک"],G:["Goldfish","ماهی قرمز"],H:["Halibut","حلوا"],I:["Ide","ایده"],J:["Jellyfish","عروس"],K:["Koi","کوئی"],L:["Lobster","لابستر"],M:["Mackerel","خال‌خالی"],N:["Nautilus","ناتیلوس"],O:["Octopus","اختاپوس"],P:["Pike","اردک‌ماهی"],Q:["Queenfish","ملکه"],R:["Ray","سفره‌ماهی"],S:["Salmon","سالمون"],T:["Trout","قزل‌آلا"],U:["Urchin","توتیا"],V:["Viperfish","افعی‌ماهی"],W:["Whale","نهنگ"],X:["X-ray Tetra","تترا"],Y:["Yellowtail","زرددُم"],Z:["Zebrafish","گورخری"]}},
   insect:{fa:"حشرات",en:"Insects",emo:"🐝🦋",d:{A:["Ant","مورچه"],B:["Bee","زنبور"],C:["Cricket","جیرجیرک"],D:["Dragonfly","سنجاقک"],E:["Earwig","گوش‌خیزک"],F:["Firefly","شب‌تاب"],G:["Grasshopper","ملخ"],H:["Hornet","زنبور قرمز"],I:["Isopod","خرخاکی"],J:["June Bug","سوسک"],K:["Katydid","جیرجیرک برگ"],L:["Ladybug","کفش‌دوزک"],M:["Moth","پروانه شب"],N:["Nymph","شفیره"],O:["Owlfly","جغدپروانه"],P:["Praying Mantis","آخوندک"],Q:["Queen Bee","ملکه"],R:["Roach","سوسری"],S:["Spider","عنکبوت"],T:["Termite","موریانه"],U:["Underwing","شب‌پره"],V:["Velvet Ant","مخملی"],W:["Wasp","زنبور وحشی"],X:["Xerces Blue","پروانه آبی"],Y:["Yellow Jacket","زنبور زرد"],Z:["Zebra Butterfly","گورخری"]}},
-  fruit:{fa:"میوه‌ها",en:"Fruits",emo:"🍎🍇",d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Date","خرما"],E:["Elderberry","انگور فرنگی"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Imbe","آفریقایی"],J:["Jackfruit","جک"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","انجیری"],O:["Orange","پرتقال"],P:["Peach","هلو"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت"],T:["Tangerine","نارنگی"],U:["Ugli Fruit","آگلی"],V:["Valencia Orange","پرتقال"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی"],Z:["Ziziphus","عناب"]}},
-  vegetable:{fa:"سبزیجات",en:"Vegetables",emo:"🥕🥦",d:{A:["Artichoke","کنگر"],B:["Broccoli","بروکلی"],C:["Carrot","هویج"],D:["Dill","شوید"],E:["Eggplant","بادمجان"],F:["Fennel","رازیانه"],G:["Garlic","سیر"],H:["Horseradish","ترب"],I:["Iceberg Lettuce","کاهو"],J:["Jalapeño","هالوپینو"],K:["Kale","کلم"],L:["Lettuce","کاهو"],M:["Mushroom","قارچ"],N:["Napa Cabbage","کلم"],O:["Onion","پیاز"],P:["Potato","سیب‌زمینی"],Q:["Quinoa","کینوا"],R:["Radish","تربچه"],S:["Spinach","اسفناج"],T:["Tomato","گوجه"],U:["Upland Cress","شاهی"],V:["Vine Leaves","برگ مو"],W:["Watercress","شاهی آبی"],X:["Xylopia","فلفل"],Y:["Yam","سیب‌زمینی شیرین"],Z:["Zucchini","کدو"]}},
+  fruit:{fa:"میوه‌ها",en:"Fruits",emo:"🍎🍇",d:{A:["Apple","سیب"],B:["Banana","موز"],C:["Cherry","گیلاس"],D:["Dates","خرما"],E:["Eggplant","بادمجان"],F:["Fig","انجیر"],G:["Grapes","انگور"],H:["Honeydew","طالبی"],I:["Ice-cream","بستنی"],J:["Jackfruit","جک"],K:["Kiwi","کیوی"],L:["Lemon","لیمو"],M:["Mango","انبه"],N:["Nectarine","انجیری"],O:["Orange","پرتقال"],P:["Pineapple","آناناس"],Q:["Quince","به"],R:["Raspberry","تمشک"],S:["Strawberry","توت‌فرنگی"],T:["Tomato","گوجه"],U:["Ugli Fruit","آگلی"],V:["Valencia Orange","پرتقال"],W:["Watermelon","هندوانه"],X:["Xigua","هندوانه چینی"],Y:["Yellow Melon","طالبی"],Z:["Zucchini","کدو"]}},
+  vegetable:{fa:"سبزیجات",en:"Vegetables",emo:"🥕🥦",d:{A:["Artichoke","کنگر"],B:["Broccoli","بروکلی"],C:["Carrot","هویج"],D:["Dill","شوید"],E:["Eggplant","بادمجان"],F:["Fennel","رازیانه"],G:["Garlic","سیر"],H:["Horseradish","ترب"],I:["Iceberg Lettuce","کاهو"],J:["Jalapeño","هالوپینو"],K:["Kale","کلم"],L:["Lettuce","کاهو"],M:["Mushroom","قارچ"],N:["Napa Cabbage","کلم"],O:["Onion","پیاز"],P:["Potato","سیب‌زمینی"],Q:["Quinoa","کینوا"],R:["Radish","تربچه"],S:["Spinach","اسفناج"],T:["Tomato","گوجه"],U:["Upland Cress","شاهی"],V:["Vine Leaves","برگ مو"],W:["Watercress","شاهی آبی"],X:["Xylopia","فلفل"],Y:["Yam","سیب‌زمینی"],Z:["Zucchini","کدو"]}},
   color:{fa:"رنگ‌ها",en:"Colors",emo:"🎨🌈",d:{A:["Amber","کهربایی"],B:["Blue","آبی"],C:["Cyan","فیروزه‌ای"],D:["Dark","تیره"],E:["Emerald","زمردی"],F:["Fuchsia","سرخابی"],G:["Green","سبز"],H:["Hot Pink","صورتی"],I:["Indigo","نیلی"],J:["Jade","یشمی"],K:["Khaki","خاکی"],L:["Lavender","اسطوخودوسی"],M:["Magenta","ارغوانی"],N:["Navy","سرمه‌ای"],O:["Orange","نارنجی"],P:["Pink","صورتی"],Q:["Quartz","کوارتز"],R:["Red","قرمز"],S:["Silver","نقره‌ای"],T:["Turquoise","فیروزه‌ای"],U:["Ultramarine","آبی"],V:["Violet","بنفش"],W:["White","سفید"],X:["Xanadu","زیتونی"],Y:["Yellow","زرد"],Z:["Zomp","سبز آبی"]}},
   country:{fa:"کشورها",en:"Countries",emo:"🌍🏳️",d:{A:["Argentina","آرژانتین","🇦🇷"],B:["Brazil","برزیل","🇧🇷"],C:["Canada","کانادا","🇨🇦"],D:["Denmark","دانمارک","🇩🇰"],E:["Egypt","مصر","🇪🇬"],F:["France","فرانسه","🇫🇷"],G:["Germany","آلمان","🇩🇪"],H:["Hungary","مجارستان","🇭🇺"],I:["Iran","ایران","🇮🇷"],J:["Japan","ژاپن","🇯🇵"],K:["Kuwait","کویت","🇰🇼"],L:["Lebanon","لبنان","🇱🇧"],M:["Mexico","مکزیک","🇲🇽"],N:["Norway","نروژ","🇳🇴"],O:["Oman","عمان","🇴🇲"],P:["Portugal","پرتغال","🇵🇹"],Q:["Qatar","قطر","🇶🇦"],R:["Russia","روسیه","🇷🇺"],S:["Spain","اسپانیا","🇪🇸"],T:["Turkey","ترکیه","🇹🇷"],U:["Ukraine","اوکراین","🇺🇦"],V:["Venezuela","ونزوئلا","🇻🇪"],W:["Wales","ولز","🏴"],X:["Xinjiang","سین‌کیانگ","🏴"],Y:["Yemen","یمن","🇾🇪"],Z:["Zambia","زامبیا","🇿🇲"]}},
   iranCity:{fa:"شهرهای ایران",en:"Cities",emo:"🏙️🕌",d:{A:["Ahvaz","اهواز"],B:["Babol","بابل"],C:["Chabahar","چابهار"],D:["Damghan","دامغان"],E:["Esfahan","اصفهان"],F:["Firuzabad","فیروزآباد"],G:["Gorgan","گرگان"],H:["Hamadan","همدان"],I:["Ilam","ایلام"],J:["Jahrom","جهرم"],K:["Kerman","کرمان"],L:["Lahijan","لاهیجان"],M:["Mashhad","مشهد"],N:["Najafabad","نجف‌آباد"],O:["Omidiyeh","امیدیه"],P:["Pakdasht","پاکدشت"],Q:["Qazvin","قزوین"],R:["Rasht","رشت"],S:["Shiraz","شیراز"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xoshkebijar","خشکبیجار"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
   province:{fa:"استان‌ها",en:"Provinces",emo:"🗺️🇮🇷",d:{A:["Alborz","البرز"],B:["Bushehr","بوشهر"],C:["Chaharmahal","چهارمحال"],D:["Deylaman","دیلمان"],E:["East Azerbaijan","آذربایجان شرقی"],F:["Fars","فارس"],G:["Gilan","گیلان"],H:["Hormozgan","هرمزگان"],I:["Ilam","ایلام"],J:["Jiroft","جیرفت"],K:["Kohgiluyeh","کهگیلویه"],L:["Lorestan","لرستان"],M:["Markazi","مرکزی"],N:["North Khorasan","خراسان شمالی"],O:["Ostan Tehran","تهران"],P:["Persian Gulf","خلیج فارس"],Q:["Qazvin","قزوین"],R:["Razavi Khorasan","رضوی"],S:["Sistan","سیستان"],T:["Tehran","تهران"],U:["Urmia","ارومیه"],V:["Varamin","ورامین"],W:["West Azerbaijan","آذربایجان غربی"],X:["Xorasan","خراسان"],Y:["Yazd","یزد"],Z:["Zanjan","زنجان"]}},
   iranFood:{fa:"غذاهای ایرانی",en:"Iranian Food",emo:"🍚🍢",d:{A:["Ash Reshteh","آش رشته"],B:["Baghali Polo","باقالی پلو"],C:["Chelow Kabab","چلوکباب"],D:["Dizi","دیزی"],E:["Esfenaj Polo","اسفناج‌پلو"],F:["Fesenjan","فسنجان"],G:["Ghormeh Sabzi","قرمه‌سبزی"],H:["Halim","حلیم"],I:["Ishli Kebab","ایسلی"],J:["Joojeh Kabab","جوجه"],K:["Kookoo Sabzi","کوکو"],L:["Loobia Polo","لوبیاپلو"],M:["Mirza Ghasemi","میرزا"],N:["Naz Khatoon","نازخاتون"],O:["Omelet","املت"],P:["Polo","پلو"],Q:["Qeymeh","قیمه"],R:["Reshteh Polo","رشته‌پلو"],S:["Sabzi Polo","سبزی‌پلو"],T:["Tahchin","ته‌چین"],U:["Ush","اوش"],V:["Vavishka","وویشکا"],W:["White Rice","برنج"],X:["Xorest","خورش"],Y:["Yatimcheh","یتیمچه"],Z:["Zereshk Polo","زرشک"]}},
-  sweet:{fa:"شیرینی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Donut","دونات"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","زبان"]}},
+  sweet:{fa:"شیرینی",en:"Sweets",emo:"🍰🍬",d:{A:["Almond","بادام"],B:["Baklava","باقلوای"],C:["Chocolate","شکلات"],D:["Dates","خرما"],E:["Éclair","اکلر"],F:["Fudge","فاج"],G:["Gaz","گز"],H:["Halva","حلوا"],I:["Ice Cream","بستنی"],J:["Jelly","ژله"],K:["Kebab","کباب"],L:["Lollipop","آب‌نبات"],M:["Marshmallow","مارشمالو"],N:["Nougat","نوقا"],O:["Oreo","اورئو"],P:["Popcorn","پاپ‌کورن"],Q:["Qottab","قطاب"],R:["Raisins","کشمش"],S:["Sohan","سوهان"],T:["Toffee","تافی"],U:["Ube Cake","کیک"],V:["Vanilla","وانیل"],W:["Waffle","وافل"],X:["Xmas Cake","کریسمس"],Y:["Yogurt","ماست"],Z:["Zaban","زبان"]}},
   drink:{fa:"نوشیدنی‌ها",en:"Drinks",emo:"☕🥤",d:{A:["Americano","آمریکانو"],B:["Beer","آبجو"],C:["Coffee","قهوه"],D:["Doogh","دوغ"],E:["Espresso","اسپرسو"],F:["Frappe","فراپه"],G:["Green Tea","چای سبز"],H:["Hot Chocolate","داغ"],I:["Iced Tea","آیس تی"],J:["Juice","آبمیوه"],K:["Kombucha","کامبوچا"],L:["Lemonade","لیموناد"],M:["Milk","شیر"],N:["Nectar","نکتار"],O:["Orange Juice","پرتقال"],P:["Pepsi","پپسی"],Q:["Quinine","تونیک"],R:["Red Bull","ردبول"],S:["Smoothie","اسموتی"],T:["Tea","چای"],U:["Ume","آلو"],V:["Vodka","ودکا"],W:["Water","آب"],X:["Xigua Juice","هندوانه"],Y:["Yerba Mate","یربا مات"],Z:["Zamzam","زمزم"]}},
   sport:{fa:"ورزش‌ها",en:"Sports",emo:"⚽🏀",d:{A:["Archery","کمان"],B:["Basketball","بسکتبال"],C:["Cricket","کریکت"],D:["Diving","شیرجه"],E:["Equestrian","سوارکاری"],F:["Football","فوتبال"],G:["Golf","گلف"],H:["Hockey","هاکی"],I:["Ice Skating","اسکیت"],J:["Judo","جودو"],K:["Karate","کاراته"],L:["Long Jump","پرش"],M:["Marathon","ماراتن"],N:["Netball","نت‌بال"],O:["Orienteering","جهت‌یابی"],P:["Polo","چوگان"],Q:["Quidditch","کوایدیچ"],R:["Rowing","قایقرانی"],S:["Swimming","شنا"],T:["Tennis","تنیس"],U:["Ultimate Frisbee","فریزبی"],V:["Volleyball","والیبال"],W:["Wrestling","کشتی"],X:["Xare","باسکی"],Y:["Yoga","یوگا"],Z:["Zumba","زومبا"]}},
-  job:{fa:"شغل‌ها",en:"Jobs",emo:"👨‍⚕️👷",d:{A:["Architect","معمار"],B:["Baker","نانوا"],C:["Chef","آشپز"],D:["Doctor","دکتر"],E:["Engineer","مهندس"],F:["Farmer","کشاورز"],G:["Gardener","باغبان"],H:["Hairdresser","آرایشگر"],I:["Illustrator","تصویرساز"],J:["Journalist","خبرنگار"],K:["Knight","شوالیه"],L:["Lawyer","وکیل"],M:["Musician","نوازنده"],N:["Nurse","پرستار"],O:["Optician","عینک‌ساز"],P:["Painter","نقاش"],Q:["Surveyor","مهندس"],R:["Reporter","خبرنگار"],S:["Soldier","سرباز"],T:["Teacher","معلم"],U:["Umpire","داور"],V:["Veterinarian","دامپزشک"],W:["Writer","نویسنده"],X:["Xylophonist","نوازنده"],Y:["Youtuber","یوتیوبر"],Z:["Zoologist","جانورشناس"]}},
+  job:{fa:"شغل‌ها",en:"Jobs",emo:"👨‍⚕️👷",d:{A:["Architect","معمار"],B:["Baker","نانوا"],C:["Chef","آشپز"],D:["Doctor","دکتر"],E:["Engineer","مهندس"],F:["Farmer","کشاورز"],G:["Gardener","باغبان"],H:["Hairdresser","آرایشگر"],I:["Illustrator","تصویرساز"],J:["Journalist","خبرنگار"],K:["Knight","شوالیه"],L:["Lawyer","وکیل"],M:["Mechanic","مکانیک"],N:["Nurse","پرستار"],O:["Optician","عینک‌ساز"],P:["Painter","نقاش"],Q:["Shopkeeper","فروشنده"],R:["Reporter","خبرنگار"],S:["Soldier","سرباز"],T:["Teacher","معلم"],U:["Umpire","داور"],V:["Veterinarian","دامپزشک"],W:["Writer","نویسنده"],X:["Xylophonist","نوازنده"],Y:["Youtuber","یوتیوبر"],Z:["Zoologist","جانورشناس"]}},
   car:{fa:"ماشین‌ها",en:"Cars",emo:"🏎🚗",d:{A:["Audi","آئودی"],B:["BMW","بی‌ام‌و"],C:["Chevrolet","شورولت"],D:["Dodge","دوج"],E:["Elantra","النترا"],F:["Ferrari","فراری"],G:["GMC","جی‌ام‌سی"],H:["Honda","هوندا"],I:["Infiniti","اینفینیتی"],J:["Jaguar","جگوار"],K:["Kia","کیا"],L:["Lamborghini","لامبورگینی"],M:["Mercedes","مرسدس"],N:["Nissan","نیسان"],O:["Opel","اوپل"],P:["Peugeot","پژو"],Q:["Qoros","کوروس"],R:["Renault","رنو"],S:["Skoda","اشکودا"],T:["Toyota","تویوتا"],U:["UAZ","اواز"],V:["Volvo","ولوو"],W:["Wuling","ولینگ"],X:["Xpeng","ایکس‌پنگ"],Y:["Yaris","یاریس"],Z:["Zeekr","زیکر"]}},
   player:{fa:"فوتبالیست‌ها",en:"Footballers",emo:"⚽🏆",d:{A:["Aguero","آگوئرو"],B:["Beckham","بکام"],C:["Cristiano Ronaldo","رونالدو"],D:["Drogba","درگبا"],E:["Eto'o","اتوئو"],F:["Figo","فیگو"],G:["Gerrard","جرارد"],H:["Haaland","هالند"],I:["Iniesta","اینیستا"],J:["Jahanbakhsh","جهانبخش"],K:["Kane","کین"],L:["Messi","مسی"],M:["Maradona","مارادونا"],N:["Neymar","نیمار"],O:["Ozil","اوزیل"],P:["Pele","پله"],Q:["Quaresma","کوارشما"],R:["Ronaldinho","رونالدینیو"],S:["Salah","صلاح"],T:["Taremi","طارمی"],U:["Ureña","اورنیا"],V:["Vinicius","وینیسیوس"],W:["Weah","ویا"],X:["Xavi","ژاوی"],Y:["Yamal","یامال"],Z:["Zidane","زیدان"]}},
   actor:{fa:"بازیگران مرد",en:"Actors",emo:"🎬🎭",d:{A:["Amin Zendegani","امین زندگانی"],B:["Behrouz Vossoughi","بهروز وثوقی"],C:["Cameron Diaz","کامرون دیاز"],D:["Dariush Arjmand","داریوش ارجمند"],E:["Ezzatolah Entezami","عزت‌الله"],F:["Farhad Aslani","فرهاد"],G:["Golab Adineh","گلاب"],H:["Homayoun Ershadi","همایون"],I:["Iraj Ghaderi","ایرج"],J:["Jamshid Mashayekhi","جمشید"],K:["Kambiz Dirbaz","کامبیز"],L:["Leonardo DiCaprio","دی‌کاپریو"],M:["Mehdi Hashemi","مهدی"],N:["Navid Mohammadzadeh","نوید"],O:["Omid Abbasi","امید"],P:["Parviz Parastui","پرویز"],Q:["Qasem Zare","قاسم"],R:["Reza Attaran","رضا"],S:["Shahab Hosseini","شهاب"],T:["Tom Cruise","تام کروز"],U:["Umar Khan","عمر"],V:["Hamed Vakili","حامد"],W:["Will Smith","ویل اسمیت"],X:["Xavier Bardem","خاویر"],Y:["Yousef Teymouri","یوسف"],Z:["Zahra Amir Ebrahimi","زهرا"]}},
@@ -384,7 +418,7 @@ const C = {
   writer:{fa:"نویسندگان",en:"Writers",emo:"✍️📚",d:{A:["Aeschylus","آیسخولوس"],B:["Balzac","بالزاک"],C:["Chekhov","چخوف"],D:["Dostoevsky","داستایوفسکی"],E:["Hemingway","همینگوی"],F:["Faulkner","فاکنر"],G:["Goethe","گوته"],H:["Hugo","هوگو"],I:["Ibsen","ایبسن"],J:["Jane Austen","آستین"],K:["Kafka","کافکا"],L:["Tolstoy","تولستوی"],M:["Maupassant","موپاسان"],N:["Nabokov","نابوکوف"],O:["Orwell","اورول"],P:["Pushkin","پوشکین"],Q:["Quiroga","کیروگا"],R:["Rumi","مولوی"],S:["Shakespeare","شکسپیر"],T:["Tolstoy","تولستوی"],U:["Updike","آپدایک"],V:["Voltaire","ولتر"],W:["Wilde","وایلد"],X:["Xenophon","گزنفون"],Y:["Yeats","ییتس"],Z:["Zola","زولا"]}},
   poet:{fa:"شاعران ایرانی",en:"Poets",emo:"📜🕌",d:{A:["Attar","عطار"],B:["Baba Taher","بابا طاهر"],C:["Cyrus","کوروش"],D:["Daghighi","دقیقی"],E:["Ehsan","احسان"],F:["Farrokhi","فرخی"],G:["Ganjavi","گنجوی"],H:["Hafez","حافظ"],I:["Iraj Mirza","ایرج"],J:["Jami","جامی"],K:["Khaqani","خاقانی"],L:["Labibi","لبیبی"],M:["Moulavi","مولوی"],N:["Nezami","نظامی"],O:["Omar Khayyam","خیام"],P:["Parvin","پروین"],Q:["Qatran","قطران"],R:["Rudaki","رودکی"],S:["Saadi","سعدی"],T:["Torki","ترکی"],U:["Ustad","استاد"],V:["Vahshi","وحشی"],W:["Wasif","وصیف"],X:["Xosro","خسرو"],Y:["Yaghma","یغما"],Z:["Zahir","ظهیر"]}},
   flower:{fa:"گل‌ها",en:"Flowers",emo:"🌸🌷",d:{A:["Aster","ستاره‌ای"],B:["Begonia","بگونیا"],C:["Chrysanthemum","داوودی"],D:["Daisy","مینا"],E:["Edelweiss","ادلوایس"],F:["Freesia","فریزیا"],G:["Gardenia","گاردنیا"],H:["Hyacinth","سنبل"],I:["Iris","زنبق"],J:["Jasmine","یاس"],K:["King Protea","پروتئا"],L:["Lily","سوسن"],M:["Magnolia","ماگنولیا"],N:["Narcissus","نرگس"],O:["Orchid","ارکیده"],P:["Peony","صدتومانی"],Q:["Queen Anne's Lace","توری"],R:["Rose","رز"],S:["Sunflower","آفتابگردان"],T:["Tulip","لاله"],U:["Ursinia","اورسینیا"],V:["Violet","بنفشه"],W:["Water Lily","نیلوفر"],X:["Xeranthemum","خشک‌گل"],Y:["Yarrow","بومادران"],Z:["Zinnia","زینیا"]}},
-  clothing:{fa:"پوشاک",en:"Clothing",emo:"👕👖",d:{A:["Apron","پیش‌بند"],B:["Blouse","بلوز"],C:["Coat","کت"],D:["Dress","پیراهن"],E:["Ear Muffs","گوش‌بند"],F:["Fedora","شاپو"],G:["Gloves","دستکش"],H:["Hat","کلاه"],I:["Insole","کفی"],J:["Jacket","کاپشن"],K:["Kimono","کیمونو"],L:["Leggings","ساپورت"],M:["Mittens","دستکش"],N:["Nightgown","خواب"],O:["Overcoat","پالتو"],P:["Pants","شلوار"],Q:["Quilted Jacket","کاپشن"],R:["Raincoat","بارانی"],S:["Shirt","پیراهن"],T:["Tie","کراوات"],U:["Underwear","زیر"],V:["Vest","جلیقه"],W:["Waistcoat","جلیقه"],X:["X-large Shirt","پیراهن"],Y:["Yoga Pants","یوگا"],Z:["Zip-up","زیپ"]}},
+  clothing:{fa:"پوشاک",en:"Clothing",emo:"👕👖",d:{A:["Apron","پیش‌بند"],B:["Blouse","بلوز"],C:["Coat","کت"],D:["Dress","پیراهن"],E:["Ear Muffs","گوش‌بند"],F:["Fedora","شاپو"],G:["Gloves","دستکش"],H:["Hat","کلاه"],I:["Insole","کفی"],J:["Jacket","کاپشن"],K:["Kimono","کیمونو"],L:["Leggings","ساپورت"],M:["Manteau","مانتو"],N:["Nightgown","خواب"],O:["Overcoat","پالتو"],P:["Pants","شلوار"],Q:["Quilted Jacket","کاپشن"],R:["Raincoat","بارانی"],S:["Shirt","پیراهن"],T:["Tie","کراوات"],U:["Underwear","زیر"],V:["Vest","جلیقه"],W:["Waistcoat","جلیقه"],X:["X-large Shirt","پیراهن"],Y:["Yoga Pants","یوگا"],Z:["Zip-up","زیپ"]}},
   instrument:{fa:"سازها",en:"Instruments",emo:"🎸🎹",d:{A:["Accordion","آکاردئون"],B:["Banjo","بانجو"],C:["Cello","ویولنسل"],D:["Drum","طبل"],E:["Electric Guitar","گیتار برقی"],F:["Flute","فلوت"],G:["Guitar","گیتار"],H:["Harmonica","دهنی"],I:["Ipu","هاوایی"],J:["Jembe","جمبه"],K:["Keyboard","کیبورد"],L:["Lute","لوت"],M:["Mandolin","ماندولین"],N:["Ney","نی"],O:["Oboe","ابوا"],P:["Piano","پیانو"],Q:["Qanun","قانون"],R:["Rabab","رباب"],S:["Santur","سنتور"],T:["Tar","تار"],U:["Ukulele","یوکلله"],V:["Violin","ویولن"],W:["Woodblock","وودبلاک"],X:["Xylophone","زایلوفون"],Y:["Yangqin","یانگ‌کین"],Z:["Zither","زیتر"]}},
   kitchen:{fa:"لوازم آشپزخانه",en:"Kitchen",emo:"🍳🥄",d:{A:["Apron","پیش‌بند"],B:["Blender","مخلوط‌کن"],C:["Cutting Board","تخته"],D:["Dish","بشقاب"],E:["Egg Beater","همزن"],F:["Fork","چنگال"],G:["Glass","لیوان"],H:["Hob","اجاق"],I:["Ice Tray","قالب یخ"],J:["Jug","پارچ"],K:["Kettle","کتری"],L:["Ladle","ملاقه"],M:["Mug","ماگ"],N:["Napkin","دستمال"],O:["Oven","فر"],P:["Pan","ماهیتابه"],Q:["Quiche Dish","ظرف"],R:["Rolling Pin","وردنه"],S:["Spoon","قاشق"],T:["Tongs","انبر"],U:["Utensils","ابزار"],V:["Vegetable Peeler","پوست‌کن"],W:["Whisk","همزن"],X:["Xiaolongbao Steamer","بخارپز"],Y:["Yeast Jar","مخمر"],Z:["Zester","رنده"]}},
   stationery:{fa:"لوازم‌التحریر",en:"Stationery",emo:"✏️📐",d:{A:["A4 Paper","کاغذ"],B:["Ballpoint Pen","خودکار"],C:["Compass","پرگار"],D:["Drawing Book","نقاشی"],E:["Eraser","پاک‌کن"],F:["Folder","پوشه"],G:["Glue","چسب"],H:["Highlighter","ماژیک"],I:["Ink Pen","خودنویس"],J:["Jotter","دفترچه"],K:["Knife","کاتر"],L:["Lead Pencil","نوکی"],M:["Marker","ماژیک"],N:["Notebook","دفتر"],O:["Oil Pastel","پاستل"],P:["Pencil","مداد"],Q:["Quill","قلم"],R:["Ruler","خط‌کش"],S:["Scissors","قیچی"],T:["Tape","چسب"],U:["USB Drive","فلش"],V:["Vellum Paper","پوستی"],W:["Watercolor","آبرنگ"],X:["X-Acto Knife","کاتر"],Y:["Yellow Pad","دفترچه"],Z:["Zipper Case","جامدانی"]}},
@@ -398,196 +432,310 @@ const C = {
   boyName:{fa:"اسم پسرانه",en:"Boy Names",emo:"👦🎩",d:{A:["Ali","علی"],B:["Babak","بابک"],C:["Cyrus","کوروش"],D:["Dariush","داریوش"],E:["Ehsan","احسان"],F:["Farhad","فرهاد"],G:["Ghasem","قاسم"],H:["Hamed","حامد"],I:["Iman","ایمان"],J:["Javad","جواد"],K:["Kamran","کامران"],L:["Reza","رضا"],M:["Mohammad","محمد"],N:["Navid","نوید"],O:["Omid","امید"],P:["Parviz","پرویز"],Q:["Qasem","قاسم"],R:["Rasoul","رسول"],S:["Sina","سینا"],T:["Taha","طه"],U:["Usman","عثمان"],V:["Vahid","وحید"],W:["William","ویلیام"],X:["Xerxes","خشایار"],Y:["Yasin","یاسین"],Z:["Zahra","زهرا"]}},
   mountain:{fa:"کوه‌ها",en:"Mountains",emo:"⛰️🏔️",d:{A:["Alborz","البرز"],B:["Behistun","بیستون"],C:["Caucasus","قفقاز"],D:["Damavand","دماوند"],E:["Elbrus","البروس"],F:["Fuji","فوجی"],G:["Ghori","غوری"],H:["Himalaya","هیمالیا"],I:["Ilam","ایلام"],J:["Jolmo Lungma","جولمو"],K:["Kilimanjaro","کیلیمانجارو"],L:["Logan","لوگان"],M:["Matterhorn","ماترهورن"],N:["Nanga Parbat","نانگا"],O:["Olympus","المپ"],P:["Pamir","پامیر"],Q:["Qandil","قندیل"],R:["Rocky","راکی"],S:["Sabalan","سبلان"],T:["Taftan","تفتان"],U:["Ural","اورال"],V:["Vesuvius","وزوو"],W:["Whitney","ویتنی"],X:["Xinling","شینلینگ"],Y:["Yosemite","یوسمیت"],Z:["Zagros","زاگرس"]}},
   space:{fa:"فضا",en:"Space",emo:"🪐🚀",d:{A:["Andromeda","آندرومدا"],B:["Black Hole","سیاه‌چاله"],C:["Comet","دنباله‌دار"],D:["Deep Space","دور"],E:["Earth","زمین"],F:["Fomalhaut","فم‌الحوت"],G:["Galaxy","کهکشان"],H:["Halo","هاله"],I:["Io","آیو"],J:["Jupiter","مشتری"],K:["Kepler","کپلر"],L:["Luna","ماه"],M:["Mars","مریخ"],N:["Neptune","نپتون"],O:["Orbit","مدار"],P:["Pluto","پلوتو"],Q:["Quasar","کوازار"],R:["Rocket","موشک"],S:["Saturn","زحل"],T:["Titan","تیتان"],U:["Uranus","اورانوس"],V:["Venus","زهره"],W:["Wormhole","کرم‌چاله"],X:["Xenon","زنون"],Y:["Ymir","ایمیر"],Z:["Zenith","سمت‌الرأس"]}},
-  element:{fa:"عناصر شیمیایی",en:"Elements",emo:"⚗️🧪",d:{A:["Argon","آرگون"],B:["Boron","بور"],C:["Carbon","کربن"],D:["Dubnium","دوبنیم"],E:["Einsteinium","اینشتینیوم"],F:["Fluorine","فلوئور"],G:["Gold","طلا"],H:["Hydrogen","هیدروژن"],I:["Iodine","ید"],J:["Jodium","ید"],K:["Krypton","کریپتون"],L:["Lithium","لیتیوم"],M:["Magnesium","منیزیم"],N:["Nitrogen","نیتروژن"],O:["Oxygen","اکسیژن"],P:["Phosphorus","فسفر"],Q:["Quicksilver","جیوه"],R:["Radium","رادیوم"],S:["Sodium","سدیم"],T:["Titanium","تیتانیوم"],U:["Uranium","اورانیوم"],V:["Vanadium","وانادیم"],W:["Tungsten","تنگستن"],X:["Xenon","زنون"],Y:["Yttrium","ایتریوم"],Z:["Zinc","روی"]}}
+  element:{fa:"عناصر",en:"Elements",emo:"⚗️🧪",d:{A:["Argon","آرگون"],B:["Boron","بور"],C:["Carbon","کربن"],D:["Dubnium","دوبنیم"],E:["Einsteinium","اینشتینیوم"],F:["Fluorine","فلوئور"],G:["Gold","طلا"],H:["Hydrogen","هیدروژن"],I:["Iodine","ید"],J:["Jodium","ید"],K:["Krypton","کریپتون"],L:["Lithium","لیتیوم"],M:["Magnesium","منیزیم"],N:["Nitrogen","نیتروژن"],O:["Oxygen","اکسیژن"],P:["Phosphorus","فسفر"],Q:["Quicksilver","جیوه"],R:["Radium","رادیوم"],S:["Sodium","سدیم"],T:["Titanium","تیتانیوم"],U:["Uranium","اورانیوم"],V:["Vanadium","وانادیم"],W:["Tungsten","تنگستن"],X:["Xenon","زنون"],Y:["Yttrium","ایتریوم"],Z:["Zinc","روی"]}}
 };
 
 /* =========================================================
-   ۱۲ درس پیشرفته + گرامر تخصصی
+   ۲۰ درس پیشرفته — فراتر از کتاب
    ========================================================= */
 const LESSONS = [
-  {id:"phonics",title:"آواشناسی پیشرفته",emo:"🔊",gr:false,desc:"Silent Letters، دیفتانگ‌ها، Stress",
-   body:`• حروف خاموش:\n   K → Knife, Knee, Know, Knock\n   B → Lamb, Comb, Climb, Debt\n   W → Write, Wrong, Wrist, Wrap\n   H → Hour, Honest, Ghost\n\n• دیفتانگ‌ها:\n   /eɪ/ → Cake, Rain, They\n   /aɪ/ → Time, Light, My\n   /oʊ/ → Go, Boat, Though\n   /aʊ/ → House, Now\n\n• Stress کلمه:\n   PHO-to-graph / pho-TO-gra-pher / pho-to-GRAPH-ic`},
-  {id:"tenses",title:"زمان‌های پیشرفته",emo:"⏰",gr:true,desc:"Perfect Tenses — گرامر تخصصی",
-   body:`• Present Perfect: have/has + p.p.\n   I have eaten.\n• Past Perfect: had + p.p.\n   He had left before I arrived.\n• Future Perfect: will have + p.p.\n   By 2030, I will have graduated.\n• Present Perfect Continuous: have been + V-ing\n   I have been studying for 2 hours.\n• Past Perfect Continuous: had been + V-ing\n   She had been waiting for an hour.\n\n⚠️ تفاوت Past Simple / Present Perfect:\n   I saw him yesterday. (زمان مشخص)\n   I have seen him before. (زمان نامشخص)`},
-  {id:"conditionals",title:"شرطی‌ها",emo:"🔀",gr:true,desc:"Conditionals — ۴ نوع",
-   body:`• Zero: If + present, present\n   If you heat water, it boils.\n• First: If + present, will + V\n   If it rains, I will stay home.\n• Second: If + past, would + V\n   If I were rich, I would travel.\n   ⚠️ در همه ضمایر from were (نه was)\n• Third: If + had + p.p., would have + p.p.\n   If I had studied, I would have passed.\n• Mixed: If + had + p.p., would + V\n   If I had slept, I would feel better now.`},
-  {id:"passive",title:"جملات مجهول",emo:"🔄",gr:true,desc:"Passive Voice — همه زمان‌ها",
-   body:`• ساختار: be + past participle\n• حال ساده: English is spoken here.\n• گذشته ساده: The book was written in 1990.\n• حال کامل: The work has been done.\n• گذشته کامل: It had been finished.\n• آینده: It will be completed.\n• Modal: It can be done / should be done.\n\n• در Passive، فاعل با "by" می‌آید:\n   Ali wrote the letter.\n   → The letter was written by Ali.`},
-  {id:"reported",title:"نقل قول غیرمستقیم",emo:"💬",gr:true,desc:"Reported Speech",
-   body:`• قاعده: یک زمان به عقب برمی‌گردد\n   Present → Past\n   Past → Past Perfect\n   will → would\n   can → could\n   may → might\n\n• "I am tired." → He said he was tired.\n• "I will come." → She said she would come.\n• "I have finished." → He said he had finished.\n\n• سوالات:\n   "Where do you live?" → He asked where I lived.\n• دستورات:\n   "Close the door!" → He told me to close the door.`},
-  {id:"vocab",title:"واژگان پیشرفته",emo:"📚",gr:false,desc:"Prefixes، Suffixes، Homophones",
-   body:`• پیشوندها:\n   un- → unhappy\n   re- → redo\n   dis- → disagree\n   pre- → prehistoric\n   mis- → misunderstand\n• پسوندها:\n   -ness → happiness\n   -ment → development\n   -tion → creation\n   -able → readable\n   -ful → beautiful\n• هم‌آوا:\n   their / there / they're\n   to / too / two\n   your / you're\n   its / it's\n   know / no`},
-  {id:"idioms",title:"اصطلاحات رایج",emo:"🎭",gr:false,desc:"Idioms پرکاربرد",
-   body:`• Break the ice — یخ جمع را شکستن\n• Piece of cake — مثل آب خوردن\n• Hit the books — درس خواندن جدی\n• Under the weather — ناخوش\n• Once in a blue moon — به ندرت\n• Cost an arm and a leg — خیلی گران\n• Let the cat out of the bag — لو دادن\n• Bite the bullet — تحمل کردن\n• Kill two birds with one stone — یک تیر دو نشان\n• The ball is in your court — تصمیم با توست`},
-  {id:"phrasal",title:"افعال عبارتی",emo:"🧩",gr:true,desc:"Phrasal Verbs",
-   body:`• give up — تسلیم شدن\n• look after — مراقبت کردن\n• put off — به تعویق انداختن\n• turn on/off — روشن/خاموش\n• come across — تصادفاً دیدن\n• run out of — تمام کردن\n• get along with — کنار آمدن\n• take care of — رسیدگی کردن\n• look forward to — مشتاق بودن\n• carry on — ادامه دادن`},
-  {id:"prepositions",title:"حروف اضافه",emo:"🧭",gr:true,desc:"Prepositions زمان و مکان",
-   body:`• زمان:\n   in → ماه، سال، فصل\n   on → روز، تاریخ\n   at → ساعت، لحظه\n• مکان:\n   in → داخل: in the room\n   on → سطح: on the table\n   at → نقطه: at the door\n• وسایل نقلیه:\n   in a car, in a taxi\n   on a bus, on a train\n• ترکیبات:\n   by mistake, on purpose, in love, at risk`},
-  {id:"irregular",title:"افعال بی‌قاعده",emo:"📝",gr:true,desc:"Irregular Verbs",
-   body:`• go → went → gone\n• come → came → come\n• see → saw → seen\n• do → did → done\n• take → took → taken\n• give → gave → given\n• write → wrote → written\n• speak → spoke → spoken\n• break → broke → broken\n• choose → chose → chosen\n• forget → forgot → forgotten\n• know → knew → known\n• begin → began → begun\n• drink → drank → drunk\n• sing → sang → sung`},
-  {id:"pronunciation",title:"تلفظ و لهجه",emo:"🎤",gr:false,desc:"تلفظ آمریکایی",
-   body:`• حرف T در وسط:\n   Water → "wader" (فلپ)\n   Better → "bedder"\n   Butter → "buder"\n• -ed پایان افعال:\n   /t/ بعد از بی‌صدا: walked, stopped\n   /d/ بعد از صدادار: played, loved\n   /ɪd/ بعد از t یا d: wanted, needed\n• لحن:\n   سوال بله/خیر → لحن بالا\n   سوال Wh → لحن پایین\n• حروف خاموش:\n   -e آخر کلمه: hope, name\n   gh در night, light, though`},
-  {id:"roleplay",title:"مکالمه و ایفای نقش",emo:"🎭",gr:false,desc:"Role-Play — تمرین مکالمه",
-   body:`• در این بخش یاد می‌گیری چطور در موقعیت‌های واقعی به انگلیسی مکالمه کنی.\n\n• سناریوها:\n   ۱. سفارش غذا در رستوران\n   ۲. خرید از فروشگاه\n   ۳. پرسیدن آدرس\n   ۴. معرفی خودت\n   ۵. مکالمه تلفنی\n   ۶. قرار ملاقات پزشک\n\n• نکات کلیدی:\n   - با احترام شروع کن: Excuse me / Hello\n   - واضح و شمرده صحبت کن\n   - از کلمات مؤدبانه استفاده کن: please, thank you, sorry\n   - در پایان: Thank you / Goodbye\n\n• در آزمون، از تو خواسته می‌شود نقش خودت را در یک مکالمه ایفا کنی. صدای گوینده از میکروفن پخش می‌شود و تو باید پاسخ مناسب بدهی.`}
+  {id:"l1",title:"Lesson 1: My Name — نام من",emo:"👋",gr:false,
+   desc:"معرفی خود، احوالپرسی، هجی کردن نام",
+   body:`📘 محتوای درس:\n\n• Functions (کارکردها):\n   Introducing yourself — معرفی خودت\n   Greeting — احوالپرسی\n\n• Sounds & Letters:\n   Ee /iː/ — مثل: me, be, we\n   Bb /biː/ — مثل: boy, book\n   Pp /piː/ — مثل: pen, park\n\n• Key Language (زبان کلیدی):\n   What's your name?  → اسمت چیه؟\n   My name is Ali. / I'm Ali.  → اسم من علیه\n   What's your first name?  → اسم کوچکت چیه؟\n   What's your last name?  → فامیلت چیه؟\n   Mr. / Mrs. / Miss  → آقا / خانم متاهل / خانم مجرد\n   Hello / Hi  → سلام\n   Good morning / afternoon  → صبح/بعدازظهر بخیر\n   How are you today?  → امروز حالت چطوره؟\n   Fine, thanks. / Great, thanks.  → خوبم ممنون\n\n• Conversation (مکالمه کتاب):\n   Teacher: Hi, class!\n   Students: Hello, Teacher.\n   Teacher: Thank you, sit down, please. I'm your English teacher. My name is Ahmad Karimi. Now, you tell me your names. What's your name?\n   Student 1: My name is Ali Mohammadi.\n   Teacher: How are you, Ali?\n   Student 1: Fine, thank you.\n\n• Grammar (گرامر):\n   ① فعل to be (am / is / are):\n      I am → I'm\n      You are → You're\n      He / She / It is → He's / She's / It's\n      We / You / They are → We're / You're / They're\n   ② ساختار سوالی:\n      What's your name? = What is your name?\n      جواب: My name is... / I am...\n   ③ حروف تعریف a / an:\n      a boy / a girl / an English teacher\n\n• Spelling (هجی کردن):\n   How do you spell your name?\n   K-O-M-I-J-A-N-I`},
+
+  {id:"l2",title:"Lesson 2: My Classmates — همکلاسی‌ها",emo:"👥",gr:false,
+   desc:"معرفی دیگران، دوستان، همکلاسی",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Introducing others — معرفی دیگران\n   Asking someone's name — پرسیدن اسم کسی\n\n• Sounds & Letters:\n   Aa /eɪ/ — مثل: name, game\n   Kk /keɪ/ — مثل: key, kite\n   Mm /em/ — مثل: man, mother\n\n• Key Language:\n   Who's that boy?  → اون پسر کیه؟\n   He's my friend Erfan.  → اون دوستم عرفانه\n   This is my friend Parham.  → این دوستم پرهامه\n   Nice to meet you.  → از آشنایی خوشحالم\n   Nice to meet you, too.  → منم همینطور\n   Sorry, what's your last name again?  → ببخشید فامیلت چی بود؟\n\n• Conversation:\n   Ali: Who is that boy?\n   Parham: That's Erfan. He's our new classmate.\n   Ali: Let's talk to him.\n   Parham: Hi, Erfan. This is Ali.\n   Ali: Nice to meet you, Erfan.\n   Erfan: Nice to meet you, too.\n   Ali: Welcome to our school.\n   Erfan: Thank you.\n\n• Grammar:\n   ① ضمایر اشاره:\n      This → این (نزدیک)\n      That → آن (دور)\n   ② Who's = Who is\n   ③ صفات ملکی:\n      My / Your / His / Her / Its / Our / Their`},
+
+  {id:"l3",title:"Lesson 3: My Age — سن من",emo:"🎂",gr:false,
+   desc:"سن، تاریخ تولد، ماه‌ها، اعداد",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about your age — درباره سنت صحبت کن\n   Talking about dates — درباره تاریخ صحبت کن\n\n• Sounds & Letters:\n   Ii /aɪ/ — مثل: I, fine, time\n   Tt /tiː/ — مثل: tall, ten\n   Nn /en/ — مثل: name, nose\n\n• Key Language:\n   How old are you?  → چند سالته؟\n   I'm 12 years old.  → ۱۲ سالمه\n   When's your birthday?  → تولدت کیه؟\n   It's in Mehr.  → توی مهره\n   Happy birthday!  → تولدت مبارک\n   Really?  → واقعاً؟\n\n• Months of the year (ماه‌های سال):\n   Iranian: Farvardin, Ordibehesht, Khordad, Tir, Mordad, Shahrivar, Mehr, Aban, Azar, Dey, Bahman, Esfand\n   English: January, February, March, April, May, June, July, August, September, October, November, December\n\n• Days of the week (روزهای هفته):\n   Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday\n\n• Numbers 1-100 (اعداد):\n   one, two, three, ..., twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred\n\n• Grammar:\n   ① How old + am/is/are:\n      How old are you? → I'm 12.\n      How old is he? → He's 13.\n   ② in + ماه:\n      My birthday is in Mehr.`},
+
+  {id:"l4",title:"Lesson 4: My Family — خانواده من",emo:"👨‍👩‍👧",gr:false,
+   desc:"خانواده، شغل‌ها، نسبت‌ها",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about your family — درباره خانواده صحبت کن\n\n• Sounds & Letters:\n   Uu /juː/ — مثل: uncle, use\n   Ss /es/ — مثل: sister, six\n   Gg /dʒiː/ — مثل: girl, game\n\n• Key Language:\n   How old is your father?  → پدرت چند سالشه؟\n   He's 38 years old.  → ۳۸ سالشه\n   What's your father's job?  → شغل پدرت چیه؟\n   He's a mechanic.  → مکانیکه\n   She's a housewife.  → خانه‌داره\n\n• Family members (اعضای خانواده):\n   mother, father, sister, brother, uncle, aunt,\n   grandmother, grandfather, wife, husband,\n   son, daughter, cousin\n\n• Jobs (شغل‌ها):\n   mechanic (مکانیک), doctor (دکتر), nurse (پرستار),\n   housewife (خانه‌دار), teacher (معلم), dentist (دندانپزشک),\n   pilot (خلبان), driver (راننده), shopkeeper (فروشنده),\n   engineer (مهندس), painter (نقاش), farmer (کشاورز),\n   florist (گلفروش), policeman (پلیس), postman (پستچی),\n   waiter (پیشخدمت), baker (نانوا), cook (آشپز)\n\n• Grammar:\n   ① What's your father's job? → He's a mechanic.\n   ② حرف تعریف a/an با شغل‌ها:\n      He's a doctor. / She's an engineer.\n   ③ صفات ملکی: my, your, his, her, our, their`},
+
+  {id:"l5",title:"Lesson 5: My Appearance — ظاهر من",emo:"👔",gr:false,
+   desc:"ظاهر، قد، لباس، رنگ‌ها",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about appearance — درباره ظاهر صحبت کن\n\n• Sounds & Letters:\n   Dd /diː/ — مثل: dad, door\n   Ll /el/ — مثل: look, love\n   Rr /ɑːr/ — مثل: red, room\n\n• Key Language:\n   Who is Mr. Davoodi?  → آقای داوودی کیه؟\n   He's the tall man.  → اون مرد قدبلنده\n   He's wearing a gray suit.  → کت و شلوار خاکستری پوشیده\n   Which one is Ladan?  → کدومش لدانه؟\n   She's wearing white shoes.  → کفش سفید پوشیده\n\n• Height & Age (قد و سن):\n   tall (قدبلند), short (قدکوتاه),\n   young (جوان), old (پیر)\n\n• Clothes (لباس‌ها):\n   suit, shirt, jacket, trousers/pants, manteau,\n   scarf, chador, shoes, gloves, T-shirt,\n   coat, sweater, glasses, dress, cap, sandals,\n   socks, belt\n\n• Colors (رنگ‌ها):\n   black, white, red, blue, yellow, green,\n   brown, gray, orange, pink\n\n• Grammar:\n   ① Wear → wearing (حال استمراری):\n      He is wearing a blue suit.\n      She is wearing white shoes.\n   ② Which one → کدوم یکی؟\n   ③ پرسیدن معنی: What's ... in English?`},
+
+  {id:"l6",title:"Lesson 6: My House — خانه من",emo:"🏠",gr:false,
+   desc:"خانه، اتاق‌ها، کارهای در حال انجام",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about where people are — صحبت از جای افراد\n   Talking about what people are doing — صحبت از کارهای در حال انجام\n\n• Sounds & Letters:\n   Ff /ef/ — مثل: father, family\n   Vv /viː/ — مثل: very, village\n   Ww /ˈdʌbljuː/ — مثل: wall, window\n\n• Key Language:\n   Where are you?  → کجایی؟\n   I'm in the kitchen.  → توی آشپزخانه‌ام\n   Where's he?  → اون کجاست؟\n   He's in the living room.  → توی نشیمنه\n   What are you doing?  → چیکار می‌کنی؟\n   I'm cooking.  → دارم آشپزی می‌کنم\n   What is he doing?  → داره چیکار می‌کنه؟\n   He's watching TV.  → داره تلویزیون تماشا می‌کنه\n\n• Parts of house (بخش‌های خانه):\n   house, room, bedroom, kitchen, living room,\n   garage, bathroom, office, stairs,\n   flat/apartment, villa, tower\n\n• Home items (وسایل خانه):\n   bookcase, blanket, clock, table, computer,\n   television, mirror, radio, comb, newspaper\n\n• Activities (فعالیت‌ها):\n   cooking, playing, washing, fixing,\n   watching, working, reading, eating,\n   studying, drinking, calling\n\n• Grammar:\n   ① حال استمراری (Present Continuous):\n      am/is/are + V-ing\n      I am cooking. / He is studying.\n   ② Where + am/is/are:\n      Where is she? → She's in the kitchen.`},
+
+  {id:"l7",title:"Lesson 7: My Address — آدرس من",emo:"📞",gr:false,
+   desc:"آدرس، تلفن، زمان",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about your address/phone number\n   Telling the time\n\n• Sounds & Letters:\n   Oo /oʊ/ — مثل: open, old\n   Hh /eɪtʃ/ — مثل: home, house\n   Xx /eks/ — مثل: box, six\n   Yy /waɪ/ — مثل: yes, year\n\n• Key Language:\n   What's your address?  → آدرست چیه؟\n   Where do you live?  → کجا زندگی می‌کنی؟\n   15 Shahid Hakim Street.  → خیابان شهید حکیم، ۱۵\n   What's your telephone number?  → شماره تلفنت چیه؟\n   It's 433-7891.\n   What time is it?  → ساعت چنده؟\n   It's 10 o'clock.  → ساعت ۱۰ه\n   At 5:45 in the afternoon.  → ساعت ۵:۴۵ بعدازظهر\n\n• Address items (اجزای آدرس):\n   address, home, street, telephone, number,\n   mobile/cell phone, e-mail address, call,\n   go, live, visit, time, a.m., p.m., o'clock, evening\n\n• Numbers:\n   One o'clock, half past two, quarter past three, etc.\n\n• Grammar:\n   ① What time is it? → It's + ساعت\n   ② At + ساعت: I'm going at 5 o'clock.\n   ③ آینده با going to: I'm going to visit him.`},
+
+  {id:"l8",title:"Lesson 8: My Favorite Food — غذای مورد علاقه",emo:"🍽️",gr:false,
+   desc:"غذا، نوشیدنی، پیشنهاد دادن",
+   body:`📘 محتوای درس:\n\n• Functions:\n   Talking about your favorite food\n   Making suggestions — پیشنهاد دادن\n\n• Sounds & Letters:\n   Cc /siː/ — مثل: cake, car\n   Jj /dʒeɪ/ — مثل: juice, jump\n   Qq /kjuː/ — مثل: question, quince\n   Zz /ziː/ — مثل: zoo, zucchini\n\n• Key Language:\n   I'm hungry.  → گرسنه‌ام\n   I'm thirsty.  → تشنه‌ام\n   What's your favorite food?  → غذای مورد علاقت چیه؟\n   Rice and kebab.  → برنج و کباب\n   What's your favorite drink?  → نوشیدنی مورد علاقت چیه؟\n   Orange juice.  → آب پرتقال\n   What do you like to eat/drink?  → چی دوست داری بخوری/بنوشی؟\n   Let's have something to eat/drink.  → بیا یه چیزی بخوریم/بنوشیم\n   How about some cake and milk?  → نظرت درباره کیک و شیر چیه؟\n\n• Food (غذا):\n   bread, rice, kebab, chicken, salad, fruit, dates,\n   cake, jelly, quince, coconut, zucchini, egg, honey,\n   cheese, fish, spaghetti, pineapple, ice-cream,\n   apple, carrot, onion, banana, potato, tomato\n\n• Drinks (نوشیدنی):\n   milk, tea, water, orange juice, yoghurt\n\n• Feelings:\n   hungry, thirsty, full, enough\n\n• Grammar:\n   ① What do you like to + V: What do you like to eat?\n   ② How about + اسم: How about some cake?\n   ③ Let's + V: Let's go to the kitchen.`},
+
+  /* ============ دروس گرامر تخصصی ============ */
+  {id:"g1",title:"گرامر ۱: Present Simple",emo:"⏰",gr:true,
+   desc:"حال ساده — پایه‌ای‌ترین زمان انگلیسی",
+   body:`📐 Present Simple — حال ساده\n\n• کاربرد:\n   کارهای روزمره، عادت‌ها، حقایق علمی\n   I go to school every day.\n   The sun rises in the east.\n\n• ساختار:\n   فاعل + فعل ساده\n   فاعل سوم شخص مفرد (he/she/it) + فعل + s/es\n\n   I / You / We / They → work\n   He / She / It → works\n\n• مثال‌ها:\n   I play football.  → من فوتبال بازی می‌کنم\n   She plays football.  → او فوتبال بازی می‌کند\n   They study English.  → آن‌ها انگلیسی مطالعه می‌کنند\n   He studies English.  → او انگلیسی مطالعه می‌کند\n\n• منفی کردن:\n   do not / don't برای I, You, We, They\n   does not / doesn't برای He, She, It\n\n   I don't like coffee.\n   She doesn't like coffee.\n\n• سوالی کردن:\n   Do + فاعل + فعل؟\n   Does + فاعل + فعل؟\n\n   Do you like pizza? → Yes, I do / No, I don't\n   Does he play football? → Yes, he does / No, he doesn't\n\n• کلمات کلیدی:\n   always (همیشه), usually (معمولاً), often (غالباً),\n   sometimes (بعضی وقت‌ها), never (هرگز),\n   every day/week/month (هر روز/هفته/ماه)`},
+
+  {id:"g2",title:"گرامر ۲: Present Continuous",emo:"⏳",gr:true,
+   desc:"حال استمراری — کارهای در حال انجام",
+   body:`📐 Present Continuous — حال استمراری\n\n• کاربرد:\n   کاری که همین حالا در حال انجامه\n   I am studying right now.\n\n• ساختار:\n   am / is / are + V-ing\n\n   I am working.\n   He is studying.\n   They are playing.\n\n• قاعده ing:\n   V + ing →  play → playing\n   V-e + ing →  write → writing (e حذف می‌شود)\n   V + double consonant + ing →  run → running\n\n• مثال‌ها:\n   She is reading a book.  → داره کتاب می‌خونه\n   We are watching TV.  → داریم تلویزیون می‌بینیم\n   The baby is sleeping.  → بچه داره می‌خوابه\n\n• منفی:\n   am not / isn't / aren't + V-ing\n   He isn't working.\n   They aren't playing.\n\n• سوالی:\n   Am/Is/Are + فاعل + V-ing?\n   Are you studying? → Yes, I am / No, I'm not\n\n• کلمات کلیدی:\n   now (حالا), right now (همین الان),\n   at the moment (در این لحظه),\n   Look! (نگاه کن!), Listen! (گوش کن!)`},
+
+  {id:"g3",title:"گرامر ۳: There is / There are",emo:"📦",gr:true,
+   desc:"وجود داشتن — ساختار پرکاربرد",
+   body:`📐 There is / There are\n\n• کاربرد:\n   برای گفتن وجود چیزی در جایی\n\n• ساختار:\n   There is + اسم مفرد\n   There are + اسم جمع\n\n• مثال:\n   There is a book on the table.  → یک کتاب روی میز هست\n   There are three books on the table.  → سه کتاب روی میز هست\n   There is some water in the glass.  → مقداری آب در لیوان هست\n\n• منفی:\n   There isn't a book...\n   There aren't any books...\n\n• سوالی:\n   Is there a book?  → Yes, there is / No, there isn't\n   Are there any books?  → Yes, there are / No, there aren't\n\n• some / any:\n   some → در جملات مثبت\n   any → در جملات منفی و سوالی\n\n   There is some milk in the fridge.\n   There isn't any milk in the fridge.\n   Is there any milk in the fridge?`},
+
+  {id:"g4",title:"گرامر ۴: Questions & Answers",emo:"❓",gr:true,
+   desc:"سوالات پرکاربرد و پاسخ آن‌ها",
+   body:`📐 سوالات پرکاربرد انگلیسی\n\n• What + is / are:\n   What's your name? — My name is Ali.\n   What's your job? — I'm a teacher.\n   What's this? — It's a pen.\n   What are these? — They're books.\n\n• Where + is / are / do:\n   Where is he? — He's in the room.\n   Where are you from? — I'm from Iran.\n   Where do you live? — I live in Tehran.\n\n• Who + is / are:\n   Who's he? — He's my teacher.\n   Who's that girl? — She's my sister.\n\n• When:\n   When is your birthday? — It's in Mehr.\n   When do you study? — I study at night.\n\n• How:\n   How are you? — Fine, thanks.\n   How old are you? — I'm 13.\n   How do you spell it? — A-L-I.\n\n• How many:\n   How many books? — Three books.\n   How many students? — Twenty.\n\n• Which one:\n   Which one is Ali? — He's the tall boy.`},
+
+  {id:"g5",title:"گرامر ۵: Adjectives & Comparison",emo:"⚖️",gr:true,
+   desc:"صفت‌ها و مقایسه",
+   body:`📐 Adjectives and Comparison\n\n• صفت‌ها (Adjectives):\n   صفت کلمه‌ای است که اسم را توصیف می‌کند:\n   tall boy, short girl, big house, small cat,\n   old man, young woman, new book, old car\n\n• ترتیب صفت:\n   Opinion → Size → Age → Shape → Color → Origin → Material → Purpose\n   A beautiful big old round brown Iranian wooden table\n\n• مقایسه‌ی صفت‌های کوتاه (یک سیلابی):\n   adj + er + than\n   Ali is taller than Reza.\n   This book is older than that one.\n\n• مقایسه‌ی صفت‌های بلند (دو سیلاب یا بیشتر):\n   more + adj + than\n   Ali is more intelligent than Reza.\n   This car is more expensive than that car.\n\n• صفت‌های بی‌قاعده:\n   good → better than\n   bad → worse than\n   far → farther/further than\n\n• عالی‌ترین (Superlative):\n   the + adj + est → tallest, shortest\n   the most + adj → most intelligent\n   the best, the worst`}
 ];
 
 /* =========================================================
-   توزیع سوالات
+   توزیع سوالات آزمون فینال
    ========================================================= */
 const TOPIC_DIST = {
-  "آواشناسی و تلفظ":2,
-  "دستور زبان (گرامر)":5,
+  "آواشناسی و تلفظ":3,
+  "دستور زبان":5,
   "واژگان و معانی":3,
   "اصطلاحات و افعال عبارتی":2,
   "حروف اضافه":2,
   "تلفظ با میکروفن":3,
-  "ایفای نقش (Role-Play)":3
+  "ایفای نقش":2
 };
 
 /* =========================================================
-   ۲۰ سوال فینال — MC + MIC + RP
+   ۲۰ سوال آزمون فینال — سخت و پیچیده
    ========================================================= */
 const QUIZ = [
   {topic:"آواشناسی و تلفظ",type:"mc",
-   q:"حرف کدام گزینه در کلمهٔ «Knife» خاموش است؟",
-   o:["K","N","I","F"],a:0,
-   exp:"حرف K در ابتدای Knife, Knee, Know, Knock خاموش است."},
+   q:"Which silent letter is in the word «Know»?",
+   o:["W","K","N","O"],a:1,
+   exp:"حرف K در ابتدای Know, Knee, Knock خاموش است."},
   {topic:"آواشناسی و تلفظ",type:"mc",
-   q:"کدام کلمه دارای صدای دیفتانگ /aɪ/ است؟",
-   o:["Time","Team","Tame","Tom"],a:0,
-   exp:"در Time، i صدای /aɪ/ دارد."},
-  {topic:"دستور زبان (گرامر)",type:"mc",
-   q:"کدام جمله صحیح است؟",
-   o:["I have seen him yesterday","I saw him yesterday","I have saw him","I seen him yesterday"],a:1,
-   exp:"با قید زمان گذشتهٔ مشخص (yesterday) از Past Simple استفاده می‌کنیم."},
-  {topic:"دستور زبان (گرامر)",type:"mc",
-   q:"If I ___ rich, I would travel the world.",
-   o:["am","was","were","be"],a:2,
-   exp:"شرطی نوع دوم: در همه ضمایر از were استفاده می‌کنیم."},
-  {topic:"دستور زبان (گرامر)",type:"mc",
-   q:"The letter ___ by Ali last week.",
-   o:["wrote","was written","has written","is writing"],a:1,
-   exp:"مجهول در گذشته: was/were + past participle."},
-  {topic:"دستور زبان (گرامر)",type:"mc",
-   q:"By the time we arrived, the movie ___.",
-   o:["started","has started","had started","was starting"],a:2,
-   exp:"Past Perfect برای عملی که قبل از عمل گذشتهٔ دیگر رخ داده."},
-  {topic:"دستور زبان (گرامر)",type:"mc",
-   q:"He said, \"I will call you.\" → He said he ___ call me.",
-   o:["will","would","can","did"],a:1,
-   exp:"در نقل قول غیرمستقیم، will به would تبدیل می‌شود."},
+   q:"Which word has the /aɪ/ sound?",
+   o:["Team","Time","Tame","Tom"],a:1,
+   exp:"Time دارای دیفتانگ /aɪ/ است."},
+  {topic:"آواشناسی و تلفظ",type:"mc",
+   q:"Choose the correct pronunciation of «Could»:",
+   o:["/kuld/","/kaʊd/","/kʊd/","/kjuːd/"],a:2,
+   exp:"در Could حرف l خاموش است و /kʊd/ تلفظ می‌شود."},
+  {topic:"دستور زبان",type:"mc",
+   q:"Choose the correct sentence:",
+   o:["She don't like coffee","She doesn't like coffee","She don't likes coffee","She not like coffee"],a:1,
+   exp:"با She از doesn't استفاده می‌کنیم و فعل ساده می‌ماند."},
+  {topic:"دستور زبان",type:"mc",
+   q:"My father ___ in the garage now.",
+   o:["works","is working","worked","work"],a:1,
+   exp:"با now از حال استمراری استفاده می‌شود: is working."},
+  {topic:"دستور زبان",type:"mc",
+   q:"There ___ some books on the table.",
+   o:["is","are","be","am"],a:1,
+   exp:"با اسم جمع books از are استفاده می‌کنیم."},
+  {topic:"دستور زبان",type:"mc",
+   q:"What ___ your father do?",
+   o:["do","is","does","are"],a:2,
+   exp:"برای سوم شخص مفرد از does استفاده می‌شود."},
+  {topic:"دستور زبان",type:"mc",
+   q:"Ali is ___ than Reza.",
+   o:["tall","taller","tallest","more tall"],a:1,
+   exp:"مقایسه با صفت یک سیلابی: taller than."},
   {topic:"واژگان و معانی",type:"mc",
-   q:"معنی «under the weather» چیست؟",
-   o:["زیر باران","خوشحال","ناخوش و مریض","در سفر"],a:2,
-   exp:"«under the weather» یعنی کسالت و ناخوشی."},
+   q:"What does «housewife» mean?",
+   o:["خانه‌ساز","خانه‌دار","همسایه","خانه"],
+   a:1,exp:"housewife یعنی خانم خانه‌دار."},
   {topic:"واژگان و معانی",type:"mc",
-   q:"پیشوند «dis-» در کلمهٔ «disagree» چه معنایی می‌دهد؟",
-   o:["دوباره","مخالف","قبل","بیشتر"],a:1,
-   exp:"dis- معنای منفی و مخالف می‌دهد."},
+   q:"Which word means «خرگوش»?",
+   o:["Rabbit","Rat","Bear","Bird"],a:0,
+   exp:"Rabbit یعنی خرگوش."},
   {topic:"واژگان و معانی",type:"mc",
-   q:"کدام کلمه درست املاء شده است؟",
-   o:["recieve","neccessary","accommodate","definately"],a:2,
-   exp:"accommodate درست است (دو c، دو m)."},
+   q:"What is the opposite of «tall»?",
+   o:["Long","Big","Short","Small"],a:2,
+   exp:"مخالف tall (قدبلند) می‌شود short (قدکوتاه)."},
   {topic:"اصطلاحات و افعال عبارتی",type:"mc",
-   q:"«look after» یعنی چه؟",
-   o:["نگاه کردن","مراقبت کردن","جستجو","منتظر ماندن"],a:1,
-   exp:"look after = مراقبت کردن از کسی."},
+   q:"What does «get up» mean?",
+   o:["بلند شدن از خواب","بالا رفتن","گم شدن","نشستن"],a:0,
+   exp:"get up یعنی از خواب بلند شدن."},
   {topic:"اصطلاحات و افعال عبارتی",type:"mc",
-   q:"کدام عبارت یعنی «به تعویق انداختن»؟",
-   o:["put on","put off","put up","put out"],a:1,
-   exp:"put off = به تعویق انداختن."},
+   q:"What does «look after» mean?",
+   o:["نگاه کردن","مراقبت کردن","پیدا کردن","رها کردن"],a:1,
+   exp:"look after یعنی مراقبت کردن از کسی."},
   {topic:"حروف اضافه",type:"mc",
-   q:"«I'll see you ___ Friday.»",
+   q:"I go to school ___ Monday.",
    o:["in","on","at","by"],a:1,
    exp:"برای روزهای هفته از on استفاده می‌شود."},
   {topic:"حروف اضافه",type:"mc",
-   q:"کدام جمله صحیح است؟",
-   o:["I arrived in the airport","I arrived at the airport","I arrived on the airport","I arrived to the airport"],a:1,
-   exp:"برای مکان‌های خاص از at استفاده می‌شود."},
+   q:"My birthday is ___ Mehr.",
+   o:["in","on","at","by"],a:0,
+   exp:"برای ماه‌ها از in استفاده می‌شود."},
   {topic:"تلفظ با میکروفن",type:"mic",
-   q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
-   en:"I have lived in Tehran for ten years.",
-   exp:"به استرس کلمات توجه کن: I HAVE lived in teh-RAAN for TEN years."},
+   q:"این جمله را بلند و واضح تلفظ کن:",
+   en:"My name is Ali and I am thirteen years old.",
+   exp:"به استرس کلمات توجه کن: My NAME is a-LI and I am THIR-teen YEARS old."},
   {topic:"تلفظ با میکروفن",type:"mic",
-   q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
-   en:"Could you please pass me the butter?",
-   exp:"در Could حرف l خاموش: /kʊd/. در butter، t به d تبدیل می‌شود."},
+   q:"این جمله را بلند و واضح تلفظ کن:",
+   en:"My father is a doctor and my mother is a teacher.",
+   exp:"به تلفظ درست doctor /ˈdɒktər/ و teacher /ˈtiːtʃər/ دقت کن."},
   {topic:"تلفظ با میکروفن",type:"mic",
-   q:"جملهٔ زیر را بلند و واضح تلفظ کن:",
-   en:"Practice makes perfect, so keep trying every day.",
-   exp:"به استرس در prac-TICE و PER-fect توجه کن."},
-  {topic:"ایفای نقش (Role-Play)",type:"rp",
-   q:"در رستوران هستی. گارسون می‌پرسد: «What would you like to order?» — پاسخ مناسب بده.",
+   q:"این جمله را بلند و واضح تلفظ کن:",
+   en:"I like rice and kebab for lunch.",
+   exp:"به تلفظ rice /raɪs/ و kebab /kɪˈbæb/ توجه کن."},
+  {topic:"ایفای نقش",type:"rp",
+   q:"در رستوران هستی. گارسون می‌پرسد: What would you like to order? — پاسخ مناسب بده.",
    speaker:"What would you like to order?",
-   expected:"I would like a pizza please",
-   exp:"برای سفارش مؤدبانه از «I would like ...» یا «Could I have ...?» استفاده می‌کنیم."},
-  {topic:"ایفای نقش (Role-Play)",type:"rp",
-   q:"در خیابان گم شده‌ای. از یک عابر می‌پرسی آدرس کجاست. عابر می‌گوید: «Where do you want to go?» — پاسخ مناسب بده.",
-   speaker:"Where do you want to go?",
-   expected:"I want to go to the train station",
-   exp:"برای پرسیدن آدرس از «Excuse me, how can I get to ...?» استفاده می‌کنیم."},
-  {topic:"ایفای نقش (Role-Play)",type:"rp",
-   q:"معلم از تو می‌پرسد: «How are you today?» — پاسخ مناسب بده.",
+   expected:"I would like some rice and kebab",
+   exp:"برای سفارش مؤدبانه از I would like ... استفاده کن."},
+  {topic:"ایفای نقش",type:"rp",
+   q:"معلم از تو می‌پرسد: How are you today? — پاسخ مناسب بده.",
    speaker:"How are you today?",
    expected:"I am fine thank you",
-   exp:"پاسخ مؤدبانه به «How are you?»: «I'm fine, thank you. And you?»"}
+   exp:"پاسخ مؤدبانه: I'm fine, thank you. And you?"}
 ];
 
 /* =========================================================
-   داده‌های پایه هفتم — Prospect 1
+   پایه هفتم — واژه‌نامهٔ کامل از کتاب PDF
    ========================================================= */
 const G7_VOCAB = {
-  "درس ۱ — My Name": [["Name","نام"],["First Name","نام کوچک"],["Last Name","نام خانوادگی"],["Mr","آقا"],["Mrs","خانم"],["Miss","خانم مجرد"],["Hello","سلام"],["Teacher","معلم"],["Student","دانش‌آموز"],["Class","کلاس"]],
-  "درس ۲ — My Classmates": [["Boy","پسر"],["Girl","دختر"],["Man","مرد"],["Woman","زن"],["Friend","دوست"],["Classmate","همکلاسی"],["Welcome","خوش آمدید"],["Meet","ملاقات"]],
-  "درس ۳ — My Age": [["Age","سن"],["Birthday","تولد"],["Month","ماه"],["Year","سال"],["Number","عدد"],["When","کی"],["How old","چند ساله"]],
-  "درس ۴ — My Family": [["Family","خانواده"],["Father","پدر"],["Mother","مادر"],["Sister","خواهر"],["Brother","برادر"],["Job","شغل"],["Mechanic","مکانیک"],["Housewife","خانه‌دار"],["Doctor","دکتر"],["Pilot","خلبان"]],
-  "درس ۵ — My Appearance": [["Tall","قدبلند"],["Short","قدکوتاه"],["Young","جوان"],["Old","پیر"],["Shirt","پیراهن"],["Jacket","ژاکت"],["Scarf","روسری"],["Shoes","کفش"],["Black","مشکی"],["White","سفید"],["Red","قرمز"]],
-  "درس ۶ — My House": [["House","خانه"],["Kitchen","آشپزخانه"],["Bedroom","اتاق خواب"],["Garage","گاراژ"],["Living room","نشیمن"],["Cook","آشپزی"],["Wash","شستن"],["Watch","تماشا"],["Play","بازی"],["Study","مطالعه"]],
-  "درس ۷ — My Address": [["Address","آدرس"],["Street","خیابان"],["Phone number","تلفن"],["Mobile","موبایل"],["Time","زمان"],["O'clock","ساعت"],["Morning","صبح"],["Afternoon","بعدازظهر"],["Evening","عصر"],["Telephone","تلفن"]],
-  "درس ۸ — My Favorite Food": [["Food","غذا"],["Drink","نوشیدنی"],["Rice","برنج"],["Kebab","کباب"],["Chicken","مرغ"],["Cake","کیک"],["Milk","شیر"],["Tea","چای"],["Orange juice","پرتقال"],["Water","آب"],["Hungry","گرسنه"]]
+  "Welcome — Words": [["Headphones","هدفون"],["Telephone","تلفن"],["Laptop","لپ‌تاپ"],["Book","کتاب"],["Pen","خودکار"],["Pencil","مداد"],["Ruler","خط‌کش"],["Eraser","پاک‌کن"],["Bag","کیف"],["Chair","صندلی"],["Desk","میز"],["Door","در"],["Blackboard","تخته سیاه"],["Notebook","دفترچه"],["Dictionary","فرهنگ"],["Pencil Sharpener","تراش"],["Backpack","کوله‌پشتی"],["Marker","ماژیک"],["Bench","نیمکت"],["Pencil Case","جامدادی"],["Chalk","گچ"]],
+  "Welcome — Numbers": [["One","1"],["Two","2"],["Three","3"],["Four","4"],["Five","5"],["Six","6"],["Seven","7"],["Eight","8"],["Nine","9"],["Ten","10"],["Eleven","11"],["Twelve","12"],["Thirteen","13"],["Fourteen","14"],["Fifteen","15"],["Sixteen","16"],["Seventeen","17"],["Eighteen","18"],["Nineteen","19"],["Twenty","20"],["Thirty","30"],["Forty","40"],["Fifty","50"],["Sixty","60"],["Seventy","70"],["Eighty","80"],["Ninety","90"],["One Hundred","100"]],
+  "Welcome — Colors": [["Red","قرمز"],["Blue","آبی"],["Yellow","زرد"],["Green","سبز"],["Black","مشکی"],["White","سفید"],["Brown","قهوه‌ای"],["Gray","خاکستری"],["Orange","نارنجی"],["Pink","صورتی"]],
+  "Lesson 1 — My Name": [["Name","نام"],["First Name","نام کوچک"],["Last Name","نام خانوادگی"],["Mr.","آقا"],["Mrs.","خانم (متاهل)"],["Miss","خانم (مجرد)"],["Hello","سلام"],["Hi","سلام (دوستانه)"],["Good Morning","صبح بخیر"],["Good Afternoon","عصر بخیر"],["How are you?","حالت چطوره؟"],["Fine, Thanks","خوبم، ممنون"],["Great, Thanks","عالی، ممنون"],["Teacher","معلم"],["Student","دانش‌آموز"],["Class","کلاس"],["Spell","هجی کردن"],["Library Card","کارت کتابخانه"]],
+  "Lesson 2 — My Classmates": [["Boy","پسر"],["Girl","دختر"],["Man","مرد"],["Woman","زن"],["Friend","دوست"],["Classmate","همکلاسی"],["Welcome","خوش آمدید"],["Meet","ملاقات کردن"],["Nice to meet you","از آشنایی خوشحالم"],["Nice to meet you, too","من هم همینطور"],["Who","چه کسی"],["This","این"],["That","آن"],["Sorry","ببخشید"],["Again","دوباره"],["School","مدرسه"],["Yard","حیاط"],["New","جدید"]],
+  "Lesson 3 — My Age": [["Age","سن"],["Birthday","تولد"],["Month","ماه"],["Year","سال"],["Day","روز"],["Date","تاریخ"],["Number","عدد"],["When","کی"],["How old","چند ساله"],["Happy birthday","تولدت مبارک"],["Really?","واقعاً؟"]],
+  "Lesson 4 — My Family": [["Family","خانواده"],["Father","پدر"],["Mother","مادر"],["Sister","خواهر"],["Brother","برادر"],["Uncle","عمو/دایی"],["Aunt","عمه/خاله"],["Grandfather","پدربزرگ"],["Grandmother","مادربزرگ"],["Wife","همسر"],["Husband","شوهر"],["Son","پسر"],["Daughter","دختر"],["Cousin","پسرعمو/دخترعمو"],["Job","شغل"],["Mechanic","مکانیک"],["Doctor","دکتر"],["Nurse","پرستار"],["Housewife","خانه‌دار"],["Dentist","دندانپزشک"],["Pilot","خلبان"],["Driver","راننده"],["Shopkeeper","فروشنده"],["Picture","عکس"],["Engineer","مهندس"],["Painter","نقاش"],["Farmer","کشاورز"],["Florist","گلفروش"],["Policeman","پلیس"],["Employee","کارمند"],["Postman","پستچی"],["Waiter","پیشخدمت"],["Baker","نانوا"],["Worker","کارگر"],["Cook","آشپز"]],
+  "Lesson 5 — My Appearance": [["Appearance","ظاهر"],["Tall","قدبلند"],["Short","قدکوتاه"],["Young","جوان"],["Old","پیر"],["Wear","پوشیدن"],["Suit","کت و شلوار"],["Shirt","پیراهن"],["Jacket","کاپشن"],["Trousers","شلوار"],["Pants","شلوار"],["Manteau","مانتو"],["Scarf","روسری/شال"],["Chador","چادر"],["Shoes","کفش"],["Gloves","دستکش"],["T-shirt","تی‌شرت"],["Coat","کت"],["Sweater","پلیور"],["Glasses","عینک"],["Dress","پیراهن زنانه"],["Cap","کلاه"],["Sandals","صندل"],["Sunglasses","عینک آفتابی"],["Socks","جوراب"],["Belt","کمربند"],["Black","مشکی"],["White","سفید"],["Red","قرمز"],["Blue","آبی"],["Yellow","زرد"],["Green","سبز"],["Brown","قهوه‌ای"],["Gray","خاکستری"],["Orange","نارنجی"],["Pink","صورتی"]],
+  "Lesson 6 — My House": [["House","خانه"],["Room","اتاق"],["Bedroom","اتاق خواب"],["Kitchen","آشپزخانه"],["Living Room","اتاق نشیمن"],["Garage","گاراژ"],["Bathroom","حمام"],["Office","دفتر"],["Stairs","پله"],["Flat","آپارتمان"],["Apartment","آپارتمان"],["Villa","ویلا"],["Tower","برج"],["Bookcase","کتابخانه"],["Blanket","پتو"],["Clock","ساعت دیواری"],["Table","میز"],["Computer","کامپیوتر"],["Television","تلویزیون"],["Mirror","آینه"],["Radio","رادیو"],["Comb","شانه"],["Newspaper","روزنامه"],["Lunch","ناهار"],["Hand","دست"],["Cook","آشپزی کردن"],["Wash","شستن"],["Watch","تماشا کردن"],["Play","بازی کردن"],["Read","خواندن"],["Study","مطالعه کردن"],["Work","کار کردن"],["Come","آمدن"],["Fix","تعمیر کردن"],["Call","زنگ زدن"],["Cooking","در حال آشپزی"],["Playing","در حال بازی"],["Washing","در حال شستن"],["Fixing","در حال تعمیر"],["Watching","در حال تماشا"],["Working","در حال کار"],["Reading","در حال خواندن"],["Eating","در حال خوردن"],["Studying","در حال مطالعه"],["Drinking","در حال نوشیدن"]],
+  "Lesson 7 — My Address": [["Address","آدرس"],["Home","خانه"],["Street","خیابان"],["Telephone","تلفن"],["Phone","تلفن"],["Number","شماره"],["Mobile","موبایل"],["Cell Phone","موبایل"],["Call","زنگ زدن"],["Go","رفتن"],["Live","زندگی کردن"],["Visit","ملاقات کردن"],["Time","زمان"],["a.m.","صبح"],["p.m.","بعدازظهر"],["O'clock","ساعت"],["Evening","عصر/غروب"],["E-mail Address","ایمیل"],["Office","دفتر"],["Half Past","نیم ساعت بعد"],["Quarter Past","یک ربع بعد"]],
+  "Lesson 8 — My Favorite Food": [["Food","غذا"],["Drink","نوشیدنی"],["Hungry","گرسنه"],["Thirsty","تشنه"],["Favorite","مورد علاقه"],["Bread","نان"],["Rice","برنج"],["Kebab","کباب"],["Chicken","مرغ"],["Salad","سالاد"],["Fruit","میوه"],["Juice","آبمیوه"],["Orange","پرتقال"],["Dates","خرما"],["Cake","کیک"],["Milk","شیر"],["Tea","چای"],["Water","آب"],["Jelly","ژله"],["Quince","به"],["Coconut","نارگیل"],["Zucchini","کدو"],["Feel","حس کردن"],["Like","دوست داشتن"],["Enough","کافی"],["Apple","سیب"],["Carrot","هویج"],["Onion","پیاز"],["Banana","موز"],["Potato","سیب‌زمینی"],["Tomato","گوجه"],["Egg","تخم‌مرغ"],["Honey","عسل"],["Cheese","پنیر"],["Fish","ماهی"],["Spaghetti","ماکارونی"],["Pineapple","آناناس"],["Ice-cream","بستنی"],["Yoghurt","ماست"]],
+  "Days of the Week": [["Saturday","شنبه"],["Sunday","یکشنبه"],["Monday","دوشنبه"],["Tuesday","سه‌شنبه"],["Wednesday","چهارشنبه"],["Thursday","پنجشنبه"],["Friday","جمعه"]],
+  "Iranian Months": [["Farvardin","فروردین"],["Ordibehesht","اردیبهشت"],["Khordad","خرداد"],["Tir","تیر"],["Mordad","مرداد"],["Shahrivar","شهریور"],["Mehr","مهر"],["Aban","آبان"],["Azar","آذر"],["Dey","دی"],["Bahman","بهمن"],["Esfand","اسفند"]],
+  "English Months": [["January","ژانویه"],["February","فوریه"],["March","مارس"],["April","آوریل"],["May","مه"],["June","ژوئن"],["July","ژوئیه"],["August","اوت"],["September","سپتامبر"],["October","اکتبر"],["November","نوامبر"],["December","دسامبر"]]
 };
 
+/* =========================================================
+   پایه هفتم — گرامر
+   ========================================================= */
 const G7_GRAMMAR = {
-  "درس ۱": "• ضمایر فاعلی: I, You, He, She, It, We, They\n• فعل to be: am / is / are\n• مثال: I am a student. She is my teacher.",
-  "درس ۲": "• معرفی دیگران: This is my friend. His name is Ali.\n• خوش‌آمدگویی: Welcome to our class!",
-  "درس ۳": "• پرسیدن سن: How old are you?\n• پاسخ: I am 13 years old.\n• اعداد: one, two, three, ..., twenty",
-  "درس ۴": "• شغل‌ها: What is your job?\n• پاسخ: I am a teacher. / He is a doctor.\n• صفات ملکی: my, your, his, her, our, their",
-  "درس ۵": "• سوالی کردن با am/is/are:\n  Is that your pencil? → Yes, it is. / No, it isn't.\n• حروف تعریف a / an:\n  an + صدادار: an apple, an egg\n  a + بی‌صدا: a book, a cat\n• Who و Which one\n• پرسیدن معنی: What does ... mean?",
-  "درس ۶": "• حال استمراری: am/is/are + V-ing\n  My dad is fixing the car.\n• some / any:\n  some → مثبت: I have some books.\n  any → منفی و سوالی: I don't have any books.",
-  "درس ۷": "• آینده با going to: am/is/are + going to + V\n  I am going to visit my grandmother.\n• پرسیدن زمان: What time is it?\n• It's five o'clock.",
-  "درس ۸": "• غذا و نوشیدنی: What is your favorite food?\n• I like Kebab. / My favorite food is Rice.\n• Do you like ...? → Yes, I do. / No, I don't."
+  "Lesson 1: to be (am/is/are)": "📐 فعل to be\n\n• I am / You are / He is / She is / It is\n• We are / You are / They are\n\n• مثال:\n   I am a student.\n   She is my teacher.\n   They are my friends.\n\n• سوالی:\n   Am I ...? / Are you ...? / Is she ...?\n   Are you a student? → Yes, I am. / No, I'm not.\n\n• منفی:\n   I am not / isn't / aren't\n\n• کوتاه‌شده:\n   I'm / You're / He's / She's / It's\n   We're / You're / They're",
+  "Lesson 2: This/That + Possessive": "📐 اشاره و مالکیت\n\n• This = این (نزدیک)\n   This is my friend.\n\n• That = آن (دور)\n   That is my teacher.\n\n• صفات ملکی:\n   My (مال من)\n   Your (مال تو)\n   His (مال او - مذکر)\n   Her (مال او - مؤنث)\n   Its (مال آن - اشیاء/حیوان)\n   Our (مال ما)\n   Their (مال آن‌ها)\n\n• مثال:\n   His name is Ali.\n   Her job is teaching.\n   Our school is big.",
+  "Lesson 3: How old + in + Month": "📐 سن و تاریخ\n\n• پرسیدن سن:\n   How old are you?\n   How old is she?\n\n• پاسخ:\n   I am 13 years old.\n   She is 12.\n\n• پرسیدن تاریخ:\n   When is your birthday?\n   When's your birthday?\n\n• پاسخ:\n   It's in Mehr.\n   My birthday is in Bahman.\n\n• نکته: for months از in استفاده می‌کنیم\n   in Mehr / in Bahman",
+  "Lesson 4: Jobs + a/an": "📐 شغل و حرف تعریف\n\n• پرسیدن شغل:\n   What's your job?\n   What's your father's job?\n\n• پاسخ:\n   I'm a teacher.\n   He's a mechanic.\n   She's an engineer.\n\n• حرف تعریف a / an:\n   a + حرف بی‌صدا: a doctor, a teacher\n   an + حرف صدادار (a/e/i/o/u): an engineer, an actor\n\n• صفات ملکی با شغل:\n   My father is a doctor.\n   Her mother is a nurse.",
+  "Lesson 5: Present Continuous (Wear)": "📐 حال استمراری — پوشیدن\n\n• ساختار: am/is/are + V-ing\n\n• He is wearing a gray suit.\n   She is wearing white shoes.\n\n• پرسش:\n   Who is Mr. Davoodi?\n   Which one is Ladan?\n\n• پاسخ:\n   He's the tall man. He's wearing a gray suit.\n   She's wearing white shoes.\n\n• نکته: which one → کدوم یکی؟",
+  "Lesson 6: Where + Present Continuous": "📐 مکان و حال استمراری\n\n• Where + am/is/are:\n   Where are you? → I'm in the kitchen.\n   Where is he? → He's in the garage.\n   Where are they? → They're in the bedroom.\n\n• What + am/is/are + doing:\n   What are you doing? → I'm cooking.\n   What is he doing? → He's watching TV.\n   What are they doing? → They're playing.\n\n• افعال حال استمراری:\n   cook → cooking\n   watch → watching\n   play → playing\n   read → reading\n   study → studying\n   wash → washing\n   fix → fixing\n   work → working",
+  "Lesson 7: Time & Going to": "📐 زمان و آینده\n\n• پرسیدن ساعت:\n   What time is it?\n   It's 10 o'clock.\n   It's half past two. (ساعت 2:30)\n   It's quarter past three. (ساعت 3:15)\n\n• آینده با going to:\n   am/is/are + going to + V\n   I'm going to visit him.\n   She's going to study.\n\n• a.m. / p.m.:\n   a.m. → صبح (قبل از ظهر)\n   p.m. → بعدازظهر\n   at 5 in the afternoon",
+  "Lesson 8: Likes & Suggestions": "📐 علاقه و پیشنهاد\n\n• پرسیدن علاقه:\n   What's your favorite food? → Rice and kebab.\n   What do you like to eat? → I like pizza.\n\n• پیشنهاد دادن:\n   Let's have something to eat.\n   How about some cake and milk?\n   What about tea?\n\n• پاسخ:\n   Sounds good!\n   Great idea!\n   OK, let's go.\n\n• What + do/does + like:\n   What do you like to drink?\n   What does she like to eat?"
 };
 
+/* =========================================================
+   پایه هفتم — درک مطلب
+   ========================================================= */
 const G7_READING = [
   {title:"متن ۱ — Sara's Family",
    text:"Sara is a student. She is 13 years old. Her father is a doctor. Her mother is a teacher. She has one brother. His name is Ali. Ali is 10 years old. They live in a big house in Tehran. Sara's favorite food is Kebab.",
    qs:[["How old is Sara?","She is 13 years old."],["What is Sara's father's job?","He is a doctor."],["What is Ali's age?","He is 10 years old."],["Where do they live?","They live in Tehran."],["What is Sara's favorite food?","Her favorite food is Kebab."]]},
   {title:"متن ۲ — My House",
    text:"My name is Reza. I live in a small house in Shiraz. My house has two bedrooms, one kitchen, and one living room. My mother cooks in the kitchen. My father watches TV in the living room. I study in my bedroom. I love my house.",
-   qs:[["Where does Reza live?","He lives in Shiraz."],["How many bedrooms does his house have?","It has two bedrooms."],["What does his mother do?","She cooks in the kitchen."],["What does his father do?","He watches TV in the living room."],["Where does Reza study?","He studies in his bedroom."]]}
+   qs:[["Where does Reza live?","He lives in Shiraz."],["How many bedrooms does his house have?","It has two bedrooms."],["What does his mother do?","She cooks in the kitchen."],["What does his father do?","He watches TV in the living room."],["Where does Reza study?","He studies in his bedroom."]]},
+  {title:"متن ۳ — Ali's Day",
+   text:"Ali is a student at a middle school in Tehran. Every morning, he gets up at 6 o'clock. He washes his face and eats breakfast. He goes to school at 7. His classes start at 7:30. He studies English, Math, Science, and other subjects. He comes home at 2 p.m. In the afternoon, he does his homework. Then he plays football with his friends. In the evening, he watches TV with his family. He goes to bed at 10 p.m.",
+   qs:[["What time does Ali get up?","He gets up at 6 o'clock."],["When do his classes start?","They start at 7:30."],["What does he do in the afternoon?","He does his homework and plays football."],["What does he do in the evening?","He watches TV with his family."],["What time does he go to bed?","He goes to bed at 10 p.m."]]}
 ];
 
+/* =========================================================
+   پایه هفتم — تمرین‌های تشریحی
+   ========================================================= */
+const G7_EXERCISES = [
+  {title:"تمرین ۱ — درس ۱ و ۲",
+   items:[
+     {q:"My name ___ Ali.",a:"is (با اسم مفرد از is استفاده می‌کنیم)"},
+     {q:"___ you a student?",a:"Are (با you از are استفاده می‌کنیم)"},
+     {q:"This is my friend. ___ name is Reza.",a:"His (Reza مذکر است → His)"},
+     {q:"Nice ___ meet you.",a:"to (ساختار ثابت: Nice to meet you)"},
+     {q:"How do you ___ your name?",a:"spell (هجی کردن)"}
+   ]},
+  {title:"تمرین ۲ — درس ۳ و ۴",
+   items:[
+     {q:"___ ___ are you? — I'm 13.",a:"How old"},
+     {q:"When is your birthday? — It's ___ Mehr.",a:"in (برای ماه‌ها از in)"},
+     {q:"What's your father's ___? — He's a doctor.",a:"job"},
+     {q:"My mother is a ___. She works in a hospital.",a:"nurse"},
+     {q:"She ___ a housewife.",a:"is"}
+   ]},
+  {title:"تمرین ۳ — درس ۵ و ۶",
+   items:[
+     {q:"He is ___ a blue suit.",a:"wearing (حال استمراری با wear)"},
+     {q:"Which one is Maryam? — She's ___ tall girl.",a:"the (با صفت خاص)"},
+     {q:"Where is Ali? — He's ___ the kitchen.",a:"in"},
+     {q:"What is she doing? — She's ___.",a:"cooking"},
+     {q:"My father is ___ the car.",a:"fixing"}
+   ]},
+  {title:"تمرین ۴ — درس ۷ و ۸",
+   items:[
+     {q:"What time is it? — It's 10 ___.",a:"o'clock"},
+     {q:"What's your ___? — 15 Laleh Street.",a:"address"},
+     {q:"I'm ___. Let's have something to eat.",a:"hungry"},
+     {q:"How about ___ cake and milk?",a:"some (در جملات پیشنهادی مثبت)"},
+     {q:"What's your ___ food? — Rice and kebab.",a:"favorite"}
+   ]}
+];
+
+/* =========================================================
+   پایه هفتم — ۵۰ سوال آزمون
+   ========================================================= */
 const G7_QUIZ = [
-  {q:"My name ___ Ali.",o:["am","is","are","be"],a:1,exp:"با فاعل سوم شخص مفرد از is استفاده می‌کنیم."},
+  {q:"My name ___ Ali.",o:["am","is","are","be"],a:1,exp:"با اسم مفرد از is"},
   {q:"She ___ a doctor.",o:["am","is","are","be"],a:1,exp:"She → is"},
-  {q:"___ you a student?",o:["Am","Is","Are","Do"],a:2,exp:"You → Are در ابتدای سوال"},
-  {q:"I have ___ apple.",o:["a","an","the","some"],a:1,exp:"حرف صدادار apple → an"},
-  {q:"There are ___ books on the table.",o:["some","any","a","an"],a:0,exp:"در جملات مثبت از some استفاده می‌شود."},
-  {q:"What is your favorite food?",o:["orange juice","Rice and Kebab","play football","watching TV"],a:1,exp:"غذای مورد علاقه → Rice and Kebab"},
-  {q:"When is your birthday?",o:["It's on the 22nd of March","I am 13","He is a teacher","It's a book"],a:0,exp:"پاسخ تاریخ → It's on the 22nd of March"},
-  {q:"Where is his aunt's car?",o:["It's five forty-five","It's in the garage","She is a nurse","Yes, it is"],a:1,exp:"مکان → It's in the garage"},
+  {q:"___ you a student?",o:["Am","Is","Are","Do"],a:2,exp:"You → Are"},
+  {q:"I have ___ apple.",o:["a","an","the","some"],a:1,exp:"حرف صدادار → an"},
+  {q:"There are ___ books on the table.",o:["some","any","a","an"],a:0,exp:"مثبت → some"},
+  {q:"What is your favorite food?",o:["Orange juice","Rice and Kebab","Play football","Watching TV"],a:1,exp:"غذا → Rice and Kebab"},
+  {q:"When is your birthday?",o:["It's on the 22nd of March","I am 13","He is a teacher","It's a book"],a:0,exp:"تاریخ → 22nd of March"},
+  {q:"Where is his aunt's car?",o:["It's five forty-five","It's in the garage","She is a nurse","Yes, it is"],a:1,exp:"مکان → in the garage"},
   {q:"Which one is a capital letter?",o:["a","B","c","d"],a:1,exp:"حرف بزرگ = B"},
   {q:"How old ___ she?",o:["am","is","are","be"],a:1,exp:"She → is"},
   {q:"___ that your pencil?",o:["Am","Is","Are","Do"],a:1,exp:"That → Is"},
-  {q:"My dad ___ fixing the car.",o:["am","is","are","be"],a:1,exp:"حال استمراری با is"},
+  {q:"My dad ___ fixing the car.",o:["am","is","are","be"],a:1,exp:"حال استمراری → is"},
   {q:"I don't have ___ books.",o:["some","any","a","an"],a:1,exp:"منفی → any"},
-  {q:"What time is it? — It's ___ .",o:["five o'clock","a book","in Tehran","a teacher"],a:0,exp:"ساعت → five o'clock"},
-  {q:"She ___ going to visit her grandmother.",o:["am","is","are","be"],a:1,exp:"آینده با going to → is"},
+  {q:"What time is it? — It's ___.",o:["five o'clock","a book","in Tehran","a teacher"],a:0,exp:"ساعت → five o'clock"},
+  {q:"She ___ going to visit her grandmother.",o:["am","is","are","be"],a:1,exp:"going to → is"},
   {q:"Who is Mr. Lotfi?",o:["He is the old man","It's a car","Yes, it is","In the garage"],a:0,exp:"Who → He is the old man"},
   {q:"What does 'Happy' mean?",o:["غمگین","خوشحال","گرسنه","پیر"],a:1,exp:"Happy = خوشحال"},
   {q:"His name is Ali. ___ is 10 years old.",o:["She","He","It","They"],a:1,exp:"Ali → He"},
   {q:"___ you like Kebab?",o:["Do","Does","Is","Are"],a:0,exp:"You → Do"},
-  {q:"My mother cooks in the ___ .",o:["bedroom","kitchen","garage","street"],a:1,exp:"آشپزی در آشپزخانه → kitchen"}
+  {q:"My mother cooks in the ___.",o:["bedroom","kitchen","garage","street"],a:1,exp:"آشپزی → kitchen"},
+  {q:"What ___ your father do?",o:["do","does","is","are"],a:1,exp:"سوم شخص → does"},
+  {q:"He ___ football every day.",o:["play","plays","playing","played"],a:1,exp:"سوم شخص → plays"},
+  {q:"This is my sister. ___ name is Maryam.",o:["His","Her","Its","Their"],a:1,exp:"مؤنث → Her"},
+  {q:"I go to school ___ Monday.",o:["in","on","at","by"],a:1,exp:"روز هفته → on"},
+  {q:"My birthday is ___ Mehr.",o:["in","on","at","by"],a:0,exp:"ماه → in"},
+  {q:"She is wearing ___ red scarf.",o:["a","an","the","some"],a:0,exp:"حرف بی‌صدا → a"},
+  {q:"What's his job? — He's ___ engineer.",o:["a","an","the","some"],a:1,exp:"حرف صدادار → an"},
+  {q:"There ___ a book on the table.",o:["are","is","be","am"],a:1,exp:"اسم مفرد → is"},
+  {q:"Are there ___ apples in the basket?",o:["some","any","a","an"],a:1,exp:"سوالی → any"},
+  {q:"What ___ they doing?",o:["am","is","are","be"],a:2,exp:"They → are"},
+  {q:"Look! The baby ___ .",o:["sleeps","sleep","is sleeping","slept"],a:2,exp:"Look! → حال استمراری"},
+  {q:"She ___ TV at the moment.",o:["watches","watch","is watching","watched"],a:2,exp:"at the moment → حال استمراری"},
+  {q:"How many books ___ on the shelf?",o:["is","are","am","be"],a:1,exp:"books جمع → are"},
+  {q:"___ your brother have a car?",o:["Do","Does","Is","Are"],a:1,exp:"brother سوم شخص → Does"},
+  {q:"Ali is ___ than Reza.",o:["tall","taller","tallest","more tall"],a:1,exp:"مقایسه → taller"},
+  {q:"This is ___ book in the library.",o:["good","better","the best","best"],a:2,exp:"عالی‌ترین → the best"},
+  {q:"Where ___ you live?",o:["do","does","is","are"],a:0,exp:"You → do"},
+  {q:"Where ___ he live?",o:["do","does","is","are"],a:1,exp:"He → does"},
+  {q:"She ___ to school every day.",o:["go","goes","going","went"],a:1,exp:"سوم شخص → goes"},
+  {q:"I ___ my homework now.",o:["do","does","am doing","did"],a:2,exp:"now → حال استمراری"},
+  {q:"What's ___ address?",o:["you","your","yours","yours"],a:1,exp:"مالکیت → your"},
+  {q:"Let's ___ something to eat.",o:["have","has","having","had"],a:0,exp:"Let's + فعل ساده"},
+  {q:"How ___ some tea?",o:["is","are","about","of"],a:2,exp:"How about → پیشنهاد"},
+  {q:"I like ___ to music.",o:["listen","listening","to listen","listens"],a:1,exp:"like + V-ing"},
+  {q:"He plays football ___ Friday.",o:["in","on","at","by"],a:1,exp:"روز → on"},
+  {q:"This is a ___ boy. He is 7 years old.",o:["tall","young","old","short"],a:1,exp:"7 ساله → young"},
+  {q:"She is a ___. She works in a hospital.",o:["teacher","nurse","driver","pilot"],a:1,exp:"hospital → nurse"},
+  {q:"What's the weather like? — It's ___.",o:["sunny","Sunday","spring","summer"],a:0,exp:"آب و هوا → sunny"},
+  {q:"I ___ born in Tehran.",o:["am","is","was","were"],a:2,exp:"گذشته → was"},
+  {q:"There ___ two cats in the yard.",o:["is","are","be","am"],a:1,exp:"جمع → are"},
+  {q:"My brother ___ a new bicycle last week.",o:["buy","buys","bought","buying"],a:2,exp:"گذشته → bought"}
 ];
 </script>
 <script>
@@ -605,7 +753,6 @@ function toast(msg, ms=2400){
   clearTimeout(t._tid);
   t._tid = setTimeout(() => t.classList.remove("sh"), ms);
 }
-
 function fmtTime(sec){
   sec = Math.max(0, Math.floor(sec));
   const m = Math.floor(sec/60).toString().padStart(2,"0");
@@ -624,7 +771,7 @@ function escapeHtml(s){
   const box = $("#stars");
   for(let i=0;i<40;i++){
     const s = document.createElement("div");
-    s.className = "s";
+    s.className = "str";
     s.style.left = Math.random()*100 + "%";
     s.style.animationDuration = (8 + Math.random()*12) + "s";
     s.style.animationDelay = (-Math.random()*20) + "s";
@@ -694,6 +841,7 @@ document.querySelectorAll("#g7tabs button").forEach(b=>{
     const g = b.dataset.g;
     $("#g7Vocab").hidden = g !== "vocab";
     $("#g7Grammar").hidden = g !== "grammar";
+    $("#g7Exercises").hidden = g !== "exercises";
     $("#g7Reading").hidden = g !== "reading";
     $("#g7Quiz").hidden = g !== "quiz";
     $("#g7Play").hidden = true;
@@ -701,12 +849,12 @@ document.querySelectorAll("#g7tabs button").forEach(b=>{
 });
 
 /* =========================================================
-   کارت‌های دسته — ۴۰ دسته
+   کارت‌های ۴۰ دسته
    ========================================================= */
 const catsEl = $("#cats");
 Object.entries(C).forEach(([id, cat])=>{
   const btn = document.createElement("button");
-  btn.type = "button"; btn.className = "cd";
+  btn.type = "button"; btn.className = "card";
   btn.dataset.search = (cat.fa + " " + cat.en).toLowerCase();
   btn.innerHTML = `<span class="em">${cat.emo}</span>
                    <span class="nm">${cat.fa}</span>
@@ -718,7 +866,7 @@ $("#catCount").textContent = fa(Object.keys(C).length) + " دسته";
 
 $("#search").addEventListener("input", e=>{
   const q = e.target.value.trim().toLowerCase();
-  document.querySelectorAll("#cats .cd").forEach(b=>{
+  document.querySelectorAll("#cats .card").forEach(b=>{
     b.style.display = !q || b.dataset.search.includes(q) ? "" : "none";
   });
 });
@@ -740,7 +888,7 @@ function openCat(id){
 
   LETTERS.forEach(L=>{
     const b = document.createElement("button");
-    b.type = "button"; b.className = "ky"; b.textContent = L;
+    b.type = "button"; b.className = "key"; b.textContent = L;
     b.addEventListener("click", ()=>pick(L));
     keysEl.appendChild(b);
     keyButtons[L] = b;
@@ -757,7 +905,7 @@ function openCat(id){
 
 function setEmpty(){
   const r = $("#result");
-  r.className = "rs em";
+  r.className = "res empty";
   r.textContent = "یک حرف را انتخاب کن";
 }
 
@@ -769,7 +917,7 @@ function updateProgress(){
 function pick(L){
   const btn = keyButtons[L];
   if(!btn) return;
-  document.querySelectorAll(".ky.sl").forEach(x=>x.classList.remove("sl"));
+  document.querySelectorAll(".key.sl").forEach(x=>x.classList.remove("sl"));
   btn.classList.add("sl");
 
   const r = $("#result");
@@ -777,7 +925,7 @@ function pick(L){
   r.innerHTML = "";
 
   if(!data){
-    r.className = "rs no";
+    r.className = "res none";
     r.textContent = "در این دسته کلمه‌ای با حرف «" + L + "» نداریم";
     btn.classList.add("nn");
     return;
@@ -787,7 +935,7 @@ function pick(L){
   btn.classList.add("dn");
   updateProgress();
 
-  r.className = "rs";
+  r.className = "res";
   const letterEl = document.createElement("div"); letterEl.className="lt";
   letterEl.textContent = L + " " + L.toLowerCase();
   const wordEl = document.createElement("div"); wordEl.className="wd";
@@ -795,7 +943,7 @@ function pick(L){
   const faEl = document.createElement("div"); faEl.className="fa";
   faEl.textContent = data[1];
   const spk = document.createElement("button");
-  spk.type = "button"; spk.className="spk";
+  spk.type = "button"; spk.className="speak";
   spk.innerHTML = `<span>🔊</span><span>تلفظ کن</span>`;
   spk.addEventListener("click", e=>{ e.stopPropagation(); speak(data[0], spk); });
 
@@ -859,10 +1007,10 @@ $("#saveLesson").addEventListener("click", ()=>{
 });
 
 /* =========================================================
-   توزیع سوالات
+   توزیع سوالات آزمون فینال
    ========================================================= */
 (function renderDist(){
-  const box = $("#topicDistribution");
+  const box = $("#topicDist");
   let html = "";
   let total = 0;
   for(const [t,n] of Object.entries(TOPIC_DIST)){
@@ -987,24 +1135,26 @@ const g7VocabList = $("#g7VocabList");
 let g7vCount = 0;
 Object.entries(G7_VOCAB).forEach(([lesson, words])=>{
   const card = document.createElement("div");
-  card.className = "cd";
+  card.className = "card";
   card.innerHTML = `<span class="em">📘</span>
                     <span class="nm">${lesson}</span>
                     <span class="en">${fa(words.length)} کلمه</span>`;
   card.addEventListener("click", ()=>{
     $("#g7Title").textContent = lesson;
-    $("#g7Body").innerHTML = `<div style="text-align:right;line-height:2.2">
-      ${words.map(w=>`<div style="padding:6px 10px;border-bottom:1px dashed rgba(255,255,255,.12)">
-        <span style="direction:ltr;color:#ffd700;font-weight:800">${w[0]}</span>
-        <span style="color:rgba(255,255,255,.5)"> → </span>
-        <span>${w[1]}</span>
-        <button class="bs pk" style="float:left;padding:3px 8px;font-size:10px" data-w="${w[0]}">🔊</button>
-      </div>`).join("")}
-    </div>`;
-    $("#g7Play").hidden = false;
+    let html = `<div style="text-align:right;line-height:2.2">`;
+    words.forEach(w=>{
+      html += `<div class="vi">
+        <span class="en">${w[0]}</span>
+        <span class="fa">${w[1]}</span>
+        <button class="bs pk" style="padding:3px 8px;font-size:10px" data-w="${w[0]}">🔊</button>
+      </div>`;
+    });
+    html += `</div>`;
+    $("#g7Body").innerHTML = html;
     $("#g7Body").querySelectorAll("button[data-w]").forEach(b=>{
       b.addEventListener("click", ()=>speak(b.dataset.w, b));
     });
+    $("#g7Play").hidden = false;
     window.scrollTo(0,0);
   });
   g7VocabList.appendChild(card);
@@ -1018,14 +1168,39 @@ const g7GrammarList = $("#g7GrammarList");
 Object.entries(G7_GRAMMAR).forEach(([lesson, text])=>{
   const card = document.createElement("div");
   card.className = "lc";
-  card.innerHTML = `<h3>📖 گرامر ${lesson}</h3><p>برای مطالعه ضربه بزن</p>`;
+  card.innerHTML = `<h3>📐 ${lesson}</h3><p>برای مطالعه و مشاهده جزئیات ضربه بزن</p>`;
   card.addEventListener("click", ()=>{
-    $("#g7Title").textContent = "گرامر " + lesson;
+    $("#g7Title").textContent = lesson;
     $("#g7Body").innerHTML = `<div class="lb">${escapeHtml(text)}</div>`;
     $("#g7Play").hidden = false;
     window.scrollTo(0,0);
   });
   g7GrammarList.appendChild(card);
+});
+
+/* =========================================================
+   پایه هفتم — تمرین‌ها
+   ========================================================= */
+const g7ExercisesList = $("#g7ExercisesList");
+G7_EXERCISES.forEach(ex=>{
+  const box = document.createElement("div");
+  box.className = "ex";
+  box.innerHTML = `<h4>✏️ ${ex.title}</h4>`;
+  ex.items.forEach((it, i)=>{
+    const div = document.createElement("div");
+    div.className = "qi";
+    div.innerHTML = `
+      <div><span class="nm2">${fa(i+1)}.</span> ${escapeHtml(it.q)}</div>
+      <div class="an">✅ ${escapeHtml(it.a)}</div>
+      <button class="ba">نمایش پاسخ</button>
+    `;
+    div.querySelector(".ba").addEventListener("click", ()=>{
+      div.classList.toggle("sh");
+      div.querySelector(".ba").textContent = div.classList.contains("sh") ? "پنهان کردن" : "نمایش پاسخ";
+    });
+    box.appendChild(div);
+  });
+  g7ExercisesList.appendChild(box);
 });
 
 /* =========================================================
@@ -1073,18 +1248,18 @@ renderGallery();
 
   <script>
 /* =========================================================
-   آزمون فینال — ۸۰۰ ثانیه، هر سوال ۴۰ ثانیه
+   آزمون فینال — ۴۰۰ ثانیه، هر سوال ۲۰ ثانیه
    ========================================================= */
-const QUIZ_TOTAL_SEC = 800;
-const QUIZ_Q_SEC = 40;
+const QUIZ_TOTAL_SEC = 400;
+const QUIZ_Q_SEC = 20;
 
 const qs = {
-  idx: 0, score: 0, answered: false,
-  student: "", studentClass: "ایمان",
-  startTime: 0, endTime: 0,
+  idx:0, score:0, answered:false,
+  student:"", studentClass:"ایمان",
+  startTime:0, endTime:0,
   totalLeft: QUIZ_TOTAL_SEC, qLeft: QUIZ_Q_SEC,
-  totalTimer: null, qTimer: null,
-  results: [], micRec: null, micRecing: false, micHeard: ""
+  totalTimer:null, qTimer:null,
+  results:[], micRec:null, micRecing:false, micHeard:""
 };
 
 $("#startQuiz").addEventListener("click", ()=>{
@@ -1121,8 +1296,8 @@ function updateTotalUI(){
   const el = $("#qTimer");
   el.textContent = fmtTime(qs.totalLeft);
   el.classList.remove("wn","dg");
-  if(qs.totalLeft <= 60) el.classList.add("dg");
-  else if(qs.totalLeft <= 180) el.classList.add("wn");
+  if(qs.totalLeft <= 30) el.classList.add("dg");
+  else if(qs.totalLeft <= 90) el.classList.add("wn");
 }
 
 function startQTimer(){
@@ -1143,7 +1318,7 @@ function updateQUI(){
   const el = $("#qQTimer");
   el.textContent = "⏱ " + fmtTime(qs.qLeft);
   el.classList.remove("wn");
-  if(qs.qLeft <= 10) el.classList.add("wn");
+  if(qs.qLeft <= 5) el.classList.add("wn");
 }
 
 function renderQ(){
@@ -1317,7 +1492,7 @@ function toggleRP(q){
   }, 2200);
 }
 
-/* ---------- شباهت رشته ---------- */
+/* ---------- شباهت دو رشته ---------- */
 function sim(a, b){
   a = a.replace(/[^a-z\s]/g,"").toLowerCase().trim();
   b = b.replace(/[^a-z\s]/g,"").toLowerCase().trim();
@@ -1596,9 +1771,9 @@ $("#backQuiz").addEventListener("click", ()=>{
 });
 
 /* =========================================================
-   آزمون پایه هفتم — ۶۰۰ ثانیه، هر سوال ۳۰ ثانیه
+   آزمون پایه هفتم — ۱۵۰۰ ثانیه، هر سوال ۳۰ ثانیه
    ========================================================= */
-const G7_TOTAL_SEC = 600;
+const G7_TOTAL_SEC = 1500;
 const G7_Q_SEC = 30;
 
 const g7s = {
@@ -1619,38 +1794,36 @@ $("#g7Start").addEventListener("click", ()=>{
   $("#home").hidden = true;
   $("#g7Quiz").hidden = true;
   $("#g7Play").hidden = true;
-  // ساخت صفحه‌آزمون موقت داخل پنجره
   showG7QuizScreen();
   startG7Total();
   window.scrollTo(0,0);
 });
 
 function showG7QuizScreen(){
-  // اگر قبلاً ساخته نشده، بساز
   if(!document.getElementById("g7QuizScreen")){
     const wrap = document.createElement("section");
     wrap.id = "g7QuizScreen";
     wrap.innerHTML = `
-      <div class="tp"><button class="bk" id="g7QuizBack">→ بازگشت</button><h2>🎯 آزمون پایه هفتم</h2></div>
+      <div class="top"><button class="back" id="g7QuizBack">→ بازگشت</button><h2>🎯 آزمون پایه هفتم</h2></div>
       <div class="qh">
-        <span class="qt" id="g7QNum">۱ / ۲۰</span>
+        <span class="qt" id="g7QNum">۱ / ۵۰</span>
         <span class="qt gd" id="g7QScore">امتیاز: ۰</span>
-        <span class="qt tm" id="g7QTimer">۱۰:۰۰</span>
+        <span class="qt tm" id="g7QTimer">۲۵:۰۰</span>
         <span class="qt qt2" id="g7QTimerQ">⏱ ۰۰:۳۰</span>
       </div>
-      <div class="pb"><i id="g7QFill"></i></div>
-      <div class="gl">
+      <div class="prog"><i id="g7QFill"></i></div>
+      <div class="glass">
         <p class="qq" id="g7QText"></p>
         <div id="g7QBody"></div>
       </div>
       <div id="g7QResult" hidden>
-        <div class="gl rsc">
+        <div class="glass rsc">
           <div class="bg" id="g7RE">🎉</div>
-          <div class="sc" id="g7RS">— / ۲۰</div>
+          <div class="sc" id="g7RS">— / ۵۰</div>
           <div class="lb2" id="g7RP">—٪</div>
           <div class="sr2" id="g7RSt"></div>
           <div class="ms2" id="g7RM"></div>
-          <button class="bt g" id="g7RCert" type="button">🏆 دریافت گواهینامه</button>
+          <button class="btn gold" id="g7RCert" type="button">🏆 دریافت گواهینامه</button>
         </div>
       </div>
       <div id="g7CertScreen" hidden>
@@ -1669,7 +1842,7 @@ function showG7QuizScreen(){
           </div>
         </div>
         <div class="sv" style="margin-bottom:12px"><button class="bs pk" id="g7SaveCert" type="button">💾 ذخیره گواهینامه</button></div>
-        <button class="bt" id="g7CertBack" type="button">🏠 بازگشت</button>
+        <button class="btn" id="g7CertBack" type="button">🏠 بازگشت</button>
       </div>
     `;
     document.querySelector(".app").appendChild(wrap);
@@ -1727,8 +1900,8 @@ function updateG7Total(){
   const el = document.getElementById("g7QTimer");
   el.textContent = fmtTime(g7s.totalLeft);
   el.classList.remove("wn","dg");
-  if(g7s.totalLeft <= 30) el.classList.add("dg");
-  else if(g7s.totalLeft <= 90) el.classList.add("wn");
+  if(g7s.totalLeft <= 60) el.classList.add("dg");
+  else if(g7s.totalLeft <= 300) el.classList.add("wn");
 }
 
 function startG7Q(){
@@ -1831,7 +2004,6 @@ function finishG7(){
   document.getElementById("g7RM").textContent = msg;
   if(pct >= 50) confetti(2500);
 
-  // ذخیره خودکار کارنامه هفتم
   let txt = `📋 کارنامهٔ پایه هفتم\nموسسه زبان محمدجواد کجوری\n─────\n`;
   txt += `نام: ${g7s.student}\nکلاس: ایمان\nتاریخ: ${nowFa()}\n`;
   txt += `شروع: ${timeOnlyFa(g7s.startTime)}\nپایان: ${timeOnlyFa(g7s.endTime)}\n`;
