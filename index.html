@@ -5369,4 +5369,1116 @@ $("#retryLessonQuiz").addEventListener("click", ()=>{
 renderLessonGrid();
 </script>
 </body>
-</html>
+</html><!-- ============ دکمهٔ شناور آزمون‌های Prospect 1 ============ -->
+<button id="p1Fab" type="button">📚 آزمون‌های Prospect 1</button>
+
+<!-- ============ پنل کامل ============ -->
+<div id="p1Overlay" style="display:none">
+  <div id="p1Panel">
+    <button id="p1Close" type="button">✕</button>
+    <div id="p1Content"></div>
+  </div>
+</div>
+
+<style>
+/* ============ استایل اختصاصی Prospect 1 ============ */
+#p1Fab{
+  position:fixed; bottom:20px; left:20px; z-index:9990;
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  color:#fff; border:0; border-radius:99px;
+  padding:14px 22px; font-family:'Vazirmatn',Tahoma,sans-serif;
+  font-size:14px; font-weight:800; cursor:pointer;
+  box-shadow:0 10px 30px -8px #ff5ca8;
+  animation:p1Pulse 2s ease-in-out infinite;
+}
+@keyframes p1Pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+}
+#p1Fab:active{transform:scale(.95)}
+
+#p1Overlay{
+  position:fixed; inset:0; z-index:9995;
+  background:rgba(5,3,20,.92);
+  backdrop-filter:blur(12px);
+  overflow-y:auto;
+  direction:rtl;
+}
+#p1Panel{
+  max-width:780px; margin:0 auto; padding:20px 14px 60px;
+  position:relative;
+  font-family:'Vazirmatn',Tahoma,sans-serif;
+  color:#fff;
+}
+#p1Close{
+  position:sticky; top:10px; float:left;
+  width:42px; height:42px; border-radius:50%;
+  background:rgba(255,255,255,.15); color:#fff;
+  border:1.5px solid rgba(255,255,255,.3);
+  font-size:20px; cursor:pointer; z-index:10;
+}
+
+#p1Panel .p1-brand{
+  text-align:center; padding:20px 16px; margin:30px 0 18px;
+  background:rgba(255,255,255,.08);
+  border:1.5px solid rgba(255,255,255,.2);
+  border-radius:22px;
+}
+#p1Panel .p1-brand h2{
+  font-size:18px; font-weight:900; margin:0 0 6px;
+}
+#p1Panel .p1-brand .p1-sub{
+  font-size:12.5px; font-weight:800;
+  background:linear-gradient(90deg,#ffd700,#ff5ca8,#7c5cff,#40e0d0,#ffd700);
+  background-size:200% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent;
+  animation:p1Tf 4s linear infinite;
+  margin:0 0 8px;
+}
+@keyframes p1Tf{to{background-position:200% 0}}
+#p1Panel .p1-brand .p1-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  padding:5px 14px; border-radius:99px;
+  font-size:11px; font-weight:800;
+}
+
+/* گرید درس‌ها */
+.p1-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px}
+.p1-card{
+  background:rgba(255,255,255,.10);
+  border:1.5px solid rgba(255,255,255,.22);
+  border-radius:18px; padding:16px 10px;
+  cursor:pointer; transition:.15s; text-align:center;
+}
+.p1-card:hover{
+  border-color:rgba(255,92,168,.7);
+  background:rgba(255,255,255,.16);
+  transform:translateY(-3px);
+}
+.p1-card:active{transform:scale(.96)}
+.p1-card .p1-em{font-size:30px; display:block; margin-bottom:6px}
+.p1-card .p1-nm{font-weight:800; font-size:13px; display:block; margin-bottom:4px}
+.p1-card .p1-cnt{font-size:10.5px; color:rgba(255,255,255,.65)}
+.p1-card .p1-topics{
+  font-size:10px; color:#c9bcff; margin-top:6px;
+  line-height:1.6; display:block;
+}
+
+/* تب‌ها */
+.p1-tabs{
+  display:flex; gap:5px; background:rgba(0,0,0,.3);
+  padding:5px; border-radius:16px; margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.15);
+}
+.p1-tabs button{
+  flex:1; font-family:inherit; font-size:12px; font-weight:700;
+  padding:12px; background:transparent; color:rgba(255,255,255,.65);
+  border:0; border-radius:12px; cursor:pointer; transition:.2s;
+}
+.p1-tabs button.on{
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff); color:#fff;
+}
+
+/* هدر */
+.p1-top{
+  display:flex; align-items:center; gap:10px; margin:8px 0 14px;
+}
+.p1-back{
+  border:1.5px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.12); color:#fff;
+  border-radius:12px; font-family:inherit;
+  padding:9px 14px; cursor:pointer;
+  font-weight:700; font-size:12.5px;
+}
+.p1-top h3{margin:0; font-size:16px; font-weight:900; flex:1}
+
+/* جدول لغات */
+.p1-vtable{width:100%; border-collapse:collapse; font-size:12.5px}
+.p1-vtable th{
+  background:rgba(255,92,168,.2); color:#ffb3d9;
+  padding:10px 8px; text-align:right;
+  font-weight:800; font-size:11.5px;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.p1-vtable td{padding:9px 8px; border-bottom:1px dashed rgba(255,255,255,.12)}
+.p1-vtable .p1-en{color:#ffd700; font-weight:800; direction:ltr; text-align:left; font-size:13px}
+.p1-vtable .p1-fa{font-size:12px}
+.p1-spk{
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  border:0; color:#fff; border-radius:8px;
+  padding:3px 9px; font-size:10px;
+  cursor:pointer; font-weight:700;
+}
+
+/* کارت شیشه‌ای */
+.p1-glass{
+  background:rgba(255,255,255,.10);
+  border:1.5px solid rgba(255,255,255,.22);
+  border-radius:20px; backdrop-filter:blur(20px);
+  padding:18px;
+}
+
+/* آزمون */
+.p1-qhead{
+  display:flex; justify-content:space-between;
+  align-items:center; margin-bottom:10px;
+  font-size:11px; font-weight:700; gap:5px; flex-wrap:wrap;
+}
+.p1-qt{
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  color:#fff; padding:5px 11px; border-radius:99px;
+  font-size:10.5px;
+}
+.p1-qt.gold{
+  background:rgba(255,215,0,.15); color:#ffd700;
+  border:1px solid rgba(255,215,0,.4);
+}
+.p1-qt.timer{
+  background:rgba(79,209,161,.15); color:#4fd1a1;
+  border:1px solid rgba(79,209,161,.4);
+  font-family:monospace; font-size:13px; font-weight:800;
+}
+.p1-qt.timer.warn{
+  background:rgba(255,180,92,.25); color:#ffb45c;
+  border-color:#ffb45c;
+}
+.p1-qt.timer.danger{
+  background:rgba(255,0,0,.3); color:#fff;
+  border-color:#ff6b6b; animation:p1Tk .6s infinite;
+}
+@keyframes p1Tk{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+.p1-q{
+  font-size:14px; font-weight:800; line-height:1.7;
+  margin:0 0 12px; text-align:center;
+  padding:13px; background:rgba(0,0,0,.2);
+  border-radius:14px; border:1px solid rgba(255,255,255,.15);
+}
+.p1-opts{display:grid; gap:9px}
+.p1-opt{
+  padding:13px 15px; border-radius:13px; cursor:pointer;
+  background:rgba(255,255,255,.10);
+  border:1.5px solid rgba(255,255,255,.22);
+  color:#fff; font-family:inherit; font-size:13px;
+  font-weight:700; text-align:right; direction:ltr;
+  transition:.2s;
+}
+.p1-opt:hover:not(:disabled){background:rgba(255,255,255,.18)}
+.p1-opt:disabled{cursor:not-allowed}
+.p1-opt.correct{
+  background:linear-gradient(135deg,rgba(79,209,161,.4),rgba(79,209,161,.15));
+  border-color:#4fd1a1; color:#b3ffd9;
+}
+.p1-opt.wrong{
+  background:linear-gradient(135deg,rgba(255,107,107,.4),rgba(255,107,107,.15));
+  border-color:#ff6b6b; color:#ffb3b3;
+}
+
+/* نتیجه */
+.p1-result{text-align:center; padding:24px 16px}
+.p1-result .p1-big{font-size:64px; margin-bottom:8px}
+.p1-result .p1-score{
+  font-size:40px; font-weight:900; margin:8px 0;
+  background:linear-gradient(135deg,#ffd700,#ff5ca8,#7c5cff);
+  background-size:200% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; animation:p1Tf 3s linear infinite;
+}
+.p1-result .p1-lbl{font-size:13px; color:rgba(255,255,255,.75); font-weight:700; margin-bottom:14px}
+.p1-result .p1-stars{font-size:24px; letter-spacing:4px; margin:10px 0 14px}
+.p1-result .p1-msg{
+  font-size:13px; font-weight:700; line-height:1.9;
+  margin-bottom:16px; padding:12px; border-radius:14px;
+  background:rgba(255,255,255,.10);
+}
+
+/* دکمه‌ها */
+.p1-btn{
+  width:100%; padding:15px; border:0; border-radius:16px;
+  cursor:pointer; font-family:inherit; font-weight:900;
+  font-size:15px; color:#fff;
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  transition:.15s;
+}
+.p1-btn.gold{
+  background:linear-gradient(135deg,#ffd700,#ff8c00,#ff5ca8);
+}
+.p1-btn:active{transform:scale(.98)}
+.p1-bs{
+  padding:9px 13px; border:0; border-radius:12px;
+  cursor:pointer; font-family:inherit; font-weight:800;
+  font-size:11.5px; color:#fff;
+  background:rgba(255,255,255,.15);
+  border:1.5px solid rgba(255,255,255,.25);
+  margin:4px 4px 4px 0;
+}
+.p1-bs.pk{background:linear-gradient(135deg,#ff5ca8,#7c5cff); border:0}
+
+/* فرم */
+.p1-fld{
+  width:100%; padding:12px; border-radius:14px;
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.28);
+  color:#fff; font-family:inherit;
+  font-size:13.5px; font-weight:700; outline:none;
+  margin-bottom:10px; text-align:center;
+}
+.p1-fld::placeholder{color:rgba(255,255,255,.5)}
+.p1-fld:focus{border-color:#ffd700}
+
+/* کارنامه */
+.p1-rc{
+  margin-bottom:12px; padding:12px; border-radius:14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+}
+.p1-rc h4{margin:0 0 8px; font-size:12.5px; font-weight:800; color:#ffd700}
+.p1-rr{
+  display:flex; justify-content:space-between;
+  padding:5px 0; font-size:11.5px;
+  border-bottom:1px dashed rgba(255,255,255,.15); gap:8px;
+}
+.p1-rr:last-child{border-bottom:0}
+.p1-gd{color:#4fd1a1}
+.p1-md{color:#ffd700}
+.p1-bd{color:#ff6b6b}
+
+/* میکروفن و ایفای نقش */
+.p1-micbox{
+  background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(255,92,168,.15));
+  border:2px solid rgba(124,92,255,.5);
+  border-radius:20px; padding:16px;
+  text-align:center; margin-bottom:10px;
+}
+.p1-rpbox{
+  background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,92,168,.15));
+  border:2px solid #ffd700;
+  border-radius:20px; padding:16px;
+  text-align:center; margin-bottom:10px;
+}
+.p1-micbox .p1-en{
+  font-size:18px; font-weight:900; direction:ltr;
+  color:#ffd700; margin:10px 0; line-height:1.35;
+  word-break:break-word;
+}
+.p1-hint{
+  font-size:11px; color:rgba(255,255,255,.82);
+  line-height:2; margin-bottom:10px; text-align:right;
+}
+.p1-role{
+  display:inline-block;
+  background:linear-gradient(135deg,#ffd700,#ff8c00);
+  color:#3d2a00; padding:4px 12px; border-radius:99px;
+  font-size:11px; font-weight:900; margin-bottom:10px;
+}
+.p1-lines{
+  background:rgba(0,0,0,.3); border-radius:14px;
+  padding:13px; margin:10px 0;
+  text-align:left; direction:ltr;
+  font-size:12.5px; line-height:2;
+}
+.p1-lines .p1-spk{color:#ffd700; font-weight:800; margin-right:6px}
+.p1-lines .p1-you{color:#4fd1a1; font-weight:800; margin-right:6px}
+.p1-mbtn{
+  width:88px; height:88px; border-radius:50%;
+  border:3px solid #fff;
+  background:linear-gradient(135deg,#ff5ca8,#7c5cff);
+  cursor:pointer; display:inline-flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  font-size:28px; color:#fff; margin:6px;
+}
+.p1-mbtn.recording{
+  background:linear-gradient(135deg,#ff0080,#ff5ca8);
+  animation:p1Mp 1s infinite;
+}
+@keyframes p1Mp{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,92,168,.7)}
+  50%{box-shadow:0 0 0 22px rgba(255,92,168,0)}
+}
+.p1-mbtn .p1-lbl{font-size:9px; font-weight:700; margin-top:-2px}
+.p1-mstatus{
+  font-size:12px; font-weight:700; color:#4fd1a1;
+  margin-top:8px; min-height:22px;
+  white-space:pre-line; line-height:1.6;
+}
+.p1-mstatus.listening{color:#ffd700}
+.p1-mstatus.error{color:#ff6b6b}
+
+/* درک مطلب */
+.p1-rcbox{
+  padding:14px; background:rgba(0,0,0,.25);
+  border-radius:14px; margin-bottom:12px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.p1-rcbox .p1-text{
+  direction:ltr; text-align:left;
+  font-size:13px; line-height:2.1;
+}
+
+/* جای خالی */
+.p1-fill{
+  padding:12px 14px; background:rgba(255,255,255,.08);
+  border-radius:12px; margin-bottom:10px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.p1-fill input{
+  width:100%; padding:10px 12px; border-radius:10px;
+  background:rgba(0,0,0,.3);
+  border:1.5px solid rgba(255,255,255,.2);
+  color:#fff; font-family:inherit; font-size:13px;
+  outline:none; direction:ltr; text-align:left;
+}
+.p1-fill input.correct{
+  border-color:#4fd1a1;
+  background:rgba(79,209,161,.15);
+}
+.p1-fill input.wrong{
+  border-color:#ff6b6b;
+  background:rgba(255,107,107,.15);
+}
+
+/* گواهینامه */
+.p1-cert{
+  background:
+    radial-gradient(ellipse at top left,rgba(255,215,0,.15),transparent 50%),
+    radial-gradient(ellipse at bottom right,rgba(255,92,168,.15),transparent 50%),
+    linear-gradient(135deg,#1a1033,#2a1a4d,#1a1033);
+  border:3px double #ffd700; border-radius:24px;
+  padding:24px 18px; text-align:center;
+  box-shadow:0 0 60px rgba(255,215,0,.3); margin-bottom:14px;
+}
+.p1-cert .p1-deco{color:#ffd700; font-size:20px; letter-spacing:8px; margin-bottom:8px}
+.p1-cert .p1-ttl{
+  font-size:19px; font-weight:900;
+  background:linear-gradient(135deg,#ffd700,#ff5ca8,#ffd700);
+  background-size:200% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; animation:p1Tf 4s linear infinite;
+  margin:0 0 6px;
+}
+.p1-cert .p1-sub{color:rgba(255,255,255,.7); font-size:11px; margin:0 0 12px}
+.p1-cert .p1-nm{
+  font-size:22px; font-weight:900; color:#fff;
+  padding:12px 16px; margin:10px 0;
+  border-top:2px solid #ffd700; border-bottom:2px solid #ffd700;
+  line-height:1.4; word-break:break-word;
+}
+.p1-cert .p1-body{font-size:12px; line-height:2; margin:10px 0}
+.p1-cert .p1-sc{
+  display:inline-block; padding:7px 16px;
+  border-radius:99px; margin:8px 0;
+  background:linear-gradient(135deg,rgba(255,215,0,.2),rgba(255,92,168,.2));
+  border:1.5px solid #ffd700; color:#ffd700;
+  font-weight:800; font-size:12.5px;
+}
+.p1-cert .p1-ft{
+  margin-top:16px; padding-top:12px;
+  border-top:1px dashed rgba(255,215,0,.4);
+  display:flex; justify-content:space-between;
+  align-items:center; font-size:9.5px;
+  color:rgba(255,255,255,.6);
+}
+.p1-cert .p1-sg{text-align:center}
+.p1-cert .p1-sg .p1-n2{color:#ffd700; font-size:11.5px; font-weight:800; margin-bottom:2px}
+.p1-cert .p1-seal{
+  width:48px; height:48px; border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#fff5b0,#ffd700 40%,#b8860b);
+  display:grid; place-items:center;
+  font-size:18px; color:#5a3d00; font-weight:900;
+}
+
+/* کانفتی */
+.p1-confetti{position:fixed; inset:0; pointer-events:none; z-index:99999}
+.p1-conf{
+  position:absolute; width:9px; height:12px;
+  animation:p1Cf linear infinite; opacity:.9;
+}
+@keyframes p1Cf{
+  0%{transform:translateY(-20vh) rotate(0deg); opacity:1}
+  100%{transform:translateY(110vh) rotate(720deg); opacity:0}
+}
+
+@media (max-width:480px){
+  #p1Fab{font-size:12px; padding:12px 18px; bottom:16px; left:16px}
+  .p1-grid{gap:8px}
+}
+</style>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ================== ابزارها ================== */
+  const fa = n => Number(n).toLocaleString("fa-IR");
+  const fmtTime = s => { s = Math.max(0, Math.floor(s)); return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0"); };
+  const nowFa = () => new Date().toLocaleDateString("fa-IR");
+  const timeFa = t => new Date(t).toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit"});
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  function toast(msg){
+    let t = document.getElementById("p1Toast");
+    if(!t){
+      t = document.createElement("div");
+      t.id = "p1Toast";
+      t.style.cssText = "position:fixed;bottom:24px;right:50%;transform:translate(50%,120px);background:rgba(0,0,0,.9);color:#fff;padding:12px 18px;border-radius:14px;font-size:12.5px;font-weight:700;z-index:99999;transition:transform .3s;font-family:inherit";
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    t.style.transform = "translate(50%,0)";
+    clearTimeout(t._tid);
+    t._tid = setTimeout(() => t.style.transform = "translate(50%,120px)", 2400);
+  }
+
+  function speak(text, btn){
+    if(!("speechSynthesis" in window)) return;
+    try{
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-US"; u.rate = .85;
+      const vs = speechSynthesis.getVoices();
+      const v = vs.find(x => x.lang === "en-US") || vs.find(x => x.lang.startsWith("en"));
+      if(v) u.voice = v;
+      if(btn){ btn.style.transform = "scale(1.2)"; u.onend = () => btn.style.transform = ""; }
+      speechSynthesis.speak(u);
+    }catch(e){}
+  }
+
+  function confetti(){
+    const colors = ["#ff5ca8","#7c5cff","#ffd700","#40e0d0","#ff8c00"];
+    const wrap = document.createElement("div");
+    wrap.className = "p1-confetti";
+    document.body.appendChild(wrap);
+    for(let i=0;i<80;i++){
+      const p = document.createElement("div");
+      p.className = "p1-conf";
+      p.style.left = Math.random()*100 + "%";
+      p.style.background = colors[Math.floor(Math.random()*colors.length)];
+      p.style.animationDuration = (2.2 + Math.random()*2) + "s";
+      p.style.animationDelay = (Math.random()*0.6) + "s";
+      wrap.appendChild(p);
+    }
+    setTimeout(()=>wrap.remove(), 3500);
+  }
+
+  function sim(a,b){
+    a = a.replace(/[^a-z\s]/g,"").toLowerCase().trim();
+    b = b.replace(/[^a-z\s]/g,"").toLowerCase().trim();
+    if(!a || !b) return 0;
+    const m=a.length, n=b.length;
+    const dp = Array.from({length:m+1},()=>new Array(n+1).fill(0));
+    for(let i=0;i<=m;i++) dp[i][0]=i;
+    for(let j=0;j<=n;j++) dp[0][j]=j;
+    for(let i=1;i<=m;i++)
+      for(let j=1;j<=n;j++)
+        dp[i][j] = Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+    return 1 - dp[m][n]/Math.max(m,n);
+  }
+
+  /* ================== دادهٔ ۸ درس ================== */
+  const LESSONS = {
+    l1:{t:"درس ۱ — My Name",e:"📛",topics:"معرفی خود · هجی کردن · احوالپرسی",
+      v:[["Name","نام"],["First name","نام کوچک"],["Last name","نام خانوادگی"],["Spell","هجی کردن"],["Mr.","آقا"],["Mrs.","خانم"],["Miss","خانم مجرد"],["Teacher","معلم"],["Student","دانش‌آموز"],["Class","کلاس"],["Book","کتاب"],["Pen","خودکار"],["Pencil","مداد"],["Bag","کیف"],["School","مدرسه"],["Desk","میز"]],
+      mc:[["معنی name چیست؟","نام","شماره","آدرس","سن",0,"name = نام"],["معنی last name چیست؟","نام کوچک","نام خانوادگی","لقب","کد",1,"نام خانوادگی"],["معنی spell چیست؟","هجی کردن","نوشتن","خواندن","گوش دادن",0,"هجی کردن"],["معنی Miss چیست؟","آقا","خانم مجرد","خانم متأهل","دکتر",1,"خانم مجرد"],["معنی teacher چیست؟","معلم","دانش‌آموز","دکتر","مهندس",0,"معلم"],["معنی book چیست؟","کتاب","دفتر","قلم","مداد",0,"کتاب"],["معنی pencil چیست؟","مداد","خودکار","ماژیک","پاک‌کن",0,"مداد"],["معنی class چیست؟","کلاس","مدرسه","خانه","دفتر",0,"کلاس"],["معنی school چیست؟","مدرسه","خانه","کلاس","کتاب",0,"مدرسه"],["معنی bag چیست؟","کیف","کتاب","مداد","میز",0,"کیف"]],
+      fill:[["My ___ is Ali Rezaei.","name","نام"],["How do you ___ your name?","spell","هجی"],["I am a ___. (دانش‌آموز)","student","دانش‌آموز"],["She is my English ___. (معلم)","teacher","معلم"],["___ is your teacher? — Mr. Ahmadi.","Who","چه کسی"]],
+      read:{text:"Ali: Hi! My name is Ali. What's your name?\nSara: Hi Ali. I'm Sara. How do you spell your name?\nAli: A-L-I. And you?\nSara: S-A-R-A.",q:[["What is the boy's name?","Ali"],["What is the girl's name?","Sara"],["How does Ali spell his name?","A-L-I"],["How does Sara spell her name?","S-A-R-A"],["What is the girl's name again?","Sara"]]},
+      rp:[{q:"معلم می‌پرسد اسمت چیه. پاسخ بده:",speaker:"What's your name?",expected:"My name is Ali",exp:"با My name is ... معرفی کن."},{q:"معلم می‌پرسد اسمت رو چطور هجی می‌کنی:",speaker:"How do you spell your name?",expected:"A-L-I",exp:"حروف رو جدا جدا بگو."}],
+      mic:[{en:"My name is Ali.",exp:"name = /neɪm/"},{en:"How do you spell your name?",exp:"spell = /spel/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"What's your name?",expected:"My name is Ali",exp:"پاسخ نام"},{q:"دوستت می‌گوید:",speaker:"Nice to meet you.",expected:"Nice to meet you too",exp:"پاسخ مودبانه"}]
+    },
+    l2:{t:"درس ۲ — My Classmates",e:"👥",topics:"معرفی دیگران · دوستان · این/آن",
+      v:[["Boy","پسر"],["Girl","دختر"],["Man","مرد"],["Woman","زن"],["Friend","دوست"],["Classmate","همکلاسی"],["Welcome","خوش آمدید"],["Meet","ملاقات کردن"],["This","این"],["That","آن"],["He","او (مذکر)"],["She","او (مؤنث)"],["Who","چه کسی"],["Library","کتابخانه"],["Librarian","کتابدار"],["New","جدید"]],
+      mc:[["معنی friend چیست؟","دوست","همکار","معلم","دانش‌آموز",0,"دوست"],["معنی classmate چیست؟","همکلاسی","همکار","دوست","خویشاوند",0,"همکلاسی"],["معنی welcome چیست؟","خوش آمدید","خداحافظ","ممنون","ببخشید",0,"خوش آمدید"],["معنی boy چیست؟","پسر","دختر","مرد","زن",0,"پسر"],["معنی girl چیست؟","دختر","پسر","زن","مرد",0,"دختر"],["معنی this چیست؟","این","آن","او","ما",0,"این"],["معنی that چیست؟","آن","این","اینجا","آنجا",0,"آن"],["معنی he چیست؟","او (مذکر)","او (مؤنث)","آن","ما",0,"او مذکر"],["معنی she چیست؟","او (مؤنث)","او (مذکر)","آن","شما",0,"او مؤنث"],["معنی who چیست؟","چه کسی","چه","کجا","کی",0,"چه کسی"]],
+      fill:[["___ is your friend? — Ali.","Who","چه کسی"],["This is my ___. (دوست)","friend","دوست"],["She is my ___. (همکلاسی)","classmate","همکلاسی"],["___ to our class!","Welcome","خوش آمدید"],["Is this your book? — Yes, it ___.","is","پاسخ کوتاه"]],
+      read:{text:"Ali: Hi Sara! Who is this boy?\nSara: Hi! This is my classmate, Reza.\nAli: Nice to meet you, Reza.\nReza: Nice to meet you too, Ali.",q:[["Who is the boy?","Reza"],["Who is Reza?","Sara's classmate"],["Is Reza a new student?","Yes"],["Who said 'Nice to meet you' first?","Ali"],["Who is Sara?","A student"]]},
+      rp:[{q:"دوستت یک نفر رو معرفی می‌کند:",speaker:"This is my classmate, Reza.",expected:"Nice to meet you Reza",exp:"با Nice to meet you پاسخ بده."},{q:"دوستت می‌پرسد آن پسر کیه. بپرس اسمش چیه:",speaker:"He is my friend.",expected:"What is his name",exp:"با What is his name? بپرس."}],
+      mic:[{en:"This is my friend, Reza.",exp:"friend = /frend/"},{en:"Welcome to our class!",exp:"Welcome = /ˈwelkəm/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"Who is this girl?",expected:"She is my classmate",exp:"معرفی"}]
+    },
+    l3:{t:"درس ۳ — My Age",e:"🎂",topics:"سن · تولد · ماه‌ها · اعداد",
+      v:[["Age","سن"],["Birthday","تولد"],["Month","ماه"],["Year","سال"],["Number","عدد"],["When","کی"],["How old","چند ساله"],["First","اول"],["Second","دوم"],["Third","سوم"],["January","ژانویه"],["February","فوریه"],["March","مارس"],["April","آپریل"],["May","مه"],["June","ژوئن"]],
+      mc:[["معنی age چیست؟","سن","نام","آدرس","عدد",0,"سن"],["معنی birthday چیست؟","تولد","مرگ","سن","شغل",0,"تولد"],["معنی month چیست؟","ماه","سال","روز","هفته",0,"ماه"],["معنی year چیست؟","سال","ماه","هفته","روز",0,"سال"],["معنی when چیست؟","کی","چه کسی","کجا","چرا",0,"کی"],["عدد 5 به انگلیسی؟","Five","Four","Six","Nine",0,"5=five"],["عدد 10 به انگلیسی؟","Ten","Nine","Eight","Eleven",0,"10=ten"],["معنی first چیست؟","اول","دوم","سوم","چهارم",0,"اول"],["معنی third چیست؟","سوم","دوم","اول","چهارم",0,"سوم"],["بعد از March کدام ماه است؟","April","May","June","February",0,"April"]],
+      fill:[["___ old are you? — I am 12.","How","چند ساله"],["My ___ is on the 5th of May.","birthday","تولد"],["I am twelve years ___.","old","years old"],["Three + seven = ___.","ten","3+7=10"],["The month after June is ___.","July","جولای"]],
+      read:{text:"Sara: How old are you, Ali?\nAli: I am 13 years old. And you?\nSara: I am 12. When is your birthday?\nAli: It's on the 22nd of March.",q:[["How old is Ali?","He is 13 years old"],["How old is Sara?","She is 12 years old"],["When is Ali's birthday?","On the 22nd of March"],["When is Sara's birthday?","On the 5th of May"],["Who is older?","Ali"]]},
+      rp:[{q:"دوستت می‌پرسد چند سالته:",speaker:"How old are you?",expected:"I am thirteen years old",exp:"با I am ... years old پاسخ بده."},{q:"از دوستت تولدش رو بپرس:",speaker:"My birthday is in May.",expected:"When is your birthday",exp:"با When is your birthday? بپرس."}],
+      mic:[{en:"I am thirteen years old.",exp:"thirteen = /θɜːrˈtiːn/"},{en:"My birthday is on the fifth of May.",exp:"fifth = /fɪfθ/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"How old are you?",expected:"I am twelve years old",exp:"پاسخ سن"}]
+    },
+    l4:{t:"درس ۴ — My Family",e:"👨‍👩‍👧",topics:"خانواده · شغل‌ها · صفات ملکی",
+      v:[["Family","خانواده"],["Father","پدر"],["Mother","مادر"],["Sister","خواهر"],["Brother","برادر"],["Aunt","خاله/عمه"],["Uncle","عمو/دایی"],["Cousin","پسرعمو"],["Grandfather","پدربزرگ"],["Grandmother","مادربزرگ"],["Job","شغل"],["Doctor","دکتر"],["Nurse","پرستار"],["Teacher","معلم"],["Engineer","مهندس"],["Pilot","خلبان"],["Mechanic","مکانیک"],["Housewife","خانه‌دار"]],
+      mc:[["معنی family چیست؟","خانواده","خانه","فامیل","همه",0,"خانواده"],["معنی father چیست؟","پدر","مادر","پسر","دایی",0,"پدر"],["معنی mother چیست؟","مادر","پدر","دختر","خاله",0,"مادر"],["معنی sister چیست؟","خواهر","برادر","دختر","مادر",0,"خواهر"],["معنی brother چیست؟","برادر","خواهر","پسر","پدر",0,"برادر"],["معنی job چیست؟","شغل","نام","سن","آدرس",0,"شغل"],["معنی doctor چیست؟","دکتر","پرستار","معلم","مهندس",0,"دکتر"],["معنی nurse چیست؟","پرستار","دکتر","معلم","راننده",0,"پرستار"],["معنی engineer چیست؟","مهندس","دکتر","معلم","خلبان",0,"مهندس"],["معنی pilot چیست؟","خلبان","راننده","ملوان","مهندس",0,"خلبان"]],
+      fill:[["My ___ is a doctor. (پدر)","father","پدر"],["My ___ is a teacher. (مادر)","mother","مادر"],["I have one ___. (برادر)","brother","برادر"],["My father's brother is my ___.","uncle","عمو"],["My mother's sister is my ___.","aunt","خاله"]],
+      read:{text:"My name is Sara. I have a small family. My father is a doctor. He works in a hospital. My mother is a teacher. She works in a school. I have one brother. His name is Reza.",q:[["What is Sara's father's job?","He is a doctor"],["What is Sara's mother's job?","She is a teacher"],["How many brothers does Sara have?","One brother"],["What is her brother's name?","Reza"],["Where do they live?","In Tehran"]]},
+      rp:[{q:"دوستت می‌پرسد شغل پدرت چیه:",speaker:"What is your father's job?",expected:"He is a doctor",exp:"با He is a ... پاسخ بده."},{q:"دوستت می‌پرسد خواهر داری:",speaker:"Do you have a sister?",expected:"Yes I have one sister",exp:"با Yes I have ... پاسخ بده."}],
+      mic:[{en:"My father is a doctor.",exp:"doctor = /ˈdɑːktər/"},{en:"I have one brother and one sister.",exp:"brother = /ˈbrʌðər/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"What is your mother's job?",expected:"She is a teacher",exp:"شغل مادر"}]
+    },
+    l5:{t:"درس ۵ — My Appearance",e:"👕",topics:"ظاهر · لباس · رنگ‌ها",
+      v:[["Tall","قدبلند"],["Short","قدکوتاه"],["Young","جوان"],["Old","پیر"],["Hair","مو"],["Eye","چشم"],["Shirt","پیراهن"],["Jacket","کاپشن"],["Pants","شلوار"],["Shoes","کفش"],["Scarf","روسری"],["Hat","کلاه"],["Black","مشکی"],["White","سفید"],["Red","قرمز"],["Blue","آبی"],["Green","سبز"],["Yellow","زرد"]],
+      mc:[["معنی tall چیست؟","قدبلند","قدکوتاه","لاغر","چاق",0,"قدبلند"],["معنی short چیست؟","قدکوتاه","قدبلند","بلند","کوتاه",0,"قدکوتاه"],["معنی young چیست؟","جوان","پیر","بچه","نوجوان",0,"جوان"],["معنی old چیست؟","پیر","جوان","نو","تازه",0,"پیر"],["معنی shirt چیست؟","پیراهن","شلوار","کاپشن","کلاه",0,"پیراهن"],["معنی jacket چیست؟","کاپشن","پیراهن","شلوار","کفش",0,"کاپشن"],["معنی shoes چیست؟","کفش","جوراب","کلاه","دستکش",0,"کفش"],["معنی black چیست؟","مشکی","سفید","قرمز","آبی",0,"مشکی"],["معنی red چیست؟","قرمز","آبی","سبز","زرد",0,"قرمز"],["معنی blue چیست؟","آبی","سبز","قرمز","زرد",0,"آبی"]],
+      fill:[["My father is very ___. (قدبلند)","tall","قدبلند"],["I am wearing a blue ___. (پیراهن)","shirt","پیراهن"],["Her hair is ___. (مشکی)","black","مشکی"],["He has brown ___. (چشم)","eyes","چشم"],["My sister is ___. (جوان)","young","جوان"]],
+      read:{text:"This is my friend Reza. He is tall and young. He has black hair and brown eyes. Today, he is wearing a blue shirt and black pants.",q:[["How is Reza?","He is tall and young"],["What color is his hair?","Black"],["What color are his eyes?","Brown"],["What is he wearing today?","A blue shirt and black pants"],["What color are his shoes?","White"]]},
+      rp:[{q:"دوستت می‌پرسد دوست قدبلندت کیه:",speaker:"Who is your tall friend?",expected:"He is Reza",exp:"با He is ... پاسخ بده."},{q:"از دوستت بپرس امروز چی پوشیده:",speaker:"I am a student.",expected:"What are you wearing today",exp:"با What are you wearing بپرس."}],
+      mic:[{en:"My father is tall and young.",exp:"tall = /tɔːl/"},{en:"She has black hair and brown eyes.",exp:"brown = /braʊn/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"What color is your shirt?",expected:"It is blue",exp:"رنگ پیراهن"}]
+    },
+    l6:{t:"درس ۶ — My House",e:"🏠",topics:"خانه · اتاق‌ها · حال استمراری",
+      v:[["House","خانه"],["Kitchen","آشپزخانه"],["Bedroom","اتاق خواب"],["Garage","گاراژ"],["Living room","اتاق نشیمن"],["Bathroom","حمام"],["Door","در"],["Window","پنجره"],["Garden","باغچه"],["Cook","آشپزی کردن"],["Wash","شستن"],["Watch","تماشا کردن"],["Play","بازی کردن"],["Study","مطالعه کردن"],["Now","الان"],["Some","مقداری"],["Any","هیچ"]],
+      mc:[["معنی house چیست؟","خانه","آشپزخانه","اتاق","گاراژ",0,"خانه"],["معنی kitchen چیست؟","آشپزخانه","اتاق خواب","حمام","اتاق نشیمن",0,"آشپزخانه"],["معنی bedroom چیست؟","اتاق خواب","آشپزخانه","حمام","گاراژ",0,"اتاق خواب"],["معنی garage چیست؟","گاراژ","اتاق","خانه","آشپزخانه",0,"گاراژ"],["معنی door چیست؟","در","پنجره","دیوار","سقف",0,"در"],["معنی cook چیست؟","آشپزی کردن","شستن","تماشا کردن","بازی کردن",0,"آشپزی"],["معنی wash چیست؟","شستن","آشپزی","تماشا","بازی",0,"شستن"],["معنی watch چیست؟","تماشا کردن","گوش دادن","خواندن","نوشتن",0,"تماشا"],["معنی study چیست؟","مطالعه کردن","نوشتن","بازی","خواندن",0,"مطالعه"],["معنی now چیست؟","الان","دیروز","فردا","هفته",0,"الان"]],
+      fill:[["My mother ___ in the kitchen now. (آشپزی)","is cooking","حال استمراری"],["I have ___ books.","some","مثبت"],["I don't have ___ books.","any","منفی"],["The door is ___ the wall.","on","روی"],["We watch TV in the ___.","living room","اتاق نشیمن"]],
+      read:{text:"My name is Ali. I live in a big house. My house has three bedrooms, one kitchen, and one living room. My mother is cooking in the kitchen. My father is watching TV in the living room.",q:[["How many bedrooms does Ali's house have?","Three bedrooms"],["What is his mother doing?","She is cooking"],["What is his father doing?","He is watching TV"],["Where is his father?","In the living room"],["What is Ali doing?","He is studying"]]},
+      rp:[{q:"دوستت می‌پرسد خانه‌ات چند اتاق داره:",speaker:"How many bedrooms does your house have?",expected:"My house has three bedrooms",exp:"با My house has ... پاسخ بده."},{q:"دوستت می‌پرسد مادرت چیکار می‌کنه:",speaker:"What is your mother doing?",expected:"She is cooking",exp:"با She is + ing پاسخ بده."}],
+      mic:[{en:"My mother is cooking in the kitchen.",exp:"kitchen = /ˈkɪtʃɪn/"},{en:"My father is watching TV in the living room.",exp:"watching = /ˈwɑːtʃɪŋ/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"Where is your father?",expected:"He is in the living room",exp:"مکان پدر"}]
+    },
+    l7:{t:"درس ۷ — My Address",e:"📍",topics:"آدرس · تلفن · زمان · آینده",
+      v:[["Address","آدرس"],["Street","خیابان"],["Phone number","شماره تلفن"],["Mobile","موبایل"],["Time","زمان"],["O'clock","ساعت"],["Morning","صبح"],["Afternoon","بعدازظهر"],["Evening","عصر"],["Night","شب"],["Hour","ساعت"],["Minute","دقیقه"],["Early","زود"],["Late","دیر"],["Clock","ساعت دیواری"],["Watch","ساعت مچی"]],
+      mc:[["معنی address چیست؟","آدرس","شماره","نام","شهر",0,"آدرس"],["معنی street چیست؟","خیابان","کوچه","میدان","جاده",0,"خیابان"],["معنی phone number چیست؟","شماره تلفن","آدرس","ایمیل","کد",0,"شماره تلفن"],["معنی time چیست؟","زمان","مکان","اسم","عدد",0,"زمان"],["معنی morning چیست؟","صبح","شب","عصر","بعدازظهر",0,"صبح"],["معنی afternoon چیست؟","بعدازظهر","صبح","شب","عصر",0,"بعدازظهر"],["معنی evening چیست؟","عصر","صبح","شب","بعدازظهر",0,"عصر"],["معنی late چیست؟","دیر","زود","الان","قبل",0,"دیر"],["معنی early چیست؟","زود","دیر","همیشه","هرگز",0,"زود"],["معنی clock چیست؟","ساعت","دقیقه","ثانیه","زمان",0,"ساعت"]],
+      fill:[["What's your ___? — 123 Main Street.","address","آدرس"],["It's five ___. (ساعت)","o'clock","ساعت"],["My ___ is 0912-345-6789.","phone number","شماره تلفن"],["I ___ going to visit my grandmother tomorrow.","am","آینده"],["What ___ is it? — Five thirty.","time","زمان"]],
+      read:{text:"Reza: What's your address, Ali?\nAli: My address is 123 Main Street, Tehran.\nReza: What's your phone number?\nAli: It's 0912-345-6789.\nReza: What time is it now?\nAli: It's six o'clock.",q:[["What is Ali's address?","123 Main Street"],["What is Ali's phone number?","0912-345-6789"],["What time is it?","Six o'clock"],["What is Ali going to do?","He is going to go home"],["Who asks about Ali's address?","Reza"]]},
+      rp:[{q:"از دوستت آدرسش رو بپرس:",speaker:"Yes, of course.",expected:"What is your address",exp:"با What is your address بپرس."},{q:"دوستت می‌پرسد ساعت چنده:",speaker:"What time is it?",expected:"It is six o'clock",exp:"با It is ... o'clock پاسخ بده."}],
+      mic:[{en:"My address is one two three Main Street.",exp:"address = /ˈædres/"},{en:"It is six o'clock.",exp:"o'clock = /əˈklɑːk/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"What is your phone number?",expected:"It is 0912 345 6789",exp:"شماره تلفن"}]
+    },
+    l8:{t:"درس ۸ — My Favorite Food",e:"🍔",topics:"غذا · نوشیدنی · رستوران",
+      v:[["Food","غذا"],["Drink","نوشیدنی"],["Rice","برنج"],["Kebab","کباب"],["Chicken","مرغ"],["Fish","ماهی"],["Bread","نان"],["Egg","تخم مرغ"],["Cake","کیک"],["Ice cream","بستنی"],["Milk","شیر"],["Tea","چای"],["Coffee","قهوه"],["Water","آب"],["Juice","آبمیوه"],["Orange juice","آب پرتقال"],["Hungry","گرسنه"],["Thirsty","تشنه"],["Delicious","خوشمزه"],["Favorite","مورد علاقه"]],
+      mc:[["معنی food چیست؟","غذا","نوشیدنی","میوه","شیرینی",0,"غذا"],["معنی drink چیست؟","نوشیدنی","غذا","میوه","کیک",0,"نوشیدنی"],["معنی rice چیست؟","برنج","نان","گوشت","ماهی",0,"برنج"],["معنی kebab چیست؟","کباب","پیتزا","ساندویچ","برگر",0,"کباب"],["معنی chicken چیست؟","مرغ","گاو","گوسفند","ماهی",0,"مرغ"],["معنی cake چیست؟","کیک","شیرینی","نان","بستنی",0,"کیک"],["معنی milk چیست؟","شیر","آب","چای","قهوه",0,"شیر"],["معنی tea چیست؟","چای","قهوه","شیر","آب",0,"چای"],["معنی water چیست؟","آب","شیر","چای","قهوه",0,"آب"],["معنی hungry چیست؟","گرسنه","تشنه","خسته","خوشحال",0,"گرسنه"]],
+      fill:[["I like ___. (کباب)","kebab","کباب"],["My favorite food is ___.","kebab","کباب"],["Would you like some ___? (آب پرتقال)","orange juice","آب پرتقال"],["I am ___. Let's eat. (گرسنه)","hungry","گرسنه"],["I am ___. Let's drink water.","thirsty","تشنه"]],
+      read:{text:"Ali: I'm hungry. Let's go to a restaurant.\nSara: Good idea! What's your favorite food?\nAli: My favorite food is kebab with rice.\nSara: I like chicken.",q:[["What is Ali's favorite food?","Kebab with rice"],["What does Sara like?","Chicken"],["What does Sara want to drink?","Orange juice"],["Where are they going?","To a restaurant"],["Why are they going to a restaurant?","Because Ali is hungry"]]},
+      rp:[{q:"گارسون در رستوران می‌پرسد:",speaker:"What would you like to order?",expected:"I would like a kebab please",exp:"با I would like ... please سفارش بده."},{q:"گارسون می‌پرسد چی می‌نوشی:",speaker:"What would you like to drink?",expected:"Orange juice please",exp:"با ... please پاسخ بده."}],
+      mic:[{en:"My favorite food is kebab with rice.",exp:"favorite = /ˈfeɪvərɪt/"},{en:"I would like some orange juice, please.",exp:"orange = /ˈɔːrɪndʒ/"}],
+      conv:[{q:"دوستت می‌پرسد:",speaker:"What is your favorite food?",expected:"My favorite food is kebab",exp:"غذای مورد علاقه"}]
+    }
+  };
+
+  /* ================== state ================== */
+  const state = {
+    lesson:null,
+    idx:0, score:0, answered:false,
+    student:"", startTime:0, endTime:0,
+    totalLeft:900, timer:null,
+    results:[], rec:null, recing:false
+  };
+
+  const overlay = document.getElementById("p1Overlay");
+  const content = document.getElementById("p1Content");
+
+  /* ================== توابع رندر ================== */
+  function showHome(){
+    let html = `
+      <div class="p1-brand">
+        <h2>🎓 موسسه زبان انگلیسی محمدجواد کجوری</h2>
+        <p class="p1-sub">✨ آزمون‌های تفکیکی Prospect 1 ✨</p>
+        <div class="p1-badge">پایه هفتم · ۸ درس · لغت + آزمون + تلفظ + ایفای نقش</div>
+      </div>
+      <div style="text-align:center;margin-bottom:14px;font-size:13px;font-weight:700;opacity:.8">
+        👇 یک درس را برای آزمون انتخاب کن
+      </div>
+      <div class="p1-grid">`;
+    Object.entries(LESSONS).forEach(([key, l])=>{
+      const total = l.mc.length + l.fill.length + l.read.q.length + l.rp.length + l.mic.length + l.conv.length;
+      html += `
+        <div class="p1-card" data-key="${key}">
+          <span class="p1-em">${l.e}</span>
+          <span class="p1-nm">${l.t}</span>
+          <span class="p1-cnt">${fa(l.v.length)} لغت · ${fa(total)} سوال</span>
+          <span class="p1-topics">📌 ${l.topics}</span>
+        </div>`;
+    });
+    html += `</div>`;
+    content.innerHTML = html;
+    content.querySelectorAll(".p1-card").forEach(c=>{
+      c.addEventListener("click", ()=>openLesson(c.dataset.key));
+    });
+  }
+
+  function openLesson(key){
+    state.lesson = key;
+    const l = LESSONS[key];
+    content.innerHTML = `
+      <div class="p1-top">
+        <button class="p1-back" id="p1Back">→ بازگشت</button>
+        <h3>${l.e} ${l.t}</h3>
+      </div>
+      <div class="p1-tabs">
+        <button type="button" data-t="v" class="on">📖 لغات درس</button>
+        <button type="button" data-t="q">📝 آزمون درس</button>
+      </div>
+      <div id="p1VocabSection">
+        <div class="p1-glass" style="padding:12px" id="p1VocabBox"></div>
+      </div>
+      <div id="p1QuizSection" hidden>
+        <div class="p1-glass" style="text-align:center;padding:20px 14px" id="p1QuizStart">
+          <div style="font-size:44px;margin-bottom:6px">📝</div>
+          <h2 style="margin:0 0 8px;font-size:16px;font-weight:900">آزمون ${l.t}</h2>
+          <p style="opacity:.75;font-size:11.5px;line-height:1.9;margin:0 0 12px">
+            <b style="color:#ffd700">${fa(l.mc.length + l.fill.length + l.read.q.length + l.rp.length + l.mic.length + l.conv.length)} سوال</b> — چهارگزینه‌ای + جای خالی + درک مطلب + تلفظ + ایفای نقش<br>
+            ⏱ زمان: <b style="color:#4fd1a1">۱۵ دقیقه</b>
+          </p>
+          <input type="text" class="p1-fld" id="p1Name" placeholder="نام و نام خانوادگی" maxlength="40">
+          <div class="p1-fld" style="background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.4);color:#ffd700;font-weight:800">کلاس: ایمان</div>
+          <button class="p1-btn gold" id="p1StartQuiz" type="button">🚀 شروع آزمون</button>
+        </div>
+        <div id="p1QuizRun" hidden>
+          <div class="p1-qhead">
+            <span class="p1-qt" id="p1QNum">۱ / ۲۶</span>
+            <span class="p1-qt gold" id="p1QScore">امتیاز: ۰</span>
+            <span class="p1-qt timer" id="p1QTimer">۱۵:۰۰</span>
+          </div>
+          <div class="p1-glass">
+            <p class="p1-q" id="p1QText"></p>
+            <div id="p1QBody"></div>
+          </div>
+        </div>
+        <div id="p1QuizResult" hidden>
+          <div class="p1-glass p1-result">
+            <div class="p1-big" id="p1REmoji">🎉</div>
+            <div class="p1-score" id="p1RScore">— / ۲۶</div>
+            <div class="p1-lbl" id="p1RPct">—٪</div>
+            <div class="p1-stars" id="p1RStars"></div>
+            <div class="p1-msg" id="p1RMsg"></div>
+            <button class="p1-btn gold" id="p1ShowReport" type="button">📋 کارنامه</button>
+          </div>
+        </div>
+        <div id="p1Report" hidden>
+          <div class="p1-glass">
+            <h2 style="text-align:center;font-size:16px;font-weight:900;margin:0 0 14px">📋 کارنامهٔ آزمون</h2>
+            <div class="p1-rc">
+              <h4>👤 اطلاعات دانش‌آموز</h4>
+              <div class="p1-rr"><span>نام:</span><span class="p1-gd" id="p1RName">—</span></div>
+              <div class="p1-rr"><span>کلاس:</span><span class="p1-gd">ایمان</span></div>
+              <div class="p1-rr"><span>درس:</span><span class="p1-gd" id="p1RLesson">—</span></div>
+              <div class="p1-rr"><span>تاریخ:</span><span class="p1-gd" id="p1RDate">—</span></div>
+              <div class="p1-rr"><span>ساعت شروع:</span><span class="p1-gd" id="p1RStart">—</span></div>
+              <div class="p1-rr"><span>ساعت پایان:</span><span class="p1-gd" id="p1REnd">—</span></div>
+              <div class="p1-rr"><span>مدت:</span><span class="p1-gd" id="p1RTime">—</span></div>
+            </div>
+            <div class="p1-rc">
+              <h4>📊 نتیجه</h4>
+              <div class="p1-rr"><span>نمره:</span><span id="p1RScoreVal">—</span></div>
+              <div class="p1-rr"><span>درصد:</span><span id="p1RPctVal">—</span></div>
+              <div class="p1-rr"><span>وضعیت:</span><span id="p1RStatus">—</span></div>
+            </div>
+            <button class="p1-btn gold" id="p1GoCert" type="button" style="margin-top:12px">🏆 دریافت گواهینامه</button>
+            <button class="p1-btn" id="p1ViewAnswers" type="button" style="margin-top:8px">📖 پاسخ‌نامه تشریحی</button>
+            <button class="p1-btn" id="p1Retry" type="button" style="margin-top:8px">🔄 آزمون مجدد</button>
+          </div>
+        </div>
+        <div id="p1Answers" hidden>
+          <div class="p1-glass">
+            <h2 style="text-align:center;font-size:16px;font-weight:900;margin:0 0 12px">📖 پاسخ‌نامهٔ تشریحی</h2>
+            <div id="p1AnswersList" style="font-size:11.5px;line-height:1.85;max-height:65vh;overflow-y:auto"></div>
+            <button class="p1-btn" id="p1BackReport" type="button" style="margin-top:12px">→ بازگشت به کارنامه</button>
+          </div>
+        </div>
+        <div id="p1Cert" hidden>
+          <div class="p1-cert">
+            <div class="p1-deco">★ ★ ★</div>
+            <h2 class="p1-ttl">گواهینامهٔ افتخار</h2>
+            <p class="p1-sub">Certificate of Achievement</p>
+            <div style="font-size:11px;opacity:.7;margin-bottom:4px">بدین‌وسیله به</div>
+            <div class="p1-nm" id="p1CertName">—</div>
+            <div class="p1-body">این گواهینامه به پاس تلاش و موفقیت در<br><b style="color:#ffd700" id="p1CertLesson">آزمون درس</b><br>با کسب نمرهٔ عالی اعطا می‌گردد.</div>
+            <div class="p1-sc" id="p1CertScore">نمره: —</div>
+            <div class="p1-ft">
+              <div class="p1-sg"><div class="p1-n2">محمدجواد کجوری</div><div>مدیر موسسه</div><div style="font-size:9px" id="p1CertDate">—</div></div>
+              <div class="p1-seal">🏆</div>
+              <div class="p1-sg"><div class="p1-n2">کلاس ایمان ۱</div><div>پایه هفتم</div><div style="font-size:9px">معتبر</div></div>
+            </div>
+          </div>
+          <button class="p1-btn" id="p1CertBack" type="button">🏠 بازگشت به دروس</button>
+        </div>
+      </div>`;
+
+    // لغات
+    let vh = `<div style="font-size:12.5px;color:#ffd700;font-weight:800;margin-bottom:10px">📖 لغات ${l.t} — ${fa(l.v.length)} کلمه</div>`;
+    vh += `<table class="p1-vtable"><thead><tr><th>کلمه</th><th>معنی</th><th>🔊</th></tr></thead><tbody>`;
+    l.v.forEach(w=>{
+      vh += `<tr><td class="p1-en">${esc(w[0])}</td><td class="p1-fa">${esc(w[1])}</td>
+        <td><button class="p1-spk" data-w="${esc(w[0])}">🔊</button></td></tr>`;
+    });
+    vh += `</tbody></table>`;
+    document.getElementById("p1VocabBox").innerHTML = vh;
+    document.querySelectorAll("#p1VocabBox button[data-w]").forEach(b=>{
+      b.addEventListener("click", ()=>speak(b.dataset.w, b));
+    });
+
+    // بک
+    document.getElementById("p1Back").addEventListener("click", showHome);
+    // تب‌ها
+    document.querySelectorAll("#p1QuizSection, #p1VocabSection");
+    document.querySelectorAll(".p1-tabs button").forEach(b=>{
+      b.addEventListener("click", ()=>{
+        document.querySelectorAll(".p1-tabs button").forEach(x=>x.classList.toggle("on", x===b));
+        const t = b.dataset.t;
+        document.getElementById("p1VocabSection").hidden = t !== "v";
+        document.getElementById("p1QuizSection").hidden = t !== "q";
+      });
+    });
+    // شروع آزمون
+    document.getElementById("p1StartQuiz").addEventListener("click", startQuiz);
+    // دکمه‌های دیگر
+    document.getElementById("p1ShowReport").addEventListener("click", showReport);
+    document.getElementById("p1ViewAnswers").addEventListener("click", showAnswers);
+    document.getElementById("p1BackReport").addEventListener("click", ()=>{
+      document.getElementById("p1Answers").hidden = true;
+      document.getElementById("p1Report").hidden = false;
+    });
+    document.getElementById("p1GoCert").addEventListener("click", showCert);
+    document.getElementById("p1CertBack").addEventListener("click", ()=>{
+      document.getElementById("p1Cert").hidden = true;
+      showHome();
+    });
+    document.getElementById("p1Retry").addEventListener("click", ()=>{
+      document.getElementById("p1Report").hidden = true;
+      document.getElementById("p1QuizStart").hidden = false;
+      document.getElementById("p1Name").value = "";
+    });
+  }
+
+  function getAllQuestions(l){
+    const all = [];
+    l.mc.forEach(m=>all.push({ type:"mc", q:m[0], o:[m[1],m[2],m[3],m[4]], a:m[5], exp:m[6] }));
+    l.fill.forEach(f=>all.push({ type:"fill", q:f[0], a:f[1], exp:f[2] }));
+    l.read.q.forEach(r=>all.push({ type:"read", q:r[0], a:r[1], text:l.read.text, exp:"پاسخ: " + r[1] }));
+    l.rp.forEach(r=>all.push({ type:"rp", q:r.q, speaker:r.speaker, a:r.expected, exp:r.exp }));
+    l.mic.forEach(m=>all.push({ type:"mic", q:"جمله را بلند و واضح تلفظ کن:", en:m.en, a:m.en, exp:m.exp }));
+    l.conv.forEach(c=>all.push({ type:"conv", q:c.q, speaker:c.speaker, a:c.expected, exp:c.exp }));
+    return all;
+  }
+
+  /* ================== آزمون ================== */
+  function startQuiz(){
+    const name = document.getElementById("p1Name").value.trim();
+    if(name.length < 2){ toast("نام خود را وارد کن"); document.getElementById("p1Name").focus(); return; }
+    state.idx = 0; state.score = 0; state.answered = false;
+    state.student = name;
+    state.startTime = Date.now(); state.endTime = 0;
+    state.totalLeft = 900; state.results = [];
+    document.getElementById("p1QuizStart").hidden = true;
+    document.getElementById("p1QuizRun").hidden = false;
+    document.getElementById("p1QuizResult").hidden = true;
+    document.getElementById("p1Report").hidden = true;
+    document.getElementById("p1Answers").hidden = true;
+    document.getElementById("p1Cert").hidden = true;
+    renderQ();
+    startTimer();
+    window.scrollTo(0,0);
+  }
+
+  function startTimer(){
+    if(state.timer) clearInterval(state.timer);
+    updateTimerUI();
+    state.timer = setInterval(()=>{
+      state.totalLeft--;
+      updateTimerUI();
+      if(state.totalLeft <= 0){
+        clearInterval(state.timer);
+        finishQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function updateTimerUI(){
+    const el = document.getElementById("p1QTimer");
+    el.textContent = fmtTime(state.totalLeft);
+    el.classList.remove("warn","danger");
+    if(state.totalLeft <= 90) el.classList.add("danger");
+    else if(state.totalLeft <= 240) el.classList.add("warn");
+  }
+
+  function renderQ(){
+    const l = LESSONS[state.lesson];
+    const qs = getAllQuestions(l);
+    const q = qs[state.idx];
+    if(!q) return;
+    document.getElementById("p1QNum").textContent = `سوال ${fa(state.idx+1)} / ${fa(qs.length)}`;
+    document.getElementById("p1QScore").textContent = `امتیاز: ${fa(state.score)}`;
+    document.getElementById("p1QText").textContent = q.q;
+    const body = document.getElementById("p1QBody");
+    body.innerHTML = "";
+
+    if(q.type === "mc"){
+      const o = document.createElement("div");
+      o.className = "p1-opts";
+      q.o.forEach((opt, i)=>{
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "p1-opt"; b.textContent = opt;
+        b.addEventListener("click", ()=>ansMC(i, q));
+        o.appendChild(b);
+      });
+      body.appendChild(o);
+    } else if(q.type === "fill"){
+      body.innerHTML = `
+        <div class="p1-fill">
+          <div style="font-size:13px;font-weight:700;line-height:1.8;margin-bottom:8px">${esc(q.q)}</div>
+          <input type="text" id="p1FInput" placeholder="پاسخ به انگلیسی..." dir="ltr">
+          <button class="p1-btn" id="p1FSub" type="button" style="margin-top:8px">✔ ارسال</button>
+          <div id="p1FFb" style="font-size:11px;margin-top:5px;font-weight:700"></div>
+        </div>`;
+      document.getElementById("p1FInput").focus();
+      document.getElementById("p1FSub").addEventListener("click", ()=>ansFill(q.a, q.exp));
+      document.getElementById("p1FInput").addEventListener("keydown", e=>{ if(e.key === "Enter") ansFill(q.a, q.exp); });
+    } else if(q.type === "read"){
+      body.innerHTML = `
+        <div class="p1-rcbox">
+          <div class="p1-text">${esc(q.text).replace(/\n/g,"<br>")}</div>
+          <div style="margin-top:12px;font-size:12.5px;font-weight:700;color:#ffd700">${esc(q.q)}</div>
+          <input type="text" id="p1RInput" placeholder="پاسخ به انگلیسی..." dir="ltr" style="width:100%;margin-top:8px;padding:10px;border-radius:10px;background:rgba(0,0,0,.3);border:1.5px solid rgba(255,255,255,.2);color:#fff;font-family:inherit;font-size:13px;outline:none">
+          <button class="p1-btn" id="p1RSub" type="button" style="margin-top:8px">✔ ارسال</button>
+          <div id="p1RFb" style="font-size:11px;margin-top:5px;font-weight:700"></div>
+        </div>`;
+      document.getElementById("p1RInput").focus();
+      document.getElementById("p1RSub").addEventListener("click", ()=>ansRead(q.a, q.exp));
+      document.getElementById("p1RInput").addEventListener("keydown", e=>{ if(e.key === "Enter") ansRead(q.a, q.exp); });
+    } else if(q.type === "rp" || q.type === "conv"){
+      body.innerHTML = `
+        <div class="p1-rpbox">
+          <div class="p1-role">${q.type === "rp" ? "🎭 ایفای نقش" : "💬 گفتگو"}</div>
+          <div class="p1-hint">🎧 روی میکروفن بزن → پیام گوینده پخش می‌شود → پاسخ خودت را بگو → دوباره بزن تا نمره داده شود.</div>
+          <div class="p1-lines">
+            <div><span class="p1-spk">Speaker:</span> ${esc(q.speaker)}</div>
+            <div style="margin-top:6px"><span class="p1-you">You:</span> <span style="color:rgba(255,255,255,.55)">[پاسخ تو...]</span></div>
+          </div>
+          <button type="button" class="p1-mbtn" id="p1MicBtn"><span>🎤</span><span class="p1-lbl">شروع ضبط</span></button>
+          <div class="p1-mstatus" id="p1MicStatus">آماده</div>
+          <button type="button" class="p1-bs pk" id="p1MicHear" style="margin-top:8px">🔊 پخش پیام</button>
+        </div>`;
+      document.getElementById("p1MicHear").addEventListener("click", ()=>speak(q.speaker));
+      document.getElementById("p1MicBtn").addEventListener("click", ()=>toggleMic(q));
+    } else if(q.type === "mic"){
+      body.innerHTML = `
+        <div class="p1-micbox">
+          <div class="p1-hint">🎤 روی میکروفن بزن → جمله را بلند تلفظ کن → دوباره بزن تا نمره بگیرد.</div>
+          <div class="p1-en">${esc(q.en)}</div>
+          <button type="button" class="p1-mbtn" id="p1MicBtn"><span>🎤</span><span class="p1-lbl">شروع ضبط</span></button>
+          <div class="p1-mstatus" id="p1MicStatus">آماده</div>
+          <button type="button" class="p1-bs pk" id="p1MicHear" style="margin-top:8px">🔊 نمونه را بشنو</button>
+        </div>`;
+      document.getElementById("p1MicHear").addEventListener("click", ()=>speak(q.en));
+      document.getElementById("p1MicBtn").addEventListener("click", ()=>toggleMic(q));
+    }
+
+    state.answered = false;
+  }
+
+  function ansMC(i, q){
+    if(state.answered) return; state.answered = true;
+    const correct = i === q.a;
+    document.querySelectorAll("#p1QBody .p1-opt").forEach((b, idx)=>{
+      b.disabled = true;
+      if(idx === q.a) b.classList.add("correct");
+      else if(idx === i && !correct) b.classList.add("wrong");
+    });
+    if(correct) state.score++;
+    state.results.push({ q:q.q, correct, userAnswer:q.o[i], correctAnswer:q.o[q.a], exp:q.exp });
+    document.getElementById("p1QScore").textContent = `امتیاز: ${fa(state.score)}`;
+    setTimeout(next, 900);
+  }
+
+  function ansFill(correctAns, exp){
+    if(state.answered) return;
+    const inp = document.getElementById("p1FInput");
+    const correct = inp.value.trim().toLowerCase() === correctAns.toLowerCase();
+    state.answered = true;
+    inp.disabled = true; document.getElementById("p1FSub").disabled = true;
+    inp.classList.add(correct ? "correct" : "wrong");
+    const fb = document.getElementById("p1FFb");
+    fb.textContent = correct ? "✅ درست!" : "❌ پاسخ: " + correctAns;
+    fb.style.color = correct ? "#4fd1a1" : "#ff6b6b";
+    if(correct) state.score++;
+    state.results.push({ q:"جای خالی", correct, userAnswer:inp.value, correctAnswer:correctAns, exp });
+    document.getElementById("p1QScore").textContent = `امتیاز: ${fa(state.score)}`;
+    setTimeout(next, 1300);
+  }
+
+  function ansRead(correctAns, exp){
+    if(state.answered) return;
+    const inp = document.getElementById("p1RInput");
+    const user = inp.value.trim().toLowerCase();
+    const kws = correctAns.toLowerCase().split(/\s+/).filter(w=>w.length>2);
+    const matches = kws.filter(k=>user.includes(k)).length;
+    const correct = user === correctAns.toLowerCase() || (matches > 0 && user.length > 2);
+    state.answered = true;
+    inp.disabled = true; document.getElementById("p1RSub").disabled = true;
+    inp.style.borderColor = correct ? "#4fd1a1" : "#ff6b6b";
+    const fb = document.getElementById("p1RFb");
+    fb.textContent = correct ? "✅ درست!" : "❌ پاسخ: " + correctAns;
+    fb.style.color = correct ? "#4fd1a1" : "#ff6b6b";
+    if(correct) state.score++;
+    state.results.push({ q:"درک مطلب", correct, userAnswer:inp.value, correctAnswer:correctAns, exp });
+    document.getElementById("p1QScore").textContent = `امتیاز: ${fa(state.score)}`;
+    setTimeout(next, 1300);
+  }
+
+  function toggleMic(q){
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if(!SR){ toast("مرورگر از تشخیص گفتار پشتیبانی نمی‌کند"); ansMic(q, "بدون پشتیبانی", true); return; }
+    const b = document.getElementById("p1MicBtn");
+    const st = document.getElementById("p1MicStatus");
+
+    if(state.recing){
+      try{ state.rec.stop(); }catch(e){}
+      state.recing = false;
+      b.classList.remove("recording");
+      b.querySelector(".p1-lbl").textContent = "شروع ضبط";
+      st.textContent = "🔍 بررسی…";
+      return;
+    }
+
+    const startRec = ()=>{
+      const rec = new SR();
+      rec.lang = "en-US"; rec.interimResults = false; rec.maxAlternatives = 5;
+      state.rec = rec; state.recing = true;
+      b.classList.add("recording");
+      b.querySelector(".p1-lbl").textContent = "توقف و نمره";
+      st.textContent = "🎙️ گوش می‌دهم…";
+      st.className = "p1-mstatus listening";
+
+      rec.onresult = (e)=>{
+        const heard = e.results[0][0].transcript.toLowerCase().trim();
+        const target = (q.type === "mic" ? q.en : q.a).toLowerCase();
+        const s = sim(target, heard);
+        const correct = s >= 0.5 || (heard.split(/\s+/).length >= 3 && s >= 0.35);
+        st.textContent = (correct ? "✅ " : "⚠️ ") + `شباهت: ${fa(Math.round(s*100))}% — "${heard}"`;
+        st.className = "p1-mstatus " + (correct ? "" : "error");
+        ansMic(q, heard, correct);
+      };
+      rec.onerror = ()=>{
+        st.textContent = "⚠️ خطای ضبط."; st.className = "p1-mstatus error";
+        state.recing = false; b.classList.remove("recording");
+        b.querySelector(".p1-lbl").textContent = "شروع ضبط";
+      };
+      rec.onend = ()=>{
+        state.recing = false; b.classList.remove("recording");
+        b.querySelector(".p1-lbl").textContent = "شروع ضبط";
+      };
+      try{ rec.start(); }catch(e){ state.recing = false; b.classList.remove("recording"); }
+    };
+
+    if(q.type === "rp" || q.type === "conv"){
+      speak(q.speaker);
+      setTimeout(startRec, 2200);
+    } else {
+      startRec();
+    }
+  }
+
+  function ansMic(q, heard, correct){
+    if(state.answered) return; state.answered = true;
+    if(correct) state.score++;
+    const qText = q.type === "mic" ? "تلفظ: " + q.en : q.q + " — Speaker: " + q.speaker;
+    state.results.push({ q:qText, correct, userAnswer:heard, correctAnswer:q.a, exp:q.exp });
+    document.getElementById("p1QScore").textContent = `امتیاز: ${fa(state.score)}`;
+    setTimeout(next, 1600);
+  }
+
+  function next(){
+    state.idx++;
+    const l = LESSONS[state.lesson];
+    if(state.idx < getAllQuestions(l).length) renderQ();
+    else finishQuiz(false);
+  }
+
+  function finishQuiz(timeout){
+    if(state.timer) clearInterval(state.timer);
+    state.endTime = Date.now();
+    document.getElementById("p1QuizRun").hidden = true;
+    document.getElementById("p1QuizResult").hidden = false;
+    window.scrollTo(0,0);
+
+    const l = LESSONS[state.lesson];
+    const total = getAllQuestions(l).length;
+    const score = state.score;
+    const pct = Math.round(score/total*100);
+
+    document.getElementById("p1RScore").textContent = `${fa(score)} / ${fa(total)}`;
+    document.getElementById("p1RPct").textContent = `${fa(pct)}٪`;
+    const stars = Math.round(pct/20);
+    document.getElementById("p1RStars").textContent = "★".repeat(stars) + "☆".repeat(5-stars);
+
+    let e, m;
+    if(timeout){ e="⏰"; m="زمان آزمون به پایان رسید."; }
+    else if(pct >= 90){ e="🏆"; m="فوق‌العاده! نابغهٔ زبان هستی!"; }
+    else if(pct >= 75){ e="🎉"; m="بسیار عالی! دانش حرفه‌ای داری."; }
+    else if(pct >= 50){ e="👍"; m="خوب بود! با تمرین بیشتر بهتر می‌شی."; }
+    else { e="💪"; m="ناامید نشو! لغات را دوباره مطالعه کن."; }
+    document.getElementById("p1REmoji").textContent = e;
+    document.getElementById("p1RMsg").textContent = m;
+    if(pct >= 50) confetti();
+  }
+
+  function showReport(){
+    const l = LESSONS[state.lesson];
+    const total = getAllQuestions(l).length;
+    const pct = Math.round(state.score/total*100);
+    const elapsed = Math.floor((state.endTime - state.startTime)/1000);
+
+    document.getElementById("p1RName").textContent = state.student;
+    document.getElementById("p1RLesson").textContent = l.t;
+    document.getElementById("p1RDate").textContent = nowFa();
+    document.getElementById("p1RStart").textContent = timeFa(state.startTime);
+    document.getElementById("p1REnd").textContent = timeFa(state.endTime);
+    document.getElementById("p1RTime").textContent = fmtTime(elapsed);
+    document.getElementById("p1RScoreVal").textContent = `${fa(state.score)} از ${fa(total)}`;
+    document.getElementById("p1RPctVal").textContent = `${fa(pct)}٪`;
+    const st = document.getElementById("p1RStatus");
+    if(pct >= 90){ st.textContent = "عالی ⭐⭐⭐"; st.className = "p1-gd"; }
+    else if(pct >= 75){ st.textContent = "خیلی خوب ⭐⭐"; st.className = "p1-gd"; }
+    else if(pct >= 50){ st.textContent = "قابل قبول ⭐"; st.className = "p1-md"; }
+    else { st.textContent = "نیاز به تلاش"; st.className = "p1-bd"; }
+
+    document.getElementById("p1QuizResult").hidden = true;
+    document.getElementById("p1Report").hidden = false;
+    window.scrollTo(0,0);
+  }
+
+  function showAnswers(){
+    const box = document.getElementById("p1AnswersList");
+    box.innerHTML = "";
+    state.results.forEach((r, i)=>{
+      const d = document.createElement("div");
+      d.style.cssText = `padding:10px;border-radius:12px;background:rgba(255,255,255,.06);margin-bottom:8px;border-right:3px solid ${r.correct?'#4fd1a1':'#ff6b6b'}`;
+      d.innerHTML = `
+        <div style="font-weight:800;color:#fff;font-size:12px;margin-bottom:5px">${fa(i+1)}. ${esc(r.q)}</div>
+        <div style="color:#4fd1a1;font-weight:700;font-size:11.5px;direction:ltr;text-align:left">✅ ${esc(r.correctAnswer)}</div>
+        <div style="color:${r.correct?'#4fd1a1':'#ff6b6b'};font-weight:700;font-size:11.5px;direction:ltr;text-align:left">📝 ${esc(r.userAnswer)}</div>
+        <div style="color:rgba(255,255,255,.78);font-size:11px;line-height:1.8;margin-top:4px">💡 ${esc(r.exp)}</div>`;
+      box.appendChild(d);
+    });
+    document.getElementById("p1Report").hidden = true;
+    document.getElementById("p1Answers").hidden = false;
+    window.scrollTo(0,0);
+  }
+
+  function showCert(){
+    const l = LESSONS[state.lesson];
+    const total = getAllQuestions(l).length;
+    const pct = Math.round(state.score/total*100);
+    document.getElementById("p1CertName").textContent = state.student;
+    document.getElementById("p1CertLesson").textContent = "آزمون " + l.t;
+    document.getElementById("p1CertScore").textContent = `نمره: ${fa(state.score)} از ${fa(total)} (${fa(pct)}٪)`;
+    document.getElementById("p1CertDate").textContent = `تاریخ: ${nowFa()}`;
+    document.getElementById("p1Report").hidden = true;
+    document.getElementById("p1Cert").hidden = false;
+    confetti();
+    window.scrollTo(0,0);
+  }
+
+  /* ================== باز و بسته کردن ================== */
+  document.getElementById("p1Fab").addEventListener("click", ()=>{
+    overlay.style.display = "block";
+    document.body.style.overflow = "hidden";
+    showHome();
+    window.scrollTo(0,0);
+  });
+
+  document.getElementById("p1Close").addEventListener("click", ()=>{
+    overlay.style.display = "none";
+    document.body.style.overflow = "";
+    if(state.timer){ clearInterval(state.timer); state.timer = null; }
+  });
+
+})();
+</script>
